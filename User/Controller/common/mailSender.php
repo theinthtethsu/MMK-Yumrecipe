@@ -1,0 +1,42 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require __DIR__ . '/../lib/PHPMailer/src/Exception.php';
+require __DIR__ . '/../lib/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/../lib/PHPMailer/src/SMTP.php';
+
+
+class SendMail
+{
+    public function sendMail($toMail, $subject, $body)
+    {
+        $mail = new PHPMailer(true);
+
+        try {
+            //Server settings
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'exbrain1130@gmail.com'; // <<< Change 
+            $mail->Password   = 'fqdsixnhrsijtwiy'; // <<< Change
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port       = 465;
+
+            //Recipients
+            $mail->setFrom('exbrain1130@gmail.com', 'Yummy'); //<<< Change
+            $mail->addAddress($toMail);
+
+            //Content
+            $mail->isHTML(true);
+            $mail->Subject = $subject;
+            $mail->Body    = $body;
+            $mail->send();
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    }
+}
