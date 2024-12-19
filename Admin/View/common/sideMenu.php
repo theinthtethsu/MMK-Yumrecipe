@@ -1,7 +1,7 @@
 <?php
 
-$icons_path = '../resources/icons/';
-$images_path = '../resources/images/';
+$icons_path = "/yumrecipe/Admin/View/resources/icons/";
+$images_path = "/yumrecipe/Admin/View/resources/images/";
 ?>
 
 <!DOCTYPE html>
@@ -20,14 +20,14 @@ $images_path = '../resources/images/';
     <div class="w-64 bg-primary text-white flex flex-col justify-center items-center">
         <!-- Logo -->
         <div class="p-4">
-            <img src="<?php echo $images_path; ?>logo.svg" alt="Logo" class="mb-4" />
+            <img src="<?php echo $images_path ?>logo.svg" alt="Logo" class="mb-4" />
         </div>
         <!-- Menu -->
         <nav class="w-full flex flex-col items-center">
             <div class="space-y-2 w-full text-center">
                 <div class="w-full text-left">
                     <a href="#dashboard" class="block w-full p-2  hover:bg-secondary active:bg-accent">
-                        <img src="<?php echo $icons_path; ?>Frame.svg" alt="Dashboard Icon" class="inline ml-10"> Dashboard
+                        <img src="<?php echo $icons_path ?>Frame.svg" alt="Dashboard Icon" class="inline ml-10"> Dashboard
                     </a>
                 </div>
                 <div class="w-full text-left">

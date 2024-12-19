@@ -1,10 +1,17 @@
+<?php
+
+$root_dir = $_SERVER['DOCUMENT_ROOT'];
+$icons_path = $root_dir . '/Admin/View/resources/icons/';
+$images_path = $root_dir . '/Admin/View/resources/images/';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Activities</title>
     <link rel="stylesheet" href="../../../../../output.css">
     <link rel="stylesheet" href="../../css/root.css">
 </head>
