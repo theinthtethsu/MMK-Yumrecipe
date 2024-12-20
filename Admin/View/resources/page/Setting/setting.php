@@ -213,7 +213,10 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                             <input type="text" id="linkedin2" name="linkedin2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-1 text-sm" value="https://linkedin.com/maryjanes">
                                         </div>
                                         <div class="bg-white p-2 rounded-lg shadow-md">
-                                            <img src="/yumrecipe/Admin/View/resources/images/writer3.png" alt="Writer 3" class="w-20 h-20 rounded-full mx-auto mb-1">
+                                            <div class="flex items-center justify-center">  
+                                                <img src="/yumrecipe/Admin/View/resources/images/writer3.png" alt="Writer 3" class="w-20 h-20 rounded-full mb-1 border border-dark-text">
+                                                <button type="button" class="ml-1 bg-gray-300 text-dark-text px-1 rounded-md shadow hover:bg-gray-400">Change</button>
+                                            </div>
                                             <label for="writer3" class="block text-dark-text text-sm">Writer Name</label>
                                             <input type="text" id="writer3" name="writer3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-1 text-sm" value="Mary Janes">
                                             <label for="role3" class="block text-dark-text text-sm">Role</label>
@@ -241,9 +244,19 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                             <p class="text-sm text-yellow-500 mb-4"><a href="#">Settings > Privacy Policy</a></p>
                             <form action="" method="post">
                                 <div class="mb-4">
-                                    <label for="privacy-policy" class="block text-dark-text">Privacy Policy</label>
-                                    <textarea id="privacy-policy" name="privacy-policy" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="4"></textarea>
+                                    <label for="privacy-policy" class="block text-dark-text">1. Information We Collect</label>
+                                    <textarea id="privacy-policy" name="privacy-policy" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="4">           We collect personal information such as name, email address, and password when users create an account, along with optional profile details like profile pictures or food preferences. Additionally, we gather data on recipes saved or submitted by users, usage details like pages visited and features used, and device information such as IP address, browser type, and operating system. We also use cookies and tracking data to enhance user experience and remember preferences.
+</textarea>
                                 </div>
+                                 <div class="mb-4">
+                                    <label for="privacy-policy" class="block text-dark-text">2.How We Use Your Information</label>
+                                    <textarea id="privacy-policy" name="privacy-policy" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="4">We use the collected information to manage user accounts, enable recipe-saving features, and provide personalized recommendations. It helps us improve the website by analyzing user interactions and enhancing the experience. We also use the data to communicate updates, respond to inquiries, and ensure security by protecting against unauthorized access or fraud.</textarea>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="privacy-policy" class="block text-dark-text">3.How We Share Your Information</label>
+                                    <textarea id="privacy-policy" name="privacy-policy" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="4"> We respect your privacy and do not sell your personal information. However, we may share it with trusted service providers, such as those handling hosting, analytics, or email services, to support our website's functionality. If required by law or to comply with legal obligations, we may disclose information to authorities. In the event of a business merger, acquisition, or sale, user data may be transferred to the new entity. Additionally, we may share anonymized, aggregated data, such as website usage trends, which cannot identify individual users.</textarea>
+                                </div>
+                               
                                 <!-- Save Changes -->
                                 <button type="submit" class="bg-accent text-light-text px-4 py-2 rounded-md shadow hover:bg-blue-600">Save Changes</button>
                                 <!-- Cancel -->
@@ -257,9 +270,98 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                             <h2 class="text-xl font-semibold mb-2">Faq</h2>
                             <p class="text-sm text-yellow-500 mb-4"><a href="#">Settings > Faq</a></p>
                             <form action="" method="post">
-                                <div class="mb-4">
-                                    <label for="faq" class="block text-dark-text">Faq</label>
-                                    <textarea id="faq" name="faq" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="4"></textarea>
+                                <div class="grid grid-cols-3 gap-4 mb-4">
+                                    <div class="overflow-y-auto max-h-60 shadow-md p-2">
+                                        <label for="general-question" class="block text-dark-text fixed shadow-md sticky top-0 bg-yellow-500">General Question</label>
+                                        <label for="general-answer" class="block text-dark-text mt-5">Question 1</label>
+                                        <textarea id="general-question1" name="general-question1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="general-answer" class="block text-dark-text">Answer 1</label>
+                                        <textarea id="general-answer1" name="general-answer1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="general-answer" class="block text-dark-text">Question 2</label>
+                                        <textarea id="general-question2" name="general-question2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="general-answer" class="block text-dark-text">Answer 2</label>
+                                        <textarea id="general-answer2" name="general-answer2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="general-answer" class="block text-dark-text">Question 3</label>
+                                        <textarea id="general-question3" name="general-question3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="general-answer" class="block text-dark-text">Answer 3</label>
+                                        <textarea id="general-answer3" name="general-answer3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+
+                                    </div>
+                                    <div class="overflow-y-auto max-h-60 shadow-md p-2">
+                                        <label for="account-registration" class="block text-dark-text sticky top-0 bg-green-500">Account and Registration</label>
+                                        <label for="account-registration" class="block text-dark-text mt-5">Question 1</label>
+                                        <textarea id="account-registration1" name="account-registration1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="account-registration" class="block text-dark-text">Answer 1</label>
+                                        <textarea id="account-registration1" name="account-registration1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="account-registration" class="block text-dark-text">Question 2</label>
+                                        <textarea id="account-registration2" name="account-registration2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="account-registration" class="block text-dark-text">Answer 2</label>
+                                        <textarea id="account-registration2" name="account-registration2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="account-registration" class="block text-dark-text">Question 3</label>
+                                        <textarea id="account-registration3" name="account-registration3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="account-registration" class="block text-dark-text">Answer 3</label>
+                                        <textarea id="account-registration3" name="account-registration3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                    </div>
+                                    <div class="overflow-y-auto max-h-60 shadow-md p-2">
+                                        <label for="recipe-specific" class="block text-dark-text sticky top-0 bg-red-500">Recipe-Specific Question</label>
+                                        <label for="recipe-specific" class="block text-dark-text mt-5">Question 1</label>
+                                        <textarea id="recipe-specific1" name="recipe-specific1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="recipe-specific" class="block text-dark-text">Answer 1</label>
+                                        <textarea id="recipe-specific1" name="recipe-specific1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="recipe-specific" class="block text-dark-text">Question 2</label>
+                                            <textarea id="recipe-specific2" name="recipe-specific2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="recipe-specific" class="block text-dark-text">Answer 2</label>
+                                        <textarea id="recipe-specific2" name="recipe-specific2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="recipe-specific" class="block text-dark-text">Question 3</label>
+                                        <textarea id="recipe-specific3" name="recipe-specific3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="recipe-specific" class="block text-dark-text">Answer 3</label>
+                                        <textarea id="recipe-specific3" name="recipe-specific3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                    </div>
+                                    <div class="overflow-y-auto max-h-60 shadow-md p-2">
+                                        <label for="premium-plans" class="block text-dark-text sticky top-0 bg-blue-500">Premium Plans</label>
+                                        <label for="premium-plans" class="block text-dark-text mt-5">Question 1</label>
+                                        <textarea id="premium-plans1" name="premium-plans1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="premium-plans" class="block text-dark-text">Answer 1</label>
+                                        <textarea id="premium-plans1" name="premium-plans1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="premium-plans" class="block text-dark-text">Question 2</label>
+                                        <textarea id="premium-plans2" name="premium-plans2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="premium-plans" class="block text-dark-text">Answer 2</label>
+                                        <textarea id="premium-plans2" name="premium-plans2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="premium-plans" class="block text-dark-text">Question 3</label>
+                                        <textarea id="premium-plans3" name="premium-plans3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="premium-plans" class="block text-dark-text">Answer 3</label>
+                                        <textarea id="premium-plans3" name="premium-plans3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea> 
+                                    </div>
+                                    <div class="overflow-y-auto max-h-60 shadow-md p-2">
+                                        <label for="community-contribution" class="block text-dark-text sticky top-0 bg-purple-500">Community and Contribution</label>
+                                        <label for="community-contribution" class="block text-dark-text mt-5">Question 1</label>
+                                        <textarea id="community-contribution1" name="community-contribution1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="community-contribution" class="block text-dark-text">Answer 1</label>
+                                        <textarea id="community-contribution1" name="community-contribution1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="community-contribution" class="block text-dark-text">Question 2</label>
+                                        <textarea id="community-contribution2" name="community-contribution2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="community-contribution" class="block text-dark-text">Answer 2</label>
+                                        <textarea id="community-contribution2" name="community-contribution2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="community-contribution" class="block text-dark-text">Question 3</label>
+                                        <textarea id="community-contribution3" name="community-contribution3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="community-contribution" class="block text-dark-text">Answer 3</label>
+                                        <textarea id="community-contribution3" name="community-contribution3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                    </div>
+                                    <div class="overflow-y-auto max-h-60 shadow-md p-2">
+                                        <label for="miscellaneous" class="block text-light-text sticky top-0 bg-black">Miscellaneous</label>
+                                        <label for="miscellaneous" class="block text-dark-text mt-5">Question 1</label>
+                                        <textarea id="miscellaneous1" name="miscellaneous1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="miscellaneous" class="block text-dark-text">Answer 1</label>
+                                        <textarea id="miscellaneous1" name="miscellaneous1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="miscellaneous" class="block text-dark-text">Question 2</label>
+                                        <textarea id="miscellaneous2" name="miscellaneous2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="miscellaneous" class="block text-dark-text">Answer 2</label>
+                                        <textarea id="miscellaneous2" name="miscellaneous2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="miscellaneous" class="block text-dark-text">Question 3</label>
+                                        <textarea id="miscellaneous3" name="miscellaneous3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <label for="miscellaneous" class="block text-dark-text">Answer 3</label>
+                                        <textarea id="miscellaneous3" name="miscellaneous3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                    </div>
                                 </div>
                                 <!-- Save Changes -->
                                 <button type="submit" class="bg-accent text-light-text px-4 py-2 rounded-md shadow hover:bg-blue-600">Save Changes</button>

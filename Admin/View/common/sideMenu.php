@@ -4,6 +4,7 @@ $icons_path = "/yumrecipe/Admin/View/resources/icons/";
 $images_path = "/yumrecipe/Admin/View/resources/images/";
 $user_path = "/yumrecipe/Admin/View/resources/page/User/";
 $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
+$payment_path = "/yumrecipe/Admin/View/resources/page/Payment/";
 ?>
 
 <!DOCTYPE html>
@@ -76,10 +77,10 @@ $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
                         <a href="#subscription" class="block w-full p-2 hover:bg-secondary active:bg-accent">
                         <img src="<?php echo $icons_path; ?>SketchLogo.svg" alt="Subscription Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Subscription
                     </a>
-                </div>
+                </div>  
                 <div class="w-full text-left">
-                    <a href="#payment" class="block w-full p-2 hover:bg-secondary active:bg-accent">
-                        <img src="<?php echo $icons_path; ?>PayPalLogo.svg" alt="Payment Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Payment
+                    <a href="<?php echo $payment_path; ?>payment.php" class="block w-full p-2 hover:bg-secondary active:bg-accent <?php echo basename($_SERVER['PHP_SELF']) == 'payment.php' ? 'bg-accent' : '' ?>">
+                        <img src="<?php echo $icons_path; ?>PayPalLogo.svg" alt="Payment Icon" class="inline ml-10 " style="width: 20px; height: 20px;"> Payment
                     </a>
                 </div>
                 <div class="w-full text-left">
