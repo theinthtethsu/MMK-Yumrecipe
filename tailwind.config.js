@@ -21,6 +21,12 @@ module.exports = {
         "light-text": "var(--light-text-color)",
         "danger": "var(--danger)",
         "success": "var(--success)",
+        "userPrimary": "#FF4655", // Custom color with a name like 'primary'
+        userPrimaryShade: '#e63f4d',
+        primaryShade2: '#cc3844',
+        primartTint: '#ffedee',
+        primaryTint2: '#ffc8cc',
+        secondary: '#FFD122',
       },
     },
   },
