@@ -7,8 +7,24 @@
     --footer-color: #31363F;
     --dark-text-color: #374151;
     --light-text-color: #F3F4F6;
+    --form-bg-color: #E3E4E7;
     --danger: #E96425;
     --success: #48C78E;
+    --warning: #F59E0B;
+    --font-size-large: 1.5rem;
+    --font-size-medium: 1.25rem;
+    --font-size-small: 1rem;
+    --font-size-x-small: 0.875rem;
+    --font-size-xx-small: 0.75rem;
+    --font-size-xxx-small: 0.625rem;
+    --font-size-xxxx-small: 0.5rem;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    --font-family-sans: 'lato', sans-serif;
+    --font-family-serif: 'lato', serif;
+    --font-family-mono: 'lato', monospace;
 }
 
 * {

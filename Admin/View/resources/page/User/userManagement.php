@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="../../css/root.css">
 </head>
 
-<body>
+<body class="font-sans bg-light-text">
     <div class="flex">
         <?php require_once '../../../common/sideMenu.php'; ?>
         <div class="flex-1 container p-4 bg-secondary">
-            <h1 class="text-2xl font-bold">User Management</h1>
+            <h1 class="text-2xl font-bold">User management</h1>
             <p class="mb-4">Manage Users and their accounts here</p>
             <div class="flex justify-end mb-10">
                     <div class="flex space-x-4">
@@ -39,93 +39,73 @@
             $users = [
                 [
                     'id' => 1, 
-                    'name' => 'John Doe', 
-                    'username' => 'johndoe', 
-                    'email' => 'john@example.com', 
-                    'password' => 'password123', 
+                    'name' => 'John Doe',
+                    'email' => 'john@example.com',
                     'type' => 'Admin', 
-                    'created_date' => '2023-01-01'
+                    'registered_date' => '2023-01-01',
                 ],
                 [
                     'id' => 2, 
                     'name' => 'Jane Smith', 
-                    'username' => 'janesmith', 
                     'email' => 'jane@example.com', 
-                    'password' => 'password456', 
                     'type' => 'User', 
-                    'created_date' => '2023-02-01'
+                    'registered_date' => '2023-02-01',
                 ],
                 [
                     'id' => 3, 
                     'name' => 'John Doe', 
-                    'username' => 'johndoe', 
                     'email' => 'john@example.com', 
-                    'password' => 'password123', 
                     'type' => 'Admin', 
-                    'created_date' => '2023-01-01'
+                    'registered_date' => '2023-01-01',
                 ],
                 [
                     'id' => 4, 
                     'name' => 'Jane Smith', 
-                    'username' => 'janesmith', 
                     'email' => 'jane@example.com', 
-                    'password' => 'password456', 
                     'type' => 'User', 
-                    'created_date' => '2023-02-01'
+                    'registered_date' => '2023-02-01',
                 ],
                 [
                     'id' => 5, 
                     'name' => 'John Doe', 
-                    'username' => 'johndoe', 
                     'email' => 'john@example.com', 
-                    'password' => 'password123', 
                     'type' => 'Admin', 
-                    'created_date' => '2023-01-01'
+                    'registered_date' => '2023-01-01',
                 ],
                 [
                     'id' => 6, 
                     'name' => 'Jane Smith', 
-                    'username' => 'janesmith', 
                     'email' => 'jane@example.com', 
-                    'password' => 'password456', 
                     'type' => 'User', 
-                    'created_date' => '2023-02-01'
+                    'registered_date' => '2023-02-01',
                 ],
                 [
                     'id' => 7, 
                     'name' => 'John Doe', 
-                    'username' => 'johndoe', 
                     'email' => 'john@example.com', 
-                    'password' => 'password123', 
                     'type' => 'Admin', 
-                    'created_date' => '2023-01-01'
+                    'registered_date' => '2023-01-01',
                 ],
                 [
                     'id' => 8, 
                     'name' => 'Jane Smith', 
-                    'username' => 'janesmith', 
                     'email' => 'jane@example.com', 
-                    'password' => 'password456', 
                     'type' => 'User', 
-                    'created_date' => '2023-02-01'
+                    'registered_date' => '2023-02-01',
                 ],
                 [
                     'id' => 9, 
                     'name' => 'John Doe', 
-                    'username' => 'johndoe', 
                     'email' => 'john@example.com', 
-                    'password' => 'password123', 
                     'type' => 'Admin', 
-                    'created_date' => '2023-01-01'
+                    'registered_date' => '2023-01-01',
                 ],
                 [
                     'id' => 10, 
                     'name' => 'Jane Smith', 
-                    'username' => 'janesmith', 
                     'email' => 'jane@example.com', 
-                    'password' => 'password456', 
                     'type' => 'User', 
-                    'created_date' => '2023-02-01'
+                    'registered_date' => '2023-02-01',
                 ],
                 // Add more users as needed
             ];
@@ -135,11 +115,10 @@
                     <tr class="bg-light-text">
                         <th class="border border-black p-2">Id</th>
                         <th class="border border-black p-2">Name</th>
-                        <th class="border border-black p-2">Username</th>
                         <th class="border border-black p-2">Email</th>
-                        <th class="border border-black p-2">Password</th>
                         <th class="border border-black p-2">Type</th>
-                        <th class="border border-black p-2">Created Date</th>
+                        <th class="border border-black p-2">Registered Date</th>
+              <th class="border border-black p-2">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -150,11 +129,17 @@
                         echo "<tr class='" . ($index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text') . "'>";
                         echo "<td class='border border-black p-2'>{$user['id']}</td>";
                         echo "<td class='border border-black p-2'>{$user['name']}</td>";
-                        echo "<td class='border border-black p-2'>{$user['username']}</td>";
                         echo "<td class='border border-black p-2'>{$user['email']}</td>";
-                        echo "<td class='border border-black p-2'>{$user['password']}</td>";
                         echo "<td class='border border-black p-2'>{$user['type']}</td>";
-                        echo "<td class='border border-black p-2'>{$user['created_date']}</td>";
+                        echo "<td class='border border-black p-2'>{$user['registered_date']}</td>";
+                        echo "<td class='border border-black p-2'>";
+                        echo "<div class='flex justify-center gap-2'>";  
+                        echo "<img src='../../../resources/icons/PencilSimple.svg' alt='Edit' class='inline w-6 h-6'>";  
+                        echo "<img src='../../../resources/icons/Trash.svg' alt='Delete' class='inline w-6 h-6'>";
+                        echo "</div>";
+                        echo "</td>";
+
+                        
                         echo "</tr>";
                     }
                     ?>
