@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../../css/root.css">
 </head>
 
-<body class="font-sans bg-light-text">
-    <div class="flex">
+<body class="font-sans bg-light-text h-screen">
+    <div class="flex min-h-screen">
         <?php require_once '../../../common/sideMenu.php'; ?>
         <div class="flex-1 container p-4 bg-secondary">
             <h1 class="text-2xl font-bold">User management</h1>
