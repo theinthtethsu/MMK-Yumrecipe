@@ -16,7 +16,7 @@ $images_path = $root_dir . '/Admin/View/resources/images/';
     <link rel="stylesheet" href="../../css/root.css">
 </head>
 
-<body>
+<body class="font-sans bg-light-text">
     <div class="flex">
         <?php require_once '../../../common/sideMenu.php'; ?>
         <div class="flex-1 container p-4 bg-secondary">
@@ -24,19 +24,12 @@ $images_path = $root_dir . '/Admin/View/resources/images/';
             <div class="flex justify-end mb-10">
                     <div class="flex space-x-4">
                         <select class="border rounded p-2 bg-light-text">
-                            <option>All Role</option>
-                            <option>Free</option>
-                            <option>Basic</option>
-                            <option>Standard</option>
-                            <option>Premium</option>
-                            <option>Non-Registered</option>
-                        </select>
-                        <select class="border rounded p-2 bg-light-text">
                             <option>All Action</option>
-                            <option>Logged in</option>
-                            <option>Logged out</option>
-                            <option>Commented</option>
-                            <option>Subscribed</option>
+                            <option>Subscribed to Basic Plan</option>
+                            <option>Subscribed to Standard Plan</option>
+                            <option>Subscribed to Premium Plan</option>
+                            <option>Rated 1 star</option>
+                            <option>Rated 5 stars</option>
                         </select>
                         <select class="border rounded p-2 bg-light-text">
                             <option>All Time</option>
@@ -52,84 +45,74 @@ $images_path = $root_dir . '/Admin/View/resources/images/';
             // Associative array of user activities
             $userActivities = [
                 [
-                    "id" => 1,
+                    "no" => 1,
+                    "email" => "john.doe@example.com",
+                    "username" => "John Doe",
                     "date" => "2023-10-01",
-                    "author" => "John Doe",
-                    "type" => "Basic",
-                    "action" => "Logged In",
-                    "description" => "User logged in successfully."
+                    "action" => "Subscribed to Basic Plan",
                 ],
                 [
-                    "id" => 2,
+                    "no" => 2,
+                    "email" => "jane.smith@example.com",
+                    "username" => "Jane Smith",
                     "date" => "2023-10-02",
-                    "author" => "Jane Smith",
-                    "type" => "Standard",
-                    "action" => "Subscribed",
-                    "description" => "User logged out successfully."
+                    "action" => "Subscribed to Standard Plan",
                 ],
                 [
-                    "id" => 3,
+                    "no" => 3,
+                    "email" => "alice.johnson@example.com",
+                    "username" => "Alice Johnson",
                     "date" => "2023-10-03",
-                    "author" => "Alice Johnson",
-                    "type" => "Premium",
-                    "action" => "Logged In",
-                    "description" => "User failed to update profile."
+                    "action" => "Rated 5 stars",
                 ],
                 [
-                    "id" => 4,
+                    "no" => 4,
+                    "email" => "bob.brown@example.com",
+                    "username" => "Bob Brown",
                     "date" => "2023-10-04",
-                    "author" => "Bob Brown",
-                    "type" => "Free",
-                    "action" => "Commented",
-                    "description" => "User commented on a post."
+                    "action" => "Rated 5 stars",
                 ],
                 [
-                    "id" => 5,
+                    "no" => 5,
+                    "email" => "charlie.green@example.com",
+                    "username" => "Charlie Green",
                     "date" => "2023-10-05",
-                    "author" => "Charlie Green",
-                    "type" => "Non-Registered",
-                    "action" => "Commented",
-                    "description" => "User subscribed to the newsletter."
+                    "action" => "Rated 1 stars",
                 ],
                 [
-                    "id" => 6,
+                    "no" => 6,
+                    "email" => "charlie.green@example.com",
+                    "username" => "Charlie Green",
                     "date" => "2023-10-05",
-                    "author" => "Charlie Green",
-                    "type" => "Free",
-                    "action" => "Rated",
-                    "description" => "User subscribed to the newsletter."
+                    "action" => "Rated 1 star",
                 ],
                 [
-                    "id" => 7,
+                    "no" => 7,
+                    "email" => "charlie.green@example.com",
+                    "username" => "Charlie Green",
                     "date" => "2023-10-05",
-                    "author" => "Charlie Green",
-                    "type" => "Subscribe",
-                    "action" => "Logged In",
-                    "description" => "User subscribed to the newsletter."
+                    "action" => "Subscribed to Premium Plan",
                 ],
                 [
-                    "id" => 8,
+                    "no" => 8,
+                    "email" => "charlie.green@example.com",
+                    "username" => "Charlie Green",
                     "date" => "2023-10-05",
-                    "author" => "Charlie Green",
-                    "type" => "Subscribe",
-                    "action" => "Logged Out",
-                    "description" => "User subscribed to the newsletter."
+                    "action" => "Subscribed to Premium Plan",
                 ],
                 [
-                    "id" => 9,
+                    "no" => 9,
+                    "email" => "charlie.green@example.com",
+                    "username" => "Charlie Green",
                     "date" => "2023-10-05",
-                    "author" => "Charlie Green",
-                    "type" => "Subscribe",
-                    "action" => "Logged In",
-                    "description" => "User subscribed to the newsletter."
+                    "action" => "Rated 5 stars",
                 ],
                 [
-                    "id" => 10,
+                    "no" => 10,
+                    "email" => "charlie.green@example.com",
+                    "username" => "Charlie Green",
                     "date" => "2023-10-05",
-                    "author" => "Charlie Green",
-                    "type" => "Free",
-                    "action" => "Rated",
-                    "description" => "User subscribed to the newsletter."
+                    "action" => "Rated 5 stars",
                 ],
             ];
             ?>
@@ -139,21 +122,19 @@ $images_path = $root_dir . '/Admin/View/resources/images/';
                     <tr class="bg-light-text">
                         <th class="border border-black p-2">No</th>
                         <th class="border border-black p-2">Date</th>
-                        <th class="border border-black p-2">Author</th>
-                        <th class="border border-black p-2">Type</th>
+                        <th class="border border-black p-2">Email</th>
+                        <th class="border border-black p-2">Username</th>
                         <th class="border border-black p-2">Action</th>
-                        <th class="border border-black p-2">Description</th>
                     </tr>
                 </thead > 
                 <tbody>
                     <?php foreach ($userActivities as $index => $activity): ?>
                         <tr class="<?= $index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text'  ?>">
-                            <td class="border border-black p-2"><?= $activity['id'] ?></td>
+                            <td class="border border-black p-2"><?= $activity['no'] ?></td>
                             <td class="border border-black p-2"><?= $activity['date'] ?></td>
-                            <td class="border border-black p-2"><?= $activity['author'] ?></td>
-                            <td class="border border-black p-2"><?= $activity['type'] ?></td>
+                            <td class="border border-black p-2"><?= $activity['email'] ?></td>
+                            <td class="border border-black p-2"><?= $activity['username'] ?></td>
                             <td class="border border-black p-2"><?= $activity['action'] ?></td>
-                            <td class="border border-black p-2"><?= $activity['description'] ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
