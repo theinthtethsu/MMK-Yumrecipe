@@ -22,6 +22,7 @@ module.exports = {
         "danger": "var(--danger)",
         "success": "var(--success)",
         "form": "var(--form-bg-color)",
+        
       },
       fontSize: {
         "large": "var(--font-size-large)",

@@ -7,7 +7,7 @@ $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-screen">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@ $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
     <link rel="stylesheet" href="../../../output.css">
 </head>
 
-<body>
+<body class="">
 
     <div class="w-64 bg-primary text-white flex flex-col justify-center items-center">
         <!-- Logo -->
