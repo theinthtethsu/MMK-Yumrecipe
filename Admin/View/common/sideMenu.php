@@ -4,6 +4,7 @@ $icons_path = "/yumrecipe/Admin/View/resources/icons/";
 $images_path = "/yumrecipe/Admin/View/resources/images/";
 $user_path = "/yumrecipe/Admin/View/resources/page/User/";
 $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
+$pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +54,7 @@ $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
                     </a>
                 </div>
                 <div class="w-full text-left">
-                        <a href="#pending-recipes" class="block w-full p-2 hover:bg-secondary active:bg-accent">
+                        <a href="<?php echo $pendingrecipe_path; ?>pendingrecipe.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'pendingrecipe.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>Notification.svg" alt="Pending Recipes Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Pending Recipes
                     </a>
                 </div>
