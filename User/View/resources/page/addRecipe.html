@@ -11,9 +11,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     /> -->
   </head>
-  <!-- <body
-    class="font-['Roboto'] font-normal text-gray-700 leading-[1]"
-  > -->
   <body class="font-roboto text-gray-700 leading-none font-normal">
     <section
       class="h-screen relative bg-cover text-white"
@@ -25,49 +22,39 @@
           url('../img/hero.jpg');
       "
     >
-      <nav class="mx-auto max-w-7xl flex justify-around pt-6 text-xl font-semibold">
+      <nav
+        class="mx-auto max-w-7xl flex justify-around pt-6 text-xl font-semibold"
+      >
         <a
           href="#"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
-          Home
-        </a>
         <a
           href="#"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
-          Recipe
-        </a>
         <a
           href="#"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
-          Add Recipe
-        </a>
         <a
           href="#"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
-          Blogs
-        </a>
         <a
           href="#"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
-          About Us
-        </a>
       </nav>
 
       <div
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-screen-xl"
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-screen-xl px-4"
       >
-        <!-- <div class="w-[120rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> -->
-
-        <div class="w-1/2">
-          <h1 class="text-5xl md:text-5.2rem font-bold mb-8 leading-tight">
+        <div class="w-full md:w-1/2">
+          <h1 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">
             Create Your Own Delish Recipes!
           </h1>
-          <p class="text-2xl line-height-1.6">
+          <p class="text-lg md:text-2xl line-height-1.6">
             Unleash your inner chef and craft your own unique recipes. Share
             your mouthwatering creations, ingredients, and steps with the world,
             and inspire others to cook with passion!
@@ -76,8 +63,10 @@
       </div>
     </section>
 
-    <section class="container mx-auto py-16">
-      <h2 class="text-center text-4xl font-bold mb-8">Add a Recipe</h2>
+    <section class="container mx-auto py-16 px-4">
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-8">
+        Add a Recipe
+      </h2>
       <form class="max-w-lg mx-auto space-y-8">
         <!-- Recipe Title -->
         <div>
@@ -126,7 +115,7 @@
         </div>
 
         <!-- Number of Servings -->
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label
               for="servings"
@@ -140,15 +129,17 @@
             />
           </div>
         </div>
+
         <!-- Cooking Time -->
-        <div
+        <div>
           <label
             for="time"
             class="block text-sm font-semibold mb-2 text-gray-600"
             >Cooking Time</label
           >
-
-          <div class="flex items-center space-x-4">
+          <div
+            class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4"
+          >
             <!-- Hours Picker -->
             <div>
               <label
@@ -206,7 +197,7 @@
           <label class="block text-sm font-semibold mb-1 text-gray-600"
             >Ingredients</label
           >
-          <div class="grid grid-cols-3 gap-4 mb-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             <input
               type="text"
               placeholder="Olive oil"
@@ -260,7 +251,7 @@
           <label class="block text-sm font-semibold mb-1 text-gray-600"
             >Nutritional Facts</label
           >
-          <div class="grid grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <label class="text-xs text-gray-600 block mb-1">Calories</label>
               <input
@@ -319,76 +310,64 @@
           <label
             for="tags"
             class="block text-sm font-semibold mb-1 text-gray-600"
+            >Choose Tags</label
           >
-            Choose Tags
-          </label>
           <div class="flex gap-2 flex-wrap">
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Japanese</span
             >
-              Japanese
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Heart-Healthy</span
             >
-              Heart-Healthy
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Under 15 minutes</span
             >
-              Under 15 minutes
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Chicken</span
             >
-              Chicken
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Grilling</span
             >
-              Grilling
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Party</span
             >
-              Party
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Family Dinner</span
             >
-              Family Dinner
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Appetizer</span
             >
-              Appetizer
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Desert</span
             >
-              Desert
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Vegetarian</span
             >
-              Vegetarian
-            </span>
             <span
               class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
               onclick="toggleTag(this)"
+              >Summer</span
             >
-              Summer
-            </span>
           </div>
         </div>
 
@@ -413,7 +392,6 @@
             class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10"
             id="upload-container"
           >
-            <!-- Image Preview Container -->
             <div class="text-center" id="preview-container">
               <svg
                 class="mx-auto size-12 text-gray-300"
@@ -451,30 +429,27 @@
         </div>
 
         <script>
-          // Function to display the uploaded image preview
           function displayImagePreview(event) {
-            const file = event.target.files[0]; // Get the uploaded file
+            const file = event.target.files[0];
             const previewContainer =
-              document.getElementById("preview-container"); // The container to display preview
+              document.getElementById("preview-container");
 
             if (file && file.type.startsWith("image/")) {
               const reader = new FileReader();
 
               reader.onload = function (e) {
-                // Display the uploaded image
                 previewContainer.innerHTML = `
                 <img src="${e.target.result}" alt="Cover Photo" class="h-48 w-auto rounded-lg object-cover shadow-md" />
                 <button onclick="resetPreview()" class="mt-4 px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600">Remove</button>
               `;
               };
 
-              reader.readAsDataURL(file); // Read file as Data URL
+              reader.readAsDataURL(file);
             } else {
               alert("Please upload a valid image file (PNG, JPG, or GIF).");
             }
           }
 
-          // Function to reset the preview back to default
           function resetPreview() {
             const previewContainer =
               document.getElementById("preview-container");
@@ -497,9 +472,6 @@
 
         <!-- Submit Button Section -->
         <div class="text-center flex items-center justify-center gap-6">
-          <!-- Privacy Toggle -->
-
-          <!-- Submit Button -->
           <button
             type="submit"
             class="bg-red-500 text-white px-4 py-3 rounded hover:bg-red-600 transition font-bold"
