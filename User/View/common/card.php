@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="px-32 py-36">
-     
  <!-- Recipe Card -->
  <div class="w-[288px] h-[340px] rounded-lg shadow-lg bg-white overflow-hidden"> 
     <!-- Image Section -->
