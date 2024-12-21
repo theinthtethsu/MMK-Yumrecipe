@@ -277,10 +277,12 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                         <textarea id="general-question1" name="general-question1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="general-answer" class="block text-dark-text">Answer 1</label>
                                         <textarea id="general-answer1" name="general-answer1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="general-answer" class="block text-dark-text">Question 2</label>
                                         <textarea id="general-question2" name="general-question2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="general-answer" class="block text-dark-text">Answer 2</label>
                                         <textarea id="general-answer2" name="general-answer2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="general-answer" class="block text-dark-text">Question 3</label>
                                         <textarea id="general-question3" name="general-question3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="general-answer" class="block text-dark-text">Answer 3</label>
@@ -293,10 +295,12 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                         <textarea id="account-registration1" name="account-registration1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="account-registration" class="block text-dark-text">Answer 1</label>
                                         <textarea id="account-registration1" name="account-registration1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="account-registration" class="block text-dark-text">Question 2</label>
                                         <textarea id="account-registration2" name="account-registration2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="account-registration" class="block text-dark-text">Answer 2</label>
                                         <textarea id="account-registration2" name="account-registration2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="account-registration" class="block text-dark-text">Question 3</label>
                                         <textarea id="account-registration3" name="account-registration3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="account-registration" class="block text-dark-text">Answer 3</label>
@@ -309,9 +313,11 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                         <label for="recipe-specific" class="block text-dark-text">Answer 1</label>
                                         <textarea id="recipe-specific1" name="recipe-specific1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="recipe-specific" class="block text-dark-text">Question 2</label>
-                                            <textarea id="recipe-specific2" name="recipe-specific2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
+                                        <textarea id="recipe-specific2" name="recipe-specific2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="recipe-specific" class="block text-dark-text">Answer 2</label>
                                         <textarea id="recipe-specific2" name="recipe-specific2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="recipe-specific" class="block text-dark-text">Question 3</label>
                                         <textarea id="recipe-specific3" name="recipe-specific3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="recipe-specific" class="block text-dark-text">Answer 3</label>
@@ -323,10 +329,12 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                         <textarea id="premium-plans1" name="premium-plans1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="premium-plans" class="block text-dark-text">Answer 1</label>
                                         <textarea id="premium-plans1" name="premium-plans1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="premium-plans" class="block text-dark-text">Question 2</label>
                                         <textarea id="premium-plans2" name="premium-plans2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="premium-plans" class="block text-dark-text">Answer 2</label>
                                         <textarea id="premium-plans2" name="premium-plans2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="premium-plans" class="block text-dark-text">Question 3</label>
                                         <textarea id="premium-plans3" name="premium-plans3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="premium-plans" class="block text-dark-text">Answer 3</label>
@@ -338,10 +346,12 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                         <textarea id="community-contribution1" name="community-contribution1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="community-contribution" class="block text-dark-text">Answer 1</label>
                                         <textarea id="community-contribution1" name="community-contribution1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="community-contribution" class="block text-dark-text">Question 2</label>
                                         <textarea id="community-contribution2" name="community-contribution2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="community-contribution" class="block text-dark-text">Answer 2</label>
                                         <textarea id="community-contribution2" name="community-contribution2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="community-contribution" class="block text-dark-text">Question 3</label>
                                         <textarea id="community-contribution3" name="community-contribution3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="community-contribution" class="block text-dark-text">Answer 3</label>
@@ -353,10 +363,12 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                         <textarea id="miscellaneous1" name="miscellaneous1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="miscellaneous" class="block text-dark-text">Answer 1</label>
                                         <textarea id="miscellaneous1" name="miscellaneous1" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="miscellaneous" class="block text-dark-text">Question 2</label>
                                         <textarea id="miscellaneous2" name="miscellaneous2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="miscellaneous" class="block text-dark-text">Answer 2</label>
                                         <textarea id="miscellaneous2" name="miscellaneous2" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
+                                        <hr class="my-4 border-t border-gray-300">
                                         <label for="miscellaneous" class="block text-dark-text">Question 3</label>
                                         <textarea id="miscellaneous3" name="miscellaneous3" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" rows="2"></textarea>
                                         <label for="miscellaneous" class="block text-dark-text">Answer 3</label>

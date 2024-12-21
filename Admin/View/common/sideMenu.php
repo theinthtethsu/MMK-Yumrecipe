@@ -6,6 +6,7 @@ $user_path = "/yumrecipe/Admin/View/resources/page/User/";
 $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
 $payment_path = "/yumrecipe/Admin/View/resources/page/Payment/";
 $pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
+$paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
 ?>
 
 <!DOCTYPE html>
