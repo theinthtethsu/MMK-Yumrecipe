@@ -10,7 +10,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="h-screen">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">

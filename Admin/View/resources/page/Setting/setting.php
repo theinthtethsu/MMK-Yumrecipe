@@ -18,7 +18,7 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
         <!-- Side Menu -->
         <?php require_once '../../../common/sideMenu.php'; ?>
         <!-- Content -->
-        <div class="flex-1 container p-4 bg-secondary">
+        <div class="flex-1 container p-4 bg-secondary overflow-y-auto" style="max-height: calc(100vh - 0px);">
             <h1 class="text-2xl font-bold mb-4">Setting</h1>
             <!-- Tabs -->
             <ul class="flex space-x-4 mb-6 justify-end">

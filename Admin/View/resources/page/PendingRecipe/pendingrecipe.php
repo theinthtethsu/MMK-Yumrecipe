@@ -14,7 +14,7 @@
 <body class="font-sans bg-light-text h-screen">
     <div class="flex min-h-screen">
         <?php require_once '../../../common/sideMenu.php'; ?>
-        <div class="flex-1 container p-4 bg-secondary">
+        <div class="flex-1 container p-4 bg-secondary overflow-y-auto" style="max-height: calc(100vh - 0px);">
             <h1 class="text-2xl font-bold">Pending Recipe</h1>
             <div class="flex justify-end">
               <!-- Container -->
@@ -162,7 +162,7 @@
             </table>
             <!-- Pagination -->
             <div class="flex items-center mt-4">
-                <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($userActivities) ?> of <?= count($userActivities) ?> entries</span>
+                <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($recipePending) ?> of <?= count($recipePending) ?> entries</span>
                 <div class="flex space-x-5 ml-60">
                     <a href="#" class="text-gray-700 hover:text-accent mt-2">
                         <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
