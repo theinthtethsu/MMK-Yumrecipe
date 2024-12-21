@@ -8,6 +8,8 @@ module.exports = {
     './Admin/View/resources/css/root.css',
     './output.css',
     './input.css',
+    './User/View/resources/**/*.{html,js,php}',
+
   ],
   theme: {
     extend: {
@@ -22,7 +24,15 @@ module.exports = {
         "danger": "var(--danger)",
         "success": "var(--success)",
         "form": "var(--form-bg-color)",
-        
+
+        //user colors
+        "userPrimary": '#FF4655',
+        "userPrimaryShade": '#e63f4d',
+        "userPrimaryTint": '#ffedee',
+        "userSecondary": '#FFD122'
+        // "userPrimary": "var(--user-primary-color)",
+
+
       },
       fontSize: {
         "large": "var(--font-size-large)",
@@ -43,6 +53,7 @@ module.exports = {
         "sans": "var(--font-family-sans)",
         "serif": "var(--font-family-serif)",
         "mono": "var(--font-family-mono)",
+        roboto: ['Roboto', 'sans-serif'],
       },
     },
   },

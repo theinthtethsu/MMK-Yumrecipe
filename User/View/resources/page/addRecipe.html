@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Recipe</title>
     <link rel="stylesheet" href="/output.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
   </head>
   <!-- <body
     class="font-['Roboto'] font-normal text-gray-700 leading-[1]"
@@ -24,34 +24,34 @@
           url('../img/hero.jpg');
       "
     >
-      <nav class="mx-auto max-w-7xl flex justify-around pt-6 text-xl font-bold">
+      <nav class="mx-auto max-w-7xl flex justify-around pt-6 text-xl font-semibold">
         <a
           href="#"
-          class="text-white no-underline hover:text-primary hover:font-bold transition duration-300"
+          class="text-white no-underline hover:text-userPrimary hover:font-bold transition duration-300"
         >
           Home
         </a>
         <a
           href="#"
-          class="text-white no-underline hover:text-primary hover:font-bold transition duration-300"
+          class="text-white no-underline hover:text-userPrimary hover:font-bold transition duration-300"
         >
           Recipe
         </a>
         <a
           href="#"
-          class="text-white no-underline hover:text-primary hover:font-bold transition duration-300"
+          class="text-white no-underline hover:text-userPrimary hover:font-bold transition duration-300"
         >
           Add Recipe
         </a>
         <a
           href="#"
-          class="text-white no-underline hover:text-primary hover:font-bold transition duration-300"
+          class="text-white no-underline hover:text-userPrimary hover:font-bold transition duration-300"
         >
           Blogs
         </a>
         <a
           href="#"
-          class="text-white no-underline hover:text-primary hover:font-bold transition duration-300"
+          class="text-white no-underline hover:text-userPrimary hover:font-bold transition duration-300"
         >
           About Us
         </a>
@@ -89,7 +89,7 @@
             id="title"
             type="text"
             required
-            class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+            class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
           />
         </div>
 
@@ -103,7 +103,7 @@
           <textarea
             id="description"
             rows="4"
-            class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+            class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
           ></textarea>
         </div>
 
@@ -116,7 +116,7 @@
           >
           <select
             id="category"
-            class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+            class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
           >
             <option>Breakfast</option>
             <option>Lunch</option>
@@ -135,7 +135,7 @@
             <input
               id="servings"
               type="number"
-              class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+              class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
             />
           </div>
         </div>
@@ -157,7 +157,7 @@
               >
               <select
                 id="hours"
-                class="rounded-md block w-full px-4 py-2 text-gray-700 bg-white border outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+                class="rounded-md block w-full px-4 py-2 text-gray-700 bg-white border outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
               >
                 <option value="" disabled selected>--</option>
                 <!-- Hour options (0-23) -->
@@ -182,7 +182,7 @@
               >
               <select
                 id="minutes"
-                class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+                class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
               >
                 <option value="" disabled selected>--</option>
                 <!-- Minute options (0-59) -->
@@ -209,22 +209,22 @@
             <input
               type="text"
               placeholder="Olive oil"
-              class="border  rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+              class="border  rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
             />
             <input
               type="number"
               placeholder="2"
-              class="border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+              class="border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
             />
             <input
               type="text"
               placeholder="tablespoons"
-              class="border  rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+              class="border  rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
             />
           </div>
           <button
             type="button"
-            class="text-primary border border-primary px-4 py-3 rounded hover:bg-primary hover:text-white transition"
+            class="text-userPrimary border border-userPrimary px-4 py-3 rounded hover:bg-userPrimary hover:text-white transition"
           >
             Add Ingredients
           </button>
@@ -241,13 +241,13 @@
               type="text"
               required
               placeholder="Click Add Instructions line by line"
-              class="w-full border border-primary rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+              class="w-full border border-userPrimary rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
             />
           </div>
           <div>
             <button
               type="button"
-              class="text-primary border border-primary px-4 py-3 rounded hover:bg-primary hover:text-white transition"
+              class="text-userPrimary border border-userPrimary px-4 py-3 rounded hover:bg-userPrimary hover:text-white transition"
             >
               Add Instructions
             </button>
@@ -265,7 +265,7 @@
               <input
                 type="text"
                 placeholder="e.g., 250 "
-                class="w-full border rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary "
+                class="w-full border rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary "
               />
             </div>
             <div>
@@ -273,7 +273,7 @@
               <input
                 type="text"
                 placeholder="e.g., 10"
-                class="w-full border rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+                class="w-full border rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
               />
             </div>
             <div>
@@ -283,7 +283,7 @@
               <input
                 type="text"
                 placeholder="e.g., 15"
-                class="w-full border  rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+                class="w-full border  rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
               />
             </div>
             <div>
@@ -291,7 +291,7 @@
               <input
                 type="text"
                 placeholder="e.g., 30"
-                class="w-full border  rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+                class="w-full border  rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
               />
             </div>
             <div>
@@ -299,7 +299,7 @@
               <input
                 type="text"
                 placeholder="e.g., 5"
-                class="w-full border  rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+                class="w-full border  rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
               />
             </div>
             <div>
@@ -307,7 +307,7 @@
               <input
                 type="text"
                 placeholder="e.g., 8"
-                class="w-full border  rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary"
+                class="w-full border  rounded p-1 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-userPrimary"
               />
             </div>
           </div>
@@ -393,8 +393,8 @@
 
         <script>
           function toggleTag(tagElement) {
-            // Toggle the primary background color and text color
-            tagElement.classList.toggle("bg-primary"); // Primary color
+            // Toggle the userPrimary background color and text color
+            tagElement.classList.toggle("bg-userPrimary"); // userPrimary color
             tagElement.classList.toggle("text-white"); // White text for contrast
             tagElement.classList.toggle("bg-gray-200"); // Return to original background
             tagElement.classList.toggle("text-gray-700"); // Return to original text color
@@ -432,7 +432,7 @@
                   for="file-upload"
                   class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
                 >
-                  <span class="text-primary">Upload a picture </span>
+                  <span class="text-userPrimary">Upload a picture </span>
                   <input
                     id="file-upload"
                     name="file-upload"
@@ -501,7 +501,7 @@
           <!-- Submit Button -->
           <button
             type="submit"
-            class="bg-primary text-white px-4 py-3 rounded hover:bg-primaryShade transition font-bold"
+            class="bg-userPrimary text-white px-4 py-3 rounded hover:bg-userPrimaryShade transition font-bold"
           >
             Submit Recipe
           </button>
