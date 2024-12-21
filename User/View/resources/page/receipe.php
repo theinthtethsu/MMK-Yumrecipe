@@ -1,3 +1,6 @@
+<?php 
+$images_path = "/yumrecipe/User/View/resources/images/";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,57 +40,57 @@
                 $recipes = [
                     [
                         'id' => 1,
-                        'title' => 'Lemon Butter Fish',
+                        'title' => 'Shredded Beef Tacos',
                         'author' => 'Ricky',
                         'time' => '1 hour 22 min',
                         'stars' => 4,
                         'reviews' => 23,
-                        'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+                        'image' => '/yumrecipe/User/View/resources/images/shredded-beef-tacos-recipe.jpg'
                     ],
                     [
                         'id' => 2,
-                        'title' => 'Spaghetti Bolognese',
+                        'title' => 'Charcuterie Cups',
                         'author' => 'Anna',
                         'time' => '45 min',
                         'stars' => 5,
                         'reviews' => 48,
-                        'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+                        'image' => '/yumrecipe/User/View/resources/images/Charcuterie Cups.jpg'
                     ],
                     [
                       'id' => 3,
-                      'title' => 'Spaghetti Bolognese',
+                      'title' => 'Crab Cakes ',
                       'author' => 'Anna',
                       'time' => '45 min',
                       'stars' => 5,
                       'reviews' => 48,
-                      'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+                      'image' => '/yumrecipe/User/View/resources/images/maryland-crab-cakes-recipe-jennifercooks_1676-copy.webp'
                   ],
                   [
                     'id' => 4,
-                    'title' => 'Spaghetti Bolognese',
+                    'title' => 'Strawberry Dessert',
                     'author' => 'Anna',
                     'time' => '45 min',
                     'stars' => 5,
                     'reviews' => 48,
-                    'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+                    'image' => '/yumrecipe/User/View/resources/images/strawberry-salsa-with-cinnamon-and-sugar-chips-recipe.jpg'
                 ],
                 [
                   'id' => 5,
-                  'title' => 'Spaghetti Bolognese',
+                  'title' => 'Cheddar Cheeseball',
                   'author' => 'Anna',
                   'time' => '45 min',
                   'stars' => 5,
                   'reviews' => 48,
-                  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+                  'image' => '/yumrecipe/User/View/resources/images/old-fashioned-cheeseball.webp'
               ],
               [
                 'id' => 6,
-                'title' => 'Spaghetti Bolognese',
+                'title' => 'Grinch Cookies',
                 'author' => 'Anna',
                 'time' => '45 min',
                 'stars' => 5,
                 'reviews' => 48,
-                'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+                'image' => '/yumrecipe/User/View/resources/images/easy-holiday-grinch-cookies-recipe-jennifercooks.webp'
             ],
             [
               'id' => 7,
@@ -96,7 +99,7 @@
               'time' => '45 min',
               'stars' => 5,
               'reviews' => 48,
-              'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+              'image' => '/yumrecipe/User/View/resources/images/recipe.png'
           ],
           [
             'id' => 8,
@@ -105,7 +108,7 @@
             'time' => '45 min',
             'stars' => 5,
             'reviews' => 48,
-            'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+            'image' => '/yumrecipe/User/View/resources/images/recipe.png'
         ],
         [
           'id' => 9,
@@ -114,7 +117,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+          'image' => '/yumrecipe/User/View/resources/images/recipe.png'
       ],
       [
         'id' => 10,
@@ -123,7 +126,7 @@
         'time' => '45 min',
         'stars' => 5,
         'reviews' => 48,
-        'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+        'image' => '/yumrecipe/User/View/resources/images/recipe.png'
     ],
     [
       'id' => 11,
@@ -132,7 +135,7 @@
       'time' => '45 min',
       'stars' => 5,
       'reviews' => 48,
-      'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+      'image' => '/yumrecipe/User/View/resources/images/recipe.png'
   ],
   [
     'id' => 12,
@@ -141,7 +144,7 @@
     'time' => '45 min',
     'stars' => 5,
     'reviews' => 48,
-    'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+    'image' => '/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 13,
@@ -150,7 +153,7 @@
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 14,
@@ -159,7 +162,7 @@
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 15,
@@ -168,7 +171,7 @@
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 16,
@@ -177,7 +180,7 @@
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 17,
@@ -186,7 +189,7 @@
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 18,
@@ -195,7 +198,7 @@
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
 ],
                     // Add more recipes here...
                 ];
@@ -204,6 +207,8 @@
                 foreach ($recipes as $recipe) {
                   echo '
                   <div class="bg-white w-52 shadow-lg rounded-lg overflow-hidden">
+                  
+
                       <img src="' . $recipe['image'] . '" alt="' . $recipe['title'] . '" class="w-full h-40 object-cover">
                       <div class="p-2">
                           <h3 class="text-lg font-bold text-gray-900">' . $recipe['title'] . '</h3>

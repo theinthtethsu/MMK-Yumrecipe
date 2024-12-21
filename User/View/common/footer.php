@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yum Recipe</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
 </head>
 <body class="bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto p-8 flex  bg-gray-900 text-white flex-col md:flex-row gap-8">
@@ -31,11 +33,19 @@
             </p>
             <!-- Social Media Icons -->
             <div class="flex justify-center gap-6">
-                <a href="#" class="text-red-400 text-2xl"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="text-red-400 text-2xl"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-red-400 text-2xl"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-red-400 text-2xl"><i class="fab fa-facebook"></i></a>
-            </div>
+    <a href="#" class="text-red-400 text-2xl" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+    </a>
+    <a href="#" class="text-red-400 text-2xl" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="text-red-400 text-2xl" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="text-red-400 text-2xl" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+    </a>
+</div>
         </div>
 
         <!-- Right Section: Contact Form -->
@@ -47,7 +57,7 @@
             <form class="space-y-4">
                 <input type="email" placeholder="Enter Your Email" 
                     class="w-full px-4 py-2 rounded-full bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-red-400" />
-                <textarea placeholder="Enter Your Message" rows="3" 
+                <textarea placeholder="Enter Your Message"  
                     class="w-full px-4 py-2 rounded-full bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
                 <div class="text-center">
                     <button type="submit" 
