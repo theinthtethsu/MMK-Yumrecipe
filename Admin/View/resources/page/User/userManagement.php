@@ -145,6 +145,7 @@
                     ?>
                 </tbody>
             </table>
+            <!-- Pagination -->
             <div class="flex items-center mt-4">
                 <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($users) ?> of <?= count($users) ?> entries</span>
                 <div class="flex space-x-5 ml-60">

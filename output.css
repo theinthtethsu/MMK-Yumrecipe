@@ -5426,6 +5426,10 @@ video {
   width: 100vw;
 }
 
+.w-1\/3 {
+  width: 33.333333%;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -8765,6 +8769,10 @@ video {
   border-color: rgb(113 63 18 / var(--tw-divide-opacity, 1));
 }
 
+.divide-form > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--form-bg-color);
+}
+
 .divide-opacity-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 0;
 }
@@ -9963,6 +9971,10 @@ video {
   border-color: rgb(113 63 18 / var(--tw-border-opacity, 1));
 }
 
+.border-form {
+  border-color: var(--form-bg-color);
+}
+
 .border-opacity-0 {
   --tw-border-opacity: 0;
 }
@@ -10494,6 +10506,11 @@ video {
 .bg-yellow-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(113 63 18 / var(--tw-bg-opacity, 1));
+}
+
+.bg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-0 {
@@ -11150,6 +11167,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-form {
+  --tw-gradient-from: var(--form-bg-color) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-accent {
   --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--accent-color) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -11615,6 +11638,11 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), #713f12 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-form {
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--form-bg-color) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .to-accent {
   --tw-gradient-to: var(--accent-color) var(--tw-gradient-to-position);
 }
@@ -11985,6 +12013,10 @@ video {
 
 .to-yellow-900 {
   --tw-gradient-to: #713f12 var(--tw-gradient-to-position);
+}
+
+.to-form {
+  --tw-gradient-to: var(--form-bg-color) var(--tw-gradient-to-position);
 }
 
 .decoration-slice {
@@ -13940,6 +13972,10 @@ video {
   color: rgb(113 63 18 / var(--tw-text-opacity, 1));
 }
 
+.text-form {
+  color: var(--form-bg-color);
+}
+
 .text-opacity-0 {
   --tw-text-opacity: 0;
 }
@@ -14392,6 +14428,10 @@ video {
 
 .caret-yellow-900 {
   caret-color: #713f12;
+}
+
+.caret-form {
+  caret-color: var(--form-bg-color);
 }
 
 .opacity-0 {
@@ -15153,6 +15193,10 @@ video {
   --tw-ring-color: rgb(113 63 18 / var(--tw-ring-opacity, 1));
 }
 
+.ring-form {
+  --tw-ring-color: var(--form-bg-color);
+}
+
 .ring-opacity-0 {
   --tw-ring-opacity: 0;
 }
@@ -15603,6 +15647,10 @@ video {
 
 .ring-offset-yellow-900 {
   --tw-ring-offset-color: #713f12;
+}
+
+.ring-offset-form {
+  --tw-ring-offset-color: var(--form-bg-color);
 }
 
 .blur {
@@ -16493,6 +16541,11 @@ video {
   background-color: rgb(230 63 77 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-green-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:font-bold:hover {
   font-weight: var(--font-weight-bold);
 }
@@ -16526,6 +16579,21 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-green-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-red-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity, 1));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -16557,13 +16625,29 @@ video {
   --tw-ring-color: rgb(254 202 202 / var(--tw-ring-opacity, 1));
 }
 
+.focus\:ring-blue-400:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(96 165 250 / var(--tw-ring-opacity, 1));
+}
+
 .active\:bg-accent:active {
   background-color: var(--accent-color);
 }
 
 @media (min-width: 640px) {
+  .sm\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 }
 
