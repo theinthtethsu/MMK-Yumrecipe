@@ -373,7 +373,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
 
             <?php
             // Associative array of user activities
-            $recipePending = [
+            $recipeComment = [
                 [
                     "no" => 1,
                     "username" => "John Doe",
@@ -470,14 +470,14 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
                     </tr>
                 </thead > 
                 <tbody>
-                    <?php foreach ($recipePending as $index => $pending): ?>
+                    <?php foreach ($recipeComment as $index => $comment): ?>
                         <tr class="<?= $index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text'  ?>">
-                            <td class="border border-black p-2"><?= $pending['no'] ?></td>
-                            <td class="border border-black p-2"><?= $pending['username'] ?></td>
-                            <td class="border border-black p-2"><?= $pending['email'] ?></td>
-                            <td class="border border-black p-2"><?= $pending['date'] ?></td>
-                            <td class="border border-black p-2"><?= $pending['recipetitle'] ?></td>
-                            <td class="border border-black p-2"><?= $pending['comment'] ?></td>
+                            <td class="border border-black p-2"><?= $comment['no'] ?></td>
+                            <td class="border border-black p-2"><?= $comment['username'] ?></td>
+                            <td class="border border-black p-2"><?= $comment['email'] ?></td>
+                            <td class="border border-black p-2"><?= $comment['date'] ?></td>
+                            <td class="border border-black p-2"><?= $comment['recipetitle'] ?></td>
+                            <td class="border border-black p-2"><?= $comment['comment'] ?></td>
                             <td class="border border-black p-2 flex justify-center">
                                 <button class="text-red-600 hover:text-red-800 ">
                                     <span class="material-icons text-xl">delete</span>
@@ -489,7 +489,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
             </table>
             <!-- Pagination -->
             <div class="flex items-center mt-4">
-                <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($pending) ?> of <?= count($pending) ?> entries</span>
+                <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($comment) ?> of <?= count($comment) ?> entries</span>
                 <div class="flex space-x-5 ml-60">
                     <a href="#" class="text-gray-700 hover:text-accent mt-2">
                         <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
