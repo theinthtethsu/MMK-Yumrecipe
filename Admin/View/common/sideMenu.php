@@ -1,15 +1,21 @@
 <?php
-
-$icons_path = "/yumrecipe/Admin/View/resources/icons/";
-$images_path = "/yumrecipe/Admin/View/resources/images/";
+//Page Path
 $user_path = "/yumrecipe/Admin/View/resources/page/User/";
 $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
+$payment_path = "/yumrecipe/Admin/View/resources/page/Payment/";
 $pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
 $community_path = "/yumrecipe/Admin/View/resources/page/Community/";
+$gallery_path = "/yumrecipe/Admin/View/resources/page/Gallery/";
+$admin_path = "/yumrecipe/Admin/View/resources/page/Admin/";
+
+//Images Path
+$icons_path = "/yumrecipe/Admin/View/resources/icons/";
+$images_path = "/yumrecipe/Admin/View/resources/images/";
+$paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="h-screen">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +36,7 @@ $community_path = "/yumrecipe/Admin/View/resources/page/Community/";
         <nav class="w-full flex flex-col items-center">
             <div class="space-y-0 w-full text-center">
                 <div class="w-full text-left">
-                    <a href="#dashboard" class="block w-full p-2  hover:bg-secondary active:bg-accent">
+                    <a href="<?php echo $admin_path; ?>adminDashboard.php" class="block w-full p-2  hover:bg-secondary active:bg-accent <?php echo basename($_SERVER['PHP_SELF']) == 'adminDashboard.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path ?>Frame.svg" alt="Dashboard Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Dashboard
                     </a>
                 </div>
@@ -78,10 +84,10 @@ $community_path = "/yumrecipe/Admin/View/resources/page/Community/";
                         <a href="#subscription" class="block w-full p-2 hover:bg-secondary active:bg-accent">
                         <img src="<?php echo $icons_path; ?>SketchLogo.svg" alt="Subscription Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Subscription
                     </a>
-                </div>
+                </div>  
                 <div class="w-full text-left">
-                    <a href="#payment" class="block w-full p-2 hover:bg-secondary active:bg-accent">
-                        <img src="<?php echo $icons_path; ?>PayPalLogo.svg" alt="Payment Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Payment
+                    <a href="<?php echo $payment_path; ?>payment.php" class="block w-full p-2 hover:bg-secondary active:bg-accent <?php echo basename($_SERVER['PHP_SELF']) == 'payment.php' ? 'bg-accent' : '' ?>">
+                        <img src="<?php echo $icons_path; ?>PayPalLogo.svg" alt="Payment Icon" class="inline ml-10 " style="width: 20px; height: 20px;"> Payment
                     </a>
                 </div>
                 <div class="w-full text-left">
@@ -90,7 +96,7 @@ $community_path = "/yumrecipe/Admin/View/resources/page/Community/";
                     </a>
                 </div>
                 <div class="w-full text-left">
-                    <a href="#gallery" class="block w-full p-2 hover:bg-secondary active:bg-accent">
+                    <a href="<?php echo $gallery_path; ?>gallery.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'gallery.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>Image.svg" alt="Gallery Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Gallery
                     </a>
                 </div>
