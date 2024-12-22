@@ -5,6 +5,7 @@ $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
 $payment_path = "/yumrecipe/Admin/View/resources/page/Payment/";
 $pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
 $gallery_path = "/yumrecipe/Admin/View/resources/page/Gallery/";
+$admin_path = "/yumrecipe/Admin/View/resources/page/Admin/";
 
 //Images Path
 $icons_path = "/yumrecipe/Admin/View/resources/icons/";
@@ -34,7 +35,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
         <nav class="w-full flex flex-col items-center">
             <div class="space-y-0 w-full text-center">
                 <div class="w-full text-left">
-                    <a href="#dashboard" class="block w-full p-2  hover:bg-secondary active:bg-accent">
+                    <a href="<?php echo $admin_path; ?>adminDashboard.php" class="block w-full p-2  hover:bg-secondary active:bg-accent <?php echo basename($_SERVER['PHP_SELF']) == 'adminDashboard.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path ?>Frame.svg" alt="Dashboard Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Dashboard
                     </a>
                 </div>
