@@ -11,7 +11,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
     <title>Payment</title>
     <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../../../../../output.css">
-    <!-- <script src="../../js/payment.js" defer></script> -->
+    <script src="../../js/payment.js" defer></script>
 </head>
 
 <body class="font-sans bg-light-text">
@@ -115,73 +115,5 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
             </div>
         </div>
 </body>
-<script>
-    const accountNameInput = document.getElementById('account-name-kpay');
-    const accountNumberInput = document.getElementById('phone-number-kpay');
-    const mobileBankingSelect = document.getElementById('mobile-banking');
-    const preview = document.getElementById('preview');
-    const receivingInfoElements = document.querySelectorAll('.mobile-banking-option');
-
-    accountNameInput.addEventListener('input', function() {
-        document.getElementById('preview-account-name').textContent = this.value;
-    });
-
-    accountNumberInput.addEventListener('input', function() {
-        document.getElementById('preview-account-number').textContent = this.value;
-    });
-
-  
-    let selectedOption = null;
-
-    // Mobile Banking Selection
-    mobileBankingSelect.addEventListener('change', function() {
-        const selectedValue = this.value;
-        let logoSrc = '';
-
-        // Hide all receiving info elements initially
-        receivingInfoElements.forEach(element => {
-            element.classList.add('hidden');
-        });
-
-        // If no option is selected, hide the logo preview
-        if (selectedValue === 'default') {
-            preview.classList.add('hidden');
-        } else {
-            preview.classList.remove('hidden');
-            switch (selectedValue) {
-                case 'kpay':
-                    logoSrc = '<?php echo $paymentlogo_path; ?>kpayLogo.png';
-                    selectedOption = <?php echo json_encode($mobileBankingOptions['kpay']); ?>;
-                    break;
-                case 'wavepay':
-                    logoSrc = '<?php echo $paymentlogo_path; ?>wavepayLogo.png';
-                    selectedOption = <?php echo json_encode($mobileBankingOptions['wavepay']); ?>;
-                    break;
-                case 'ayapay':
-                    logoSrc = '<?php echo $paymentlogo_path; ?>ayapayLogo.png';
-                    selectedOption = <?php echo json_encode($mobileBankingOptions['ayapay']); ?>;
-                    break;
-            }
-            // Show only the relevant receiving info elements
-            receivingInfoElements.forEach(element => {
-                if (element.dataset.value === selectedValue) {
-                    element.classList.remove('hidden');
-                }
-            });
-        }
-
-        logoPreview.src = logoSrc;
-    });
-
-    // Show Payment Modal
-    function showPaymentModal() {
-        document.getElementById('paymentModal').classList.remove('hidden');
-    }
-
-    // Close Payment Modal
-    function closePaymentModal() {
-        document.getElementById('paymentModal').classList.add('hidden');
-    }
-</script>
 
 </html>
