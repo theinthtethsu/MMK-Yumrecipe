@@ -1,11 +1,14 @@
 <?php
-
-$icons_path = "/yumrecipe/Admin/View/resources/icons/";
-$images_path = "/yumrecipe/Admin/View/resources/images/";
+//Page Path
 $user_path = "/yumrecipe/Admin/View/resources/page/User/";
 $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
 $payment_path = "/yumrecipe/Admin/View/resources/page/Payment/";
 $pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
+$gallery_path = "/yumrecipe/Admin/View/resources/page/Gallery/";
+
+//Images Path
+$icons_path = "/yumrecipe/Admin/View/resources/icons/";
+$images_path = "/yumrecipe/Admin/View/resources/images/";
 $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
 ?>
 
@@ -91,7 +94,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                     </a>
                 </div>
                 <div class="w-full text-left">
-                    <a href="#gallery" class="block w-full p-2 hover:bg-secondary active:bg-accent">
+                    <a href="<?php echo $gallery_path; ?>gallery.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'gallery.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>Image.svg" alt="Gallery Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Gallery
                     </a>
                 </div>

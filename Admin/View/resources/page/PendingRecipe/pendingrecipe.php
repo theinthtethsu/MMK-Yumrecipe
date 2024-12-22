@@ -120,6 +120,7 @@
             ];
             ?>
 
+            <!-- Table -->
             <table class="min-w-full border border-collapse border-black">
                 <thead>
                     <tr class="bg-light-text">
@@ -133,6 +134,7 @@
                     </tr>
                 </thead > 
                 <tbody>
+                    <!-- Table Body -->
                     <?php foreach ($recipePending as $index => $pending): ?>
                         <tr class="<?= $index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text'  ?>">
                             <td class="border border-black p-2"><?= $pending['no'] ?></td>
@@ -162,7 +164,9 @@
             </table>
             <!-- Pagination -->
             <div class="flex items-center mt-4">
+                <!-- Showing entries -->
                 <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($recipePending) ?> of <?= count($recipePending) ?> entries</span>
+                <!-- Pagination -->
                 <div class="flex space-x-5 ml-60">
                     <a href="#" class="text-gray-700 hover:text-accent mt-2">
                         <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">

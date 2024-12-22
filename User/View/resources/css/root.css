@@ -1,9 +1,8 @@
 :root {
-    --font-family: 'Arial', sans-serif;
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --tertiary-color: #28a745;
-    --large-font-size: 1.5rem;
-    --medium-font-size: 1rem;
-    --small-font-size: 0.875rem;
+    --user-font-family: 'Arial', sans-serif;
+    --user-primary-color: #FF4655;
+    --user-secondary-color: #FFD122;
+    --user-large-font-size: 1.5rem;
+    --user-medium-font-size: 1rem;
+    --user-small-font-size: 0.875rem;
 }
