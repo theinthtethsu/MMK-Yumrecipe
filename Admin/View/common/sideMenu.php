@@ -39,11 +39,6 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                         <img src="<?php echo $icons_path ?>Frame.svg" alt="Dashboard Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Dashboard
                     </a>
                 </div>
-                <div class="w-full text-left">
-                    <a href="#Profile" class="block w-full p-2 hover:bg-secondary active:bg-accent">
-                        <img src="<?php echo $icons_path; ?>UserSquare.svg" alt="Profile Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Profile
-                    </a>
-                </div>
                 <div class="w-full text-left ">
                     <a href="<?php echo $user_path; ?>userActivities.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'userActivities.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>Pulse.svg" alt="User Activities Icon" class="inline ml-10" style="width: 20px; height: 20px;"> User Activities
@@ -91,7 +86,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                 </div>
                 <div class="w-full text-left">
                     <a href="#financial" class="block w-full p-2 hover:bg-secondary active:bg-accent">
-                        <img src="<?php echo $icons_path; ?>CurrencyCircleDollar.svg" alt="Financial Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Financial
+                        <img src="<?php echo $icons_path; ?>CurrencyCircleDollar.svg" alt="Financial Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Income
                     </a>
                 </div>
                 <div class="w-full text-left">

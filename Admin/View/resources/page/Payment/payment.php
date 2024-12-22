@@ -28,13 +28,13 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                     <div class="bg-white p-6 rounded-md shadow-md w-1/3">
                         <h2 class="text-xl font-semibold mb-4">Add New Payment</h2>
                         <label for="payment-name" class="block text-dark-text">Payment Name</label>
-                        <input type="text" id="payment-name" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" placeholder="Enter Payment Name">
+                        <input type="text" id="payment-name" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" placeholder="Enter Payment Name" required>
 
                         <label for="payment-logo" class="block text-dark-text mt-4">Payment Logo</label>
-                        <input type="file" id="payment-logo" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2">
+                        <input type="file" id="payment-logo" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" required>
 
                         <div class="mt-4 flex justify-end">
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600" onclick="savePayment()">Save</button>
+                            <button class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2" onclick="savePayment()">Save</button>
                             <button class="bg-gray-300 text-black px-4 py-2 rounded-md shadow ml-2 hover:bg-gray-400" onclick="closePaymentModal()">Cancel</button>
                         </div>
                     </div>
