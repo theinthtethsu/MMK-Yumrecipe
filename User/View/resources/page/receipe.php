@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<?php 
-=======
-<?php
->>>>>>> 4bf1c7d818e29b11087bc83d1ae14c9ecf92ef6b
-$images_path = "/yumrecipe/User/View/resources/images/";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,62 +18,61 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
       <!-- Recipe Card -->
 
-<<<<<<< HEAD
             <?php
                 $recipes = [
                     [
                         'id' => 1,
-                        'title' => 'Shredded Beef Tacos',
+                        'title' => 'Lemon Butter Fish',
                         'author' => 'Ricky',
                         'time' => '1 hour 22 min',
                         'stars' => 4,
                         'reviews' => 23,
-                        'image' => '/yumrecipe/User/View/resources/images/shredded-beef-tacos-recipe.jpg'
+                        'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
                     ],
                     [
                         'id' => 2,
-                        'title' => 'Charcuterie Cups',
+                        'title' => 'Spaghetti Bolognese',
                         'author' => 'Anna',
                         'time' => '45 min',
                         'stars' => 5,
                         'reviews' => 48,
-                        'image' => '/yumrecipe/User/View/resources/images/Charcuterie Cups.jpg'
+                        'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
                     ],
                     [
                       'id' => 3,
-                      'title' => 'Crab Cakes ',
+                      'title' => 'Spaghetti Bolognese',
                       'author' => 'Anna',
                       'time' => '45 min',
                       'stars' => 5,
                       'reviews' => 48,
-                      'image' => '/yumrecipe/User/View/resources/images/maryland-crab-cakes-recipe-jennifercooks_1676-copy.webp'
+                      'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
                   ],
                   [
                     'id' => 4,
-                    'title' => 'Strawberry Dessert',
+                    'title' => 'Spaghetti Bolognese',
                     'author' => 'Anna',
                     'time' => '45 min',
                     'stars' => 5,
                     'reviews' => 48,
-                    'image' => '/yumrecipe/User/View/resources/images/strawberry-salsa-with-cinnamon-and-sugar-chips-recipe.jpg'
+                    'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
                 ],
                 [
                   'id' => 5,
-                  'title' => 'Cheddar Cheeseball',
+                  'title' => 'Spaghetti Bolognese',
                   'author' => 'Anna',
                   'time' => '45 min',
                   'stars' => 5,
                   'reviews' => 48,
-                  'image' => '/yumrecipe/User/View/resources/images/old-fashioned-cheeseball.webp'
+                  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
               ],
               [
                 'id' => 6,
-                'title' => 'Grinch Cookies',
+                'title' => 'Spaghetti Bolognese',
                 'author' => 'Anna',
                 'time' => '45 min',
                 'stars' => 5,
                 'reviews' => 48,
-                'image' => '/yumrecipe/User/View/resources/images/easy-holiday-grinch-cookies-recipe-jennifercooks.webp'
+                'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
             ],
             [
               'id' => 7,
@@ -89,7 +81,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
               'time' => '45 min',
               'stars' => 5,
               'reviews' => 48,
-              'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+              'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
           ],
           [
             'id' => 8,
@@ -98,29 +90,16 @@ $images_path = "/yumrecipe/User/View/resources/images/";
             'time' => '45 min',
             'stars' => 5,
             'reviews' => 48,
-            'image' => '/yumrecipe/User/View/resources/images/recipe.png'
-=======
-      <?php
-      $recipes = [
-        [
-          'id' => 1,
-          'title' => 'Shredded Beef Tacos',
-          'author' => 'Ricky',
-          'time' => '1 hour 22 min',
-          'stars' => 4,
-          'reviews' => 23,
-          'image' => '/yumrecipe/User/View/resources/images/shredded-beef-tacos-recipe.jpg'
->>>>>>> 4bf1c7d818e29b11087bc83d1ae14c9ecf92ef6b
+            'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
         ],
         [
-          'id' => 2,
-          'title' => 'Charcuterie Cups',
+          'id' => 9,
+          'title' => 'Spaghetti Bolognese',
           'author' => 'Anna',
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-<<<<<<< HEAD
-          'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+          'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
       ],
       [
         'id' => 10,
@@ -129,7 +108,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
         'time' => '45 min',
         'stars' => 5,
         'reviews' => 48,
-        'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+        'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
     ],
     [
       'id' => 11,
@@ -138,7 +117,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       'time' => '45 min',
       'stars' => 5,
       'reviews' => 48,
-      'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+      'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
   ],
   [
     'id' => 12,
@@ -147,7 +126,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     'time' => '45 min',
     'stars' => 5,
     'reviews' => 48,
-    'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+    'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 13,
@@ -156,7 +135,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 14,
@@ -165,7 +144,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 15,
@@ -174,7 +153,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 16,
@@ -183,7 +162,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 17,
@@ -192,7 +171,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
 ],
 [
   'id' => 18,
@@ -201,7 +180,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   'time' => '45 min',
   'stars' => 5,
   'reviews' => 48,
-  'image' => '/yumrecipe/User/View/resources/images/recipe.png'
+  'image' => 'http://localhost/yumrecipe/User/View/resources/images/recipe.png'
 ],
                     // Add more recipes here...
                 ];
@@ -210,165 +189,6 @@ $images_path = "/yumrecipe/User/View/resources/images/";
                 foreach ($recipes as $recipe) {
                   echo '
                   <div class="bg-white w-52 shadow-lg rounded-lg overflow-hidden">
-                  
-
-=======
-          'image' => '/yumrecipe/User/View/resources/images/Charcuterie Cups.jpg'
-        ],
-        [
-          'id' => 3,
-          'title' => 'Crab Cakes ',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/maryland-crab-cakes-recipe-jennifercooks_1676-copy.webp'
-        ],
-        [
-          'id' => 4,
-          'title' => 'Strawberry Dessert',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/strawberry-salsa-with-cinnamon-and-sugar-chips-recipe.jpg'
-        ],
-        [
-          'id' => 5,
-          'title' => 'Cheddar Cheeseball',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/old-fashioned-cheeseball.webp'
-        ],
-        [
-          'id' => 6,
-          'title' => 'Grinch Cookies',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/easy-holiday-grinch-cookies-recipe-jennifercooks.webp'
-        ],
-        [
-          'id' => 7,
-          'title' => 'Herb-Butter Rubbed Turkey',
-          'author' => 'Dev',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/herb-butter-rubbed-rub-turkey.webp'
-        ],
-        [
-          'id' => 8,
-          'title' => 'Easy Lemon Dill Sauce
-',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/easy-lemon-dill-sauce.webp'
-        ],
-        [
-          'id' => 9,
-          'title' => 'Monte Cristo Sliders',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/monte_cristo_sandwich.webp'
-        ],
-        [
-          'id' => 10,
-          'title' => 'Cup Cake',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Cake.webp'
-        ],
-        [
-          'id' => 11,
-          'title' => 'Classic Crunchy Ground Beef Tacos',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/IMG_8.jpg'
-        ],
-        [
-          'id' => 12,
-          'title' => 'Chicken Khao Soi',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Chicken-Khao-Soi.jpg'
-        ],
-        [
-          'id' => 13,
-          'title' => 'Si Hta Min',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Si Hta Min.jpg'
-        ],
-        [
-          'id' => 14,
-          'title' => 'Cranberry Sauce',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/cranberry-sauce-recipe-1.webp'
-        ],
-        [
-          'id' => 15,
-          'title' => 'Chocolate Layer Sweet Treat',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Forticreme-Chocolate-Chocolate-Layered.jpeg'
-        ],
-        [
-          'id' => 16,
-          'title' => 'Burmese Prawn Curry',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 4,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Burmese-Prawn-Curry.jpg'
-        ],
-        [
-          'id' => 17,
-          'title' => 'Tomato Soup',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/tomato-soup-recipe.jpg'
-        ],
-        [
-          'id' => 18,
-          'title' => 'Cheese Cake',
-          'author' => 'Anna',
-          'time' => '45 min',
-          'stars' => 5,
-          'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Best-Cheesecake-Recipe-2-1-of-1-4.jpg'
-        ],
-        // Add more recipes here...
-      ];
-
-      foreach ($recipes as $recipe) {
-        echo '
-                  <a href="receipeDetail.php" style="text-decoration: none; color: inherit;">
-                  <div class="max-w-sm rounded-lg shadow-lg bg-white overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
-                
->>>>>>> 4bf1c7d818e29b11087bc83d1ae14c9ecf92ef6b
                       <img src="' . $recipe['image'] . '" alt="' . $recipe['title'] . '" class="w-full h-40 object-cover">
                       <div class="absolute top-2 right-2"> <!-- Bookmark Icon -->
             <div class="bg-yellow-300 rounded-full p-2"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
