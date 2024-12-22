@@ -9,7 +9,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <title>Receipe Detail Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-200">
+<body class="bg-white">
 <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/header-after-login.php'); ?>
 <div>
   <div class="bg-red-500 w-full h-auto pl-8 p-4 text-white text-2xl">Shredded Beef Tacos</div>
@@ -81,7 +81,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       </ul>
     </div>
 
-    <div class="w-64 p-4 mr-28 bg-gray-200 rounded-md shadow-md border  border-red-400">
+    <div class="w-64 p-4 mr-28 bg-white rounded-md shadow-md border  border-red-400">
     <h2 class="text-lg font-bold text-red-500 mb-1">Nutrition Facts</h2>
     <p class="text-sm text-red-500 mb-4">Amount Per Serving</p>
     <div class="flex justify-between mb-2">
