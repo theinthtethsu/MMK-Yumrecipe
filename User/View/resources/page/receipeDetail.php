@@ -167,7 +167,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     <!-- Recipe Item -->
     <div class="flex items-center mb-8">
       <img
-        src="<?php echo $images_path ?>Best-Cheesecake-Recipe-2-1-of-1-4.jpg" alt="burger" class="w-36 h-28"
+        src="<?php echo $images_path ?>Best-Cheesecake.jpg" alt="cheese-cake" class="w-36 h-28"
         
       />
       <div class="ml-2 ">
@@ -177,7 +177,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     </div>
     <div class="flex items-center mb-4">
       <img
-        src="<?php echo $images_path ?>tomato-soup-recipe.jpg" alt="burger" class="w-36 h-28"
+        src="<?php echo $images_path ?>tomato-soup.jpg" alt="soup" class="w-36 h-28"
       />
       <div class="ml-2">
         <p>Tomato Soup</p>
