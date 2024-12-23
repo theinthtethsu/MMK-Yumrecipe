@@ -31,7 +31,8 @@ module.exports = {
         "userPrimary": '#FF4655',
         "userPrimaryShade": '#e63f4d',
         "userPrimaryTint": '#ffedee',
-        "userSecondary": '#FFD122'
+        "userSecondary": '#FFD122',
+        "userPink": '#ffd1e6',
         // "userPrimary": "var(--user-primary-color)",
 
 
