@@ -103,7 +103,7 @@
         </ul>
     </aside>
 
-    <div class="flex-1 flex flex-col bg-gray-50 p-10">
+<div class="flex-1 flex flex-col bg-gray-50 p-10">
         <!--Empty List-->
     <div class="hidden text-center text-gray-500">
                 <div class="text-6xl mb-4">🛒</div>
