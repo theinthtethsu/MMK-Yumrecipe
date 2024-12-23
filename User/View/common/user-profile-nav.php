@@ -53,6 +53,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
                     </div>
                 </div>
     </div>
+    
         <!-- Top Navbar -->
         <div class="w-full">
         <nav class="bg-gray-100  p-4 flex justify-center items-center">

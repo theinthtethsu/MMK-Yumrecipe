@@ -15,7 +15,9 @@ $user_path = "/yumrecipe/User/View/resources/page/";
 <section class="flex items-center justify-center mt-9" >
     <nav class="w-full max-w-2xl  text-gray-700">
         <!-- Top Red Line -->
-        <div class="h-0.5 bg-red-400 w-full"></div>
+        <div class="h-0.5 bg-red-400 w-full">
+          
+        </div>
     
         <!-- Menu Items -->
         <ul class="flex justify-center space-x-10 py-4 font-semibold">

@@ -37,6 +37,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>setting.html">Setting</a></li>
             </ul>
         </aside>
+        
 
         <!-- Main Content -->
         <div class="flex-1 flex flex-col bg-gray-50">
