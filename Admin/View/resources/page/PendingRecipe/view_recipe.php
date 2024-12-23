@@ -14,7 +14,7 @@
     <div class="flex min-h-screen">
         <?php require_once '../../../common/sideMenu.php'; ?>
         <div class="flex-1 container p-4 bg-secondary border border-black">
-            <h1 class="text-2xl font-bold mb-5">Pending Recipe</h1>
+            <h1 class="text-2xl font-bold mb-10">Pending Recipe</h1>
             <div class="flex justify-center">
             <div class="max-w-2xl bg-light-text shadow-lg rounded-lg p-6">
                 <h2 class="text-2xl font-bold mb-4 text-center">Approval</h2>
@@ -49,6 +49,12 @@
     </div>
   </div>
 </div>
+<div class="flex justify-end mb-5">
+        <a href="/yumrecipe/Admin/View/resources/page/Community/community.php" class="flex items-center text-black font-bold hover:text-blue-800">
+            <span class="material-icons mr-1">arrow_back</span>
+            Back to Community
+        </a>
+  </div>
 </body>
 
 </html>

@@ -9,9 +9,10 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <title>Receipe Detail Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-200">
+<body class="bg-white">
+<?php include('C:/xampp/htdocs/yumrecipe/User/View/common/header-after-login.php'); ?>
 <div>
-  <div class="bg-red-500 w-full h-auto  p-4 text-white text-2xl">Hot Spinach Artichoke Dip</div>
+  <div class="bg-red-500 w-full h-auto pl-8 p-4 text-white text-2xl">Shredded Beef Tacos</div>
   </div>
   <div class="flex items-center justify-start m-8 space-x-4">
   <div class="flex items-center gap-2">
@@ -40,12 +41,11 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17.27l6.18 3.73-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l4.46 4.73-1.64 7.03L12 17.27z"/>
 </svg>
 
-
     <p class="text-lg">Rating</p>
   </div>
 </div>
   <div>
-    <img class="w-1/2 h-auto m-8" src="http://localhost/yumrecipe/User/View/resources/images/burger.png" alt="Hot Spinach Artichoke Dip" class="w-full md:w-1/2 object-cover" />
+    <img class="w-1/2 h-96 m-8" src="http://localhost/yumrecipe/User/View/resources/images/shredded-beef-tacos-recipe.jpg" alt="Hot Spinach Artichoke Dip" class="w-full md:w-1/2 object-cover" />
   </div>
   <div class="flex items-center justify-start m-8 space-x-8">
   <p class="text-sm">Serving Size</p>
@@ -60,34 +60,69 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <span class="text-lg">Print</span>
   </button>
   </div>
-  
 </div>
+
 <div class="m-8">
   <p>It's a vegetarian pasta loaded with a whole head of broccoli, corn, zucchinis,
   capsicum/peppers and  onion, and smothered in a garlic  herb tomato sauce. </p>
 </div>
-  <div class="flex flex-col md:flex-row m-8">
+
+<div class="flex  flex-col md:flex-row justify-between gap-4 mt-6">
     <div class="md:w-1/2 p-4">
       <h2 class="text-2xl font-bold">Ingredients</h2>
-      <ul class="list-disc pl-5">
-        <li>1 cup spiwnach</li>
-        <li>1 cup artichokes</li>
-        <li>1 cup cream cheese</li>
-        <li>1 cup mozzarella cheese</li>
-        <li>1 cup mozzarella cheese</li>
-        <li>1 cup mozzarella cheese</li>
+      <ul class="list-disc pl-10 py-4">
+        <li class="py-2">1 cup spiwnach</li>
+        <li class="py-2">1 cup artichokes</li>
+        <li class="py-2">1 cup cream cheese</li>
+        <li class="py-2">1 cup mozzarella cheese</li>
+        <li class="py-2">1 cup mozzarella cheese</li>
+        <li class="py-2">1 cup mozzarella cheese</li>
         <!-- Add more ingredients as needed -->
       </ul>
+    </div>
+
+    <div class="w-64 p-4 mr-28 bg-white rounded-md shadow-md border  border-red-400">
+    <h2 class="text-lg font-bold text-red-500 mb-1">Nutrition Facts</h2>
+    <p class="text-sm text-red-500 mb-4">Amount Per Serving</p>
+    <div class="flex justify-between mb-2">
+      <span>Calories</span>
+      <span class="font-bold">459</span>
+    </div>
+    <div class="flex justify-between mb-2">
+      <span>Fat(g)</span>
+      <span class="font-bold">20.9g</span>
+    </div>
+    <div class="flex justify-between mb-2">
+      <span>Cholesterol(mg)</span>
+      <span class="font-bold">85 mg</span>
+    </div>
+    <div class="flex justify-between mb-2">
+      <span>Sodium(mg)</span>
+      <span class="font-bold">500mg</span>
+    </div>
+    <div class="flex justify-between mb-2">
+      <span>Sugars(g)</span>
+      <span class="font-bold">2.3g</span>
+    </div>
+    <div class="flex justify-between">
+      <span>Protein(g)</span>
+      <span class="font-bold">14g</span>
+    </div>
+  </div>
+</div>
+<div class="md:w-1/2 p-4">
       <h2 class="text-2xl font-bold mt-4">Instructions</h2>
-      <ol class="list-decimal pl-5">
-        <li>Preheat the oven to 350°F (175°C).</li>
-        <li>Mix all ingredients in a bowl.</li>
-        <li>Transfer to a baking dish and bake for 20 minutes.</li>
-        <li>Transfer to a baking dish and bake for 20 minutes.</li>
+      <ol class="list-decimal pl-10 py-4">
+        <li class="py-2">Preheat the oven to 350°F (175°C).</li>
+        <li class="py-2">Mix all ingredients in a bowl.</li>
+        <li class="py-2">Transfer to a baking dish and bake for 20 minutes.</li>
+        <li class="py-2">Transfer to a baking dish and bake for 20 minutes.</li>
         <!-- Add more instructions as needed -->
       </ol>
-    </div>
+      </div>
 </div>
+  
+    </div>
 
 <div class="flex ml-8 flex-col md:flex-row justify-between gap-6 mt-6 ">
   <!-- All Comments Section -->
@@ -132,20 +167,20 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     <!-- Recipe Item -->
     <div class="flex items-center mb-8">
       <img
-        src="<?php echo $images_path ?>burger.png" alt="burger" class="w-36 h-28"
+        src="<?php echo $images_path ?>Best-Cheesecake.jpg" alt="cheese-cake" class="w-36 h-28"
         
       />
       <div class="ml-2 ">
-        <p >Chicken Salad</p>
+        <p >Cheese Cake</p>
         <div class="text-yellow-500">★★★★☆</div>
       </div>
     </div>
     <div class="flex items-center mb-4">
       <img
-        src="<?php echo $images_path ?>burger.png" alt="burger" class="w-36 h-28"
+        src="<?php echo $images_path ?>tomato-soup.jpg" alt="soup" class="w-36 h-28"
       />
       <div class="ml-2">
-        <p>Steak</p>
+        <p>Tomato Soup</p>
         <div class="text-yellow-500">★★★★☆</div>
       </div>
     </div>

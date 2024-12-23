@@ -11,12 +11,15 @@
 
 <body class="font-sans bg-light-text h-screen">
     <div class="flex min-h-screen">
+        <!-- Side Menu -->
         <?php require_once '../../../common/sideMenu.php'; ?>
+        <!-- Container -->
         <div class="flex-1 container p-4 bg-secondary">
             <h1 class="text-2xl font-bold">User management</h1>
             <p class="mb-4">Manage Users and their accounts here</p>
             <div class="flex justify-end mb-10">
                     <div class="flex space-x-4">
+                        <!-- Role Filter -->
                         <select class="border rounded p-2 bg-light-text">
                             <option>All Role</option>
                             <option>Free</option>
@@ -25,16 +28,18 @@
                             <option>Premium</option>
                             <option>Non-Registered</option>
                         </select>
+                        <!-- Time Filter -->
                         <select class="border rounded p-2 bg-light-text">
-                            <option>All Time</option>
+                            <option>All Time</option>   
                             <option>Last 24 hours</option>
                             <option>Last 7 days</option>
                         </select>
+                        <!-- Search -->
                         <input type="text" placeholder="Search..." class="border rounded p-2 flex-grow bg-light-text" style="max-width: 200px; " />
                         <button class="bg-accent text-white rounded px-4 py-2 transition duration-200 ease-in-out hover:bg-accent2 ">Search</button>
                     </div>
             </div>
-
+            <!--Mock Data-->
             <?php
             $users = [
                 [
@@ -107,9 +112,9 @@
                     'type' => 'User', 
                     'registered_date' => '2023-02-01',
                 ],
-                // Add more users as needed
             ];
             ?>
+            <!-- Table -->
             <table class="min-w-full border border-collapse border-black">
                 <thead>
                     <tr class="bg-light-text">
@@ -121,10 +126,9 @@
               <th class="border border-black p-2">Action</th>
                     </tr>
                 </thead>
+                <!-- Table Body -->
                 <tbody>
                     <?php
-                    // Sample data for demonstration
-
                     foreach ($users as $index => $user) {
                         echo "<tr class='" . ($index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text') . "'>";
                         echo "<td class='border border-black p-2'>{$user['id']}</td>";
@@ -138,8 +142,6 @@
                         echo "<img src='../../../resources/icons/Trash.svg' alt='Delete' class='inline w-6 h-6'>";
                         echo "</div>";
                         echo "</td>";
-
-                        
                         echo "</tr>";
                     }
                     ?>

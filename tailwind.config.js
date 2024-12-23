@@ -9,6 +9,8 @@ module.exports = {
     './output.css',
     './input.css',
     './User/View/resources/**/*.{html,js,php}',
+    './User/View/resources/page/**/*.{html,js,php}',
+    './User/View/resources/page/signup.php',
 
   ],
   theme: {
