@@ -24,9 +24,9 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
             <h1 class="text-2xl font-bold mb-4">Community</h1>
             <!-- Tabs -->
             <ul class="flex space-x-4 justify-end">
-                <li class="cursor-pointer px-2 py-1 bg-light-text rounded-sm hover:text-blue-500" onclick="toggleBackground(this);">Blogs</li>
-                <li class="cursor-pointer px-2 py-1  rounded-sm hover:text-blue-500" onclick="toggleBackground(this);">Contents</li>
-                <li class="cursor-pointer px-2 py-1  rounded-sm hover:text-blue-500" onclick="toggleBackground(this);">Comments</li>
+                <li class="cursor-pointer px-2 py-2 pb-2 bg-light-text rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Blogs</li>
+                <li class="cursor-pointer px-2 py-2 pb-2 rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Contents</li>
+                <li class="cursor-pointer px-2 py-2 pb-2  rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Comments</li>
                 
             </ul>
             <!-- Content -->
@@ -47,9 +47,9 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
                 case 'Blogs':
                     contentDiv.innerHTML = `
     <!-- Main Content -->
-    <main class="flex-1 bg-light-text max-w-full rounded-lg shadow-md">
+    <main class="flex-1 bg-light-text max-w-full rounded-lg shadow-md ml-3 mr-3">
         <div class="flex justify-end mb-2 mr-5">
-        <button id="addNewBlogBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300 mt-2">Add New Blog</button>
+            <a href="/yumrecipe/Admin/View/resources/page/Community/addnewblog.php" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300 mt-2">Add New Blog</a>
         </div>
  
         <!-- Two Columns Layout -->
@@ -85,7 +85,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
               </div>
  
               <!-- Scrollable Card Container -->
-              <div class="overflow-y-auto h-[500px] space-y-4 scrollbar-thin scrollbar-thumb-gray-300">
+              <div class="overflow-y-auto h-[550px] space-y-4 scrollbar-thin scrollbar-thumb-gray-300">
                 <!-- Card 1 -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
                   <img src="/yumrecipe/Admin/View/resources/images/prawn.jpg" alt="Recipe Image"
@@ -117,7 +117,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
 
           <!-- Form Container -->
     <div class="col-span-1 sm:col-span-2 border rounded p-5 bg-gray-50">
-      <h2 class="text-2xl font-semibold flex justify-center">Upload</h2>    
+      <h2 class="text-2xl font-semibold flex justify-center">Edit</h2>    
         <div class="col-span-2">
           <p class="text-sm font-bold text-gray-500 flex justify-end">Blog From 2024/12/01</p>
         </div>    
@@ -128,7 +128,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
         <label for="photo" class="block text-lg font-bold text-gray-700">Photo</label>
  <div class="flex items-center space-x-4">
    <div class="w-24 h-24 bg-gray-200 border border-dashed border-gray-400 rounded-lg flex items-center justify-center overflow-hidden">
-     <img id="photo-preview" src="#" alt="Photo Preview" class="w-full h-full object-cover">
+     <img id="photo-preview" src="/yumrecipe/Admin/View/resources/images/prawn.jpg" alt="Photo Preview" class="w-full h-full object-cover">
    </div>
    <label class="px-4 py-2 bg-gray-200 text-sm font-medium text-gray-700 rounded-md border border-gray-300 hover:bg-gray-300 cursor-pointer">
      <input type="file" name="photo" id="photo-input" class="hidden" accept="image/*" required>
@@ -139,30 +139,31 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label class="block font-medium" for="author">Author</label>
-          <input id="author" type="text"
+          <input id="author" type="text" value="Hnin Hnin"
             class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" />
         </div>
         <div>
           <label class="block font-medium" for="intro">Intro</label>
-          <input id="intro" type="text" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" />
+          <input id="intro" type="text" value="Prawn is a good food" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" />
         </div>
       </div>
       <div>
         <label class="block font-medium" for="title">Title</label>
-        <input id="title" type="text"
+        <input id="title" type="text" value="What To Cook in Christmas?"
           class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400" />
       </div>
       <div>
         <label class="block font-medium" for="description">Description</label>
-        <textarea id="description" rows="5"
-          class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"></textarea>
+        <textarea id="description" rows="5" 
+          class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </textarea>
       </div>
       <div class="text-right">
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300 ">Upload</button>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300 ">Save Changes</button>
       </div>
     </form>
   </div>
-    </main>;
+    </main>
   </div>`;
   const photoInput = document.getElementById('photo-input');
     const photoPreview = document.getElementById('photo-preview');

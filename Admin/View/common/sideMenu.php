@@ -8,6 +8,7 @@ $pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
 $community_path = "/yumrecipe/Admin/View/resources/page/Community/";
 $gallery_path = "/yumrecipe/Admin/View/resources/page/Gallery/";
 $admin_path = "/yumrecipe/Admin/View/resources/page/Admin/";
+$income_path = "/yumrecipe/Admin/View/resources/page/Income/";
 
 //Images Path
 $icons_path = "/yumrecipe/Admin/View/resources/icons/";
@@ -87,7 +88,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                     </a>
                 </div>
                 <div class="w-full text-left">
-                    <a href="#financial" class="block w-full p-2 hover:bg-secondary active:bg-accent">
+                    <a href="<?php echo $income_path; ?>income.php" class="block w-full p-2 hover:bg-secondary active:bg-accent <?php echo basename($_SERVER['PHP_SELF']) == 'income.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>CurrencyCircleDollar.svg" alt="Financial Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Income
                     </a>
                 </div>
@@ -103,6 +104,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                 </div>
             </div>
         </nav>
+        
     </div>
 
 </body>
