@@ -15,7 +15,7 @@
         <?php require_once '../../../common/sideMenu.php'; ?>
         <div class="flex-1 container p-4 bg-secondary">
 
-            <h1 class="text-2xl font-bold mb-10">Income Status Overview</h1>
+            <h1 class="text-2xl font-bold mb-5">Income Status Overview</h1>
 
             <!-- Chart and Info Section -->
             <div class="flex">
@@ -69,7 +69,7 @@
                     "date" => "2023-10-01",
                 ],
                 [
-                   "no" => 1,
+                   "no" => 2,
                     "username" => "ZZN",
                     "email" => "zzn@gmail.com",
                     "amount" => "$200.00",
@@ -79,7 +79,7 @@
                     "date" => "2023-10-01",
                 ],
                 [
-                   "no" => 1,
+                   "no" => 3,
                     "username" => "EKK",
                     "email" => "ekk@gmail.com",
                     "amount" => "$200.00",
@@ -199,6 +199,6 @@
                         }
                     }
                 });
-            </script>
+        </script>
 </body>
 </html>

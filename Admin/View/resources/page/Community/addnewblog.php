@@ -134,7 +134,7 @@
     </form>
   </div>
     </div>
-    <div class="flex justify-end mb-5 mt-5 ">
+    <div class="flex justify-end mb-3 mt-3 ">
         <button id="toggleFormBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300" onclick="window.location.href='community.php'">Back to Blogs</button>
     </div>
     </div>
