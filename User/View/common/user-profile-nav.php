@@ -4,15 +4,14 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header with Profile</title>
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <header class="px-20 py-1 bg-white shadow-md">
+<header class="shadow-md sticky top-0 z-50 bg-white">
     <div class="container mx-auto flex items-center justify-between ">
         <!-- Logo -->
         <div class="flex items-center">
@@ -54,5 +53,18 @@ $images_path = "/yumrecipe/User/View/resources/img/";
                     </div>
                 </div>
     </div>
+        <!-- Top Navbar -->
+        <div class="w-full">
+        <nav class="bg-gray-100  p-4 flex justify-center items-center">
+            <div class="space-x-8 text-gray-700">
+                <a href="<?php echo $user_path; ?>homepage.php" class="hover:text-red-500">Home</a>
+                <a href="<?php echo $user_path; ?>receipe.php" class="hover:text-red-500">Recipes</a>
+                <a href="<?php echo $user_path; ?>addRecipe.html" class="hover:text-red-500">Add Recipes</a>
+                <a href="<?php echo $user_path; ?>blog.html" class="hover:text-red-500">Blogs</a>
+                <a href="<?php echo $user_path; ?>aboutUs.html" class="hover:text-red-500">About Us</a>
+            </div>
+        </nav>
+    </div>
 </header>
+</body>
 </html>
