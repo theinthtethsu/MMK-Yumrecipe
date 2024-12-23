@@ -59,34 +59,7 @@
 </section>
 
   <!-- Navigation Bar -->
-<section class="flex items-center justify-center mt-9" >
-    <nav class="w-full max-w-2xl  text-gray-700">
-        <!-- Top Red Line -->
-        <div class="h-0.5 bg-red-400 w-full"></div>
-    
-        <!-- Menu Items -->
-        <ul class="flex justify-center space-x-10 py-4 font-semibold">
-          <li>
-            <a href="#" class="text-red-500 hover:text-red-600">Home</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-red-600">Recipes</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-red-600">Add Recipes</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-red-600">Blogs</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-red-600">About Us</a>
-          </li>
-        </ul>
-    
-        <!-- Bottom Red Line -->
-        <div class="h-0.5 bg-red-400 w-full"></div>
-      </nav>
-</section>
+  <?php require_once '../../common/nav.php'; ?>
 
 <!-- Trending Recipes -->
 <h1 class="text-3xl font-bold text-gray-600 font-family:'poppins',sans-serif text-center mb-10 mt-10">
