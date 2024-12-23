@@ -9,6 +9,8 @@
   <body
     class="font-roboto text-gray-700 leading-none font-normal overflow-x-hidden"
   >
+  <?php include_once '../../common/header-before-login.php'; ?>
+  <?php include_once '../../common/nav.php'; ?>
     <section class="w-screen bg-red-50">
       <div
         class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-x-5"
@@ -26,7 +28,7 @@
             and the stories behind every meal.
           </p>
           <a
-            href="#"
+            href="receipe.php"
             class="inline-block text-xl md:text-2xl font-semibold py-3 md:py-4 px-6 md:px-8 rounded-full bg-red-500 text-yellow-300 hover:bg-red-600 hover:text-white transition-all duration-300 mt-10"
           >
             Explore Recipes
@@ -41,7 +43,7 @@
         </div>
       </div>
     </section>
-    <section class="w-screen py-2">
+    <section class="w-screen py-2 mb-36">
       <div class="max-w-screen-xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
           Our Writers
@@ -139,5 +141,6 @@
         </div>
       </div>
     </section>
+    <?php include_once '../../common/footer.php'; ?>
   </body>
 </html>

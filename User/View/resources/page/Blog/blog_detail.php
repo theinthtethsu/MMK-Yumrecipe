@@ -7,10 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-roboto text-gray-700 leading-none font-normal">
+    <?php include_once '../../../common/header-before-login.php'; ?>
+   <?php include_once '../../../common/nav.php'; ?>
     <!-- Main Container -->
-    <div class="max-w-screen-lg mx-auto px-4 py-8">
+    <div class="max-w-screen-lg mx-auto px-4 py-4 mt-14">
       <!-- Header -->
-      <header class="text-center mb-40">
+      <header class="text-center mb-20 md:mb-16">
         <img
           src="../../img/Salad.png"
           alt="Blog Logo"
@@ -46,7 +48,7 @@
             <input
               type="email"
               placeholder="Email address"
-              class="w-full p-2 mb-3 border rounded"
+              class="w-full p-2 mb-3 border rounded outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
             />
             <button
               class="w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
@@ -73,7 +75,7 @@
             <img
               src="../../img/amin-ramezani-dcdlng96XME-unsplash.jpg"
               alt="Delicious Burger"
-              class="w-full rounded-lg mb-6"
+              class="w-full h-96 rounded-lg mb-6 object-cover"
             />
 
             <div class="prose max-w-none">
@@ -112,15 +114,23 @@
         </div>
       </div>
       <hr class="p-2 border-gray-300">
+      
     </div >
-    <figure class="border-gray-300 bg-primaryTint w-80 h-72 shadow-lg rounded-md overflow-hidden my-36 ml-20">
-      <img src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg" alt="food" class="w-full h-48 object-cover">
-      <div class="p-2">
-        <h3 class="mb-6 text-sm font-semibold">10 Best Deserts to Sastify the Sweet Tooth</h3>
-        <div class="text-xs"> December 19, 2024
-        </div>
-      </div>
-    </figure>     
+    <div class="mt-20 ml-20 mb-18">
+    <div class=" font-semibold text-lg mb-1">Recent Post</div>
+
+    <a href="page5.html" class="block">
+        <figure class="border-gray-300 bg-primaryTint w-full md:w-80 h-auto md:h-72 shadow-lg rounded-md overflow-hidden">
+          <img src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg" alt="food" class="w-full h-48 object-cover">
+          <div class="p-2">
+            <h3 class="mb-6 text-sm font-semibold">10 Best Deserts to Satisfy the Sweet Tooth</h3>
+            <div class="text-xs">December 19, 2024</div>
+          </div>
+        </figure>
+      </a>
+    </div>
+    
+    <?php include_once '../../../common/footer.php'; ?>    
   </body>
 </html>
 

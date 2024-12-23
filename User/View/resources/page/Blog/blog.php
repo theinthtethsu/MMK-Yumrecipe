@@ -7,10 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-roboto text-gray-700 leading-none font-normal">
+  <?php include_once '../../../common/header-before-login.php'; ?>
+  <?php include_once '../../../common/nav.php'; ?>
     <!-- Main Container -->
-    <div class="max-w-screen-lg mx-auto px-4 py-8">
+    <div class="max-w-screen-lg mx-auto px-4 py-4 mt-14 ">
       <!-- Header -->
-      <header class="text-center mb-20 md:mb-40">
+      <header class="text-center mb-20 md:mb-16">
         <img
           src="../../img/Salad.png"
           alt="Blog Logo"
@@ -26,7 +28,7 @@
 
       <!-- Main Content Grid -->
       <div
-        class="grid grid-cols-1 md:grid-cols-[14rem_1fr] gap-12 md:gap-24 items-start"
+        class=" grid grid-cols-1 md:grid-cols-[14rem_1fr] gap-12 md:gap-24 items-start"
       >
         <!-- Left Sidebar -->
         <div class="md:col-span-1">
@@ -42,12 +44,12 @@
           />
 
           <!-- Newsletter Section -->
-          <div class="bg-gray-100 rounded-lg p-4">
+          <div class="bg-gray-100 rounded-lg">
             <h3 class="font-semibold mb-4">Subscribe to our Newsletter</h3>
             <input
               type="email"
               placeholder="Email address"
-              class="w-full p-2 mb-3 border rounded"
+              class="w-full p-2 mb-3 border rounded outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
             />
             <button
               class="w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
@@ -59,92 +61,93 @@
 
         <!-- Blog Posts Content -->
         <div class="flex flex-col gap-11">
-          <section
-            class="shadow-lg border-gray-200 border-2 bg-primaryTint p-2 rounded-lg"
-          >
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-              <!-- Image -->
-              <img
-                src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg"
-                alt="People sitting on chairs"
-                class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
-              />
-              <!-- Testimonial Box -->
-              <div class="testimonial-box col-span-2">
-                <blockquote
-                  class="text-lg mb-4 leading-relaxed text-gray-600 font-bold"
-                >
-                  The World’s Most Delicious Burgers and Where to Find Them
-                </blockquote>
-                <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
-              </div>
+      <a href="blog_detail.php" class="block transition-transform transform hover:scale-105">
+        <section
+          class="shadow-lg border-gray-200 border-2 bg-primaryTint p-2 rounded-lg "
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+            <img
+              src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg"
+              alt="People sitting on chairs"
+              class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
+            />
+            <div class="testimonial-box col-span-2">
+              <blockquote
+                class="text-lg mb-4 leading-relaxed text-gray-600 font-bold"
+              >
+                The World’s Most Delicious Burgers and Where to Find Them
+              </blockquote>
+              <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
             </div>
-          </section>
-          <section
-            class="shadow-lg border-gray-200 border-2 bg-primaryTint p-2 rounded-lg"
-          >
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-              <!-- Image -->
-              <img
-                src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg"
-                alt="People sitting on chairs"
-                class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
-              />
-              <!-- Testimonial Box -->
-              <div class="testimonial-box col-span-2">
-                <blockquote
-                  class="text-lg mb-4 leading-relaxed text-gray-600 font-bold"
-                >
-                  The World’s Most Delicious Burgers and Where to Find Them
-                </blockquote>
-                <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
-              </div>
+          </div>
+        </section>
+      </a>
+      <a href="blog_detail.php" class="block transition-transform transform hover:scale-105">
+        <section
+          class="shadow-lg border-gray-200 border-2 bg-primaryTint p-2 rounded-lg"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+            <img
+              src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg"
+              alt="People sitting on chairs"
+              class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
+            />
+            <div class="testimonial-box col-span-2">
+              <blockquote
+                class="text-lg mb-4 leading-relaxed text-gray-600 font-bold"
+              >
+                The World’s Most Delicious Burgers and Where to Find Them
+              </blockquote>
+              <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
             </div>
-          </section>
-          <section
-            class="shadow-lg border-gray-200 border-2 bg-primaryTint p-2 rounded-lg"
-          >
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-              <!-- Image -->
-              <img
-                src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg"
-                alt="People sitting on chairs"
-                class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
-              />
-              <!-- Testimonial Box -->
-              <div class="testimonial-box col-span-2">
-                <blockquote
-                  class="text-lg mb-4 leading-relaxed text-gray-600 font-bold"
-                >
-                  The World’s Most Delicious Burgers and Where to Find Them
-                </blockquote>
-                <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
-              </div>
+          </div>
+        </section>
+      </a>
+      <a href="blog_detail.php" class="block transition-transform transform hover:scale-105">
+        <section
+          class="shadow-lg border-gray-200 border-2 bg-primaryTint p-2 rounded-lg"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+            <img
+              src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg"
+              alt="People sitting on chairs"
+              class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
+            />
+            <div class="testimonial-box col-span-2">
+              <blockquote
+                class="text-lg mb-4 leading-relaxed text-gray-600 font-bold"
+              >
+                The World’s Most Delicious Burgers and Where to Find Them
+              </blockquote>
+              <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
             </div>
-          </section>
-          <section
-            class="shadow-lg border-gray-200 border-2 bg-primaryTint p-2 rounded-lg"
-          >
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-              <!-- Image -->
-              <img
-                src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg"
-                alt="People sitting on chairs"
-                class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
-              />
-              <!-- Testimonial Box -->
-              <div class="testimonial-box col-span-2">
-                <blockquote
-                  class="text-lg mb-4 leading-relaxed text-gray-600 font-bold"
-                >
-                  The World’s Most Delicious Burgers and Where to Find Them
-                </blockquote>
-                <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
-              </div>
+          </div>
+        </section>
+      </a>
+      <a href="blog_detail.php" class="block transition-transform transform hover:scale-105">
+        <section
+          class="shadow-lg border-gray-200 border-2 bg-primaryTint p-2 rounded-lg"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+            <img
+              src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg"
+              alt="People sitting on chairs"
+              class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
+            />
+            <div class="testimonial-box col-span-2">
+              <blockquote
+                class="text-lg mb-4 leading-relaxed text-gray-600 font-bold"
+              >
+                The World’s Most Delicious Burgers and Where to Find Them
+              </blockquote>
+              <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+      </a>
+    </div>
       </div>
     </div>
+    <?php include_once '../../../common/footer.php'; ?>
   </body>
 </html>

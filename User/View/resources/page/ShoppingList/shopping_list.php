@@ -150,8 +150,6 @@
         </li>
     </ul>
 </div>
-
-
                 <!-- Meat Category -->
                 <div>
                     <div class="flex justify-between items-center mb-2">
