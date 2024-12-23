@@ -11,24 +11,11 @@ $images_path = "/yumrecipe/User/View/resources/images/";
 </head>
 <body class="">
     <!-- Navbar -->
-    <nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-        <div class="flex items-center gap-4">
-            <img src="logo.png" alt="Logo" class="w-12">
-            <div class="relative">
-                <button class="bg-red-500 text-white py-2 px-4 rounded-lg flex items-center gap-2">
-                    All Categories <span>&#x25BC;</span>
-                </button>
-            </div>
-        </div>
-        <div class="flex gap-4">
-            <input type="text" placeholder="Search" class="border border-gray-300 rounded-lg px-4 py-2">
-            <button class="bg-red-500 text-white py-2 px-4 rounded-lg">Search</button>
-        </div>
-        <div class="flex gap-4">
-            <button class="text-red-500">Login</button>
-            <button class="bg-red-500 text-white py-2 px-4 rounded-lg">Sign Up</button>
-        </div>
-    </nav>
+    <?php require_once '../../common/header-before-login.php'; ?>
+
+    
+  <!-- Navigation Bar -->
+  <?php require_once '../../common/nav.php'; ?>
 
     <!-- Main Content -->
     <main class="container mx-auto py-8 px-4">
@@ -274,8 +261,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   </div>
 </div>
  <!-- Footer -->
-<div class="bg-gray-900">
-<?php include('C:/xampp/htdocs/yumrecipe/User/View/common/footer.php'); ?>
-</div>   
+ <?php require_once '../../common/footer.php'; ?>
+
 </body>
 </html>
