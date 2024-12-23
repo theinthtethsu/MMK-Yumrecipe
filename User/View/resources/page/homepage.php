@@ -433,7 +433,7 @@
 
     <div class="flex items-center justify-end mt-11 px-20 mb-10">
         <!-- Centered Button -->
-        <a href="#" class="px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300">
+        <a href="<?php echo $user_path; ?>receipe.php" class="px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300">
           View All Recipes
         </a>      
       </div>
@@ -457,7 +457,7 @@
         Share your favorite recipes with the world! From traditional dishes to creative twists, inspire others to cook, taste, and enjoy your culinary creations.
       </p>    
       <!-- Button -->
-      <a href="#" class="inline-block px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300 animate-bounce">
+      <a href="<?php echo $user_path; ?>addRecipe.html" class="inline-block px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300 animate-bounce">
         Add Recipe
       </a>
     </div>

@@ -8,6 +8,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
       <!-- Navigation Bar -->
@@ -19,19 +20,19 @@ $user_path = "/yumrecipe/User/View/resources/page/";
         <!-- Menu Items -->
         <ul class="flex justify-center space-x-10 py-4 font-semibold">
           <li>
-            <a href="#" class="text-red-500 hover:text-red-600">Home</a>
+            <a href="<?php echo $user_path; ?>homepage.php" class="text-red-500 hover:text-red-600">Home</a>
           </li>
           <li>
-            <a href="<?php echo $user_path; ?>recipe.php" class="hover:text-red-600">Recipes</a>
+            <a href="<?php echo $user_path; ?>receipe.php" class="hover:text-red-600">Recipes</a>
           </li>
           <li>
-            <a href="#" class="hover:text-red-600">Add Recipes</a>
+            <a href="<?php echo $user_path; ?>addRecipe.html" class="hover:text-red-600">Add Recipes</a>
           </li>
           <li>
-            <a href="#" class="hover:text-red-600">Blogs</a>
+            <a href="<?php echo $user_path; ?>blog.html" class="hover:text-red-600">Blogs</a>
           </li>
           <li>
-            <a href="#" class="hover:text-red-600">About Us</a>
+            <a href="<?php echo $user_path; ?>aboutUs.html" class="hover:text-red-600">About Us</a>
           </li>
         </ul>
     
