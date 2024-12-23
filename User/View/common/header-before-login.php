@@ -1,3 +1,8 @@
+<?php
+$images_path = "/yumrecipe/User/View/resources/img/";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +17,7 @@
         <div class="container mx-auto flex items-center justify-between ">
             <!-- Logo -->
             <div class="flex items-center">
-                <img src="../resources/img/logo.png" alt="Logo" class="h-20 w-20">
+                <img src="<?php echo $images_path ?>logo.png" alt="Logo" class="h-20 w-20">
             </div>
             <!-- Search Section -->
             <div class="flex-1 max-w-2xl mx-40">
@@ -38,10 +43,10 @@
             </div>
             <!-- Auth Buttons -->
             <div class="flex items-center space-x-4">
-                <button class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-sm font-semibold">
+                <button class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-md font-semibold">
                     Login
                 </button>
-                <button class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-sm font-semibold">
+                <button class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-md font-semibold">
                     Sign Up </button>
             </div>
         </div>
