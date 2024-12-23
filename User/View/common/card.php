@@ -1,3 +1,7 @@
+<?php
+$images_path = "/yumrecipe/User/View/resources/img/";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +10,20 @@
     <title>Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="px-32 py-36">
+<body>
  <!-- Recipe Card -->
  <div class="w-[288px] h-[340px] rounded-lg shadow-lg bg-white overflow-hidden"> 
     <!-- Image Section -->
     <div class="relative"> 
-        <img src="../resources/img/lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-48 object-cover">
-        <div class="absolute top-2 right-2"> <!-- Bookmark Icon -->
-            <div class="bg-yellow-300 rounded-full p-2"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+        <img src="<?php echo $images_path ?>lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-48 object-cover">
+        <div class="absolute top-2 right-2"> 
+            <!-- Bookmark Icon -->
+            <div class="bg-yellow-300 rounded-full p-2"> 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l7-5 7 5V3z" />
-                </svg> </div>
+                </svg> 
+            </div>
         </div>
     </div> <!-- Content Section -->
     <div class="p-4">
@@ -46,10 +53,10 @@
         <!-- Meta Data -->
         <div class="flex justify-between items-center mt-4 text-gray-600 text-sm">
             <div class="flex items-center"> 
-                <img src="../resources/img/clock.svg" alt="" class="w-5 h-5 mr-1">
+                <img src="<?php echo $images_path ?>clock.svg" alt="" class="w-5 h-5 mr-1">
                 <span>1 hour 23 min</span> </div>
             <div class="flex items-center"> 
-                <img src="../resources/img/comment.svg" alt=""
+                <img src="<?php echo $images_path ?>comment.svg" alt=""
                     class="w-5 h-5 mr-1">
                
                 <span>23</span> 

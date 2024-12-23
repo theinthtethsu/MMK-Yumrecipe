@@ -1,3 +1,7 @@
+<?php
+$images_path = "/yumrecipe/User/View/resources/img/";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +16,7 @@
     <div class="container mx-auto flex items-center justify-between ">
         <!-- Logo -->
         <div class="flex items-center">
-            <img src="../resources/img/logo.png" alt="Logo" class="h-20 w-20">
+            <img src="<?php echo $images_path ?>logo.png" alt="Logo" class="h-20 w-20">
         </div>
         <!-- Search Section -->
         <div class="flex-1 max-w-2xl mx-40">
