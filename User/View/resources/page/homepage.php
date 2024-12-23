@@ -65,6 +65,7 @@
 <h1 class="text-3xl font-bold text-gray-600 font-family:'poppins',sans-serif text-center mb-10 mt-10">
     Trending Recipes
 </h1>
+
 <section class="px-20 flex items-center justify-between mb-10">
 <!-- Recipe Card -->
 <div class="w-[288px] h-[340px] rounded-lg shadow-lg bg-white overflow-hidden"> 
