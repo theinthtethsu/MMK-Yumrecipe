@@ -24,10 +24,11 @@
             }
         }
 
-        function handleRadioChange(radio, ingredientId) {
-            const ingredient = document.getElementById(ingredientId);
-            ingredient.style.textDecoration = radio.checked ? 'line-through' : 'none';
-        }
+        function handleCheckboxChange(checkbox, ingredientId) {
+    const ingredient = document.getElementById(ingredientId);
+    ingredient.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
+}
+
 
         function deleteIngredient(categoryId, ingredientId) {
             const ingredient = document.getElementById(ingredientId);
@@ -110,44 +111,46 @@
                 <p>Start your shopping list by adding items above</p>
             </div>
 
-        <div class="bg-white rounded-lg shadow-md p-6">
+        <div class=" p-6">
             <div class="flex items-center space-x-4">
                 <input type="text" placeholder="Add an item..." class="border rounded-lg w-40 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
                 <button class="bg-red-500 text-white px-4 py-2 rounded-lg">Add</button>
             </div>
 
-            <div class="mt-8">
+            <div class="mt-8 max-w-xs">
                 <!-- Dairy Category -->
-                <div class="mb-6">
-                    <div class="flex justify-between items-center mb-2">
-                        <h3 class="font-bold text-lg">Dairy</h3>
-                        <button id="toggle-dairy" onclick="toggleIngredients('dairy-items', 'toggle-dairy')" class="text-gray-500 hover:text-gray-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                    </div>
-                    <ul id="dairy-items" class="space-y-2">
-                        <li id="dairy-milk" class="flex items-center space-x-4">
-                            <input type="radio" name="dairy" id="milk" class="form-radio" onchange="handleRadioChange(this, 'label-milk')">
-                            <label id="label-milk" for="milk">Milk</label>
-                            <button onclick="deleteIngredient('dairy-items', 'dairy-milk')" class="text-red-500 hover:text-red-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </li>
-                        <li id="dairy-butter" class="flex items-center space-x-4">
-                            <input type="radio" name="dairy" id="butter" class="form-radio" onchange="handleRadioChange(this, 'label-butter')">
-                            <label id="label-butter" for="butter">Butter</label>
-                            <button onclick="deleteIngredient('dairy-items', 'dairy-butter')" class="text-red-500 hover:text-red-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Dairy Category -->
+<div class="mb-6">
+    <div class="flex justify-between items-center mb-2">
+        <h3 class="font-bold text-lg">Dairy</h3>
+        <button id="toggle-dairy" onclick="toggleIngredients('dairy-items', 'toggle-dairy')" class="text-gray-500 hover:text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+    </div>
+    <ul id="dairy-items" class="space-y-2">
+        <li id="dairy-milk" class="flex items-center space-x-4">
+            <input type="checkbox" id="milk" class="form-checkbox" onchange="handleCheckboxChange(this, 'label-milk')">
+            <label id="label-milk" for="milk">Milk</label>
+            <button onclick="deleteIngredient('dairy-items', 'dairy-milk')" class="text-red-500 hover:text-red-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </li>
+        <li id="dairy-butter" class="flex items-center space-x-4">
+            <input type="checkbox" id="butter" class="form-checkbox" onchange="handleCheckboxChange(this, 'label-butter')">
+            <label id="label-butter" for="butter">Butter</label>
+            <button onclick="deleteIngredient('dairy-items', 'dairy-butter')" class="text-red-500 hover:text-red-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </li>
+    </ul>
+</div>
+
 
                 <!-- Meat Category -->
                 <div>
@@ -161,7 +164,7 @@
                     </div>
                     <ul id="meat-items" class="space-y-2">
                         <li id="meat-beef" class="flex items-center space-x-4">
-                            <input type="radio" name="meat" id="beef" class="form-radio" onchange="handleRadioChange(this, 'label-beef')">
+                            <input type="checkbox" name="meat" id="beef" class="form-checkbox" onchange="handleCheckboxChange(this, 'label-beef')">
                             <label id="label-beef" for="beef">Beef</label>
                             <button onclick="deleteIngredient('meat-items', 'meat-beef')" class="text-red-500 hover:text-red-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
