@@ -10,6 +10,5 @@
 <?php include_once '../../../common/user-profile.php'; ?>   
 <!-- Cards Container -->
 <?php include_once '../../../common/plans.php'; ?>       
-
 </body>
 </html>
