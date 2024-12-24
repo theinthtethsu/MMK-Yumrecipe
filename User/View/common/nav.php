@@ -1,5 +1,6 @@
 <?php
 $user_path = "/yumrecipe/User/View/resources/page/";
+$blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 ?>
 
 <!DOCTYPE html>
@@ -28,13 +29,13 @@ $user_path = "/yumrecipe/User/View/resources/page/";
             <a href="<?php echo $user_path; ?>receipe.php" class="hover:text-red-600">Recipes</a>
           </li>
           <li>
-            <a href="<?php echo $user_path; ?>addRecipe.html" class="hover:text-red-600">Add Recipes</a>
+            <a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-600">Add Recipes</a>
           </li>
           <li>
-            <a href="<?php echo $user_path; ?>blog.html" class="hover:text-red-600">Blogs</a>
+            <a href="<?php echo $blog_path; ?>blog.php" class="hover:text-red-600">Blogs</a>
           </li>
           <li>
-            <a href="<?php echo $user_path; ?>aboutUs.html" class="hover:text-red-600">About Us</a>
+            <a href="<?php echo $user_path; ?>about_us.php" class="hover:text-red-600">About Us</a>
           </li>
         </ul>
     

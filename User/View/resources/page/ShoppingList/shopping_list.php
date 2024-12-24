@@ -17,7 +17,7 @@
     <script defer src="tailwind.js"></script>
   </head>
   <body>
-    <?php include_once '../../../common/user-profile.php'; ?>
+    <?php include_once '../../../common/user-profile-common.php'; ?>
 
     <!-- <div class="bg-gray-200 flex items-center justify-center min-h-screen"> -->
     <div class="container text-white flex flex-col lg:flex-row">
