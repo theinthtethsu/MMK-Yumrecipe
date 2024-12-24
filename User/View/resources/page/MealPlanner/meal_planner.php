@@ -17,7 +17,7 @@
     <script defer src="../../js/meal_planner.js"></script>
 </head>
 <body>
-<?php include_once '../../../common/user-profile.php'; ?>
+<?php include_once '../../../common/user-profile-common.php'; ?>
 <div class="container text-white flex flex-col lg:flex-row">
       <!-- Left Section -->
       <div class="left w-full lg:w-2/5 p-5">

@@ -11,7 +11,7 @@
   >
   <?php include_once '../../common/header-before-login.php'; ?>
   <?php include_once '../../common/nav.php'; ?>
-    <section class="w-screen bg-red-50">
+    <section class="w-screen">
       <div
         class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-x-5"
       >
