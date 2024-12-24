@@ -4,7 +4,6 @@ $user_path = "/yumrecipe/User/View/resources/page/";
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +18,12 @@ $user_path = "/yumrecipe/User/View/resources/page/";
 }
 </style>
 </head>
-
 <body>
 
 <?php require_once './user-profile-nav.php'; ?>
 
     <!-- Parent Container -->
-    <div class="flex ">
+    <div class="flex">
         <!-- Sidebar -->
         <aside class="w-1/5 bg-white border-r text-center">
             <ul class="mt-10 space-y-4 pl-5">
@@ -40,14 +38,11 @@ $user_path = "/yumrecipe/User/View/resources/page/";
         
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col bg-gray-50">
-        <div class="p-5 space-y-4">
-                <div class="h-[2000px] bg-gray-200 rounded shadow p-4">
-                    Scrollable Content Goes Here
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
+     
+
 
 </body>
 </html>
