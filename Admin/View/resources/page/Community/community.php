@@ -24,9 +24,9 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
             <h1 class="text-2xl font-bold mb-3">Community</h1>
             <!-- Tabs -->
             <ul class="flex space-x-4 justify-end">
-                <li class="cursor-pointer px-2 py-2 pb-2 bg-light-text rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Blogs</li>
-                <li class="cursor-pointer px-2 py-2 pb-2 rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Contents</li>
-                <li class="cursor-pointer px-2 py-2 pb-2  rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Comments</li>
+                <li class="cursor-pointer px-2 py-2 pb-5 bg-light-text rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Blogs</li>
+                <li class="cursor-pointer px-2 py-2 pb-5 rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Contents</li>
+                <li class="cursor-pointer px-2 py-2 pb-5  rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Comments</li>
                 
             </ul>
             <!-- Content -->
@@ -47,9 +47,9 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
                 case 'Blogs':
                     contentDiv.innerHTML = `
     <!-- Main Content -->
-    <main class="flex-1 bg-light-text max-w-full rounded-lg shadow-md ml-3 mr-3">
-        <div class="flex justify-end mb-2 mr-5">
-            <a href="/yumrecipe/Admin/View/resources/page/Community/addnewblog.php" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300 mt-2">Add New Blog</a>
+    <main class="flex-1 bg-light-text max-w-full rounded-lg shadow-md ml-3 mr-3 -mt-3"> 
+        <div class="flex justify-end mr-5">
+            <a href="/yumrecipe/Admin/View/resources/page/Community/addnewblog.php" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300 mt-3 mb-3">Add New Blog</a>
         </div>
  
         <!-- Two Columns Layout -->
@@ -162,8 +162,6 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
         <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300 ">Save Changes</button>
       </div>
     </form>
-  </div>
-    </main>
   </div>`;
   const photoInput = document.getElementById('photo-input');
     const photoPreview = document.getElementById('photo-preview');
@@ -182,7 +180,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
   break;
   case 'Contents':
             contentDiv.innerHTML = `
-            <div class="bg-light-text p-6 rounded-md shadow-md w-full">
+            <div class="bg-light-text p-6 rounded-md shadow-md w-full -mt-3">
               <div class="flex-1 container p-4">
               <div class="flex justify-end mb-3">
                     <div class="flex space-x-4">
@@ -353,7 +351,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
     break;
     case 'Comments':
             contentDiv.innerHTML = `
-            <div class="bg-light-text p-6 rounded-lg shadow-md w-full">
+            <div class="bg-light-text p-6 rounded-lg shadow-md w-full -mt-3">
               <div class="flex-1 container p-4">
             <div class="flex justify-end">
               <div class="flex justify-end mb-3">
