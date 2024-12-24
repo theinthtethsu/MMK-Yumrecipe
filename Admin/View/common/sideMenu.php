@@ -11,6 +11,7 @@ $contentcategorization_path = "/yumrecipe/Admin/View/resources/page/Content/";
 $gallery_path = "/yumrecipe/Admin/View/resources/page/Gallery/";
 $admin_path = "/yumrecipe/Admin/View/resources/page/Admin/";
 $income_path = "/yumrecipe/Admin/View/resources/page/Income/";
+$subscription_path = "/yumrecipe/Admin/View/resources/page/Subscription/";
 
 //Images Path
 $icons_path = "/yumrecipe/Admin/View/resources/icons/";
@@ -81,7 +82,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                     </a>
                 </div>
                 <div class="w-full text-left">
-                        <a href="#subscription" class="block w-full p-2 hover:bg-secondary active:bg-accent">
+                        <a href="<?php echo $subscription_path; ?>subscription.php" class="block w-full p-2 hover:bg-secondary active:bg-accent <?php echo basename($_SERVER['PHP_SELF']) == 'subscription.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>SketchLogo.svg" alt="Subscription Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Subscription
                     </a>
                 </div>  
