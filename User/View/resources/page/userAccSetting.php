@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<?php require_once '../../common/user-profile.php'; ?>
+<?php require_once '../../common/user-profile-common.php'; ?>
   
 
 <div class="flex-1 flex flex-col bg-gray-50 px-11 py-5">
