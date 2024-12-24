@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<?php include_once '../../../common/user-profile.php'; ?>   
+<?php include_once '../../../common/user-profile-common.php'; ?>   
 <!-- Cards Container -->
 <?php include_once '../../../common/plans.php'; ?>       
 
