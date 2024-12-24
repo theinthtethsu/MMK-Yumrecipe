@@ -2,6 +2,7 @@
 //Page Path
 $user_path = "/yumrecipe/Admin/View/resources/page/User/";
 $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
+
 $payment_path = "/yumrecipe/Admin/View/resources/page/Payment/";
 $recipemanagement_path = "/yumrecipe/Admin/View/resources/page/RecipeManagement/";
 $pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
