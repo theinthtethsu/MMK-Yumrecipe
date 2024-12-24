@@ -11,7 +11,7 @@
 <body class="">
   <!-- Navbar -->
   <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/header-before-login.php'); ?>
-
+  <?php require_once '../../common/nav.php'; ?>
   <!-- Main Content -->
   <main class="container mx-auto py-8 px-4">
     <h1 class="text-2xl font-bold mb-6 text-center">All Recipes</h1>

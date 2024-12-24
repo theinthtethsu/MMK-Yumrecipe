@@ -91,7 +91,7 @@
   <!-- Footer -->
   <footer>
     <div class="bg-gray-900">
-        <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/footer.php'); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/yumrecipe/User/View/common/footer.php'); ?>
     </div>
   </footer>
 </body>

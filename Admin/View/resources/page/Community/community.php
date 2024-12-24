@@ -21,7 +21,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
     <?php require_once '../../../common/sideMenu.php'; ?>
 
     <div class="flex-1 container p-4 bg-secondary">
-            <h1 class="text-2xl font-bold mb-4">Community</h1>
+            <h1 class="text-2xl font-bold mb-3">Community</h1>
             <!-- Tabs -->
             <ul class="flex space-x-4 justify-end">
                 <li class="cursor-pointer px-2 py-2 pb-2 bg-light-text rounded-md hover:text-blue-500" onclick="toggleBackground(this);">Blogs</li>
@@ -182,10 +182,9 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
   break;
   case 'Contents':
             contentDiv.innerHTML = `
-            <div class="bg-light-text p-6 rounded-lg shadow-md w-full">
+            <div class="bg-light-text p-6 rounded-md shadow-md w-full">
               <div class="flex-1 container p-4">
-            <div class="flex justify-end">
-              <div class="flex justify-end mb-10">
+              <div class="flex justify-end mb-3">
                     <div class="flex space-x-4">
                         <select class="border rounded p-2 bg-secondary">
                             <option>Pending</option>
@@ -291,7 +290,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
             ];
             ?>
 
-            <table class="min-w-full border border-collapse border-black">
+            <table class="min-w-full border border-black">
                 <thead>
                     <tr class="bg-light-text">
                         <th class="border border-black p-2">No</th>
@@ -357,7 +356,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
             <div class="bg-light-text p-6 rounded-lg shadow-md w-full">
               <div class="flex-1 container p-4">
             <div class="flex justify-end">
-              <div class="flex justify-end mb-10">
+              <div class="flex justify-end mb-3">
                     <div class="flex space-x-4">
                         <select class="border rounded-md p-2 bg-secondary">
                             <option>All Time</option>

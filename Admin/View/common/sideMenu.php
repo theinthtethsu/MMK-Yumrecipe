@@ -7,6 +7,7 @@ $payment_path = "/yumrecipe/Admin/View/resources/page/Payment/";
 $recipemanagement_path = "/yumrecipe/Admin/View/resources/page/RecipeManagement/";
 $pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
 $community_path = "/yumrecipe/Admin/View/resources/page/Community/";
+$contentcategorization_path = "/yumrecipe/Admin/View/resources/page/Content/";
 $gallery_path = "/yumrecipe/Admin/View/resources/page/Gallery/";
 $admin_path = "/yumrecipe/Admin/View/resources/page/Admin/";
 $income_path = "/yumrecipe/Admin/View/resources/page/Income/";
@@ -75,7 +76,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                     </a>
                 </div>
                 <div class="w-full text-left">
-                    <a href="#contents" class="block w-full p-2 hover:bg-secondary active:bg-accent">
+                    <a href="<?php echo $contentcategorization_path; ?>contentcategorization.php" class="block w-full p-2 hover:bg-secondary active:bg-accent">
                         <img src="<?php echo $icons_path; ?>PenNib.svg" alt="Contents Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Contents
                     </a>
                 </div>
