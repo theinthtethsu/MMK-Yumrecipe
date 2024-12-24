@@ -220,27 +220,27 @@
       ?>
     </div>
     <!-- Pagination -->
-    <div class="flex justify-center mt-8">
-      <ul class="flex gap-2">
-        <li><button class="py-2 px-4 bg-gray-200 text-gray-600 rounded">1</button></li>
-        <li><button class="py-2 px-4 bg-gray-200 text-gray-600 rounded">2</button></li>
-        <li><button class="py-2 px-4 bg-gray-200 text-gray-600 rounded">3</button></li>
-      </ul>
+    <div class="mt-4">
+      <?php require_once '../../common/pagination.php'; ?>
     </div>
+
   </main>
 
-  <div class="bg-cover bg-center bg-no-repeat p-10 rounded-lg"
+  <div class="bg-cover bg-center bg-no-repeat p-10 rounded-lg "
     style="background-image: url('http://localhost/yumrecipe/User/View/resources/images/bg9.png');">
-    <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 mb-0">
       <!-- Popular Categories Section -->
-      <div class="col-span-2 md:col-span-2">
+      <div class="col-span-2 md:col-span-2 h-auto">
         <h2 class="text-red-500 font-bold text-lg mb-4">Popular Categories</h2>
-        <ul class="space-y-2 text-gray-700">
-          <li><span class="inline-block mr-2">🍴</span>Quick and Easy</li>
-          <li><span class="inline-block mr-2">🍝</span>Pasta</li>
-          <li><span class="inline-block mr-2">🍣</span>Shashimi</li>
-          <li><span class="inline-block mr-2">🔥</span>Instant Pot</li>
-          <li><span class="inline-block mr-2">🥗</span>Vegetarian</li>
+        <ul class="space-y-2 text-gray-700 ">
+          <li><a href="receipe.php?category=quick-and-easy" class="inline-block mr-2 hover:text-gray-900">🍴 Quick and
+              Easy</a></li>
+          <li><a href="receipe.php?category=pasta" class="inline-block mr-2 hover:text-gray-900">🍝 Pasta</a></li>
+          <li><a href="receipe.php?category=shashimi" class="inline-block mr-2 hover:text-gray-900">🍣 Shashimi</a></li>
+          <li><a href="receipe.php?category=instant-pot" class="inline-block mr-2 hover:text-gray-900">🔥 Instant
+              Pot</a></li>
+          <li><a href="receipe.php?category=vegetarian" class="inline-block mr-2 hover:text-gray-900">🥗 Vegetarian</a>
+          </li>
         </ul>
       </div>
 
@@ -249,22 +249,24 @@
         <h2 class="text-red-500 font-bold text-lg mb-4">Recipe By Season</h2>
         <div class="grid grid-cols-2 gap-2 text-gray-700">
           <ul class="space-y-2">
-            <li>Spring</li>
-            <li>Winter</li>
-            <li>Summer</li>
+            <li><a href="receipe.php?season=spring" class="inline-block hover:text-gray-900">Spring</a></li>
+            <li><a href="receipe.php?season=winter" class="inline-block hover:text-gray-900">Winter</a></li>
+            <li><a href="receipe.php?season=summer" class="inline-block hover:text-gray-900">Summer</a></li>
           </ul>
           <ul class="space-y-2">
-            <li>Rainy</li>
-            <li>Fall</li>
+            <li><a href="receipe.php?season=rainy" class="inline-block hover:text-gray-900">Rainy</a></li>
+            <li><a href="receipe.php?season=fall" class="inline-block hover:text-gray-900">Fall</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+
   <!-- Footer -->
-  <div class="bg-gray-900">
+  <div class="bg-gray-900 ">
     <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/footer.php'); ?>
   </div>
+  
 </body>
 
 </html>
