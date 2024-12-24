@@ -14027,6 +14027,14 @@ video {
   -moz-osx-font-smoothing: auto;
 }
 
+.placeholder-opacity-75::-moz-placeholder {
+  --tw-placeholder-opacity: 0.75;
+}
+
+.placeholder-opacity-75::placeholder {
+  --tw-placeholder-opacity: 0.75;
+}
+
 .caret-accent {
   caret-color: var(--accent-color);
 }

@@ -2,6 +2,7 @@
 //Page Path
 $user_path = "/yumrecipe/Admin/View/resources/page/User/";
 $setting_path = "/yumrecipe/Admin/View/resources/page/Setting/";
+
 $payment_path = "/yumrecipe/Admin/View/resources/page/Payment/";
 $recipemanagement_path = "/yumrecipe/Admin/View/resources/page/RecipeManagement/";
 $pendingrecipe_path = "/yumrecipe/Admin/View/resources/page/PendingRecipe/";
@@ -15,6 +16,7 @@ $income_path = "/yumrecipe/Admin/View/resources/page/Income/";
 $icons_path = "/yumrecipe/Admin/View/resources/icons/";
 $images_path = "/yumrecipe/Admin/View/resources/images/";
 $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
+
 ?>
 
 <!DOCTYPE html>

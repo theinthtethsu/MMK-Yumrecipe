@@ -1,5 +1,4 @@
 <?php
-$user_path = "/yumrecipe/User/View/resources/page/";
 $images_path = "/yumrecipe/User/View/resources/img/";
 ?>
 
@@ -8,19 +7,10 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile UI</title>
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<style>
-    aside {
-    position: sticky;
-    top: 8.5rem;
-    height: calc(100vh - 8.5rem); 
-    z-index: 10;
-}
-</style>
 </head>
 <body>
-
 <header class="shadow-md sticky top-0 z-50 bg-white">
     <div class="container mx-auto flex items-center justify-between ">
         <!-- Logo -->
@@ -77,25 +67,5 @@ $images_path = "/yumrecipe/User/View/resources/img/";
         </nav>
     </div>
 </header>
-
-    <!-- Parent Container -->
-    <div class="flex">
-        <!-- Sidebar -->
-        <aside class="w-1/5 bg-white border-r text-center">
-            <ul class="mt-10 space-y-4 pl-5">
-                <li class="text-white font-bold italic bg-red-500 p-2"><a href="<?php echo $user_path; ?>profile.html">Profile</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>savedRecipes.html">Save Recipes</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>notification.html">Notification</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>mealPlanner.html">Meal Planner</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>groceryList.html">Grocery List</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>setting.html">Setting</a></li>
-            </ul>
-        </aside>
-        
-
-        <!-- Main Content -->
-
-
-
 </body>
 </html>

@@ -43,13 +43,13 @@ $images_path = "/yumrecipe/User/View/resources/img/";
                 <!-- Profile Section -->
                 <div class="flex items-center space-x-4">
                     <button class="p-2">
-                        <img src="../resources/img/notification.svg" alt="" class="w-7 h-7">
+                        <img src="<?php echo $images_path ?>notification.svg" alt="" class="w-7 h-7">
 
                     </button>
                     <div class="flex items-center">
                         <span class="text-gray-700 dark:text-gray-300 mr-2">My Profile</span>
                         <button class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
-                            <img src="../resources/img/profile.svg" alt="" class="w-7 h-7">                         
+                            <img src="<?php echo $images_path ?>profile.svg" alt="" class="w-7 h-7">                         
                         </button>
                     </div>
                 </div>
