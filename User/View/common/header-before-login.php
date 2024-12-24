@@ -44,7 +44,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             <!-- Auth Buttons -->
             <div class="flex items-center space-x-4">
                 <button class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-md font-semibold">
-                    Login
+                    Sign In
                 </button>
                 <button class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-md font-semibold">
                     Sign Up </button>
