@@ -13,7 +13,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 </head>
 <body>
     
-    <header class="px-20 py-1 bg-white shadow-md">
+    <header class="px-20 py-1 bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between ">
             <!-- Logo -->
             <div class="flex items-center">
@@ -44,7 +44,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             <!-- Auth Buttons -->
             <div class="flex items-center space-x-4">
                 <button class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-md font-semibold">
-                    Login
+                    Sign In
                 </button>
                 <button class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-md font-semibold">
                     Sign Up </button>

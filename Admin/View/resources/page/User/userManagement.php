@@ -123,7 +123,7 @@
                         <th class="border border-black p-2">Email</th>
                         <th class="border border-black p-2">Type</th>
                         <th class="border border-black p-2">Registered Date</th>
-              <th class="border border-black p-2">Action</th>
+                        <th class="border border-black p-2">Action</th>
                     </tr>
                 </thead>
                 <!-- Table Body -->

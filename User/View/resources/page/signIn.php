@@ -8,7 +8,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
+    <title>Sign In Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
@@ -37,8 +37,8 @@ $user_path = "/yumrecipe/User/View/resources/page/";
         <div class="px-10 pt-20 pb-8 w-96">
             <!-- Title -->
             <div class="text-center mb-6">
-                <p class="text-2xl font-bold text-black dark:text-white">Sign Up</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">or <a href="<?php echo $user_path ?>signIn.php" class="text-primary font-semibold">Sign In</a></p>
+                <p class="text-2xl font-bold text-black dark:text-white">Sign In</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">or <a href="<?php echo $user_path ?>signUp.php" class="text-primary font-semibold">Sign Up</a></p>
             </div>
 
             <!-- Form Section -->
@@ -51,22 +51,6 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                     </div>
                 </div>
 
-                      <!-- Email Field -->
-                      <div class="mb-4">
-                    <div class="flex items-center border-b-2 border-red-400 p-2">
-                        <span class="material-icons text-gray-400 dark:text-gray-300">email</span>
-                        <input id="email" name="email" type="email" placeholder="Email" class="ml-2 w-full bg-transparent focus:outline-none text-black dark:text-white">
-                    </div>
-                </div>
-
-                      <!-- Phone No Field -->
-                      <div class="mb-4">
-                    <div class="flex items-center border-b-2 border-red-400 p-2">
-                        <span class="material-icons text-gray-400 dark:text-gray-300">phone</span>
-                        <input id="phone" name="phone" type="text" placeholder="Phone Number" class="ml-2 w-full bg-transparent focus:outline-none text-black dark:text-white">
-                    </div>
-                </div>
-
                 <!-- Password Field -->
                 <div class="mb-4">
                     <div class="flex items-center border-b-2 border-red-400 p-2">
@@ -76,17 +60,18 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                     </div>
                 </div>
 
-                <!-- Remember Me -->
+                <!-- Remember Me and Forgot Password -->
                 <div class="flex items-center justify-between mb-6 mt-10">
                     <label class="flex items-center text-sm text-gray-600 dark:text-gray-300">
                         <input type="checkbox" class="form-checkbox text-primary dark:text-primary focus:ring-primary dark:focus:ring-primary">
                         <span class="ml-2">Remember Me</span>
-                    </label>                  
+                    </label>
+                    <a href="<?php echo $user_path ?>forgetPassword.php" class="text-sm text-primary font-semibold">Forget Password</a>
                 </div>
 .
-                <!-- Sign Up Button -->
+                <!-- Sign In Button -->
                  <div class=" flex justify-center items-center mt-5">
-                    <button type="submit" class="m-auto px-10 py-3 border rounded-full bg-red-500 text-white text-md font-semibold hover:bg-red-600 ml-auto">Sign Up</button>
+                    <button type="submit" class="m-auto px-10 py-3 border rounded-full bg-red-500 text-white text-md font-semibold hover:bg-red-600 ml-auto">Sign In</button>
                  </div>
             </form>
         </div>      
