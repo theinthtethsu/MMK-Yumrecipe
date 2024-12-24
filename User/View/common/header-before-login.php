@@ -13,7 +13,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 </head>
 <body>
     
-    <header class="px-20 py-1 bg-white shadow-md">
+    <header class="px-20 py-1 bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between ">
             <!-- Logo -->
             <div class="flex items-center">
