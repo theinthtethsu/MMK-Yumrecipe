@@ -10,7 +10,9 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white">
+<div>
 <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/header-after-login.php'); ?>
+</div>
 <div>
   <div class="bg-red-500 w-full h-auto pl-8 p-4 text-white text-2xl">Shredded Beef Tacos</div>
   </div>
@@ -167,7 +169,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     <!-- Recipe Item -->
     <div class="flex items-center mb-8">
       <img
-        src="<?php echo $images_path ?>Best-Cheesecake.jpg" alt="cheese-cake" class="w-36 h-28"
+        src="<?php echo $images_path ?>Pastas/1-14.jpg" alt="cheese-cake" class="w-36 h-28"
         
       />
       <div class="ml-2 ">
@@ -181,7 +183,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       />
       <div class="ml-2">
         <p>Tomato Soup</p>
-        <div class="text-yellow-500">★★★★☆</div>
+        <div class="text-yellow-500 ">★★★★☆</div>
       </div>
     </div>
   </div>

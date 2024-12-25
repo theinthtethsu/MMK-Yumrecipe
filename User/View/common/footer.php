@@ -15,19 +15,19 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 </head>
 
 <body>
-    <section class="bg-gray-900 text-white mt-14">
+    <section class="bg-gray-900 text-white ">
         <div class="max-w-7xl mx-auto p-8 flex flex-col md:flex-row gap-8">
             <!-- Left Section: Pages -->
             <div class="flex-1">
                 <h2 class="text-3xl font-bold mb-6">Pages</h2>
                 <ul class="space-y-4 text-lg">
-                    <li><a href="<?php echo $user_path; ?>homepage.php" class="hover:text-red-500 <?php echo basename($_SERVER['PHP_SELF']) == 'homepage.php' ? 'text-red-500' : '' ?>">Home</a></li>
-                    <li><a href="<?php echo $user_path; ?>receipe.php" class=" hover:text-red-500 <?php echo basename($_SERVER['PHP_SELF']) == 'receipe.php' ? 'text-red-500' : '' ?>">Recipe</a></li>
-                    <li><a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-500 <?php echo basename($_SERVER['PHP_SELF']) == 'add_recipe.php' ? 'text-red-500' : '' ?>">Add Recipe</a></li>
-                    <li><a href="<?php echo $blog_path; ?>blog.php" class="hover:text-red-500 <?php echo basename($_SERVER['PHP_SELF']) == 'blog.php' ? 'text-red-500' : '' ?>">Blogs</a></li>
-                    <li><a href="<?php echo $user_path; ?>about_us.php" class="hover:text-red-500 <?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'text-red-500' : '' ?>">About Us</a></li>
-                    <li><a href="<?php echo $user_path; ?>faq1.php" class="hover:text-red-500 <?php echo basename($_SERVER['PHP_SELF']) == 'faq1.php' ? 'text-red-500' : '' ?>">FAQ</a></li>
-                    <li><a href="<?php echo $user_path; ?>privacyPolicy.php" class="hover:text-red-500 <?php echo basename($_SERVER['PHP_SELF']) == 'privacyPolicy.php' ? 'text-red-500' : '' ?>">Privacy
+                    <li><a href="<?php echo $user_path; ?>homepage.php" class=" text-red-500">Home</a></li>
+                    <li><a href="<?php echo $user_path; ?>Recipe/receipe.php" class=" hover:text-red-500">Recipe</a></li>
+                    <li><a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-500">Add Recipe</a></li>
+                    <li><a href="<?php echo $user_path; ?>blog.html" class="hover:text-red-500">Blogs</a></li>
+                    <li><a href="<?php echo $user_path; ?>aboutUs.html" class="hover:text-red-500">About Us</a></li>
+                    <li><a href="<?php echo $user_path; ?>faq1.php" class="hover:text-red-500">FAQ</a></li>
+                    <li><a href="<?php echo $user_path; ?>privacyPolicy.php" class="hover:text-red-500">Privacy
                             Policy</a></li>
                 </ul>
             </div>
