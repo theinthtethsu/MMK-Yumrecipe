@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meal Planner</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
     <link
@@ -18,7 +18,7 @@
 </head>
 <body>
 <?php include_once '../../../common/user-profile-common.php'; ?>
-<div class="container text-white flex flex-col lg:flex-row">
+<div class="container mx-auto text-white flex flex-col lg:flex-row">
       <!-- Left Section -->
       <div class="left w-full lg:w-2/5 p-5">
         <div
