@@ -14,14 +14,14 @@ $user_path = "/yumrecipe/User/View/resources/page/";
 </head>
 
 <body>
-    <section class="bg-gray-900 text-white mt-14">
+    <section class="bg-gray-900 text-white ">
         <div class="max-w-7xl mx-auto p-8 flex flex-col md:flex-row gap-8">
             <!-- Left Section: Pages -->
             <div class="flex-1">
                 <h2 class="text-3xl font-bold mb-6">Pages</h2>
                 <ul class="space-y-4 text-lg">
                     <li><a href="<?php echo $user_path; ?>homepage.php"" class=" text-red-500">Home</a></li>
-                    <li><a href="<?php echo $user_path; ?>receipe.php" class=" hover:text-red-500">Recipe</a></li>
+                    <li><a href="<?php echo $user_path; ?>Recipe/receipe.php" class=" hover:text-red-500">Recipe</a></li>
                     <li><a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-500">Add Recipe</a></li>
                     <li><a href="<?php echo $user_path; ?>blog.html" class="hover:text-red-500">Blogs</a></li>
                     <li><a href="<?php echo $user_path; ?>aboutUs.html" class="hover:text-red-500">About Us</a></li>

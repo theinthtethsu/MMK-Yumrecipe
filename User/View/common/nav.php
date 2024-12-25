@@ -25,7 +25,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
             <a href="<?php echo $user_path; ?>homepage.php" class="text-red-500 hover:text-red-600">Home</a>
           </li>
           <li>
-            <a href="<?php echo $user_path; ?>receipe.php" class="hover:text-red-600">Recipes</a>
+            <a href="<?php echo $user_path; ?>Recipe/receipe.php" class="hover:text-red-600">Recipes</a>
           </li>
           <li>
             <a href="<?php echo $user_path; ?>addRecipe.html" class="hover:text-red-600">Add Recipes</a>
