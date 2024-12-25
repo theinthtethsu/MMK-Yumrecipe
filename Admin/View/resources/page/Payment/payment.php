@@ -11,7 +11,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
     <title>Payment</title>
     <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../../../../../output.css">
-    <script src="../../js/payment.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="font-sans bg-light-text">
@@ -19,50 +19,58 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
         <!-- Side Menu -->
         <?php require_once '../../../common/sideMenu.php'; ?>
         <!-- Content -->
-        <div class="flex-1 container p-4 bg-secondary">
+        <div class="flex-1 container p-4 bg-secondary overflow-y-auto" style="height: 100vh;">
             <h1 class="text-2xl font-bold mb-4">Payment</h1>
             <div class="mb-4 flex justify-end">
-                <button class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2 mb-4" onclick="showPaymentModal()">Add New Payment</button>
-                <!-- Payment Modal -->
-                <div id="paymentModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <div class="bg-white p-6 rounded-md shadow-md w-1/3">
-                        <h2 class="text-xl font-semibold mb-4">Add New Payment</h2>
-                        <label for="payment-name" class="block text-dark-text">Payment Name</label>
-                        <input type="text" id="payment-name" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" placeholder="Enter Payment Name" required>
+                <!-- Add New Payment Button -->
+                <button id="addNewPayment" class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2 mb-4">Add New Payment</button>
+            </div>
 
-                        <label for="payment-logo" class="block text-dark-text mt-4">Payment Logo</label>
-                        <input type="file" id="payment-logo" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" required>
-
-                        <div class="mt-4 flex justify-end">
-                            <button class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2" onclick="savePayment()">Save</button>
-                            <button class="bg-gray-300 text-black px-4 py-2 rounded-md shadow ml-2 hover:bg-gray-400" onclick="closePaymentModal()">Cancel</button>
-                        </div>
+            <!-- Modal Box -->
+            <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center hidden mx-auto my-auto">
+                <div class="bg-white p-6 rounded-md shadow-md w-1/3">
+                    <h2 class="text-xl font-semibold mb-4">Add New Payment Method</h2>
+                    <!-- Modal Content -->
+                    <div>
+                        <label for="new-payment-name" class="block text-dark-text">Payment Name</label>
+                        <input type="text" id="new-payment-name" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" placeholder="Enter Payment Name" required>
+                    </div>
+                    <div class="mt-4">
+                        <label for="new-payment-logo" class="block text-dark-text">Payment Logo</label>
+                        <input type="file" id="new-payment-logo" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2">
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <button id="closePaymentModal" class="bg-gray-500 text-white px-4 py-2 rounded-md shadow hover:bg-gray-600 mr-2">Cancel</button>
+                        <button class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2" id="savePayment">Save</button>
                     </div>
                 </div>
             </div>
 
             <div class="grid grid-cols-2 gap-4">
+                <!-- Payment Inputs -->
                 <div class="space-y-4">
                     <div>
+                        <!-- Label to Choose Mobile Banking -->
                         <label for="mobile-banking" class="block text-dark-text">Choose Mobile Banking </label>
+                        <!-- Payment Methods in associative array -->
                         <?php
-                        $mobileBankingOptions = [
-                            'kpay' => [
-                                'label' => 'KBZPAY',
+                        $paymentMethods = [
+                            [
+                                'name' => 'KBZPAY',
                                 'logo' => $paymentlogo_path . 'kpayLogo.png',
                                 'account_name' => 'Admin KPay',
                                 'phone_number' => '0134343414',
                                 'qr_code' => $paymentlogo_path . 'kpayqr.png'
                             ],
-                            'wavepay' => [
-                                'label' => 'WAVEPAY',
+                            [
+                                'name' => 'WAVEPAY',
                                 'logo' => $paymentlogo_path . 'wavepayLogo.png',
                                 'account_name' => 'Admin Wave Pay',
                                 'phone_number' => '09999999999',
                                 'qr_code' => $paymentlogo_path . 'kpayqr.png'
                             ],
-                            'ayapay' => [
-                                'label' => 'AYAPAY',
+                            [
+                                'name' => 'AYAPAY',
                                 'logo' => $paymentlogo_path . 'ayapayLogo.png',
                                 'account_name' => 'Admin Aya Pay',
                                 'phone_number' => '09914545453',
@@ -70,50 +78,192 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                             ]
                         ];
                         ?>
+                        <!-- Select Box to Choose Mobile Banking -->
                         <select id="mobile-banking" class="mt-1 w-64 bg-gray-200 rounded-md shadow-md p-2 inline-flex items-center">
+                            <!-- Default Option -->
                             <option value="default">Select Mobile Banking</option>
-                            <?php foreach ($mobileBankingOptions as $value => $option): ?>
-                                <option value="<?php echo $value; ?>">
-                                    <?php echo $option['label']; ?>
+                            <!-- Loop through payment methods -->
+                            <?php foreach ($paymentMethods as $paymentMethod => $option): ?>
+                                <option value="<?php echo $paymentMethod; ?>">
+                                    <?php echo $option['name']; ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
-                        <img id="logo-preview" src="" alt="Payment Logo" class="inline ml-2 border border-gray-300 hidden" style="width: 40px; height: 30px;">
+                        <!-- Payment Logo -->
+                        <img id="payment-logo" src="" alt="Payment Logo" class="hidden ml-2 border border-gray-300" style="width: 40px; height: 30px;">
                     </div>
+
                     <!-- Receiving Info -->
-                    <?php foreach ($mobileBankingOptions as $key => $option): ?>
-                        <div class="mobile-banking-option hidden" data-value="<?php echo $key; ?>">
-                            <label for="account-name-<?php echo $key; ?>" class="block text-dark-text">Enter Receiving Account Name for <?php echo $option['label']; ?></label>
-                            <input type="text" id="account-name-<?php echo $key; ?>" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" placeholder="Account Name" value="<?php echo $option['account_name']; ?>" required>
+                    <div id="grid grid-cols-2">
+                        <div id=" receiving-info">
+                            <?php foreach ($paymentMethods as $paymentMethod => $option): ?>
+                                <!--Account Name-->
+                                <div class="payment-method" data-value="<?php echo $paymentMethod; ?>">
+                                    <!--Label-->
+                                    <label for="account-name-input" class="block text-dark-text">Enter Receiving Account Name for <?php echo $option['name']; ?></label>
+                                    <!--Input-->
+                                    <input type="text" id="account-name-input" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2 account-name" placeholder="Account Name" value="<?php echo $option['account_name']; ?>" required>
+                                </div>
+                                <!--Phone Number-->
+                                <div class="payment-method" data-value="<?php echo $paymentMethod; ?>">
+                                    <!--Label-->
+                                    <label for="phone-number-input" class="block text-dark-text">Enter Receiving Phone Number for <?php echo $option['name']; ?></label>
+                                    <!--Input-->
+                                    <input type="tel" id="phone-number-input" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2 phone-number" placeholder="Phone Number" value="<?php echo $option['phone_number']; ?>" required>
+                                </div>
+                                <!--QR Code-->
+                                <div class="payment-method" data-value="<?php echo $paymentMethod; ?>">
+                                    <!--Label-->
+                                    <label class="block text-dark-text">Upload QR Code or Banking Info Image for <?php echo $option['name']; ?></label>
+                                    <!--Input-->
+                                    <div class="flex items-center mt-1">
+                                        <input type="file" id="qr-code-input" class="block w-full bg-gray-200 rounded-md shadow-md p-2 qr-code" required />
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
-                        <div class="mobile-banking-option hidden" data-value="<?php echo $key; ?>">
-                            <label for="phone-number-<?php echo $key; ?>" class="block text-dark-text">Enter Receiving Phone Number for <?php echo $option['label']; ?></label>
-                            <input type="text" id="phone-number-<?php echo $key; ?>" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2" placeholder="Phone Number" value="<?php echo $option['phone_number']; ?>" required>
-                        </div>
-                        <div class="mobile-banking-option hidden" data-value="<?php echo $key; ?>">
-                            <label class="block text-dark-text">Upload QR Code or Banking Info Image for <?php echo $option['label']; ?></label>
-                            <div class="flex items-center mt-1">
-                                <input type="file" class="block w-full bg-gray-200 rounded-md shadow-md p-2" required />
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
+                    </div>
                 </div>
+
                 <!-- Preview -->
                 <div id="preview" class="border p-4 rounded-md hidden">
                     <h2 class="text-xl font-semibold mb-2">Preview</h2>
                     <div class="bg-gray-100 h-64 flex flex-col items-center justify-center">
-                        <img id="preview-logo" src="<?php echo $paymentlogo_path; ?>kpayLogo.png" alt="Kpay" class="inline ml-2 border border-gray-300" style="width: 40px; height: 30px;">
+                        <img id="preview-logo" src="" alt="Kpay" class="inline ml-2 border border-gray-300" style="width: 40px; height: 30px;">
                         <p class="text-gray-500">Scan To Pay</p>
-                        <img id="preview-qr" src="<?php echo $paymentlogo_path; ?>kpayqr.png" alt="KpayQR" class="ml-2 border border-gray-300" style="width: 100px; height: 100px;">
-                        <p class="text-gray-500">Account Name: <span id="preview-account-name">Admin</span></p>
-                        <p class="text-gray-500">Account Number: <span id="preview-account-number">1234567890</span></p>
+                        <img id="preview-qr-code" src="" alt="KpayQR" class="ml-2 border border-gray-300" style="width: 100px; height: 100px;">
+                        <p class="text-gray-500">Account Name: <span id="preview-account-name"></span></p>
+                        <p class="text-gray-500">Account Number: <span id="preview-account-number"></span></p>
                     </div>
                 </div>
-                <div class="flex justify-center mt-10">
-                    <button class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2">Save Changes</button>
+            </div>
+            <!-- Save Changes -->
+            <div class="flex justify-center mt-10">
+                <button class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2" id="saveChanges" onclick="">Save Changes</button>
+            </div>
+            <!--save changes modal-->
+            <div id="saveChangesModal" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center hidden mx-auto my-auto">
+                <div class="bg-white p-6 rounded-md shadow-md w-1/3">
+                    <h2 class="text-xl font-semibold mb-4">Save Changes</h2>
+                    <p class="text-center mb-4">Are you sure you want to save changes?</p>
+                    <div class="flex justify-center gap-4">
+                        <button class="bg-gray-500 text-white px-4 py-2 rounded-md shadow hover:bg-gray-600" id="saveChangesCancel" onclick="">Cancel</button>
+                        <button class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2" id="saveChangesConfirm" onclick="saveChanges()">Confirm</button>
+                    </div>
                 </div>
             </div>
+
         </div>
 </body>
+<!-- Script -->
+<script>
+    var paymentMethods = <?php echo json_encode($paymentMethods); ?>;
+    // Now paymentMethods is a JavaScript array
+
+    $(document).ready(function() {
+        $('#preview').show();
+
+        function showSelectedPaymentInfo() {
+            var selectedValue = $('#mobile-banking').val();
+            console.log(`selectedValue: ${selectedValue}`);
+            $('.payment-method').hide(); // Hide all payment method sections
+            $('.payment-method[data-value="' + selectedValue + '"]').show(); // Show the selected payment method section
+
+            // Update preview section
+            var selectedOption = <?php echo json_encode($paymentMethods); ?>[selectedValue];
+            if (selectedOption) {
+                $('#preview-logo').attr('src', selectedOption.logo);
+                $('#preview-qr-code').attr('src', selectedOption.qr_code);
+                $('#preview-account-name').text(selectedOption.account_name);
+                $('#preview-account-number').text(selectedOption.phone_number);
+                $('#preview').show();
+            } else {
+                $('#preview').hide();
+            }
+        }
+
+        $('#mobile-banking').change(showSelectedPaymentInfo);
+
+        // Update payment inputs
+        function syncPaymentInputs() {
+            var selectedValue = $('#mobile-banking').val();
+            var selectedOption = <?php echo json_encode($paymentMethods); ?>[selectedValue];
+            console.log(`selectedOption: ${selectedOption}`);
+            if (selectedOption) {
+                var accountName = $('.payment-method[data-value="' + selectedValue + '"] .account-name').val();
+                var phoneNumber = $('.payment-method[data-value="' + selectedValue + '"] .phone-number').val();
+                $('#preview-account-name').text(accountName);
+                $('#preview-account-number').text(phoneNumber);
+            }
+        }
+
+        $('.payment-method input').on('input', syncPaymentInputs);
+
+        // Trigger change event on page load to set initial state
+        $('#mobile-banking').trigger('change');
+
+        // Show payment modal
+        $('#addNewPayment').click(function() {
+            $('#paymentModal').removeClass('hidden');
+            $('#paymentModal').addClass('flex');
+        });
+
+        // Hide payment modal on cancel
+        $('#closePaymentModal').click(function() {
+            $('#paymentModal').removeClass('flex');
+            $('#paymentModal').addClass('hidden');
+        });
+
+        // Save changes
+        $('#saveChanges').click(function() {
+            $('#saveChangesModal').removeClass('hidden');
+            $('#saveChangesModal').addClass('flex');
+        });
+
+        // Confirm save changes
+        $('#saveChangesConfirm').click(function() {
+            $('#saveChangesModal').removeClass('flex');
+            $('#saveChangesModal').addClass('hidden');
+        });
+        // Close save changes modal
+        $('#saveChangesCancel').click(function() {
+            $('#saveChangesModal').removeClass('flex');
+            $('#saveChangesModal').addClass('hidden');
+        });
+        // Save payment
+        $('#savePayment').click(function() {
+            //get input payment name
+            const paymentName = $('#new-payment-name').val();
+            //get input payment logo
+            const paymentLogo = $('#new-payment-logo').val();
+            if (paymentName) {
+                const newPaymentMethod = {
+                    name: paymentName,
+                    logo: paymentLogo,
+                    account_name: null,
+                    phone_number: null,
+                    qr_code: null
+                };
+                paymentMethods.push(newPaymentMethod);
+                $('#new-payment-name').val('');
+                $('#new-payment-logo').val('');
+                //select the new payment method
+                $('#mobile-banking').val(paymentMethods.length - 1);
+                console.log(newPaymentMethod);
+                console.log(paymentMethods);
+            } else {
+                alert('Please enter a payment name');
+            }
+
+            //update the select box with the new payment method
+            $('#mobile-banking').append(new Option(paymentName, paymentMethods.length - 1));
+            $('#mobile-banking').trigger('change');
+
+            //close payment modal
+            $('#paymentModal').removeClass('flex');
+            $('#paymentModal').addClass('hidden');
+        });
+    });
+</script>
 
 </html>

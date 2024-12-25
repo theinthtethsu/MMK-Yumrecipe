@@ -9,9 +9,13 @@ $commonPath = '/yumrecipe/User/View/common/';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Features</title>
-    <link rel="stylesheet" href="../../css/root.css">
+    <link rel="stylesheet" href="../../../css/root.css">
     <link rel="stylesheet" href="../../../../../output.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!--cdn fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
@@ -22,7 +26,7 @@ $commonPath = '/yumrecipe/User/View/common/';
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Premium features made easy</h5>
             <p class="mb-3 font-normal text-gray-700">Add recipes unlimited, instantly create shopping lists, scheduled
                 meals, access to live cooking, save your recipes in organize, and read our blogs.</p>
-            <button class="bg-userPrimary hover:bg-userSecondary text-white font-bold py-2 px-4 rounded w-48">Start Planning</button>
+            <button class="bg-userPrimary hover:bg-userSecondary text-white font-bold py-2 px-4 rounded w-48 transition-transform duration-300 hover:translate-x-2" onclick="window.scrollTo({ top: document.getElementById('premium-card-container').offsetTop, behavior: 'smooth' });">Start Planning &nbsp; <i class="fa-solid fa-arrow-right ml-2  hover:text-yellow-500"></i></button>
         </div>
         <img src="../../img/lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-[340px] object-cover">
     </section>
@@ -32,7 +36,7 @@ $commonPath = '/yumrecipe/User/View/common/';
             <!--circle and text container wrapper row 1-->
             <div class="flex flex-col justify-center items-center">
                 <!--circle container with yellow background-->
-                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-24 h-24">
+                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-24 h-24 hover:bg-yellow-600">
                     <img src="../../img/cup.svg" alt="Video" class="" style="width: 70%; height: 70%;">
                 </div>
                 <!--text container-->
@@ -43,7 +47,7 @@ $commonPath = '/yumrecipe/User/View/common/';
             <!--circle and text container wrapper row 1-->
             <div class="flex flex-col justify-center items-center">
                 <!--circle container with yellow background-->
-                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-20 h-20">
+                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-20 h-20 hover:bg-yellow-600">
                     <img src="../../img/Video.svg" alt="Video" class="" style="width: 70%; height: 70%;">
                 </div>
                 <!--text container-->
@@ -55,7 +59,7 @@ $commonPath = '/yumrecipe/User/View/common/';
             <!--circle and text container wrapper row 1-->
             <div class="flex flex-col justify-center items-center">
                 <!--circle container with yellow background-->
-                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-20 h-20">
+                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-20 h-20 hover:bg-yellow-600">
                     <img src="../../img/ChefHat.svg" alt="Video" class="" style="width: 70%; height: 70%;">
                 </div>
                 <!--text container-->
@@ -70,7 +74,7 @@ $commonPath = '/yumrecipe/User/View/common/';
             <!--circle and text container wrapper row 2-->
             <div class="flex flex-col justify-center items-center">
                 <!--circle container with yellow background-->
-                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-20 h-20">
+                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-20 h-20 hover:bg-yellow-600">
                     <img src="../../img/Video.svg" alt="Video" class="" style="width: 70%; height: 70%;">
                 </div>
                 <!--text container-->
@@ -82,7 +86,7 @@ $commonPath = '/yumrecipe/User/View/common/';
             <!--circle and text container wrapper row 2-->
             <div class="flex flex-col justify-center items-center">
                 <!--circle container with yellow background-->
-                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-20 h-20">
+                <div class="flex justify-center items-center bg-yellow-500 rounded-full w-20 h-20 hover:bg-yellow-600">
                     <img src="../../img/cup.svg" alt="cup" class="" style="width: 70%; height: 70%;">
                 </div>
                 <!--text container-->
@@ -97,7 +101,9 @@ $commonPath = '/yumrecipe/User/View/common/';
     <!--title--> 
     <h1 class="text-2xl font-bold text-center mt-8 text-gray-800">Choose your plan</h1>
     <!--premium card container-->
-    <?php require_once '../../../common/plans.php'; ?>
+    <div id="premium-card-container" class="flex justify-center items-center">
+        <?php require_once '../../../common/plans.php'; ?>
+    </div>
 </body>
 
 </html>
