@@ -1,5 +1,7 @@
 <?php
 $subscription_path = '/yumrecipe/Admin/View/resources/page/Subscription/';
+$detailpending_path = '/yumrecipe/Admin/View/resources/page/Subscription/detailpending.php';
+$addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan.php';
 ?>
 
 <!DOCTYPE html>
@@ -32,30 +34,10 @@ $subscription_path = '/yumrecipe/Admin/View/resources/page/Subscription/';
             <div id="content"></div>
         </div>
     </div>
-
     <script>
-        // Add these functions at the top of your script section
-        function showModal(type) {
-            const modal = document.getElementById('deleteModal');
-            if (modal) {
-                modal.classList.remove('hidden');
-            }
-        }
-
-        function hideModal(type) {
-            const modal = document.getElementById('deleteModal');
-            if (modal) {
-                modal.classList.add('hidden');
-            }
-        }
-
-        // Also update your delete modal's cancel button
-        document.querySelector('#deleteModal button:last-child').onclick = function() {
-            hideModal('delete');
-        };
 
         // function to toggle the background color of the selected tab
-        function toggleBackground(selected) {
+         function toggleBackground(selected) {
             const items = document.querySelectorAll('ul li');
             items.forEach(item => {
                 item.classList.remove('bg-light-text');
@@ -67,11 +49,173 @@ $subscription_path = '/yumrecipe/Admin/View/resources/page/Subscription/';
             switch (selected.innerText) {
                 case 'Pending':
                     contentDiv.innerHTML = `
-                     `;   
-                    break;
+                    <div class="bg-light-text p-6 rounded-lg shadow-md w-full -mt-3">
+                    <div class="flex-1 container p-4 ">
+                      <!-- Filters -->
+                                <div class="flex space-x-4 justify-end">
+                                <select class="border rounded p-2 bg-secondary">
+                                    <option>All Type</option>
+                                    <option>Basic</option>
+                                    <option>Standard</option>
+                                    <option>Premium</option>
+                                </select>
+                                 <select class="border rounded p-2 bg-secondary">
+                                   <option>All Payment</option>
+                                  <option>KBZPay</option>
+                                  <option>WavePay</option>
+                                </select>
+                                <select class="border rounded p-2 bg-secondary">
+                                 <option>Newest First</option>
+                                 <option>Oldest First</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <?php
+            // Associative array of pending subscription
+            $pending = [
+                [
+                    "no" => 1,
+                    "date" => "2024-12-02",
+                    "subscriber" => "mary@example.com",                   
+                    "type" => "Basic",
+                    "status" => "Pending",
+                    "paymentmethod" => "KBZPay",
+                ],      
+                [
+                    "no" => 2,
+                    "date" => "2024-12-03",
+                    "subscriber" => "john@example.com",                   
+                    "type" => "Standard",
+                    "status" => "Pending",
+                    "paymentmethod" => "WavePay",
+                ],
+                [
+                    "no" => 3,
+                    "date" => "2024-12-04",
+                    "subscriber" => "jane@example.com",                   
+                    "type" => "Premium",
+                    "status" => "Pending",
+                    "paymentmethod" => "KBZPay",
+                ],
+                [
+                    "no" => 4,
+                    "date" => "2024-12-05",
+                    "subscriber" => "cathy123@example.com",                   
+                    "type" => "Standard",
+                    "status" => "Pending",
+                    "paymentmethod" => "KBZPay",
+                ],
+                [
+                    "no" => 5,
+                    "date" => "2024-12-06",
+                    "subscriber" => "jack@example.com",                   
+                    "type" => "Premium",
+                    "status" => "Pending",
+                    "paymentmethod" => "KBZPay",
+                ],
+                [
+                    "no" => 6,
+                    "date" => "2024-12-07",
+                    "subscriber" => "eathy123@example.com",                   
+                    "type" => "Basic",
+                    "status" => "Pending",
+                    "paymentmethod" => "KBZPay",
+                ]
+            ];
+            ?>
+            <table class="min-w-full border border-collapse border-black">
+                <thead>
+                    <tr class="bg-light-text">
+                        <th class="border border-black p-2">No</th>
+                        <th class="border border-black p-2">Subscriber</th>
+                        <th class="border border-black p-2">Email</th>
+                        <th class="border border-black p-2">Type</th>
+                        <th class="border border-black p-2">Status</th>
+                        <th class="border border-black p-2">Payment Method</th>
+                        <th class="border border-black p-2">Action</th>
+                    </tr>
+                </thead > 
+                 <tbody>
+                    <?php foreach ($pending as $index => $subscription): ?>
+                        <tr class="<?= $index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text' ?>">
+                            <td class="border border-black p-2"><?= $subscription['no'] ?></td>
+                            <td class="border border-black p-2"><?= strtok($subscription['subscriber'], '@') ?></td>
+                            <td class="border border-black p-2"><?= $subscription['subscriber'] ?></td>
+                            <td class="border border-black p-2"><?= $subscription['type'] ?></td>
+                            <td class="border border-black p-2"><?= $subscription['status'] ?></td>
+                            <td class="border border-black p-2"><?= $subscription['paymentmethod'] ?></td>
+                            <td class="border border-black p-2">
+                                <button onclick="window.location.href='detailpending.php?no=<?= $subscription['no'] ?>'" class="text-indigo-800 hover:text-blue-600">
+                                   View Details
+                                </button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <!-- Pagination -->
+            <div class="flex justify-center mt-4">
+                <div class="flex space-x-5 ml-30">
+                    <a href="#" class="text-gray-700 hover:text-accent mt-2">
+                        <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
+                    </a>
+                    <?php for ($i = 1; $i <= 4; $i++): ?>
+                        <a href="#" class="flex items-center justify-center w-8 h-8 <?= $i === 1 ? 'bg-accent text-white rounded-full' : 'text-gray-700 hover:bg-gray-300 rounded-full' ?>">
+                            <?= $i ?>
+                        </a>
+                    <?php endfor; ?>
+                    <a href="#" class="text-gray-700 hover:text-accent mt-2">
+                        <img src="../../../resources/icons/ArrowRight.svg" alt="Next" class="w-4 h-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div> `;   
+            break;
                 case 'Plans':
                     contentDiv.innerHTML = `
-                       `;
+                     <div class="bg-light-text p-6 rounded-lg shadow-md w-full -mt-3">
+                      <!--card container-->
+                            <div class="container mx-auto px-11 py-10">
+                                    <!-- Cards Container -->
+                                    <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                                            <!-- Basic Plan -->
+                                            <div class="bg-white border border-yellow-400 rounded-lg shadow-lg p-6 w-full md:w-1/3">
+                                                <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">Basic</h2>
+                                                <p class="text-4xl text-red-500 text-center font-bold mb-2">$1.99</p>
+                                                <p class="text-gray-500 text-center mb-4">Free Plus</p>
+                                                <ul class="text-gray-600 space-y-2 mb-6">
+                                                    <li>✅ Upload up to 10 recipes per month</li>
+                                                    <li>✅ Save up to 5 grocery lists</li>
+                                                    <li>✅ Reduced ads</li>
+                                                    <li>✅ Get a verified badge in the community</li>
+                                                    <li>✅ Join Up to 3 Live Cooking per month</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Premium Plan -->
+                                            <div class="bg-white border border-yellow-400 rounded-lg shadow-lg p-6 w-full md:w-1/3">
+                                                <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">Premium</h2>
+                                                <p class="text-4xl text-red-500 text-center font-bold mb-2">$4.99</p>
+                                                <p class="text-gray-500 text-center mb-4">Standard Plus</p>
+                                                <ul class="text-gray-600 space-y-2 mb-6">
+                                                    <li>✅ Upload recipes without restrictions</li>
+                                                    <li>✅ Export or print grocery lists from recipes</li>
+                                                    <li>✅ Unlimited access to all live cooking, including Q&A with chefs</li>
+                                                    <li>✅ Advanced folders and tagging system for recipes</li>
+                                                    <li>✅ Exclusive access to workshops, recipes, and content</li>
+                                                    <li>✅ No ads</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                            </div>
+                            <div>
+                             <!-- Add New Plan -->
+                                    <button onclick="loadAddNewPlan()" class=" w-auto bg-accent text-white font-bold ml-10 py-2 px-4 rounded hover:bg-blue-500">Add New Plan
+                                    </button>
+                                    </div>
+                  </div> `;
                     break;
                 case 'Subscribers':
                     contentDiv.innerHTML = `
@@ -92,8 +236,7 @@ $subscription_path = '/yumrecipe/Admin/View/resources/page/Subscription/';
             </div>
 
             </div>
-
-
+            <!-- Table -->
             <?php
             // Associative array of user activities
             $subscriber = [
@@ -237,29 +380,29 @@ $subscription_path = '/yumrecipe/Admin/View/resources/page/Subscription/';
                             </div>
             </div>
             <!-- Pagination -->
-            <div class="flex items-center mt-4">
-                <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($subscriber) ?> of <?= count($subscriber) ?> entries</span>
-                <div class="flex space-x-5 ml-60">
-                    <a href="#" class="text-gray-700 hover:text-accent mt-2">
-                        <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
-                    </a>
-                    <?php for ($i = 1; $i <= 4; $i++): ?>
-                        <a href="#" class="flex items-center justify-center w-8 h-8 <?= $i === 1 ? 'bg-accent text-white rounded-full' : 'text-gray-700 hover:bg-gray-300 rounded-full' ?>">
-                            <?= $i ?>
-                        </a>
-                    <?php endfor; ?>
-                    <a href="#" class="text-gray-700 hover:text-accent mt-2">
-                        <img src="../../../resources/icons/ArrowRight.svg" alt="Next" class="w-4 h-4">
-                    </a>
+                 <div class="flex items-center mt-4">
+                            <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($subscriber) ?> of <?= count($subscriber) ?> entries</span>
+                            <div class="flex space-x-5 ml-60">
+                                <a href="#" class="text-gray-700 hover:text-accent mt-2">
+                                    <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
+                                </a>
+                                <?php for ($i = 1; $i <= 4; $i++): ?>
+                                    <a href="#" class="flex items-center justify-center w-8 h-8 <?= $i === 1 ? 'bg-accent text-white rounded-full' : 'text-gray-700 hover:bg-gray-300 rounded-full' ?>">
+                                        <?= $i ?>
+                                    </a>
+                                <?php endfor; ?>
+                                <a href="#" class="text-gray-700 hover:text-accent mt-2">
+                                    <img src="../../../resources/icons/ArrowRight.svg" alt="Next" class="w-4 h-4">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    </div>`;
+                </div>`;
                 break;
                 case 'Payment History':
                     contentDiv.innerHTML = `
-                   
+
                     <div class="bg-light-text p-6 rounded-lg shadow-md w-full -mt-3">
               <div class="flex-1 container p-4 ">
               <div>
@@ -272,10 +415,7 @@ $subscription_path = '/yumrecipe/Admin/View/resources/page/Subscription/';
                         </select>
                     </div>
             </div>
-
             </div>
-
-
             <?php
             // Associative array of user activities
             $subscriberArray = [
@@ -361,56 +501,75 @@ $subscription_path = '/yumrecipe/Admin/View/resources/page/Subscription/';
                 ],
             ];
             ?>
-
             <table class="min-w-full border border-collapse border-black">
-                <thead>
-                    <tr class="bg-light-text">
-                        <th class="border border-black p-2">No</th>
-                        <th class="border border-black p-2">Subscriber</th>
-                        <th class="border border-black p-2">Email</th>
-                        <th class="border border-black p-2">Date</th>
-                        <th class="border border-black p-2">Payment Method</th>
-                        <th class="border border-black p-2">Status</th>
-                    </tr>
-                </thead > 
-                <tbody>
-                    <?php foreach ($subscriberArray as $index => $subscriber): ?>
-                        <tr class="<?= $index % 2 == 0 ? 'bg-gray-200' : 'bg-light-text'  ?>">
-                            <td class="border border-black p-2"><?= $subscriber['no'] ?></td>
-                            <td class="border border-black p-2"><?= $subscriber['subscriber'] ?></td>
-                            <td class="border border-black p-2"><?= $subscriber['email'] ?></td>
-                            <td class="border border-black p-2"><?= $subscriber['date'] ?></td>
-                            <td class="border border-black p-2"><?= $subscriber['paymentmethod'] ?></td>
-                            <td class="border border-black p-2"><?= $subscriber['status'] ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-            <!-- Pagination -->
-            <div class="flex items-center mt-4">
-                <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($subscriber) ?> of <?= count($subscriber) ?> entries</span>
-                <div class="flex space-x-5 ml-60">
-                    <a href="#" class="text-gray-700 hover:text-accent mt-2">
-                        <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
-                    </a>
-                    <?php for ($i = 1; $i <= 4; $i++): ?>
-                        <a href="#" class="flex items-center justify-center w-8 h-8 <?= $i === 1 ? 'bg-accent text-white rounded-full' : 'text-gray-700 hover:bg-gray-300 rounded-full' ?>">
-                            <?= $i ?>
-                        </a>
-                    <?php endfor; ?>
-                    <a href="#" class="text-gray-700 hover:text-accent mt-2">
-                        <img src="../../../resources/icons/ArrowRight.svg" alt="Next" class="w-4 h-4">
-                    </a>
+                 <thead>
+                     <tr class="bg-light-text">
+                            <th class="border border-black p-2">No</th>
+                            <th class="border border-black p-2">Subscriber</th>
+                            <th class="border border-black p-2">Email</th>
+                            <th class="border border-black p-2">Date</th>
+                            <th class="border border-black p-2">Payment Method</th>
+                            <th class="border border-black p-2">Status</th>
+                            </tr>
+                    </thead > 
+                    <tbody>
+                            <?php foreach ($subscriberArray as $index => $subscriber): ?>
+                                <tr class="<?= $index % 2 == 0 ? 'bg-gray-200' : 'bg-light-text'  ?>">
+                                    <td class="border border-black p-2"><?= $subscriber['no'] ?></td>
+                                    <td class="border border-black p-2"><?= $subscriber['subscriber'] ?></td>
+                                    <td class="border border-black p-2"><?= $subscriber['email'] ?></td>
+                                    <td class="border border-black p-2"><?= $subscriber['date'] ?></td>
+                                    <td class="border border-black p-2"><?= $subscriber['paymentmethod'] ?></td>
+                                    <td class="border border-black p-2"><?= $subscriber['status'] ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                    <!-- Pagination -->
+                    <div class="flex items-center mt-4">
+                        <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($subscriber) ?> of <?= count($subscriber) ?> entries</span>
+                        <div class="flex space-x-5 ml-60">
+                            <a href="#" class="text-gray-700 hover:text-accent mt-2">
+                                <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
+                            </a>
+                            <?php for ($i = 1; $i <= 4; $i++): ?>
+                                <a href="#" class="flex items-center justify-center w-8 h-8 <?= $i === 1 ? 'bg-accent text-white rounded-full' : 'text-gray-700 hover:bg-gray-300 rounded-full' ?>">
+                                    <?= $i ?>
+                                </a>
+                            <?php endfor; ?>
+                            <a href="#" class="text-gray-700 hover:text-accent mt-2">
+                                <img src="../../../resources/icons/ArrowRight.svg" alt="Next" class="w-4 h-4">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    </div>`;
-  default:
-          console.log('Unknown option clicked');
+            </div>`;
+            default:
+            console.log('Unknown option clicked');
+        }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const defaultTab = document.querySelector('ul li:first-child');
+            toggleBackground(defaultTab);
+        });
+          // Add these functions at the top of your script section
+          function showModal(type) {
+            const modal = document.getElementById('deleteModal');
+            if (modal) {
+                modal.classList.remove('hidden');
             }
         }
-
+        function hideModal(type) {
+            const modal = document.getElementById('deleteModal');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
+        // Also update your delete modal's cancel button
+        document.querySelector('#deleteModal button:last-child').onclick = function() {
+            hideModal('delete');
+        };
         async function loadUpdateSubscriber(id) {
             try {
                 const response = await fetch(`/yumrecipe/Admin/View/resources/page/Subscription/updatesubscriber.php?id=${id}`);
@@ -420,11 +579,52 @@ $subscription_path = '/yumrecipe/Admin/View/resources/page/Subscription/';
                 console.error('Error loading update subscriber content:', error);
             }
         }
+        async function loadAddNewPlan() {
+            try {
+                const response = await fetch(`/yumrecipe/Admin/View/resources/page/Subscription/addnewplan.php`);
+                const content = await response.text();
+                document.getElementById('content').innerHTML = content;
+         //  `addFeature` is redefined after content is loaded
+            initializeAddNewPlanHandlers();
+            gotoPlan();
+            } catch (error) {
+                console.error('Error loading add new plan content:', error);
+            }
+        }
+        function initializeAddNewPlanHandlers() {
+        // Adding Feature Instructions
+        window.addFeature = function () {
+            const feature = document.getElementById("feature-text").value.trim();
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const defaultTab = document.querySelector('ul li:first-child');
-            toggleBackground(defaultTab);
-        });
+            if (feature) {
+                const listItem = document.createElement("li");
+                listItem.className =
+                    "flex justify-between items-center p-2 bg-white shadow rounded border border-gray-200";
+                listItem.innerHTML = `
+                    <span>${feature}</span>
+                    <button class="text-red-500 ml-10 hover:text-red-700" onclick="removeItem(this)">X</button>
+                `;
+                document.getElementById("featureinstruction-items").appendChild(listItem);
+                // Clear textarea
+                document.getElementById("feature-text").value = "";
+            }
+        };
+            // Remove List Item
+            window.removeItem = function (button) {
+                const listItem = button.parentElement;
+                listItem.remove();
+            };
+        }
+        async function loadUpdatePending(id) {
+            try {
+                const response = await fetch(`/yumrecipe/Admin/View/resources/page/Subscription/detailpending.php?id=${id}`);
+                const content = await response.text();
+                document.getElementById('content').innerHTML = content;
+            } catch (error) {
+                console.error('Error loading update pending content:', error);
+            }
+        }
+       
     </script>
 </body>
 

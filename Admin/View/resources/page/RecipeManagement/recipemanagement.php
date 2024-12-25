@@ -191,12 +191,12 @@
                                     <!-- Ingredient Name Input -->
                                         <input
                                             type="text" id="ingredient-name" placeholder="e.g., Sugar"
-                                            class="p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500"
+                                            class="p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500 required"
                                         />
                                         <!-- Quantity and Units -->
                                         <div class="flex space-x-4">
-                                            <input type="text" id="ingredient-quantity" placeholder="e.g., 1" class="w-20 p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500" />
-                                            <input type="text" id="ingredient-unit" placeholder="e.g., tablespoons" class="w-40 p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500" />
+                                            <input type="text" id="ingredient-quantity" placeholder="e.g., 1" class="w-20 p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500 required" />
+                                            <input type="text" id="ingredient-unit" placeholder="e.g., tbls" class="w-40 p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500 required" />
                                         </div>
                                         <!-- Add Button -->
                                         <button type="button" onclick="addIngredient()" class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600 focus:ring-2 focus:ring-purple-400">Add</button>
@@ -216,7 +216,7 @@
                                         <div class="flex space-x-6 items-start">
                                         <!-- Input Field and Add Button -->
                                         <div class="flex flex-col space-y-4">
-                                            <textarea id="instruction-text" placeholder="e.g., Mix all the ingredients thoroughly." class="p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-green-500"></textarea>
+                                            <textarea id="instruction-text" placeholder="e.g., Mix all the ingredients thoroughly." class="p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-green-500 required"></textarea>
                                             <button type="button" onclick="addInstruction()" class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600 focus:ring-2 focus:ring-green-400">Add</button>
                                         </div>
                                         <!-- Added Instructions List -->
@@ -365,6 +365,57 @@
                 img.className = "w-48 h-48 object-cover rounded border border-gray-300";
                 previewContainer.appendChild(img);
             }
+        }
+         // Adding Ingredients
+        function addIngredient() {
+        const name = document.getElementById("ingredient-name").value.trim();
+        const quantity = document.getElementById("ingredient-quantity").value.trim();
+        const unit = document.getElementById("ingredient-unit").value.trim();
+
+        if (name && quantity && unit) {
+            const listItem = document.createElement("li");
+            listItem.className =
+            "flex justify-between items-center p-2 bg-white shadow rounded border border-gray-200";
+
+            listItem.innerHTML = `
+            <span>${name} ${quantity}${unit}</span>
+            <button class="text-red-500 hover:text-red-700" onclick="removeItem(this)">X</button>
+            `;
+
+            document.getElementById("ingredient-items").appendChild(listItem);
+
+            // Clear input fields
+            document.getElementById("ingredient-name").value = "";
+            document.getElementById("ingredient-quantity").value = "";
+            document.getElementById("ingredient-unit").value = "";
+        }
+        }
+
+        // Adding Instructions
+        function addInstruction() {
+        const instruction = document.getElementById("instruction-text").value.trim();
+
+        if (instruction) {
+            const listItem = document.createElement("li");
+            listItem.className =
+            "flex justify-between items-center p-2 bg-white shadow rounded border border-gray-200";
+
+            listItem.innerHTML = `
+            <span>${instruction}</span>
+            <button class="text-red-500 hover:text-red-700" onclick="removeItem(this)">X</button>
+            `;
+
+            document.getElementById("instruction-items").appendChild(listItem);
+
+            // Clear textarea
+            document.getElementById("instruction-text").value = "";
+        }
+        }
+
+        // Remove List Item
+        function removeItem(button) {
+        const listItem = button.parentElement;
+        listItem.remove();
         }
     </script>
 </body>
