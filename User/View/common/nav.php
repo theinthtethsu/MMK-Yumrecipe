@@ -23,19 +23,19 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
         <!-- Menu Items -->
         <ul class="flex justify-center space-x-10 py-4 font-semibold">
           <li>
-            <a href="<?php echo $user_path; ?>homepage.php" class="text-red-500 hover:text-red-600">Home</a>
+            <a href="<?php echo $user_path; ?>homepage.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'homepage.php' ? 'text-red-500' : '' ?>">Home</a>
           </li>
           <li>
-            <a href="<?php echo $user_path; ?>receipe.php" class="hover:text-red-600">Recipes</a>
+            <a href="<?php echo $user_path; ?>receipe.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'receipe.php' ? 'text-red-500' : '' ?>">Recipes</a>
           </li>
           <li>
-            <a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-600">Add Recipes</a>
+            <a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'add_recipe.php' ? 'text-red-500' : '' ?>">Add Recipes</a>
           </li>
           <li>
-            <a href="<?php echo $blog_path; ?>blog.php" class="hover:text-red-600">Blogs</a>
+            <a href="<?php echo $blog_path; ?>blog.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'blog.php' ? 'text-red-500' : '' ?>">Blogs</a>
           </li>
           <li>
-            <a href="<?php echo $user_path; ?>about_us.php" class="hover:text-red-600">About Us</a>
+            <a href="<?php echo $user_path; ?>about_us.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'text-red-500' : '' ?>">About Us</a>
           </li>
         </ul>
     

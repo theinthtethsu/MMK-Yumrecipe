@@ -1,6 +1,8 @@
 <?php
 $user_path = "/yumrecipe/User/View/resources/page/";
 $images_path = "/yumrecipe/User/View/resources/img/";
+$meal_plan_path = "/yumrecipe/User/View/resources/page/MealPlanner/";
+$shopping_list_path = "/yumrecipe/User/View/resources/page/ShoppingList/";
 ?>
 
 <!DOCTYPE html>
@@ -83,19 +85,13 @@ $images_path = "/yumrecipe/User/View/resources/img/";
         <!-- Sidebar -->
         <aside class="w-1/5 bg-white border-r text-center">
             <ul class="mt-10 space-y-4 pl-5">
-                <li class="text-white font-bold italic bg-red-500 p-2"><a href="<?php echo $user_path; ?>profile.html">Profile</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>savedRecipes.html">Save Recipes</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>notification.html">Notification</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>mealPlanner.html">Meal Planner</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>groceryList.html">Grocery List</a></li>
-                <li class="hover:text-red-500 cursor-pointer"><a href="<?php echo $user_path; ?>setting.html">Setting</a></li>
+                <li class="cursor-pointer p-2 <?php echo basename($_SERVER['PHP_SELF']) == 'userProfile.php' ? 'text-white font-bold italic bg-red-500' : '' ?> "><a href="<?php echo $user_path; ?>userProfile.php">Profile</a></li>
+                <li class="cursor-pointer p-2 <?php echo basename($_SERVER['PHP_SELF']) == 'savedRecipes.php' ? 'text-white font-bold italic bg-red-500' : '' ?> "><a href="<?php echo $user_path; ?>savedRecipes.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'savedRecipes.php' ? 'text-white font-bold italic bg-red-500' : '' ?>">Save Recipes</a></li>
+                <li class="cursor-pointer p-2 <?php echo basename($_SERVER['PHP_SELF']) == 'notification.php' ? 'text-white font-bold italic bg-red-500' : '' ?>"><a href="<?php echo $user_path; ?>notification.php">Notification</a></li>
+                <li class="cursor-pointer p-2 <?php echo basename($_SERVER['PHP_SELF']) == 'meal_planner.php' ? 'text-white font-bold italic bg-red-500' : '' ?>"><a href="<?php echo $meal_plan_path; ?>meal_planner.php">Meal Planner</a></li>
+                <li class="cursor-pointer p-2 <?php echo basename($_SERVER['PHP_SELF']) == 'shopping_list.php' ? 'text-white font-bold italic bg-red-500' : '' ?>"><a href="<?php echo $shopping_list_path; ?>shopping_list.php">Grocery List</a></li>
+                <li class="cursor-pointer p-2 <?php echo basename($_SERVER['PHP_SELF']) == 'setting.php' ? 'text-white font-bold italic bg-red-500' : '' ?>"><a href="<?php echo $user_path; ?>setting.php">Setting</a></li>
             </ul>
         </aside>
-        
-
-        <!-- Main Content -->
-
-
-
 </body>
 </html>

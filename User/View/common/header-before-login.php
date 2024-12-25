@@ -45,11 +45,12 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             </div>
             <!-- Auth Buttons -->
             <div class="flex items-center space-x-4">
-                <button class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-md font-semibold">
+                <a href="/yumrecipe/User/View/resources/page/signin.php" class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-md font-semibold">
                     Sign In
-                </button>
-                <button class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-md font-semibold">
-                    Sign Up </button>
+                </a>
+                <a href="/yumrecipe/User/View/resources/page/signup.php" class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-md font-semibold">
+                    Sign Up
+                </a>
             </div>
         </div>
     </header>
