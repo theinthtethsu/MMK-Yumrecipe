@@ -52,7 +52,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                     <div class="bg-light-text p-6 rounded-lg shadow-md w-full -mt-3">
                     <div class="flex-1 container p-4 ">
                       <!-- Filters -->
-                                <div class="flex space-x-4 justify-end">
+                         <div class="flex space-x-4 justify-end">
                                 <select class="border rounded p-2 bg-secondary">
                                     <option>All Type</option>
                                     <option>Basic</option>
@@ -67,10 +67,9 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                                 <select class="border rounded p-2 bg-secondary">
                                  <option>Newest First</option>
                                  <option>Oldest First</option>
-                        </select>
+                                </select>
+                         </div>
                     </div>
-                </div>
-            </div>
             <?php
             // Associative array of pending subscription
             $pending = [
@@ -214,7 +213,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                              <!-- Add New Plan -->
                                     <button onclick="loadAddNewPlan()" class=" w-auto bg-accent text-white font-bold ml-10 py-2 px-4 rounded hover:bg-blue-500">Add New Plan
                                     </button>
-                                    </div>
+                            </div>
                   </div> `;
                     break;
                 case 'Subscribers':
@@ -586,7 +585,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                 document.getElementById('content').innerHTML = content;
          //  `addFeature` is redefined after content is loaded
             initializeAddNewPlanHandlers();
-            gotoPlan();
+
             } catch (error) {
                 console.error('Error loading add new plan content:', error);
             }
@@ -615,17 +614,6 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                 listItem.remove();
             };
         }
-        async function loadUpdatePending(id) {
-            try {
-                const response = await fetch(`/yumrecipe/Admin/View/resources/page/Subscription/detailpending.php?id=${id}`);
-                const content = await response.text();
-                document.getElementById('content').innerHTML = content;
-            } catch (error) {
-                console.error('Error loading update pending content:', error);
-            }
-        }
-       
     </script>
 </body>
-
 </html>

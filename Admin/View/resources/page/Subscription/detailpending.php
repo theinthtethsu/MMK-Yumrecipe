@@ -120,7 +120,7 @@
                 </div>
                 <div class="mb-4 flex justify-between ">
                     <label class="font-bold text-gray-700">Screenshot:</label>
-                    <img src="/yumrecipe/Admin/View/resources/images/PaymentLogo/kpayQr.png" alt="Screenshot" class="w-20 h-20">
+                    <img src="/yumrecipe/Admin/View/resources/images/PaymentLogo/kpayQr.png" alt="Screenshoot" class="w-20 h-20">
             </div>
         </div>
 
