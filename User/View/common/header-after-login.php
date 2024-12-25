@@ -1,5 +1,6 @@
 <?php
 $images_path = "/yumrecipe/User/View/resources/img/";
+$user_path = "/yumrecipe/User/View/resources/page/";
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +17,9 @@ $images_path = "/yumrecipe/User/View/resources/img/";
     <div class="container mx-auto flex items-center justify-between ">
         <!-- Logo -->
         <div class="flex items-center">
-            <img src="<?php echo $images_path ?>logo.png" alt="Logo" class="h-20 w-20">
+            <a href="/yumrecipe/User/View/resources/page/homepage.php" class="cursor-pointer">
+                <img src="<?php echo $images_path ?>logo.png" alt="Logo" class="h-20 w-20">
+            </a>
         </div>
         <!-- Search Section -->
         <div class="flex-1 max-w-2xl mx-40">
@@ -42,15 +45,14 @@ $images_path = "/yumrecipe/User/View/resources/img/";
         </div>
                 <!-- Profile Section -->
                 <div class="flex items-center space-x-4">
-                    <button class="p-2">
+                    <a href="<?php echo $user_path; ?>notification.php" class="p-2">
                         <img src="<?php echo $images_path ?>notification.svg" alt="" class="w-7 h-7">
-
-                    </button>
+                    </a>
                     <div class="flex items-center">
                         <span class="text-gray-700 dark:text-gray-300 mr-2">My Profile</span>
-                        <button class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
+                        <a href="<?php echo $user_path; ?>userProfile.php" class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
                             <img src="<?php echo $images_path ?>profile.svg" alt="" class="w-7 h-7">                         
-                        </button>
+                        </a>
                     </div>
                 </div>
     </div>

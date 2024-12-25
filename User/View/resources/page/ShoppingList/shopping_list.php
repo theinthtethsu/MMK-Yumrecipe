@@ -1,156 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <script defer src="tailwind.js"></script>
-  </head>
-  <body>
-    <?php include_once '../../../common/user-profile.php'; ?>
+    <script>
+        function toggleIngredients(categoryId, buttonId) {
+            const ingredients = document.getElementById(categoryId);
+            const button = document.getElementById(buttonId);
+            const isHidden = ingredients.classList.toggle('hidden');
 
-    <!-- <div class="bg-gray-200 flex items-center justify-center min-h-screen"> -->
-    <div class="container text-white flex flex-col lg:flex-row">
-      <!-- Left Section -->
-      <div class="left w-full lg:w-2/5 p-5">
-        <div
-          class="calendar bg-red-100 text-gray-700 rounded-lg flex flex-col p-5"
-        >
-          <!-- Month Navigation -->
-          <div
-            class="month flex justify-between items-center text-lg font-medium"
-          >
-            <i
-              class="fas fa-angle-left prev cursor-pointer hover:text-red-500"
-            ></i>
-            <div class="date">December 2024</div>
-            <i
-              class="fas fa-angle-right next cursor-pointer hover:text-red-500"
-            ></i>
-          </div>
+            if (isHidden) {
+                button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5 5 5-5" />
+                </svg>`;
+            } else {
+                button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>`;
+            }
+        }
 
-          <!-- Weekdays -->
-          <div class="weekdays grid grid-cols-7 text-sm font-semibold mt-4">
-            <div class="text-center">Sun</div>
-            <div class="text-center">Mon</div>
-            <div class="text-center">Tue</div>
-            <div class="text-center">Wed</div>
-            <div class="text-center">Thu</div>
-            <div class="text-center">Fri</div>
-            <div class="text-center">Sat</div>
-          </div>
+        function handleRadioChange(radio, ingredientId) {
+            const ingredient = document.getElementById(ingredientId);
+            ingredient.style.textDecoration = radio.checked ? 'line-through' : 'none';
+        }
 
-          <!-- Days -->
-          <div class="days grid grid-cols-7 gap-1 mt-4">
-            <!-- Dynamically generated days will be injected here -->
-          </div>
+        function deleteIngredient(categoryId, ingredientId) {
+            const ingredient = document.getElementById(ingredientId);
+            const category = document.getElementById(categoryId);
+            const emptyMessage = document.querySelector('.empty-list-message');
 
-          <!-- Goto and Today -->
-          <div class="goto-today flex justify-between items-center mt-5">
-            <div
-              class="goto flex items-center border border-red-500 rounded-lg overflow-hidden"
-            >
-              <input
-                type="text"
-                placeholder="mm/yyyy"
-                class="date-input px-4 py-2 text-red-500 outline-none"
-              />
-              <button class="goto-btn px-4 py-2 bg-red-500 text-white">
-                Go
-              </button>
+            // Remove the ingredient
+            ingredient.remove();
+
+            // Check if the category has no ingredients left
+            if (!category.querySelectorAll('li').length) {
+                category.parentElement.remove();
+            }
+
+            // Check if all categories are removed
+            const allCategories = document.querySelectorAll('.grocery-category');
+            if (allCategories.length === 0) {
+                emptyMessage.classList.remove('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <?php include_once '../../../common/user-profile-common.php'; ?>
+    <div class="w-full">
+    <!-- Grocery List Container -->
+    <div class="bg-white p-6 max-w-sm">
+        <div class="flex items-center space-x-4 mb-6">
+            <input type="text" placeholder="Add an item..." class="border rounded-lg w-40 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
+            <button class="bg-red-500 text-white px-4 py-2 rounded-lg">Add</button>
+        </div>
+
+        <!-- Dairy Category -->
+        <div class="mb-6 grocery-category">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="font-bold text-lg">Dairy</h3>
+                <button id="toggle-dairy" onclick="toggleIngredients('dairy-items', 'toggle-dairy')" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
             </div>
-            <button
-              class="today-btn px-4 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white"
-            >
-              Today
-            </button>
-          </div>
+            <ul id="dairy-items" class="space-y-2">
+                <li id="dairy-milk" class="flex items-center space-x-4">
+                    <input type="checkbox" name="dairy" id="milk" class="form-checkbox" onchange="handleRadioChange(this, 'label-milk')">
+                    <label id="label-milk" for="milk">Milk</label>
+                    <button onclick="deleteIngredient('dairy-items', 'dairy-milk')" class="text-red-500 hover:text-red-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </li>
+                <li id="dairy-butter" class="flex items-center space-x-4">
+                    <input type="checkbox" name="dairy" id="butter" class="form-checkbox" onchange="handleRadioChange(this, 'label-butter')">
+                    <label id="label-butter" for="butter">Butter</label>
+                    <button onclick="deleteIngredient('dairy-items', 'dairy-butter')" class="text-red-500 hover:text-red-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
         </div>
-      </div>
 
-      <!-- Right Section -->
-      <div class="relative right w-full lg:w-2/5 p-5">
-        <div
-          class="today-date flex justify-between items-center text-lg font-medium text-gray-600"
-        >
-          <div class="event-day">Monday</div>
-          <div class="event-date">23 December 2024</div>
-        </div>
-
-        <!-- Events -->
-        <div class="events mt-5 max-h-[600px] overflow-y-auto space-y-4">
-          <div class="no-event text-center text-gray-400">No Events</div>
-        </div>
-
-        <!-- Add Event Wrapper -->
-        <form
-          class="drop-shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 add-event-wrapper bg-white text-gray-700 rounded-lg mt-5 p-5 hidden w-2/3  "
-        >
-          <div
-            class="add-event-header flex justify-between items-center border-b pb-3"
-          >
-            <div class="title text-lg font-medium">Add Meal</div>
-            <i class="fas fa-times close cursor-pointer text-xl"></i>
-          </div>
-          <div class="add-event-body space-y-3 mt-3">
-            <input
-              type="text"
-              placeholder="Event Name"
-              class="event-name w-full border-b outline-none focus:border-red-500 px-2 py-1"
-              required
-            />
-            <input
-              type="text"
-              placeholder="Recipe"
-              class="event-recipe w-full border-b outline-none focus:border-red-500 px-2 py-1"
-              required
-            />
-            <input
-              type="number"
-              placeholder="Serving Size"
-              class="event-serving-size w-full border-b outline-none focus:border-red-500 px-2 py-1"
-              
-            />
-            <div class="relative">
-              <div class="absolute inset-y-0 end-0 top-0 flex items-center pe-3.5 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
-                </svg>
-              </div>
-              <input type="time" id="time" class="border leading-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" min="09:00" max="18:00" value="00:00"  />
+        <!-- Meat Category -->
+        <div class="grocery-category">
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="font-bold text-lg">Meat</h3>
+                <button id="toggle-meat" onclick="toggleIngredients('meat-items', 'toggle-meat')" class="text-gray-500 hover:text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
             </div>
-            <input
-              type="text"
-              placeholder="Note"
-              class="event-note w-full border-b outline-none focus:border-red-500 px-2 py-1"
-            />
-          </div>
-          <div class="add-event-footer mt-4">
-            <button
-              type="submit"
-              class="add-event-btn bg-red-500 text-white px-4 py-2 rounded-lg w-full hover:bg-red-600"
-            >
-              Add Meal
-            </button>
-          </div>
-        </form>
+            <ul id="meat-items" class="space-y-2">
+                <li id="meat-beef" class="flex items-center space-x-4">
+                    <input type="checkbox" name="meat" id="beef" class="form-checkbox" onchange="handleRadioChange(this, 'label-beef')">
+                    <label id="label-beef" for="beef">Beef</label>
+                    <button onclick="deleteIngredient('meat-items', 'meat-beef')" class="text-red-500 hover:text-red-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <!-- Empty List Message -->
+     <div class=" hidden empty-list-message text-center text-gray-500">
+        <div class="text-6xl mb-4">🛒</div>
+        <p>Start your shopping list by adding items above</p>
+    </div>
 
-    <!-- Add Event Button -->
-    <button
-      class="add-event fixed bottom-10 right-10 w-12 h-12 flex items-center justify-center rounded-full bg-red-500 text-white text-xl shadow-lg hover:bg-red-600"
-    >
-      <i class="fas fa-plus"></i>
-    </button>
-    <!-- </div> -->
-  </body>
+    </div>
+
+</body>
 </html>
