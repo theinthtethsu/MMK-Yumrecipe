@@ -1,3 +1,8 @@
+<?php
+$user_path = "/yumrecipe/User/View/resources/page/";
+$blog_path = "/yumrecipe/User/View/resources/page/Blog/";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +19,7 @@
     class="font-['Roboto'] font-normal text-gray-700 leading-[1]"
   > -->
   <body class="font-roboto text-gray-700 leading-none font-normal">
+  <?php include_once '../../common/header-before-login.php'; ?>
     <section
       class="h-screen relative bg-cover text-white"
       style="
@@ -26,31 +32,31 @@
     >
       <nav class="mx-auto max-w-7xl flex justify-around pt-6 text-xl font-bold">
         <a
-          href="#"
+          href="<?php echo $user_path; ?>homepage.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'homepage.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
           Home
         </a>
         <a
-          href="#"
+          href="<?php echo $user_path; ?>receipe.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'receipe.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
           Recipe
         </a>
         <a
-          href="#"
+          href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'add_recipe.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
           Add Recipe
         </a>
         <a
-          href="#"
+          href="<?php echo $blog_path; ?>blog.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'blog.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
           Blogs
         </a>
         <a
-          href="#"
+          href="<?php echo $user_path; ?>about_us.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
           About Us
@@ -75,7 +81,7 @@
       </div>
     </section>
 
-    <section class="container mx-auto py-16">
+    <section class="container mx-auto py-16 px-4">
       <h2 class="text-center text-4xl font-bold mb-8">Add a Recipe</h2>
       <form class="max-w-lg mx-auto space-y-8">
         <!-- Recipe Title -->
@@ -125,7 +131,7 @@
         </div>
 
         <!-- Number of Servings -->
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label
               for="servings"
@@ -140,14 +146,12 @@
           </div>
         </div>
         <!-- Cooking Time -->
-        <div
+        <div>
           <label
             for="time"
             class="block text-sm font-semibold mb-2 text-gray-600"
-            >Cooking Time</label
-          >
-
-          <div class="flex items-center space-x-4">
+            >Cooking Time</label>
+          <div class="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
             <!-- Hours Picker -->
             <div>
               <label
@@ -202,64 +206,110 @@
 
         <!-- Ingredients -->
         <div>
-          <label class="block text-sm font-semibold mb-1 text-gray-600"
-            >Ingredients</label
-          >
-          <div class="grid grid-cols-3 gap-4 mb-4">
-            <input
-              type="text"
-              placeholder="Olive oil"
-              class="border  rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
-            />
-            <input
-              type="number"
-              placeholder="2"
-              class="border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
-            />
-            <input
-              type="text"
-              placeholder="tablespoons"
-              class="border  rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
-            />
+          <label class="block text-sm font-semibold mb-1 text-gray-600">Ingredients</label>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <input id="ingredient-name" type="text" placeholder="Olive oil" class="border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500" />
+            <input id="ingredient-quantity" type="number" placeholder="2" class="border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500" />
+            <input id="ingredient-unit" type="text" placeholder="tablespoons" class="border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500" />
           </div>
-          <button
-            type="button"
-            class="text-red-500 border border-red-500 px-4 py-3 rounded hover:bg-red-500 hover:text-white transition"
-          >
+          <button type="button" class="text-red-500 border border-red-500 px-4 py-3 rounded hover:bg-red-500 hover:text-white transition" onclick="addIngredient()">
             Add Ingredients
           </button>
+          <div id="ingredient-list" class="mt-4 bg-gray-100 p-4 rounded">
+            <h3 class="text-lg font-semibold mb-2">Added</h3>
+            <!-- Ingredients will be added here -->
+          </div>
         </div>
+
+        <script>
+          function addIngredient() {
+            const name = document.getElementById('ingredient-name').value.trim();
+            const quantity = document.getElementById('ingredient-quantity').value.trim();
+            const unit = document.getElementById('ingredient-unit').value.trim();
+
+            if (name && quantity && unit) {
+              const ingredientList = document.getElementById('ingredient-list');
+              const ingredientItem = document.createElement('div');
+              ingredientItem.className = 'flex justify-between items-center bg-white p-2 mb-2 rounded shadow';
+              ingredientItem.innerHTML = `
+                <span>${name} ${quantity}${unit}</span>
+                <button onclick="removeIngredient(this)" class="text-red-500">✖</button>
+              `;
+              ingredientList.appendChild(ingredientItem);
+
+              // Clear input fields
+              document.getElementById('ingredient-name').value = '';
+              document.getElementById('ingredient-quantity').value = '';
+              document.getElementById('ingredient-unit').value = '';
+            } else {
+              alert('Please fill in all fields.');
+            }
+          }
+
+          function removeIngredient(button) {
+            const ingredientItem = button.parentElement;
+            ingredientItem.remove();
+          }
+        </script>
 
         <!-- Instructions -->
         <div>
-          <label class="block text-sm font-semibold mb-1 text-gray-600"
-            >Instructions</label
-          >
-          <div class="flex gap-4 mb-4">
+          <label class="block text-sm font-semibold mb-1 text-gray-600">Instructions</label>
+          <div class="flex flex-col md:flex-row gap-4 mb-4">
             <input
-              id="instructions"
+              id="instruction-text"
               type="text"
               required
               placeholder="Click Add Instructions line by line"
               class="w-full border border-red-500 rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
             />
           </div>
-          <div>
-            <button
-              type="button"
-              class="text-red-500 border border-red-500 px-4 py-3 rounded hover:bg-red-500 hover:text-white transition"
-            >
-              Add Instructions
-            </button>
+          <button
+            type="button"
+            class="text-red-500 border border-red-500 px-4 py-3 rounded hover:bg-red-500 hover:text-white transition"
+            onclick="addInstruction()"
+          >
+            Add Instructions
+          </button>
+          <div id="instruction-list" class="mt-4 bg-gray-100 p-4 rounded">
+            <h3 class="text-lg font-semibold mb-2">Added Instructions</h3>
+            <!-- Instructions will be added here -->
           </div>
         </div>
+
+        <script>
+          function addInstruction() {
+            const instructionText = document.getElementById('instruction-text').value.trim();
+
+            if (instructionText) {
+              const instructionList = document.getElementById('instruction-list');
+              const instructionItem = document.createElement('div');
+              instructionItem.className = 'flex justify-between items-center bg-white p-2 mb-2 rounded shadow';
+              instructionItem.innerHTML = `
+                <span>${instructionText}</span>
+                <button onclick="removeInstruction(this)" class="text-red-500">✖</button>
+              `;
+              instructionList.appendChild(instructionItem);
+
+              // Clear input field
+              document.getElementById('instruction-text').value = '';
+            } else {
+              alert('Please enter an instruction.');
+            }
+          }
+
+          function removeInstruction(button) {
+            const instructionItem = button.parentElement;
+            instructionItem.remove();
+          }
+        </script>
 
         <!-- Nutritional Facts -->
         <div>
           <label class="block text-sm font-semibold mb-1 text-gray-600"
             >Nutritional Facts</label
           >
-          <div class="grid grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <label class="text-xs text-gray-600 block mb-1">Calories</label>
               <input
@@ -546,5 +596,6 @@
         });
       });
     </script> -->
+    <?php include_once '../../common/footer.php'; ?>
   </body>
 </html>

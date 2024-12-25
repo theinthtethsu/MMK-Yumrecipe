@@ -12,13 +12,14 @@ $images_path = "/yumrecipe/User/View/resources/img/";
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
     <header class="px-20 py-1 bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between ">
             <!-- Logo -->
             <div class="flex items-center">
+            <a href="/yumrecipe/User/View/resources/page/homepage.php" class="cursor-pointer">
                 <img src="<?php echo $images_path ?>logo.png" alt="Logo" class="h-20 w-20">
-            </div>
+            </a>
+        </div>
             <!-- Search Section -->
             <div class="flex-1 max-w-2xl mx-40">
                 <div class="flex items-center bg-gray-100 rounded-full">
@@ -43,11 +44,12 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             </div>
             <!-- Auth Buttons -->
             <div class="flex items-center space-x-4">
-                <button class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-md font-semibold">
+                <a href="/yumrecipe/User/View/resources/page/signin.php" class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-md font-semibold">
                     Sign In
-                </button>
-                <button class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-md font-semibold">
-                    Sign Up </button>
+                </a>
+                <a href="/yumrecipe/User/View/resources/page/signup.php" class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-md font-semibold">
+                    Sign Up
+                </a>
             </div>
         </div>
     </header>

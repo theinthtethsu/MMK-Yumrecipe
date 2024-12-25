@@ -1,4 +1,8 @@
-
+<?php
+$user_path = "/yumrecipe/User/View/resources/page/";
+$blog_path = "/yumrecipe/User/View/resources/page/Blog/";
+$images_path = "/yumrecipe/User/View/resources/img/";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +16,17 @@
   <header class="bg-red-500 text-white">
     <div class="flex justify-between items-center py-4 px-6">
       <div class="flex items-center">
-        <img src="logo.png" alt="Logo" class="h-12">
+        <a href="<?php echo $user_path; ?>homepage.php">
+          <img src="<?php echo $images_path; ?>logo.png" alt="Logo" class="h-12">
+        </a>
         <h1 class="ml-4 text-2xl font-bold">Yum Recipe</h1>
       </div>
       <nav class="space-x-6 text-lg">
-        <a href="#" class="hover:underline">Home</a>
-        <a href="#" class="hover:underline">Recipe</a>
-        <a href="#" class="hover:underline">Add Recipe</a>
-        <a href="#" class="hover:underline">Blogs</a>
-        <a href="#" class="hover:underline">About Us</a>
+      <a href="<?php echo $user_path; ?>homepage.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'homepage.php' ? 'text-red-500' : '' ?>">Home</a>
+      <a href="<?php echo $user_path; ?>receipe.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'receipe.php' ? 'text-red-500' : '' ?>">Recipes</a>
+      <a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'add_recipe.php' ? 'text-red-500' : '' ?>">Add Recipes</a>
+      <a href="<?php echo $blog_path; ?>blog.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'blog.php' ? 'text-red-500' : '' ?>">Blogs</a>
+      <a href="<?php echo $user_path; ?>about_us.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'text-red-500' : '' ?>">About Us</a>
       </nav>
     </div>
   </header>

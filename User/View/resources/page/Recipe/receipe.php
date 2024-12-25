@@ -11,7 +11,7 @@
 <body class="">
   <!-- Navbar -->
   <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/header-before-login.php'); ?>
-  <?php require_once '../../common/nav.php'; ?>
+  <?php require_once '../../../common/nav.php'; ?>
   <!-- Main Content -->
   <main class="container mx-auto py-8 px-4">
     <h1 class="text-2xl font-bold mb-6 text-center">All Recipes</h1>
@@ -220,8 +220,8 @@
       ?>
     </div>
     <!-- Pagination -->
-    <div class="mt-4">
-      <?php require_once '../../common/pagination.php'; ?>
+    <div>
+      <?php require_once '../../../common/pagination.php'; ?>
     </div>
 
   </main>
@@ -264,7 +264,7 @@
 
   <!-- Footer -->
   <div class="bg-gray-900 ">
-    <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/footer.php'); ?>
+  <?php require_once '../../../common/footer.php'; ?>
   </div>
   
 </body>
