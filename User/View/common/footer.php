@@ -3,8 +3,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
 $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +14,13 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 </head>
 
 <body>
-    <section class="bg-gray-900 text-white ">
+    <section class="bg-gray-800 text-white ">
         <div class="max-w-7xl mx-auto p-8 flex flex-col md:flex-row gap-8">
             <!-- Left Section: Pages -->
             <div class="flex-1">
                 <h2 class="text-3xl font-bold mb-6">Pages</h2>
                 <ul class="space-y-4 text-lg">
-                    <li><a href="<?php echo $user_path; ?>homepage.php" class=" text-red-500">Home</a></li>
+                    <li><a href="<?php echo $user_path; ?>homepage.php" class=" hover:text-red-500">Home</a></li>
                     <li><a href="<?php echo $user_path; ?>Recipe/receipe.php" class=" hover:text-red-500">Recipe</a></li>
                     <li><a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-500">Add Recipe</a></li>
                     <li><a href="<?php echo $user_path; ?>blog.html" class="hover:text-red-500">Blogs</a></li>
@@ -57,10 +56,10 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 
                 <form class="space-y-4">
                     <input type="email" placeholder="Enter Your Email"
-                        class="w-full px-4 py-2 rounded-md bg-gray-800 text-gray-200 focus:outline-none focus:ring-red-400"
+                        class="w-full px-4 py-2 rounded-md bg-gray-900 text-gray-200 focus:outline-none focus:ring-red-400"
                         required />
                     <textarea placeholder="Enter Your Message" rows="3"
-                        class="w-full px-4 py-2 rounded-md bg-gray-800 text-gray-200 focus:outline-none  focus:ring-red-400"
+                        class="w-full px-4 py-2 rounded-md bg-gray-900 text-gray-200 focus:outline-none  focus:ring-red-400"
                         required></textarea>
                     <div class="text-center">
                         <button type="submit" class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-400">

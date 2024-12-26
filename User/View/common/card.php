@@ -8,11 +8,12 @@ $images_path = "/yumrecipe/User/View/resources/img/";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
  <!-- Recipe Card -->
- <div class="w-[288px] h-[340px] rounded-lg shadow-lg bg-white overflow-hidden"> 
+ <div class="w-[300px] h-[350px] rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden"> 
     <!-- Image Section -->
     <div class="relative"> 
         <img src="<?php echo $images_path ?>lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-48 object-cover">
@@ -27,8 +28,8 @@ $images_path = "/yumrecipe/User/View/resources/img/";
         </div>
     </div> <!-- Content Section -->
     <div class="p-4">
-        <h2 class="font-bold text-xl text-gray-800">Lemon Butter Fish</h2>
-        <p class="text-gray-500 text-sm mt-1">by Ricky</p> <!-- Rating -->
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-white">Lemon Butter Fish</h2>
+        <p class="text-gray-500 dark:text-white text-sm mt-1">by Ricky</p> <!-- Rating -->
         <div class="flex items-center mt-2">
             <div class="flex text-yellow-300"> 
                 <!-- Star Rating --> 
@@ -53,13 +54,11 @@ $images_path = "/yumrecipe/User/View/resources/img/";
         <!-- Meta Data -->
         <div class="flex justify-between items-center mt-4 text-gray-600 text-sm">
             <div class="flex items-center"> 
-                <img src="<?php echo $images_path ?>clock.svg" alt="" class="w-5 h-5 mr-1">
-                <span>1 hour 23 min</span> </div>
+            <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">watch_later</span>
+                <span class="dark:text-white">1 hour 23 min</span> </div>
             <div class="flex items-center"> 
-                <img src="<?php echo $images_path ?>comment.svg" alt=""
-                    class="w-5 h-5 mr-1">
-               
-                <span>23</span> 
+            <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">comment</span>
+                <span class="dark:text-white">23</span> 
             </div>
         </div>
     </div>
