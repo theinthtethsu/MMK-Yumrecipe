@@ -11,6 +11,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
   <title>Home Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <?php require_once '../../common/header-before-login.php'; ?>
@@ -18,7 +19,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
 <!-- Image Slider -->
 <section class="bg-gray-100 flex items-center justify-center mt-0 w-full ">
   <!-- Slider Container -->
-  <div class="relative w-full h-[500px] max-w-8xl overflow-hidden">
+  <div class="relative w-full h-[300px] sm:h-[400px] md:h-[500px] max-w-8xl overflow-hidden">
     <!-- Slides -->
     <div class="flex transition-transform duration-700 ease-in-out" id="slider">
       <img src="<?php echo $images_path ?>lemonfish.jpg" class="w-full flex-shrink-0" alt="Slide 1">
@@ -35,18 +36,18 @@ $user_path = "/yumrecipe/User/View/resources/page/";
     </button>
 
     <!-- Card Container -->
-  <div class="absolute top-24 left-48  rounded-xl p-6 max-w-lg shadow-lg text-center">
+  <div class="absolute top-16 sm:top-24 left-8 sm:left-24 md:left-48 rounded-xl p-6 max-w-md md:max-w-lg shadow-lg text-center">
     <!-- Heading -->
-    <h1 class="text-5xl font-bold text-gray-800 font-family:'poppins',sans-serif">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 font-family:'poppins',sans-serif">
       Cook, Share, <span class="text-red-600">Enjoy</span>
     </h1>
     <!-- Description -->
-    <p class="text-gray-500 mt-3 text-sm">
+    <p class="text-gray-500 mt-3 text-xs  sm:text-sm">
         "Discover the joy of cooking and sharing delicious meals with your loved ones. Explore a world of mouthwatering recipes, each crafted to bring flavor and happiness to your table."
     </p>
     <!-- Button -->
     <div class="mt-6">
-      <a href="#" class="inline-block px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300">
+      <a href="#" class="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300">
         All Recipes →
       </a>
     </div>
@@ -67,14 +68,13 @@ $user_path = "/yumrecipe/User/View/resources/page/";
   <?php require_once '../../common/nav.php'; ?>
 
 <!-- Trending Recipes -->
-<h1 class="text-3xl font-bold text-gray-600 font-family:'poppins',sans-serif text-center mb-10 mt-10">Trending Recipes</h1>
+<h1 class="text-3xl font-bold text-gray-600 dark:text-white font-family:'poppins',sans-serif text-center mb-10 mt-10">Trending Recipes</h1>
 
 <!-- Recipe Card -->
 <section class="px-20 flex items-center justify-between mb-10">
 <?php require_once '../../common/card.php'; ?>
 
 </section>
-
 
     <div class="flex items-center justify-end mt-11 px-20 mb-10">
         <!-- Centered Button -->
@@ -84,39 +84,39 @@ $user_path = "/yumrecipe/User/View/resources/page/";
       </div>
 
 <!-- Share Recipes -->
-<section class="flex items-center justify-center bg-gray-100 py-10 px-20">
-  <!-- Card Container -->
-  <div class="h-[300px] bg-white rounded-xl shadow-lg p-6 max-w-5xl flex items-center space-x-6 ">
-    <!-- Left Section: Image -->
-    <div class="w-1/2">
-      <img src="../img/rice.jpg" alt="Recipe Image" class="rounded-lg object-cover" class="h-[250px]">
-    </div>   
-    <!-- Right Section: Content -->
-    <div class="w-1/2 space-y-4 ml-12">
-      <!-- Heading -->
-      <h2 class="text-3xl font-semibold text-gray-800">
-        Share Your <span class="text-red-500 font-bold text-4xl italic">Recipes</span>
-      </h2>     
-      <!-- Description -->
-      <p class="text-gray-500 text-sm">
-        Share your favorite recipes with the world! From traditional dishes to creative twists, inspire others to cook, taste, and enjoy your culinary creations.
-      </p>    
-      <!-- Button -->
-      <a href="<?php echo $user_path; ?>addRecipe.html" class="inline-block px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300 animate-bounce">
-        Add Recipe
-      </a>
+<section class="flex items-center justify-center bg-gray-100 dark:bg-gray-800 py-10 px-4 md:px-10 lg:px-20">
+    <!-- Card Container -->
+    <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 max-w-5xl flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 dark:border dark:border-yellow-500">
+      <!-- Left Section: Image -->
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img src="<?php echo $images_path ?>rice.jpg" alt="Recipe Image" class="rounded-lg object-cover h-[200px] md:h-[250px] w-full md:w-auto">
+      </div>   
+      <!-- Right Section: Content -->
+      <div class="w-full md:w-1/2 space-y-4 text-center md:text-left">
+        <!-- Heading -->
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white">
+          Share Your <span class="text-red-500 font-bold text-3xl md:text-4xl italic">Recipes</span>
+        </h2>     
+        <!-- Description -->
+        <p class="text-gray-500 dark:text-white text-sm md:text-base">
+          Share your favorite recipes with the world! From traditional dishes to creative twists, inspire others to cook, taste, and enjoy your culinary creations.
+        </p>    
+        <!-- Button -->
+        <a href="<?php echo $user_path; ?>addRecipe.html" class="inline-block px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300 animate-bounce">
+          Add Recipe
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 <!-- Popular Recipes -->
-<h1 class="text-3xl font-bold text-gray-600 font-family:'poppins',sans-serif text-center mb-10 mt-10">
+<h1 class="text-3xl font-bold text-gray-600 dark:text-white font-family:'poppins',sans-serif text-center mb-10 mt-10">
     Popular Recipes
 </h1>
 <section class="px-20 flex items-center justify-between mb-10">
  <!-- Recipe Card -->
- <div class="w-[288px] h-[340px] rounded-lg shadow-lg bg-white overflow-hidden"> 
+ <div class="w-[300px] h-[350px] rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden"> 
     <!-- Image Section -->
     <div class="relative"> 
         <img src="<?php echo $images_path ?>lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-48 object-cover">
@@ -131,8 +131,8 @@ $user_path = "/yumrecipe/User/View/resources/page/";
         </div>
     </div> <!-- Content Section -->
     <div class="p-4">
-        <h2 class="font-bold text-xl text-gray-800">Lemon Butter Fish</h2>
-        <p class="text-gray-500 text-sm mt-1">by Ricky</p> <!-- Rating -->
+        <h2 class="font-bold text-xl text-gray-800 dark:text-white">Lemon Butter Fish</h2>
+        <p class="text-gray-500 dark:text-white text-sm mt-1">by Ricky</p> <!-- Rating -->
         <div class="flex items-center mt-2">
             <div class="flex text-yellow-300"> 
                 <!-- Star Rating --> 
@@ -157,13 +157,11 @@ $user_path = "/yumrecipe/User/View/resources/page/";
         <!-- Meta Data -->
         <div class="flex justify-between items-center mt-4 text-gray-600 text-sm">
             <div class="flex items-center"> 
-                <img src="<?php echo $images_path ?>clock.svg" alt="" class="w-5 h-5 mr-1">
-                <span>1 hour 23 min</span> </div>
+            <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">watch_later</span>
+                <span class="dark:text-white">1 hour 23 min</span> </div>
             <div class="flex items-center"> 
-                <img src="<?php echo $images_path ?>comment.svg" alt=""
-                    class="w-5 h-5 mr-1">
-               
-                <span>23</span> 
+            <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">comment</span>
+                <span class="dark:text-white">23</span> 
             </div>
         </div>
     </div>

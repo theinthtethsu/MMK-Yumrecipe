@@ -317,17 +317,37 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
                             <a href="/yumrecipe/Admin/View/resources/page/PendingRecipe/view_recipe.php?id=<?= $pending['no'] ?>" onclick="console.log('Clicked link with ID: <?= $pending['no'] ?>')"class="text-indigo-800 hover:text-blue-600">
                                     <span class="material-icons text-xl">visibility</span>
                                 </a>
-                                <button class="text-green-600 hover:text-green-800">
-                                    <span class="material-icons text-xl">check_circle</span>
-                                </button>
-                                <button class="text-red-600 hover:text-red-800">
-                                    <span class="material-icons text-xl">cancel</span>
-                                </button>
+                                <button type="button" onclick="showModal('approve')" class="text-green-600 hover:text-green-600">
+                                 <span class="material-icons text-xl">check_circle</span></button>
+                               <button type="button" onclick="showModal('reject')" class="text-red-600 hover:text-red-600">
+                                 <span class="material-icons text-xl">cancel</span></button>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+             <!-- Delete Popup Modal -->
+                        <div id="deleteModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+                            <div class="bg-secondary p-6 rounded shadow-lg w-96">
+                                <h2 class="text-xl font-bold text-center">Reject Confirmation</h2>
+                                <p class="text-center text-gray-700 mb-4">Are you sure you want to reject  this category?</p>
+                                <div class="flex justify-center gap-x-4">
+                                    <button class="px-4 py-2 bg-red-500 text-white rounded shadow hover:bg-red-600">Reject</button>
+                                    <button type="button" onclick="hideModal('reject')" class="px-4 py-2 bg-gray-300 text-gray-700 rounded shadow hover:bg-gray-400">Cancel</button>
+                                </div>
+                            </div>
+            </div>
+            <!-- Approved Popup Modal -->
+                        <div id="approveModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+                            <div class="bg-secondary p-6 rounded shadow-lg w-96">
+                                <h2 class="text-xl font-bold text-center">Approve Confirmation</h2>
+                                <p class="text-center text-gray-700 mb-4">Are you sure you want to approve  this category?</p>
+                                <div class="flex justify-center gap-x-4">
+                                    <button class="px-4 py-2 bg-green-500 text-white rounded shadow hover:bg-green-600">Approve</button>
+                                    <button type="button" onclick="hideModal('approve')" class="px-4 py-2 bg-gray-300 text-gray-700 rounded shadow hover:bg-gray-400">Cancel</button>
+                                </div>
+                            </div>
+            </div>
             <!-- Pagination -->
             <div class="flex items-center mt-4">
                 <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($pending) ?> of <?= count($pending) ?> entries</span>
@@ -477,14 +497,24 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
                             <td class="border border-black p-2"><?= $comment['recipetitle'] ?></td>
                             <td class="border border-black p-2"><?= $comment['comment'] ?></td>
                             <td class="border border-black p-2 flex justify-center">
-                                <button class="text-red-600 hover:text-red-800 ">
-                                    <span class="material-icons text-xl">delete</span>
-                                </button>
+                                <button type="button" onclick="showModal('delete')" class="text-red-600 hover:text-red-600">
+                                 <span class="material-icons text-xl">delete</span></button>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+             <!-- Delete Popup Modal -->
+                        <div id="deleteModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+                            <div class="bg-secondary p-6 rounded shadow-lg w-96">
+                                <h2 class="text-xl font-bold text-center">Delete Confirmation</h2>
+                                <p class="text-center text-gray-700 mb-4">Are you sure you want to delete this category?</p>
+                                <div class="flex justify-center gap-x-4">
+                                    <button class="px-4 py-2 bg-red-500 text-white rounded shadow hover:bg-red-600">Delete</button>
+                                    <button type="button" onclick="hideModal('update')" class="px-4 py-2 bg-gray-300 text-gray-700 rounded shadow hover:bg-gray-400">Cancel</button>
+                                </div>
+                            </div>
+            </div>
             <!-- Pagination -->
             <div class="flex items-center mt-4">
                 <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($comment) ?> of <?= count($comment) ?> entries</span>
@@ -514,7 +544,20 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
             toggleBackground(defaultTab);
         });
 
-       
+        function showModal(type) {
+            const modalId = type === 'approve' ? 'approveModal' : 'deleteModal';
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+            }
+        }
+        function hideModal(type) {
+            const modalId = type === 'approve' ? 'approveModal' : 'deleteModal';
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
   </script>
 </body> 
 </html>

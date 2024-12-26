@@ -69,14 +69,14 @@
       </div>
       <hr class="p-2 border-gray-300" />
     </div>
-    <div class="mt-20 ml-20 mb-18">
+    <div class="mt-20 ml-4 md:ml-20 mb-18">
       <div class="font-semibold text-lg mb-1">Recent Post</div>
-
-      <a href="page5.html" class="block">
+      <!-- Recent Post -->
+      <a href="#" class="block">
         <figure class="border-gray-300 bg-primaryTint w-full md:w-80 h-auto md:h-72 shadow-lg rounded-md overflow-hidden">
           <img src="../../img/allen-rad-9G_oJBKwi1c-unsplash.jpg" alt="food" class="w-full h-48 object-cover" />
           <div class="p-2">
-            <h3 class="mb-6 text-sm font-semibold">10 Best Deserts to Satisfy the Sweet Tooth</h3>
+            <h3 class="mb-4 text-sm font-semibold">10 Best Deserts to Satisfy the Sweet Tooth</h3>
             <div class="text-xs">December 19, 2024</div>
           </div>
         </figure>
