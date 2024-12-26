@@ -319,7 +319,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
                                 </a>
                                 <button type="button" onclick="showModal('approve')" class="text-green-600 hover:text-green-600">
                                  <span class="material-icons text-xl">check_circle</span></button>
-                               <button type="button" onclick="showModal('delete')" class="text-red-600 hover:text-red-600">
+                               <button type="button" onclick="showModal('reject')" class="text-red-600 hover:text-red-600">
                                  <span class="material-icons text-xl">cancel</span></button>
                             </td>
                         </tr>
@@ -333,7 +333,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
                                 <p class="text-center text-gray-700 mb-4">Are you sure you want to reject  this category?</p>
                                 <div class="flex justify-center gap-x-4">
                                     <button class="px-4 py-2 bg-red-500 text-white rounded shadow hover:bg-red-600">Reject</button>
-                                    <button type="button" onclick="hideModal('delete')" class="px-4 py-2 bg-gray-300 text-gray-700 rounded shadow hover:bg-gray-400">Cancel</button>
+                                    <button type="button" onclick="hideModal('reject')" class="px-4 py-2 bg-gray-300 text-gray-700 rounded shadow hover:bg-gray-400">Cancel</button>
                                 </div>
                             </div>
             </div>
@@ -344,7 +344,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
                                 <p class="text-center text-gray-700 mb-4">Are you sure you want to approve  this category?</p>
                                 <div class="flex justify-center gap-x-4">
                                     <button class="px-4 py-2 bg-green-500 text-white rounded shadow hover:bg-green-600">Approve</button>
-                                    <button type="button" onclick="hideModal('update')" class="px-4 py-2 bg-gray-300 text-gray-700 rounded shadow hover:bg-gray-400">Cancel</button>
+                                    <button type="button" onclick="hideModal('approve')" class="px-4 py-2 bg-gray-300 text-gray-700 rounded shadow hover:bg-gray-400">Cancel</button>
                                 </div>
                             </div>
             </div>
@@ -544,32 +544,16 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
             toggleBackground(defaultTab);
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const defaultTab = document.querySelector('ul li:first-child');
-            toggleBackground(defaultTab);
-        });
-          // Add these functions at the top of your script section
         function showModal(type) {
-            const modal = document.getElementById('deleteModal');
+            const modalId = type === 'approve' ? 'approveModal' : 'deleteModal';
+            const modal = document.getElementById(modalId);
             if (modal) {
                 modal.classList.remove('hidden');
             }
         }
         function hideModal(type) {
-            const modal = document.getElementById('deleteModal');
-            if (modal) {
-                modal.classList.add('hidden');
-            }
-        }
-        // Approve Modal  
-        function showModal(type) {
-            const modal = document.getElementById('approveModal');
-            if (modal) {
-                modal.classList.remove('hidden');
-            }
-        }
-        function hideModal(type) {
-            const modal = document.getElementById('approveModal');
+            const modalId = type === 'approve' ? 'approveModal' : 'deleteModal';
+            const modal = document.getElementById(modalId);
             if (modal) {
                 modal.classList.add('hidden');
             }
