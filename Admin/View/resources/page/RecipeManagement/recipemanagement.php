@@ -145,13 +145,21 @@
                         </tbody>
                     </table>
                     <!-- Pagination -->
-                        <div class="flex justify-center mt-4 space-x-2">
-                            <button class="px-3 py-1 bg-gray-200 rounded">&lt;</button>
-                            <button class="px-3 py-1 bg-blue-500 text-white rounded">1</button>
-                            <button class="px-3 py-1 bg-gray-200 rounded">2</button>
-                            <button class="px-3 py-1 bg-gray-200 rounded">3</button>
-                            <button class="px-3 py-1 bg-gray-200 rounded">&gt;</button>
+                    <div class="flex justify-center mt-4">
+                        <div class="flex  space-x-5 ml-30">
+                            <a href="#" class="text-gray-700 hover:text-accent mt-2">
+                                <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
+                            </a>
+                            <?php for ($i = 1; $i <= 4; $i++): ?>
+                                <a href="#" class="flex items-center justify-center w-8 h-8 <?= $i === 1 ? 'bg-accent text-white rounded-full' : 'text-gray-700 hover:bg-gray-300 rounded-full' ?>">
+                                    <?= $i ?>
+                                </a>
+                            <?php endfor; ?>
+                            <a href="#" class="text-gray-700 hover:text-accent mt-2">
+                                <img src="../../../resources/icons/ArrowRight.svg" alt="Next" class="w-4 h-4">
+                            </a>
                         </div>
+                    </div>
                     </div>
                 </div>`;
                 break;
@@ -271,7 +279,7 @@
                                 <!-- Upload and Cancel Buttons -->
                                 <div class="flex justify-end space-x-4">
                                     <button type="submit" class="bg-accent hover:bg-blue-600 text-white px-4 py-2 rounded">Upload</button>
-                                    <button type="button" class="bg-accent hover:bg-blue-600 text-gray-800 px-4 py-2 rounded">Cancel</button>
+                                    <button type="button" onclick="window.location.href='recipemanagement.php'" class="bg-accent hover:bg-blue-600 text-gray-800 px-4 py-2 rounded">Cancel</button>
                                 </div>
                             </form>
                             </div>`;

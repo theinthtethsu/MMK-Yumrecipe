@@ -43,10 +43,10 @@
                     <div class="bg-light-text p-6 rounded-lg shadow-md -mt-8">
                         <h2 class="text-xl font-bold text-center">Category</h2>
                         <div class="flex justify-between items-center mb-4">
-                            <button onclick="showaddingModal('addModal')" class="bg-accent text-white px-4 py-2 rounded-full shadow hover:bg-blue-600">Add New Category</button>
+                            <button onclick="showaddingModal('addModal')" class="bg-accent text-white px-4 py-2 rounded shadow hover:bg-blue-600">Add New Category</button>
                         <div class="flex space-x-2 items-center">
-                        <input type="text" placeholder="Search Category" class="p-2 border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-300" />
-                        <button class="bg-accent text-white px-4 py-2 rounded-full shadow hover:bg-blue-600">
+                        <input type="text" placeholder="Search Category" class="p-2 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-300" />
+                        <button class="bg-accent text-white px-4 py-2 rounded shadow hover:bg-blue-600">
                         Search </button>
                         </div>
                     </div>
@@ -138,10 +138,10 @@
                     <div class="bg-light-text p-6 rounded-lg shadow-md -mt-8">
                         <h2 class="text-xl font-bold text-center">Tag List</h2>
                         <div class="flex justify-between items-center mb-4">
-                            <button onclick="showaddingModal('addModal')" class="bg-accent text-white px-4 py-2 rounded-full shadow hover:bg-blue-600">Add New Tag</button>
+                            <button onclick="showaddingModal('addModal')" class="bg-accent text-white px-4 py-2 rounded shadow hover:bg-blue-600">Add New Tag</button>
                         <div class="flex space-x-2 items-center">
-                        <input type="text" placeholder="Search Tag" class="p-2 border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-300" />
-                        <button class="bg-accent text-white px-4 py-2 rounded-full shadow hover:bg-blue-600">
+                        <input type="text" placeholder="Search Tag" class="p-2 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-300" />
+                        <button class="bg-accent text-white px-4 py-2 rounded shadow hover:bg-blue-600">
                         Search </button>
                         </div>
                     </div>

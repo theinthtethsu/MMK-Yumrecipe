@@ -53,18 +53,18 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                     <div class="flex-1 container p-4 ">
                       <!-- Filters -->
                          <div class="flex space-x-4 justify-end">
-                                <select class="border rounded p-2 bg-secondary">
+                                <select class="border rounded p-2 bg-light-text">
                                     <option>All Type</option>
                                     <option>Basic</option>
                                     <option>Standard</option>
                                     <option>Premium</option>
                                 </select>
-                                 <select class="border rounded p-2 bg-secondary">
+                                 <select class="border rounded p-2 bg-light-text">
                                    <option>All Payment</option>
                                   <option>KBZPay</option>
                                   <option>WavePay</option>
                                 </select>
-                                <select class="border rounded p-2 bg-secondary">
+                                <select class="border rounded p-2 bg-light-text">
                                  <option>Newest First</option>
                                  <option>Oldest First</option>
                                 </select>
@@ -211,7 +211,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                             </div>
                             <div>
                              <!-- Add New Plan -->
-                                    <button onclick="loadAddNewPlan()" class=" w-auto bg-accent text-white font-bold ml-10 py-2 px-4 rounded hover:bg-blue-500">Add New Plan
+                                    <button onclick="loadAddNewPlan()" class=" w-auto bg-accent text-white font-bold ml-10 py-2 px-4 rounded hover:bg-blue-600 focus:ring focus:ring-blue-200">Add New Plan
                                     </button>
                             </div>
                   </div> `;
