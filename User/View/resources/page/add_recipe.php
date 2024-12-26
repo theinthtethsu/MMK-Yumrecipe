@@ -19,7 +19,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
     class="font-['Roboto'] font-normal text-gray-700 leading-[1]"
   > -->
   <body class="font-roboto text-gray-700 leading-none font-normal">
-  <?php include_once '../../common/header-before-login.php'; ?>
+  <?php include_once '../../common/header-after-login.php'; ?>
     <section
       class="h-screen relative bg-cover text-white"
       style="
