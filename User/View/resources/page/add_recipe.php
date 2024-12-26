@@ -21,7 +21,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
   <body class="font-roboto text-gray-700 leading-none font-normal">
   <?php include_once '../../common/header-after-login.php'; ?>
     <section
-      class="h-screen relative bg-cover text-white"
+      class="h-screen sm:h-[75vh] relative bg-cover bg-center text-white"
       style="
         background-image: linear-gradient(
             rgba(19, 19, 19, 0.6),
@@ -30,7 +30,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
           url('../img/hero.jpg');
       "
     >
-      <nav class="mx-auto max-w-7xl flex justify-around pt-6 text-xl font-bold">
+      <nav class="mx-auto max-w-7xl flex justify-around pt-6 text-lg sm:text-xl font-bold">
         <a
           href="<?php echo $user_path; ?>homepage.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'homepage.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
@@ -66,13 +66,11 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
       <div
         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-screen-xl"
       >
-        <!-- <div class="w-[120rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> -->
-
-        <div class="w-1/2">
-          <h1 class="text-5xl md:text-5.2rem font-bold mb-8 leading-tight">
+        <div class="w-3/4 sm:w-1/2">
+          <h1 class="text-2xl sm:text-4xl font-bold mb-8 leading-tight">
             Create Your Own Delish Recipes!
           </h1>
-          <p class="text-2xl line-height-1.6">
+          <p class="text-base sm:text-lg line-height-1.6">
             Unleash your inner chef and craft your own unique recipes. Share
             your mouthwatering creations, ingredients, and steps with the world,
             and inspire others to cook with passion!
@@ -81,7 +79,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
       </div>
     </section>
 
-    <section class="container mx-auto py-16 px-4">
+    <section class="container mx-auto py-8 px-4">
       <h2 class="text-center text-4xl font-bold mb-8">Add a Recipe</h2>
       <form class="max-w-lg mx-auto space-y-8">
         <!-- Recipe Title -->
