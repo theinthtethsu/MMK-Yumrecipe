@@ -3,7 +3,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,10 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             darkMode: 'class',
         };
     </script>
+     <script defer src="/yumrecipe/User/View/resources/js/dark-mode.js"></script>
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
-    
-<header class="px-6 py-2 bg-white dark:bg-gray-800  shadow-md sticky top-0 z-50">
+<body class="bg-white dark:bg-gray-900 dark:text-white transition-all duration-300">
+<header class="px-6 py-2 bg-white dark:bg-gray-800  shadow-md sticky top-0 z-50 transition-colors duration-300">
     <div class="container mx-auto flex items-center justify-between flex-wrap">
         <!-- Logo -->
         <div class="flex items-center flex-shrink-0">
@@ -56,71 +56,17 @@ $images_path = "/yumrecipe/User/View/resources/img/";
                 </div>
             </div>
 
-            <!-- Auth Buttons -->
-            <div class="flex items-center space-x-4 mt-4 md:mt-0">
-                      <a href="/yumrecipe/User/View/resources/page/signin.php" class="px-5 py-3 text-white bg-red-500 rounded-full hover:bg-red-600 text-md font-semibold">
-                    Sign In
-                </a>
-                <a href="/yumrecipe/User/View/resources/page/signup.php" class="px-5 py-3 text-white bg-gray-900 hover:bg-gray-800 dark:text-black dark:hover:text-white dark:bg-white dark:border border-red-500 rounded-full  text-md font-semibold">
-                    Sign Up
-                </a>
-                <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
-                    <svg id="lightIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 3a1 1 0 011-1V1a1 1 0 10-2 0v1a1 1 0 011 1zm4.293-1.293a1 1 0 011.414 0l1-1a1 1 0 00-1.414-1.414l-1 1a1 1 0 010 1.414zM10 17a1 1 0 011-1v1a1 1 0 10-2 0v-1a1 1 0 011-1zm6.293-1.293a1 1 0 01-1.414 0l-1 1a1 1 0 101.414 1.414l1-1a1 1 0 010-1.414zM10 9a1 1 0 011-1V7a1 1 0 10-2 0v1a1 1 0 011 1zm4.293 4.293a1 1 0 00-1.414 0l-1-1a1 1 0 101.414-1.414l1 1a1 1 0 000 1.414zM10 5a5 5 0 100 10 5 5 0 000-10zm-3.536 7.464a1 1 0 000 1.414l1 1a1 1 0 101.414-1.414l-1-1a1 1 0 00-1.414 0z" />
-                    </svg>
-                    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 2a8 8 0 106.32 12.906A6 6 0 0112 4.8a8.044 8.044 0 00-2-.8z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
+            <!-- Dark Mode Toogle -->
+            <label class="flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggle-dark-mode" class="hidden">
+                    <div class="w-10 h-5 bg-gray-300 rounded-full dark:bg-gray-600 flex items-center">
+                        <div class="w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 dark:translate-x-5"></div>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-900 dark:text-gray-100">Toggle Dark Mode</span>
+            </label>
         </div>
     </div>
 
-    <script>
-   const darkModeToggle = document.getElementById('darkModeToggle');
-const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-const menu = document.getElementById('menu');
-const htmlElement = document.documentElement;
-
-// Function to update theme icons based on mode
-function updateIcons(isDark) {
-    const lightIcon = document.getElementById('lightIcon');
-    const darkIcon = document.getElementById('darkIcon');
-
-    if (isDark) {
-        darkIcon.classList.add('hidden');
-        lightIcon.classList.remove('hidden');
-    } else {
-        darkIcon.classList.remove('hidden');
-        lightIcon.classList.add('hidden');
-    }
-}
-
-// 1. Load saved theme from localStorage
-const storedTheme = localStorage.getItem('theme');
-if (storedTheme === 'dark') {
-    htmlElement.classList.add('dark'); // Apply dark mode
-    updateIcons(true); // Set icons for dark mode
-} else {
-    htmlElement.classList.remove('dark'); // Apply light mode
-    updateIcons(false); // Set icons for light mode
-}
-
-// 2. Toggle dark mode on button click
-darkModeToggle.addEventListener('click', () => {
-    const isDark = htmlElement.classList.toggle('dark'); // Toggle class
-    localStorage.setItem('theme', isDark ? 'dark' : 'light'); // Save to localStorage
-    updateIcons(isDark); // Update icons
-});
-
-// 3. Mobile Menu Toggle
-mobileMenuToggle.addEventListener('click', () => {
-    menu.classList.toggle('hidden'); // Show/hide menu
-});
-
-</script>
-
 </header>
-
 </body>
 </html>
