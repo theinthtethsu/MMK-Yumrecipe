@@ -7,18 +7,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900 dark:text-white">
   <?php require_once '../../common/header-before-login.php'; ?>
 
       <!-- Navigation Bar -->
       <?php require_once '../../common/nav.php'; ?>
 
 <!-- FAQ -->
-<section class="bg-gray-50 flex items-center justify-center mt-10">
-    <div class="py-10 px-20 bg-white shadow-md rounded-lg">
+<section class="bg-gray-50 flex items-center justify-center mt-10 dark:bg-gray-900 dark:text-white mb-10">
+    <div class="py-10 px-20 bg-white shadow-md rounded-lg dark:bg-gray-800">
         <div class="grid grid-cols-2 gap-8 mb-6 sm:grid-cols-3">
           <!-- Buttons -->
-          <a class="text-center px-4 py-3 border-2 border-red-500 rounded-full text-red-500 font-semibold hover:bg-red-50 transition" href="faq2.html">
+          <a class="text-center px-4 py-3 border-2 border-red-500 rounded-full text-red-500 font-semibold hover:bg-red-50 transition" href="<?php echo $user_path; ?>faq2.php">
             General Questions
           </a>
           <a class="text-center px-4 py-3 border-2 border-yellow-500 rounded-full text-yellow-500 font-semibold hover:bg-yellow-50 transition">
@@ -51,8 +51,7 @@
                   Submit Your Question!
                 </button>
               </div>
-          </form>
-          
+          </form>  
         </div>
       </div>
 </section>

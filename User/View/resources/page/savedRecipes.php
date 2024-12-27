@@ -12,11 +12,10 @@
 <?php require_once '../../common/user-profile-common.php'; ?>
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col bg-gray-50">
-
-
+        <div class="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900">
+                <!-- Navigation Bar -->
+    <?php require_once '../../common/nav.php'; ?>
             <div class="container mx-auto px-4 py-8">
-
                 <!-- Top Section: Search and Filter -->
                 <div class="flex justify-between items-center mb-6">
                     <h1 class="text-xl font-semibold">All Personal Recipes</h1>
@@ -50,25 +49,28 @@
 
                 <div class="flex flex-wrap gap-4">
                     <!-- Recipe Card -->
-                    <div
-                        class="w-[288px] h-[340px] rounded-lg shadow-lg bg-white overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+                    <div class="w-[300px] h-[350px] rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden"> 
                         <!-- Image Section -->
-                        <div class="relative">
-                            <img src="../img/lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-48 object-cover">
-                            <div class="absolute top-2 right-2"> <!-- Bookmark Icon -->
-                                <div class="bg-yellow-300 rounded-full p-2"> <svg xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
+                        <div class="relative"> 
+                            <img src="<?php echo $images_path ?>lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2"> 
+                                <!-- Bookmark Icon -->
+                                <div class="bg-yellow-300 rounded-full p-2"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l7-5 7 5V3z" />
-                                    </svg> </div>
+                                    </svg> 
+                                </div>
                             </div>
                         </div> <!-- Content Section -->
                         <div class="p-4">
-                            <h2 class="font-bold text-xl text-gray-800">Lemon Butter Fish</h2>
-                            <p class="text-gray-500 text-sm mt-1">by Ricky</p> <!-- Rating -->
+                            <h2 class="font-semibold text-xl text-gray-800 dark:text-white">Lemon Butter Fish</h2>
+                            <p class="text-gray-500 dark:text-white text-sm mt-1">by Ricky</p> <!-- Rating -->
                             <div class="flex items-center mt-2">
-                                <div class="flex text-yellow-300">
-                                    <!-- Star Rating -->
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <div class="flex text-yellow-300"> 
+                                    <!-- Star Rating --> 
+                                    <svg class="w-5 h-5" fill="currentColor"
+                                        viewBox="0 0 20 20">
                                         <path
                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.947a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.286 3.947c.3.922-.755 1.688-1.54 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784.57-1.838-.196-1.54-1.118l1.286-3.947a1 1 0 00-.364-1.118L2.075 9.374c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.947z" />
                                     </svg> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -83,44 +85,44 @@
                                     </svg> <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
                                         <path
                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.947a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.286 3.947c.3.922-.755 1.688-1.54 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784.57-1.838-.196-1.54-1.118l1.286-3.947a1 1 0 00-.364-1.118L2.075 9.374c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.947z" />
-                                    </svg>
-                                </div>
-                            </div>
+                                    </svg> </div>
+                            </div> 
                             <!-- Meta Data -->
                             <div class="flex justify-between items-center mt-4 text-gray-600 text-sm">
-                                <div class="flex items-center">
-                                    <img src="../img/clock.svg" alt="" class="w-5 h-5 mr-1">
-                                    <span>1 hour 23 min</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <img src="../img/comment.svg" alt="" class="w-5 h-5 mr-1">
-
-                                    <span>23</span>
+                                <div class="flex items-center"> 
+                                <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">watch_later</span>
+                                    <span class="dark:text-white">1 hour 23 min</span> </div>
+                                <div class="flex items-center"> 
+                                <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">comment</span>
+                                    <span class="dark:text-white">23</span> 
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Recipe Card -->
-                    <div
-                        class="w-[288px] h-[340px] rounded-lg shadow-lg bg-white overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+                    <div class="w-[300px] h-[350px] rounded-lg shadow-lg bg-white dark:bg-gray-800 overflow-hidden"> 
                         <!-- Image Section -->
-                        <div class="relative">
-                            <img src="../img/lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-48 object-cover">
-                            <div class="absolute top-2 right-2"> <!-- Bookmark Icon -->
-                                <div class="bg-yellow-300 rounded-full p-2"> <svg xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
+                        <div class="relative"> 
+                            <img src="<?php echo $images_path ?>lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2"> 
+                                <!-- Bookmark Icon -->
+                                <div class="bg-yellow-300 rounded-full p-2"> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l7-5 7 5V3z" />
-                                    </svg> </div>
+                                    </svg> 
+                                </div>
                             </div>
                         </div> <!-- Content Section -->
                         <div class="p-4">
-                            <h2 class="font-bold text-xl text-gray-800">Lemon Butter Fish</h2>
-                            <p class="text-gray-500 text-sm mt-1">by Ricky</p> <!-- Rating -->
+                            <h2 class="font-semibold text-xl text-gray-800 dark:text-white">Lemon Butter Fish</h2>
+                            <p class="text-gray-500 dark:text-white text-sm mt-1">by Ricky</p> <!-- Rating -->
                             <div class="flex items-center mt-2">
-                                <div class="flex text-yellow-300">
-                                    <!-- Star Rating -->
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <div class="flex text-yellow-300"> 
+                                    <!-- Star Rating --> 
+                                    <svg class="w-5 h-5" fill="currentColor"
+                                        viewBox="0 0 20 20">
                                         <path
                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.947a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.286 3.947c.3.922-.755 1.688-1.54 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784.57-1.838-.196-1.54-1.118l1.286-3.947a1 1 0 00-.364-1.118L2.075 9.374c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.947z" />
                                     </svg> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -135,49 +137,24 @@
                                     </svg> <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
                                         <path
                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.947a1 1 0 00.95.69h4.15c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.286 3.947c.3.922-.755 1.688-1.54 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784.57-1.838-.196-1.54-1.118l1.286-3.947a1 1 0 00-.364-1.118L2.075 9.374c-.783-.57-.38-1.81.588-1.81h4.15a1 1 0 00.95-.69l1.286-3.947z" />
-                                    </svg>
-                                </div>
-                            </div>
+                                    </svg> </div>
+                            </div> 
                             <!-- Meta Data -->
                             <div class="flex justify-between items-center mt-4 text-gray-600 text-sm">
-                                <div class="flex items-center">
-                                    <img src="../img/clock.svg" alt="" class="w-5 h-5 mr-1">
-                                    <span>1 hour 23 min</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <img src="../img/comment.svg" alt="" class="w-5 h-5 mr-1">
-
-                                    <span>23</span>
+                                <div class="flex items-center"> 
+                                <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">watch_later</span>
+                                    <span class="dark:text-white">1 hour 23 min</span> </div>
+                                <div class="flex items-center"> 
+                                <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">comment</span>
+                                    <span class="dark:text-white">23</span> 
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    
+                    </div>                    
                 </div>
 
-                <!-- Premium Section -->
-                <div class="bg-gray-200 rounded-lg mt-10 p-6">
-                    <h2 class="text-lg font-semibold mb-4">Get More Premium Features</h2>
-                    <div class="flex justify-between items-center">
-                        <!-- Price Cards -->
-                        <div class="text-center">
-                            <p class="text-red-500 font-bold">$1.99 Basic</p>
-                            <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="text-center">
-                            <p class="text-red-500 font-bold">$2.99 Standard</p>
-                            <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="text-center">
-                            <p class="text-red-500 font-bold">$4.99 Premium</p>
-                            <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <button class="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600">
-                            See Details
-                        </button>
-                    </div>
-                </div>
+                    <!-- Premium Section -->
+                    <?php require_once '../../common/premium-section.php'; ?>
             </div>
         </div>
     </div>

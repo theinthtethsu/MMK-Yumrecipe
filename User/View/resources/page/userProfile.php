@@ -11,8 +11,9 @@
 <?php require_once '../../common/user-profile-common.php'; ?>
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col bg-white">
-
+        <div class="flex-1 flex flex-col bg-white dark:bg-gray-900">
+    <!-- Navigation Bar -->
+    <?php require_once '../../common/nav.php'; ?>
             <!-- Profile Section -->
             <div class="flex flex-col items-center mt-10">
                 <p class="text-gray-600 mb-5">You are signed in as <span class="font-bold">abc123@gmail.com</span></p>

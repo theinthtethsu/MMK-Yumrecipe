@@ -2,6 +2,7 @@
 $user_path = "/yumrecipe/User/View/resources/page/";
 $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 ?>
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -21,8 +22,8 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
                 <h2 class="text-3xl font-bold mb-6">Pages</h2>
                 <ul class="space-y-4 text-lg">
                     <li><a href="<?php echo $user_path; ?>homepage.php" class=" hover:text-red-500">Home</a></li>
-                    <li><a href="<?php echo $user_path; ?>Recipe/receipe.php" class=" hover:text-red-500">Recipe</a></li>
-                    <li><a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-500">Add Recipe</a></li>
+                    <li><a href="<?php echo $user_path; ?>Recipe/receipe.php" class=" hover:text-red-500">Recipes</a></li>
+                    <li><a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-500">Add Recipes</a></li>
                     <li><a href="<?php echo $user_path; ?>blog.html" class="hover:text-red-500">Blogs</a></li>
                     <li><a href="<?php echo $user_path; ?>aboutUs.html" class="hover:text-red-500">About Us</a></li>
                     <li><a href="<?php echo $user_path; ?>faq1.php" class="hover:text-red-500">FAQ</a></li>

@@ -46,7 +46,7 @@
                             <input type="text" id="feature-text" placeholder="Enter new features" class="border border-accent rounded w-80 py-2 px-3 text-gray-700">
                             <div class="ml-8">
                                 <button type="button" onclick="addFeature()"
-                                        class="bg-accent text-white px-4 py-2 rounded shadow hover:bg-blue-500 focus:ring-2 focus:ring-accent">
+                                        class="bg-accent text-white px-4 py-2 rounded shadow hover:bg-blue-600 focus:ring-2 focus:ring-accent">
                                         Add
                                 </button>  
                             </div>
@@ -62,7 +62,7 @@
                             Save
                         </button>
                     </div>
-                    <button type="button" onclick="window.location.href='subscription.php'" class="w-auto bg-accent text-white py-2 px-4 rounded-md -ml-80 hover:bg-blue-600 focus:ring focus:ring-blue-200 justify-end">Back
+                    <button type="button" onclick="window.location.href='subscription.php'" class="w-auto bg-accent text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:ring focus:ring-blue-200 justify-end">Back
                     </button>
          </form>
     </div>

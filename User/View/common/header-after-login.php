@@ -10,10 +10,17 @@ $user_path = "/yumrecipe/User/View/resources/page/";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header with Profile</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>   
+    <script defer src="/yumrecipe/User/View/resources/js/dark-mode.js"></script>
 </head>
-<body>
-<header class="px-6 py-2 bg-white shadow-md dark:bg-gray-800">
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
+<header class="px-6 py-2 bg-white shadow-md dark:bg-gray-800 dark:shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex items-center justify-between flex-wrap">
         <!-- Logo -->
         <div class="flex items-center flex-shrink-0">
@@ -54,23 +61,26 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 <!-- Profile Section -->
                 <div class="flex items-center space-x-4">
                     <a href="<?php echo $user_path; ?>notification.php" class="p-2">
-                        <img src="<?php echo $images_path ?>notification.svg" alt="" class="w-7 h-7">
+                    <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">notifications</span>
                     </a>
                     <div class="flex items-center">
                         <span class="text-gray-700 dark:text-gray-300 mr-2">My Profile</span>
-                        <a href="<?php echo $user_path; ?>userProfile.php" class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
-                            <img src="<?php echo $images_path ?>profile.svg" alt="" class="w-7 h-7">                         
+                        <a href="<?php echo $user_path; ?>userProfile.php" class="">
+                        <span class="material-icons text-gray-400 dark:text-gray-300 mr-2 ">account_circle</span>                     
                         </a>
                     </div>
-                    <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
-                    <svg id="lightIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 3a1 1 0 011-1V1a1 1 0 10-2 0v1a1 1 0 011 1zm4.293-1.293a1 1 0 011.414 0l1-1a1 1 0 00-1.414-1.414l-1 1a1 1 0 010 1.414zM10 17a1 1 0 011-1v1a1 1 0 10-2 0v-1a1 1 0 011-1zm6.293-1.293a1 1 0 01-1.414 0l-1 1a1 1 0 101.414 1.414l1-1a1 1 0 010-1.414zM10 9a1 1 0 011-1V7a1 1 0 10-2 0v1a1 1 0 011 1zm4.293 4.293a1 1 0 00-1.414 0l-1-1a1 1 0 101.414-1.414l1 1a1 1 0 000 1.414zM10 5a5 5 0 100 10 5 5 0 000-10zm-3.536 7.464a1 1 0 000 1.414l1 1a1 1 0 101.414-1.414l-1-1a1 1 0 00-1.414 0z" />
-                    </svg>
-                    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 2a8 8 0 106.32 12.906A6 6 0 0112 4.8a8.044 8.044 0 00-2-.8z" clip-rule="evenodd" />
-                    </svg>
-                </button>
+
+                     <!-- Dark Mode Toogle -->
+            <label class="flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggle-dark-mode" class="hidden">
+                    <div class="w-10 h-5 bg-gray-300 rounded-full dark:bg-gray-600 flex items-center">
+                        <div class="w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 dark:translate-x-5"></div>
+                    </div>
+                    <span class="ml-2 text-sm text-gray-900 dark:text-gray-100">Toggle Dark Mode</span>
+            </label>
+                
                 </div>
     </div>
+
 </header>
 </html>

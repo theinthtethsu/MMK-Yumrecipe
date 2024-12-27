@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>
+     <script defer src="/yumrecipe/User/View/resources/js/dark-mode.js"></script>
   </head>
-  <body class="font-roboto text-gray-700 leading-none font-normal overflow-x-hidden">
-    <?php include_once '../../common/header-before-login.php'; ?>
-    <?php include_once '../../common/nav.php'; ?>
+  <body class="bg-white text-gray-700 leading-none font-normal overflow-x-hidden dark:bg-gray-900 dark:text-white transition-all duration-300">
+  <?php include('../../common/header-before-login.php'); ?>
+  <?php include('../../common/nav.php'); ?>
     <section class="w-full px-4 py-8">
       <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-x-5">
         <div>
-          <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-8">About Us</h1>
+          <h1 class="text-3xl md:text-3xl font-bold tracking-tight mb-8">About Us</h1>
           <p class="text-base md:text-lg text-gray-600 leading-7">
             We’re passionate about bringing people together through the joy of cooking and sharing recipes. Our platform combines personal recipe management with a vibrant community of food enthusiasts, making it easy to save your favorite dishes, explore new cuisines, and connect with like-minded creators. Join us in celebrating the art of cooking and the stories behind every meal.
           </p>
-          <a href="receipe.php" class="inline-block text-xl md:text-2xl font-semibold py-3 md:py-4 px-6 md:px-8 rounded-full bg-red-500 text-yellow-300 hover:bg-red-600 hover:text-white transition-all duration-300 mt-10">
+          <a href="receipe.php" class="inline-block text-lg font-semibold py-3 md:py-4 px-6 md:px-8 rounded-full bg-red-500 text-yellow-300 hover:bg-red-600 hover:text-white transition-all duration-300 mt-10">
             Explore Recipes
           </a>
         </div>
