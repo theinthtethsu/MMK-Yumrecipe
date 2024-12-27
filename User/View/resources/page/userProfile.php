@@ -11,7 +11,7 @@
 <?php require_once '../../common/user-profile-common.php'; ?>
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col bg-white">
+        <div class="flex-1 flex flex-col bg-white dark:bg-gray-900">
 
             <!-- Profile Section -->
             <div class="flex flex-col items-center mt-10">

@@ -56,6 +56,15 @@ $images_path = "/yumrecipe/User/View/resources/img/";
                 </div>
             </div>
 
+            <!-- Auth Buttons -->
+            <div class="flex items-center space-x-4">
+                <button class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-sm font-semibold">
+                    Login
+                </button>
+                <button class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-sm font-semibold">
+                    Sign Up </button>
+            </div>
+
             <!-- Dark Mode Toogle -->
             <label class="flex items-center cursor-pointer">
                     <input type="checkbox" id="toggle-dark-mode" class="hidden">
