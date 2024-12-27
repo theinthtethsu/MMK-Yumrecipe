@@ -64,7 +64,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
                 </a>
                 <a href="<?php echo $user_path; ?>signUp.php" class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-sm font-semibold dark:text-black dark:bg-white dark:hover:border-2 dark:hover:border-red-500 hover:text-white">
                     Sign Up </a>
-
+<!-- Dark Mode Toogle -->
                     <label class="flex items-center cursor-pointer">
                     <input type="checkbox" id="toggle-dark-mode" class="hidden">
                     <div class="w-10 h-5 bg-gray-300 rounded-full dark:bg-gray-600 flex items-center">
@@ -74,7 +74,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             </label> 
             </div>
 
-            <!-- Dark Mode Toogle -->
+            
             
         </div>
     </div>
