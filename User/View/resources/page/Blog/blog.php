@@ -6,16 +6,16 @@
     <title>Food Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-roboto text-gray-700 leading-none font-normal">
+  <body class="dark:bg-gray-900 dark:text-white">
     <?php include_once '../../../common/header-before-login.php'; ?>
     <?php include_once '../../../common/nav.php'; ?>
     <!-- Main Container -->
-    <div class="max-w-screen-lg mx-auto px-4 py-4 mt-14">
+    <div class="max-w-screen-lg mx-auto px-4 py-4 mt-14 dark:bg-gray-800 dark:text-white">
       <!-- Header -->
       <header class="text-center mb-20 md:mb-16">
         <img src="../../img/Salad.png" alt="Blog Logo" class="w-24 h-24 mx-auto mb-2" />
         <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-2">Welcome to our Blog</h1>
-        <p class="text-base md:text-lg text-gray-600">See offers, Featured News, best served with freshly baked</p>
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-400">See offers, Featured News, best served with freshly baked</p>
       </header>
 
       <!-- Main Content Grid -->
@@ -23,14 +23,14 @@
         <!-- Left Sidebar -->
         <div class="md:col-span-1">
           <h2 class="italic text-xl font-semibold mb-4">Hi There!</h2>
-          <p class="text-base text-gray-600 mb-8 leading-6">
+          <p class="text-base text-gray-600 mb-8 leading-6 dark:text-gray-400">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
           </p>
           <img src="../../img/ian-dooley-TLD6iCOlyb0-unsplash (1).jpg" alt="food picture" class="w-40 rounded-lg mb-6" />
 
           <!-- Newsletter Section -->
-          <div class="bg-gray-100 rounded-lg p-4">
-            <h3 class="font-semibold mb-4">Subscribe to our Newsletter</h3>
+          <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+            <h3 class="font-semibold mb-4 text-gray-600 dark:text-white">Subscribe to our Newsletter</h3>
             <input
               type="email"
               placeholder="Email address"
@@ -51,7 +51,7 @@
                   class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
                 />
                 <div class="testimonial-box col-span-2">
-                  <blockquote class="text-lg mb-4 leading-relaxed text-gray-600 font-bold">
+                  <blockquote class="text-lg mb-4 leading-relaxed text-gray-600 font-bold dark:text-white">
                     The World’s Most Delicious Burgers and Where to Find Them
                   </blockquote>
                   <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
@@ -68,7 +68,7 @@
                   class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
                 />
                 <div class="testimonial-box col-span-2">
-                  <blockquote class="text-lg mb-4 leading-relaxed text-gray-600 font-bold">
+                  <blockquote class="text-lg mb-4 leading-relaxed text-gray-600 font-bold dark:text-white">
                     The World’s Most Delicious Burgers and Where to Find Them
                   </blockquote>
                   <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
@@ -85,7 +85,7 @@
                   class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
                 />
                 <div class="testimonial-box col-span-2">
-                  <blockquote class="text-lg mb-4 leading-relaxed text-gray-600 font-bold">
+                  <blockquote class="text-lg mb-4 leading-relaxed text-gray-600 font-bold dark:text-white">
                     The World’s Most Delicious Burgers and Where to Find Them
                   </blockquote>
                   <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
@@ -102,7 +102,7 @@
                   class="w-full md:w-52 h-32 object-cover col-span-1 rounded-lg shadow-lg"
                 />
                 <div class="testimonial-box col-span-2">
-                  <blockquote class="text-lg mb-4 leading-relaxed text-gray-600 font-bold">
+                  <blockquote class="text-lg mb-4 leading-relaxed text-gray-600 font-bold dark:text-white">
                     The World’s Most Delicious Burgers and Where to Find Them
                   </blockquote>
                   <p class="testimonial-author text-gray-500">Dec 20, 2024</p>
