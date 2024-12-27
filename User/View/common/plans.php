@@ -1,5 +1,6 @@
 <?php
 $commonPath = '/yumrecipe/User/View/common/';
+$user_path = "/yumrecipe/User/View/resources/page/";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,9 +28,11 @@ $commonPath = '/yumrecipe/User/View/common/';
                         <li>✅ Get a verified badge in the community</li>
                         <li>✅ Join Up to 3 Live Cooking per month</li>
                     </ul>
-                    <button class="bg-red-500 text-white font-semibold w-full py-2 rounded hover:bg-red-600">
-                        Buy
-                    </button>
+                    <div class="flex justify-center">
+        <a href="<?php echo $user_path; ?>payment.php" class="bg-red-500 text-white font-semibold px-12 py-2 rounded hover:bg-red-600 text-center">
+            Buy
+        </a>
+    </div>
                 </div>
     
                 <!-- Premium Plan -->
@@ -45,9 +48,11 @@ $commonPath = '/yumrecipe/User/View/common/';
                         <li>✅ Exclusive access to workshops, recipes, and content</li>
                         <li>✅ No ads</li>
                     </ul>
-                    <button class="bg-red-500 text-white font-semibold w-full py-2 rounded hover:bg-red-600">
-                        Buy
-                    </button>
+                    <div class="flex justify-center">
+        <a href="<?php echo $user_path; ?>payment.php" class="bg-red-500 text-white font-semibold px-12 py-2 rounded hover:bg-red-600 text-center">
+            Buy
+        </a>
+    </div>
                 </div>
     
                 <!-- Standard Plan -->
@@ -62,9 +67,11 @@ $commonPath = '/yumrecipe/User/View/common/';
                         <li>✅ Join Up to 7 Live Cooking per month</li>
                         <li>✅ Access exclusive blogs</li>
                     </ul>
-                    <button class="bg-red-500 text-white font-semibold w-full py-2 rounded hover:bg-red-600">
-                        Buy
-                    </button>
+                    <div class="flex justify-center">
+        <a href="<?php echo $user_path; ?>payment.php" class="bg-red-500 text-white font-semibold px-12 py-2 rounded hover:bg-red-600 text-center">
+            Buy
+        </a>
+    </div>
                 </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
 <?php
 $commonPath = '/yumrecipe/User/View/common/';
+$user_path = "/yumrecipe/User/View/resources/page/";
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="font-roboto">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +12,17 @@ $commonPath = '/yumrecipe/User/View/common/';
     <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../../../../../output.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
+<body class=" h-screen font-roboto">
+      <!-- Navigation Bar -->
+  <?php require_once '../../../common/nav.php'; ?>
 
-<body class=" h-screen">
-    <img src="../../img/logo.png" alt="Logo" class="m-auto" style="width: 150px; height: 150px;">
-    <section class="flex flex-col items-center border w-full text-black bg-[#fbecea] border-gray-200 shadow md:flex-row md:w-full h-[340px]">
+    <section class="mt-5 flex flex-col items-center border w-full text-black bg-[#fbecea] border-gray-200 shadow md:flex-row md:w-full h-[340px]">
         <div class="flex flex-col justify-between p-4 leading-normal">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Premium features made easy</h5>
             <p class="mb-3 font-normal text-gray-700">Add recipes unlimited, instantly create shopping lists, scheduled
                 meals, access to live cooking, save your recipes in organize, and read our blogs.</p>
-            <button class="bg-userPrimary hover:bg-userSecondary text-white font-bold py-2 px-4 rounded w-48">Start Planning</button>
+            <a href="#plan" class="text-center bg-userPrimary hover:bg-userSecondary text-white font-bold py-2 px-4 rounded w-48">Start Planning</a>
         </div>
         <img src="../../img/lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-[340px] object-cover">
     </section>
@@ -97,7 +97,10 @@ $commonPath = '/yumrecipe/User/View/common/';
     <!--title--> 
     <h1 class="text-2xl font-bold text-center mt-8 text-gray-800">Choose your plan</h1>
     <!--premium card container-->
+    <div id="plan">
     <?php require_once '../../../common/plans.php'; ?>
+    </div>
+
 </body>
 
 </html>
