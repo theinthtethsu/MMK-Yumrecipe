@@ -19,7 +19,7 @@
       <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-x-5">
         <div>
           <h1 class="text-3xl md:text-3xl font-bold tracking-tight mb-8">About Us</h1>
-          <p class="text-base md:text-lg text-gray-600 leading-7">
+          <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-7">
             We’re passionate about bringing people together through the joy of cooking and sharing recipes. Our platform combines personal recipe management with a vibrant community of food enthusiasts, making it easy to save your favorite dishes, explore new cuisines, and connect with like-minded creators. Join us in celebrating the art of cooking and the stories behind every meal.
           </p>
           <a href="receipe.php" class="inline-block text-lg font-semibold py-3 md:py-4 px-6 md:px-8 rounded-full bg-red-500 text-yellow-300 hover:bg-red-600 hover:text-white transition-all duration-300 mt-10">
@@ -39,7 +39,7 @@
           <div class="text-center">
             <img src="../img/customer-1.jpg" alt="Sarah Chen" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
             <h3 class="font-semibold text-lg md:text-xl mb-2">Sarah Chen</h3>
-            <p class="text-gray-600 mb-4">
+            <p class="text-gray-600 mb-4 dark:text-gray-400">
               "As a professional chef, I love sharing authentic Asian recipes and cooking techniques that bring families together."
             </p>
             <div class="flex justify-center gap-4">
@@ -59,7 +59,7 @@
           <div class="text-center">
             <img src="../img/customer-2.jpg" alt="Marcus Rodriguez" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
             <h3 class="font-semibold text-lg md:text-xl mb-2">Marcus Rodriguez</h3>
-            <p class="text-gray-600 mb-4">
+            <p class="text-gray-600 mb-4 dark:text-gray-400">
               "I specialize in Mediterranean cuisine and love exploring the rich flavors and healthy ingredients that make these dishes special."
             </p>
             <div class="flex justify-center gap-4">
@@ -79,7 +79,7 @@
           <div class="text-center">
             <img src="../img/customer-3.jpg" alt="Emma Thompson" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
             <h3 class="font-semibold text-lg md:text-xl mb-2">Emma Thompson</h3>
-            <p class="text-gray-600 mb-4">
+            <p class="text-gray-600 mb-4 dark:text-gray-400">
               "My passion is creating simple, delicious desserts that anyone can make. I believe baking should be fun and accessible to everyone."
             </p>
             <div class="flex justify-center gap-4">

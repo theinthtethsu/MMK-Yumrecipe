@@ -32,8 +32,9 @@ $shopping_list_path = "/yumrecipe/User/View/resources/page/ShoppingList/";
 
     <!-- Parent Container -->
     <div class="flex mt-1">
+
         <!-- Sidebar -->
-        <aside class="w-1/5 bg-white border-r text-center dark:bg-gray-900 dark:text-white">
+        <aside class="w-1/5 bg-white text-black border-r text-center dark:bg-gray-900 dark:text-white">
             <ul class="mt-10 space-y-4 pl-5">
                 <li class="cursor-pointer p-2 <?php echo basename($_SERVER['PHP_SELF']) == 'userProfile.php' ? 'text-white font-bold italic bg-red-500' : '' ?> "><a href="<?php echo $user_path; ?>userProfile.php">Profile</a></li>
                 <li class="cursor-pointer p-2 <?php echo basename($_SERVER['PHP_SELF']) == 'savedRecipes.php' ? 'text-white font-bold italic bg-red-500' : '' ?> "><a href="<?php echo $user_path; ?>savedRecipes.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'savedRecipes.php' ? 'text-white font-bold italic bg-red-500' : '' ?>">Saved Recipes</a></li>

@@ -1,6 +1,7 @@
 <?php
 $images_path = "/yumrecipe/User/View/resources/img/";
 $user_path = "/yumrecipe/User/View/resources/page/";
+$receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +53,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
     </p>
     <!-- Button -->
     <div class="mt-6">
-      <a href="#" class="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300">
+      <a href="<?php echo $receipe_path; ?>receipe.php" class="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300">
         All Recipes →
       </a>
     </div>
