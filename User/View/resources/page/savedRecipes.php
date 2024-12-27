@@ -13,6 +13,8 @@
 
         <!-- Main Content -->
         <div class="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900">
+                <!-- Navigation Bar -->
+    <?php require_once '../../common/nav.php'; ?>
             <div class="container mx-auto px-4 py-8">
                 <!-- Top Section: Search and Filter -->
                 <div class="flex justify-between items-center mb-6">

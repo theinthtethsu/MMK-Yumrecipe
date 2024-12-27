@@ -11,6 +11,8 @@
   <?php require_once '../../common/user-profile-common.php'; ?>
         <!-- Main Content -->
         <div class="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 dark:text-white">
+              <!-- Navigation Bar -->
+    <?php require_once '../../common/nav.php'; ?>
 
             <div class="container mx-auto px-4 py-8">
 

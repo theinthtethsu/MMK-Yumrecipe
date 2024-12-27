@@ -17,7 +17,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <!-- Left Section: Payment Methods -->
       <div>
-        <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Payment Methods</h2>
+        <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 dark:text-white">Payment Methods</h2>
         <div class="flex flex-wrap gap-4 mb-6">
           <!-- KBZ Pay -->
           <div class="relative w-24 sm:w-32 lg:w-40 bg-white p-4 flex justify-center rounded shadow">

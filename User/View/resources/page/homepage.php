@@ -107,7 +107,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
           Share your favorite recipes with the world! From traditional dishes to creative twists, inspire others to cook, taste, and enjoy your culinary creations.
         </p>    
         <!-- Button -->
-        <a href="<?php echo $user_path; ?>addRecipe.html" class="inline-block px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300 animate-bounce">
+        <a href="<?php echo $user_path; ?>add_recipe.php" class="inline-block px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300 animate-bounce">
           Add Recipe
         </a>
       </div>

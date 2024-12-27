@@ -10,9 +10,11 @@
 <?php require_once '../../common/user-profile-common.php'; ?>
   
 
-<div class="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 px-11 py-5">
+<div class="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 px-11 py-2">
+    <!-- Navigation Bar -->
+    <?php require_once '../../common/nav.php'; ?>
   <!-- Recent Activities Section -->
-  <div class="bg-white dark:bg-gray-800 dark:text-white rounded-lg shadow-md p-6 mb-6">
+  <div class="bg-white dark:bg-gray-800 dark:text-white rounded-lg shadow-md p-6 mb-6 mt-4">
     <h2 class="text-lg font-semibold mb-4">Recent Activities</h2>
     <div class="space-y-4">
       <div class="flex items-center space-x-3">
@@ -149,6 +151,9 @@
     </div>
 
     </div>
+
+    
+
 
   </body>
 </html>
