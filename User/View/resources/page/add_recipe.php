@@ -4,7 +4,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,10 +15,8 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
   </head>
-  <!-- <body
-    class="font-['Roboto'] font-normal text-gray-700 leading-[1]"
-  > -->
-  <body class="font-roboto text-gray-700 leading-none font-normal">
+  
+  <body class="dark:bg-gray-900 dark:text-white">
   <?php include_once '../../common/header-after-login.php'; ?>
     <section
       class="h-screen sm:h-[75vh] relative bg-cover bg-center text-white"
@@ -30,7 +28,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
           url('../img/hero.jpg');
       "
     >
-      <nav class="mx-auto max-w-7xl flex justify-around pt-6 text-lg sm:text-xl font-bold">
+      <nav class="mx-auto max-w-7xl flex justify-around pt-6 font-semibold">
         <a
           href="<?php echo $user_path; ?>homepage.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'homepage.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
@@ -41,13 +39,13 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
           href="<?php echo $user_path; ?>receipe.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'receipe.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
-          Recipe
+          Recipes
         </a>
         <a
           href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'add_recipe.php' ? 'text-red-500' : '' ?>"
           class="text-white no-underline hover:text-red-500 hover:font-bold transition duration-300"
         >
-          Add Recipe
+          Add Recipes
         </a>
         <a
           href="<?php echo $blog_path; ?>blog.php" class="hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'blog.php' ? 'text-red-500' : '' ?>"
@@ -86,7 +84,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
         <div>
           <label
             for="title"
-            class="block text-sm font-semibold mb-1 text-gray-600"
+            class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white" 
             >Recipe Title</label
           >
           <input
@@ -101,7 +99,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
         <div>
           <label
             for="description"
-            class="block text-sm font-semibold mb-1 text-gray-600"
+            class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white"
             >Description</label
           >
           <textarea
@@ -115,12 +113,12 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
         <div>
           <label
             for="category"
-            class="block text-sm font-semibold mb-1 text-gray-600"
+            class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white"
             >Category</label
           >
           <select
             id="category"
-            class="w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
+            class="dark:bg-gray-900 dark:text-white w-full border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
           >
             <option>Breakfast</option>
             <option>Lunch</option>
@@ -133,7 +131,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
           <div>
             <label
               for="servings"
-              class="block text-sm font-semibold mb-1 text-gray-600"
+              class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white"
               >Number of Servings</label
             >
             <input
@@ -147,14 +145,14 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
         <div>
           <label
             for="time"
-            class="block text-sm font-semibold mb-2 text-gray-600"
+            class="block text-sm font-semibold mb-2 text-gray-600 dark:text-white"
             >Cooking Time</label>
           <div class="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
             <!-- Hours Picker -->
             <div>
               <label
                 for="hours"
-                class="block text-xs font-medium text-gray-500 mb-1"
+                class="block text-xs font-medium text-gray-500 mb-1 dark:text-white"
                 >Hours</label
               >
               <select
@@ -179,7 +177,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
             <div>
               <label
                 for="minutes"
-                class="block text-xs font-medium text-gray-500 mb-1"
+                class="block text-xs font-medium text-gray-500 mb-1 dark:text-white"
                 >Minutes</label
               >
               <select
@@ -204,7 +202,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 
         <!-- Ingredients -->
         <div>
-          <label class="block text-sm font-semibold mb-1 text-gray-600">Ingredients</label>
+          <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white">Ingredients</label>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             <input id="ingredient-name" type="text" placeholder="Olive oil" class="border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500" />
             <input id="ingredient-quantity" type="number" placeholder="2" class="border rounded p-2 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500" />
@@ -252,7 +250,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 
         <!-- Instructions -->
         <div>
-          <label class="block text-sm font-semibold mb-1 text-gray-600">Instructions</label>
+          <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white">Instructions</label>
           <div class="flex flex-col md:flex-row gap-4 mb-4">
             <input
               id="instruction-text"
@@ -304,12 +302,12 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 
         <!-- Nutritional Facts -->
         <div>
-          <label class="block text-sm font-semibold mb-1 text-gray-600"
+          <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white"
             >Nutritional Facts</label
           >
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <label class="text-xs text-gray-600 block mb-1">Calories</label>
+              <label class="text-xs text-gray-600 block mb-1 dark:text-white">Calories</label>
               <input
                 type="text"
                 placeholder="e.g., 250 "
@@ -317,7 +315,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
               />
             </div>
             <div>
-              <label class="text-xs text-gray-600 block mb-1">Fat(g)</label>
+              <label class="text-xs text-gray-600 block mb-1 dark:text-white">Fat(g)</label>
               <input
                 type="text"
                 placeholder="e.g., 10"
@@ -325,7 +323,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
               />
             </div>
             <div>
-              <label class="text-xs text-gray-600 block mb-1"
+              <label class="text-xs text-gray-600 block mb-1 dark:text-white"
                 >Cholestrol(mg)</label
               >
               <input
@@ -335,7 +333,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
               />
             </div>
             <div>
-              <label class="text-xs text-gray-600 block mb-1">Sodium(mg)</label>
+              <label class="text-xs text-gray-600 block mb-1 dark:text-white">Sodium(mg)</label>
               <input
                 type="text"
                 placeholder="e.g., 30"
@@ -365,7 +363,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
         <div>
           <label
             for="tags"
-            class="block text-sm font-semibold mb-1 text-gray-600"
+            class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white"
           >
             Choose Tags
           </label>
@@ -453,7 +451,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
         <div class="col-span-full">
           <label
             for="file-upload"
-            class="block text-sm font-medium text-gray-900"
+            class="block text-sm font-medium text-gray-900 dark:text-white"
             >Cover photo</label
           >
           <div
@@ -478,7 +476,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
               <div class="mt-4 flex text-sm text-gray-600">
                 <label
                   for="file-upload"
-                  class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
+                  class="relative cursor-pointer rounded-md font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
                 >
                   <span class="text-red-500">Upload a picture </span>
                   <input
