@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="">
+<body class="dark:bg-gray-900 dark:text-white">
   <!-- Navbar -->
   <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/header-before-login.php'); ?>
   <?php require_once '../../../common/nav.php'; ?>
@@ -233,13 +233,13 @@
       <div class="col-span-2 md:col-span-2 h-auto">
         <h2 class="text-red-500 font-bold text-lg mb-4">Popular Categories</h2>
         <ul class="space-y-2 text-gray-700 ">
-          <li><a href="receipe.php?category=quick-and-easy" class="inline-block mr-2 hover:text-gray-900">🍴 Quick and
+          <li><a href="receipe.php?category=quick-and-easy" class="inline-block mr-2 hover:text-gray-900 dark:text-white dark:hover:text-gray-400">🍴 Quick and
               Easy</a></li>
-          <li><a href="receipe.php?category=pasta" class="inline-block mr-2 hover:text-gray-900">🍝 Pasta</a></li>
-          <li><a href="receipe.php?category=shashimi" class="inline-block mr-2 hover:text-gray-900">🍣 Shashimi</a></li>
-          <li><a href="receipe.php?category=instant-pot" class="inline-block mr-2 hover:text-gray-900">🔥 Instant
+          <li><a href="receipe.php?category=pasta" class="inline-block mr-2 hover:text-gray-900 dark:text-white dark:hover:text-gray-400">🍝  Pasta</a></li>
+          <li><a href="receipe.php?category=shashimi" class="inline-block mr-2 hover:text-gray-900 dark:text-white dark:hover:text-gray-400">🍣  Shashimi</a></li>
+          <li><a href="receipe.php?category=instant-pot" class="inline-block mr-2 hover:text-gray-900 dark:text-white dark:hover:text-gray-400">🔥  Instant
               Pot</a></li>
-          <li><a href="receipe.php?category=vegetarian" class="inline-block mr-2 hover:text-gray-900">🥗 Vegetarian</a>
+          <li><a href="receipe.php?category=vegetarian" class="inline-block mr-2 hover:text-gray-900 dark:text-white dark:hover:text-gray-400">🥗  Vegetarian</a>
           </li>
         </ul>
       </div>
@@ -249,13 +249,13 @@
         <h2 class="text-red-500 font-bold text-lg mb-4">Recipe By Season</h2>
         <div class="grid grid-cols-2 gap-2 text-gray-700">
           <ul class="space-y-2">
-            <li><a href="receipe.php?season=spring" class="inline-block hover:text-gray-900">Spring</a></li>
-            <li><a href="receipe.php?season=winter" class="inline-block hover:text-gray-900">Winter</a></li>
-            <li><a href="receipe.php?season=summer" class="inline-block hover:text-gray-900">Summer</a></li>
+            <li><a href="receipe.php?season=spring" class="inline-block hover:text-gray-900 dark:text-white dark:hover:text-gray-400">Spring</a></li>
+            <li><a href="receipe.php?season=winter" class="inline-block hover:text-gray-900 dark:text-white dark:hover:text-gray-400">Winter</a></li>
+            <li><a href="receipe.php?season=summer" class="inline-block hover:text-gray-900 dark:text-white dark:hover:text-gray-400">Summer</a></li>
           </ul>
           <ul class="space-y-2">
-            <li><a href="receipe.php?season=rainy" class="inline-block hover:text-gray-900">Rainy</a></li>
-            <li><a href="receipe.php?season=fall" class="inline-block hover:text-gray-900">Fall</a></li>
+            <li><a href="receipe.php?season=rainy" class="inline-block hover:text-gray-900 dark:text-white dark:hover:text-gray-400">Rainy</a></li>
+            <li><a href="receipe.php?season=fall" class="inline-block hover:text-gray-900 dark:text-white dark:hover:text-gray-400">Fall</a></li>
           </ul>
         </div>
       </div>
