@@ -10,9 +10,15 @@ $user_path = "/yumrecipe/User/View/resources/page/";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header with Profile</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>
 </head>
-<body>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
 <header class="px-6 py-2 bg-white shadow-md dark:bg-gray-800">
     <div class="container mx-auto flex items-center justify-between flex-wrap">
         <!-- Logo -->
@@ -54,12 +60,12 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 <!-- Profile Section -->
                 <div class="flex items-center space-x-4">
                     <a href="<?php echo $user_path; ?>notification.php" class="p-2">
-                        <img src="<?php echo $images_path ?>notification.svg" alt="" class="w-7 h-7">
+                    <span class="material-icons text-gray-400 dark:text-gray-300 mr-2">notifications</span>
                     </a>
                     <div class="flex items-center">
                         <span class="text-gray-700 dark:text-gray-300 mr-2">My Profile</span>
                         <a href="<?php echo $user_path; ?>userProfile.php" class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
-                            <img src="<?php echo $images_path ?>profile.svg" alt="" class="w-7 h-7">                         
+                        <span class="material-icons text-gray-400 dark:text-gray-300 mr-2 ">account_circle</span>                     
                         </a>
                     </div>
                     <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
@@ -72,5 +78,49 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </button>
                 </div>
     </div>
+
+    <script>
+   const darkModeToggle = document.getElementById('darkModeToggle');
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const menu = document.getElementById('menu');
+const htmlElement = document.documentElement;
+
+// Function to update theme icons based on mode
+function updateIcons(isDark) {
+    const lightIcon = document.getElementById('lightIcon');
+    const darkIcon = document.getElementById('darkIcon');
+
+    if (isDark) {
+        darkIcon.classList.add('hidden');
+        lightIcon.classList.remove('hidden');
+    } else {
+        darkIcon.classList.remove('hidden');
+        lightIcon.classList.add('hidden');
+    }
+}
+
+// 1. Load saved theme from localStorage
+const storedTheme = localStorage.getItem('theme');
+if (storedTheme === 'dark') {
+    htmlElement.classList.add('dark'); // Apply dark mode
+    updateIcons(true); // Set icons for dark mode
+} else {
+    htmlElement.classList.remove('dark'); // Apply light mode
+    updateIcons(false); // Set icons for light mode
+}
+
+// 2. Toggle dark mode on button click
+darkModeToggle.addEventListener('click', () => {
+    const isDark = htmlElement.classList.toggle('dark'); // Toggle class
+    localStorage.setItem('theme', isDark ? 'dark' : 'light'); // Save to localStorage
+    updateIcons(isDark); // Update icons
+});
+
+// 3. Mobile Menu Toggle
+mobileMenuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden'); // Show/hide menu
+});
+
+</script>
 </header>
 </html>
