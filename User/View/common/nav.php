@@ -26,7 +26,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
             <a href="<?php echo $user_path; ?>homepage.php" class=" hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'homepage.php' ? 'text-red-500' : '' ?>">Home</a>
           </li>
           <li class="md:block">
-            <a href="<?php echo $user_path; ?>Recipe/receipe.php" class=" hover:text-red-600">Recipes</a>
+            <a href="<?php echo $user_path; ?>Recipe/receipe.php" class=" hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'receipe.php' ? 'text-red-500' : '' ?>">Recipes</a>
           </li>
           <li class="md:block">
             <a href="<?php echo $user_path; ?>add_recipe.php" class=" hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'add_recipe.php' ? 'text-red-500' : '' ?>">Add Recipes</a>
