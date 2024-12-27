@@ -58,25 +58,36 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             </div>
 
             <!-- Auth Buttons -->
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-4 mt-4 md:mt-0">
                 <a href="<?php echo $user_path; ?>signIn.php" class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-sm font-semibold">
                     Sign In
                 </a>
                 <a href="<?php echo $user_path; ?>signUp.php" class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-sm font-semibold dark:text-black dark:bg-white dark:hover:border-2 dark:hover:border-red-500 hover:text-white">
                     Sign Up </a>
-            </div>
 
-            <!-- Dark Mode Toogle -->
-            <label class="flex items-center cursor-pointer">
+                    <label class="flex items-center cursor-pointer">
                     <input type="checkbox" id="toggle-dark-mode" class="hidden">
                     <div class="w-10 h-5 bg-gray-300 rounded-full dark:bg-gray-600 flex items-center">
                         <div class="w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 dark:translate-x-5"></div>
                     </div>
-                    <span class="ml-2 text-sm text-gray-900 dark:text-gray-100">Toggle Dark Mode</span>
-            </label>
+                    
+            </label> 
+            </div>
+
+            <!-- Dark Mode Toogle -->
+            
         </div>
     </div>
+<script>
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const menu = document.getElementById('menu');
 
+    // 3. Mobile Menu Toggle
+mobileMenuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden'); // Show/hide menu
+});
+
+    </script>
 </header>
 </body>
 </html>
