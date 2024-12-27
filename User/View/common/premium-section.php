@@ -1,3 +1,7 @@
+<?php
+$user_path = "/yumrecipe/User/View/resources/page/";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,19 +18,19 @@
                         <!-- Price Cards -->
                         <div class="text-center">
                             <p class="text-red-500 font-bold">$1.99 Basic</p>
-                            <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet.</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet.</p>
                         </div>
                         <div class="text-center">
                             <p class="text-red-500 font-bold">$2.99 Standard</p>
-                            <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet.</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet.</p>
                         </div>
                         <div class="text-center">
                             <p class="text-red-500 font-bold">$4.99 Premium</p>
-                            <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet.</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet.</p>
                         </div>
-                        <button class="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600">
+                        <a href="<?php echo $user_path; ?>payment.php" class="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600">
                             See Details
-                        </button>
+                        </a>
                     </div>
                 </div>
 </body>

@@ -26,7 +26,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
     </script>
 </head>
 <body class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 dark:text-white">
-    <section class="bg-primary dark:bg-darkBg  h-full p-20 rounded-2xl dark:bg-gray-900 dark:text-white">
+    <section class="bg-primary dark:bg-darkBg  h-full p-20 rounded-2xl dark:bg-gray-800 dark:text-white">
         <!-- Image -->
     <div class="w-[400px] max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-lg relative">
         <div class="absolute -top-14 right-1/2 transform translate-x-1/2 w-32 h-32 ">

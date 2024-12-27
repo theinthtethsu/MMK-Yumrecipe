@@ -20,8 +20,8 @@
         };
     </script>
 </head>
-<body class="min-h-screen flex items-center justify-center bg-gray-50">
-<section class="bg-primary dark:bg-darkBg  h-full p-20 rounded-2xl">
+<body class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 dark:text-white">
+<section class="bg-primary dark:bg-darkBg  h-full p-20 rounded-2xl dark:bg-gray-800 dark:text-white">
 
     <div class="w-[400px] max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-lg relative">
 
