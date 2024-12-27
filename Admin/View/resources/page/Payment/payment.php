@@ -138,7 +138,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                 </div>
             </div>
             <!-- Save Changes -->
-            <div class="flex justify-center mt-10">
+            <div class=" flex justify-center mt-10 " id="saveChangesButton">
                 <button class="bg-accent text-white px-4 py-2 rounded-md shadow hover:bg-accent2" id="saveChanges" onclick="">Save Changes</button>
             </div>
             <!--save changes modal-->
@@ -157,20 +157,57 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
 </body>
 <!-- Script -->
 <script>
-    var paymentMethods = <?php echo json_encode($paymentMethods); ?>;
     // Now paymentMethods is a JavaScript array
-
+    
     $(document).ready(function() {
-        $('#preview').show();
+        $('#mobile-banking').change(function() {
+                        if ($(this).val() === 'default') {
+            $('#saveChangesButton').hide();
+        } else {
+            $('#saveChangesButton').show();
+        }
+    });
+        var paymentMethods = <?php echo json_encode($paymentMethods); ?>;
 
+        // This function is used to render the payment info
+        function renderPaymentInfo(){
+            const receivingInfo = $('#receiving-info');
+            const paymentSelect = $('#mobile-banking');
+            receivingInfo.empty();
+            paymentSelect.empty();
+            //render payment select
+            for(let i = 0; i < paymentMethods.length; i++){
+                paymentSelect.append(`<option value="${i}">${paymentMethods[i].name}</option>`);
+            }
+            //render receiving info
+            paymentMethods.forEach((method, index) => {
+                receivingInfo.append(`<div class="payment-method" data-value="${index}">
+                    <label for="account-name-input" class="block text-dark-text">Enter Receiving Account Name for ${method.name}</label>
+                    <input type="text" id="account-name-input" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2 account-name" placeholder="Account Name" value="${method.account_name}" required>
+                </div>
+                <div class="payment-method" data-value="${index}">
+                    <label for="phone-number-input" class="block text-dark-text">Enter Receiving Phone Number for ${method.name}</label>
+                    <input type="tel" id="phone-number-input" class="mt-1 block w-full bg-gray-200 rounded-md shadow-md p-2 phone-number" placeholder="Phone Number" value="${method.phone_number}" required>
+                </div>
+                <div class="payment-method" data-value="${index}">
+                    <label class="block text-dark-text">Upload QR Code or Banking Info Image for ${method.name}</label>
+                    <div class="flex items-center mt-1">
+                        <input type="file" id="qr-code-input" class="block w-full bg-gray-200 rounded-md shadow-md p-2 qr-code" required />
+                    </div>
+                </div>
+                `);
+            }); 
+        }
+        
+        // This function is used to show the selected payment info
         function showSelectedPaymentInfo() {
-            var selectedValue = $('#mobile-banking').val();
-            console.log(`selectedValue: ${selectedValue}`);
+            var selectedIndex = $(this).val();
+            console.log(`selectedIndex: ${selectedIndex}`);
             $('.payment-method').hide(); // Hide all payment method sections
-            $('.payment-method[data-value="' + selectedValue + '"]').show(); // Show the selected payment method section
+            $('.payment-method[data-value="' + selectedIndex + '"]').show(); // Show the selected payment method section
 
             // Update preview section
-            var selectedOption = <?php echo json_encode($paymentMethods); ?>[selectedValue];
+            var selectedOption = paymentMethods[selectedIndex];
             if (selectedOption) {
                 $('#preview-logo').attr('src', selectedOption.logo);
                 $('#preview-qr-code').attr('src', selectedOption.qr_code);
@@ -184,14 +221,14 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
 
         $('#mobile-banking').change(showSelectedPaymentInfo);
 
-        // Update payment inputs
+        // This function is used to sync the payment inputs
         function syncPaymentInputs() {
-            var selectedValue = $('#mobile-banking').val();
-            var selectedOption = <?php echo json_encode($paymentMethods); ?>[selectedValue];
+            var selectedIndex = $('#mobile-banking').val();
+            var selectedOption = paymentMethods[selectedIndex];
             console.log(`selectedOption: ${selectedOption}`);
             if (selectedOption) {
-                var accountName = $('.payment-method[data-value="' + selectedValue + '"] .account-name').val();
-                var phoneNumber = $('.payment-method[data-value="' + selectedValue + '"] .phone-number').val();
+                var accountName = $('.payment-method[data-value="' + selectedIndex + '"] .account-name').val();
+                var phoneNumber = $('.payment-method[data-value="' + selectedIndex + '"] .phone-number').val();
                 $('#preview-account-name').text(accountName);
                 $('#preview-account-number').text(phoneNumber);
             }

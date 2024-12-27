@@ -69,6 +69,10 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                 </div>
                                 <!-- Save Changes -->
                                 <button type="submit" class="bg-accent text-light-text px-4 py-2 rounded-md shadow hover:bg-blue-600">Save Changes</button>
+                                <!--Modal Message-->
+                                <div id="modal-message" class="hidden" onclick="showModalMessage()">
+                                    <p>Logo updated successfully</p>
+                                </div>
                                 <!-- Cancel -->
                                 <button type="button" class="bg-gray-300 text-black px-4 py-2 rounded-md shadow ml-2 hover:bg-gray-400">Cancel</button>
                             </form>
@@ -172,7 +176,8 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
                                         <label for="image" class="block text-dark-text">Current Image</label>
                                         <div class="flex items-center">
                                             <img src="/yumrecipe/Admin/View/resources/images/aboutUs.png" alt="Current Image" class="w-24 h-auto mt-2">
-                                            <button type="button" class="bg-gray-300 text-black px-4 py-2 rounded-md shadow ml-2 hover:bg-gray-400">Change</button>
+                                            <label for="image-upload" class="bg-gray-300 text-black px-4 py-2 rounded-md shadow ml-2 hover:bg-gray-400 cursor-pointer">Change</label>
+                                            <input type="file" id="image-upload" name="image-upload" class="hidden">
                                         </div>
                                     </div>
                                 </div>
@@ -391,6 +396,13 @@ $setting_path = '/yumrecipe/Admin/View/resources/page/Setting/';
             const defaultTab = document.querySelector('ul li:first-child');
             toggleBackground(defaultTab);
         });
+
+        // Modal Message
+        function showModalMessage() {
+            const modalMessage = document.getElementById('modal-message');
+            modalMessage.classList.remove('hidden');
+            modalMessage.classList.add('flex');
+        }
     </script>
 </body>
 
