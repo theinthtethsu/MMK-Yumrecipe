@@ -1,4 +1,5 @@
 <?php
+$user_path = "/yumrecipe/User/View/resources/page/";
 $images_path = "/yumrecipe/User/View/resources/img/";
 ?>
 
@@ -58,11 +59,11 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 
             <!-- Auth Buttons -->
             <div class="flex items-center space-x-4">
-                <button class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-sm font-semibold">
-                    Login
-                </button>
-                <button class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-sm font-semibold">
-                    Sign Up </button>
+                <a href="<?php echo $user_path; ?>signIn.php" class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-sm font-semibold">
+                    Sign In
+                </a>
+                <a href="<?php echo $user_path; ?>signUp.php" class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-sm font-semibold dark:text-black dark:bg-white dark:hover:border-2 dark:hover:border-red-500 hover:text-white">
+                    Sign Up </a>
             </div>
 
             <!-- Dark Mode Toogle -->

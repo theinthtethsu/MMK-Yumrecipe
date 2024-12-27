@@ -13,7 +13,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 </head>
 <body>
       <!-- Navigation Bar -->
-<section class="flex items-center justify-center mt-9" >
+<section class="flex items-center justify-center mt-9 dark:bg-gray-900 dark:text-white" >
     <nav class="w-full max-w-2xl  text-gray-700 dark:text-white">
         <!-- Top Red Line -->
         <div class="h-0.5 bg-red-400 w-full">
