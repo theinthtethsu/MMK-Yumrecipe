@@ -52,7 +52,7 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                     </a>
                 </div>
                 <div class="w-full text-left">
-                    <a href="<?php echo $user_path; ?>userManagement.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'userManagement.php' ? 'bg-accent' : '' ?>">
+                    <a href="<?php echo $user_path; ?>userManagement.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'userManagement.php' || basename($_SERVER['PHP_SELF']) == 'updateUser.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>UsersFour.svg" alt="User Management Icon" class="inline ml-10" style="width: 20px; height: 20px;"> User Management
                     </a>
                 </div>
@@ -62,22 +62,12 @@ $paymentlogo_path = "/yumrecipe/Admin/View/resources/images/PaymentLogo/";
                     </a>
                 </div>
                 <div class="w-full text-left">
-                        <a href="<?php echo $pendingrecipe_path; ?>view_recipe.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'pendingrecipe.php' ? 'bg-accent' : '' ?>">
-                        <img src="<?php echo $icons_path; ?>Notification.svg" alt="Pending Recipes Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Pending Recipes
-                    </a>
-                </div>
-                <div class="w-full text-left">
                         <a href="<?php echo $community_path; ?>community.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'community.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>Globe.svg" alt="Community Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Community
                     </a>
                 </div>
                 <div class="w-full text-left">
-                                <a href="#push-notifications" class="block w-full p-2 hover:bg-secondary active:bg-accent">
-                        <img src="<?php echo $icons_path; ?>Megaphone.svg" alt="Push Notifications Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Push Notifications
-                    </a>
-                </div>
-                <div class="w-full text-left">
-                    <a href="<?php echo $contentcategorization_path; ?>contentcategorization.php" class="block w-full p-2 hover:bg-secondary active:bg-accent">
+                    <a href="<?php echo $contentcategorization_path; ?>contentcategorization.php" class="block w-full p-2 hover:bg-secondary <?php echo basename($_SERVER['PHP_SELF']) == 'contentcategorization.php' || basename($_SERVER['PHP_SELF']) == 'view_recipe.php' ? 'bg-accent' : '' ?>">
                         <img src="<?php echo $icons_path; ?>PenNib.svg" alt="Contents Icon" class="inline ml-10" style="width: 20px; height: 20px;"> Contents
                     </a>
                 </div>

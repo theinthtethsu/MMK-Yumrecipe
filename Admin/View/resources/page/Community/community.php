@@ -20,7 +20,7 @@ $community_path = '/yumrecipe/Admin/View/resources/page/Community/';
     <!-- Sidebar -->
     <?php require_once '../../../common/sideMenu.php'; ?>
 
-    <div class="flex-1 container p-4 bg-secondary">
+    <div class="flex-1 container p-4 bg-secondary overflow-y-auto" style="height: 100vh;">
             <h1 class="text-2xl font-bold mb-3">Community</h1>
             <!-- Tabs -->
             <ul class="flex space-x-4 justify-end">

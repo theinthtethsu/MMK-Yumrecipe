@@ -1,91 +1,37 @@
-const accountNameInput = document.getElementById('account-name-kpay');
-const accountNumberInput = document.getElementById('phone-number-kpay');
-const mobileBankingSelect = document.getElementById('mobile-banking');
-const preview = document.getElementById('preview');
-const receivingInfoElements = document.querySelectorAll('.mobile-banking-option');
+$(document).ready(function() {
+    const mobileBankingSelect = $('#mobile-banking');
+    const receivingInfo = $('#receiving-info');
+    const preview = $('#preview');
+    const previewAccountName = $('#preview-account-name');
+    const previewAccountNumber = $('#preview-account-number');
+    const previewQrCode = $('#preview-qr-code');
+    const paymentMethodElements = $('.payment-method');
 
-accountNameInput.addEventListener('input', function() {
-    document.getElementById('preview-account-name').textContent = this.value;
-});
+    mobileBankingSelect.on('change', function() {
+        const selectedValue = $(this).val();
+        
+        // Hide all payment method elements initially
+        preview.addClass('hidden');
+        receivingInfo.addClass('hidden');
+        console.log(paymentMethodElements);
 
-accountNumberInput.addEventListener('input', function() {
-    document.getElementById('preview-account-number').textContent = this.value;
-});
+        if (selectedValue !== 'default') {
+            // Show only the relevant payment method elements
+            receivingInfo.removeClass('hidden');
+            receivingInfo.each(function() {
+                if ($(this).data('value') === selectedValue) {
+                    $(this).removeClass('hidden');
+                    const accountName = $(this).find('.account-name').val();
+                    const phoneNumber = $(this).find('.phone-number').val();
+                    const qrCodeSrc = $(this).find('.qr-code').attr('src');
 
-
-let selectedOption = null;
-
-// Mobile Banking Selection
-mobileBankingSelect.addEventListener('change', function() {
-    const selectedValue = this.value;
-    let logoSrc = '';
-
-    // Hide all receiving info elements initially
-    receivingInfoElements.forEach(element => {
-        element.classList.add('hidden');
-    });
-
-    // If no option is selected, hide the logo preview
-    if (selectedValue === 'default') {
-        preview.classList.add('hidden');
-    } else {
-        preview.classList.remove('hidden');
-        switch (selectedValue) {
-            case 'kpay':
-                logoSrc = '<?php echo $paymentlogo_path; ?>kpayLogo.png';
-                selectedOption = {
-                    label: 'KBZPAY',
-                    logo: '<?php echo $paymentlogo_path; ?>kpayLogo.png',
-                    account_name: 'Admin KPay',
-                    phone_number: '0134343414',
-                    qr_code: '<?php echo $paymentlogo_path; ?>kpayqr.png'
-                };
-                break;
-            case 'wavepay':
-                logoSrc = '<?php echo $paymentlogo_path; ?>wavepayLogo.png';
-                selectedOption = {
-                    label: 'WavePay',
-                    logo: '<?php echo $paymentlogo_path; ?>wavepayLogo.png',
-                    account_name: 'Admin WavePay',
-                    phone_number: '0134343414',
-                    qr_code: '<?php echo $paymentlogo_path; ?>wavepayqr.png'
-                };
-                break;
-            case 'ayapay':
-                logoSrc = '<?php echo $paymentlogo_path; ?>ayapayLogo.png';
-                selectedOption = {
-                    label: 'AYAPAY',
-                    logo: '<?php echo $paymentlogo_path; ?>ayapayLogo.png',
-                    account_name: 'Admin AYAPAY',
-                    phone_number: '0134343414',
-                    qr_code: '<?php echo $paymentlogo_path; ?>ayapayqr.png'
-                };
-                break;
+                    // Update preview section
+                    previewAccountName.text(accountName);
+                    previewAccountNumber.text(phoneNumber);
+                    previewQrCode.attr('src', qrCodeSrc);
+                    preview.removeClass('hidden');
+                }
+            });
         }
-        // Show only the relevant receiving info elements
-        receivingInfoElements.forEach(element => {
-            if (element.dataset.value === selectedValue) {
-                element.classList.remove('hidden');
-            }
-        });
-    }
-
-    logoPreview.src = logoSrc;
+    });
 });
-
-// Show Payment Modal
-function showPaymentModal() {
-    document.getElementById('paymentModal').classList.remove('hidden');
-}
-
-// Close Payment Modal
-function closePaymentModal() {
-    document.getElementById('paymentModal').classList.add('hidden');
-}
-
-// Proceed to Payment
-function proceedToPayment() {
-    const option1 = selectedOption.label;
-    const option2 = selectedOption.phone_number;
-    window.location.href = `payment.php?option1=${option1}&option2=${option2}`;
-}

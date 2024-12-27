@@ -17,7 +17,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
             <!-- Cards Container -->
             <div class="flex flex-col md:flex-row justify-center items-center gap-6">
                 <!-- Basic Plan -->
-                <div class="bg-white border rounded-lg shadow-lg p-6 w-full md:w-1/3">
+                <div class="bg-white border rounded-lg shadow-lg p-6 w-full md:w-1/3 hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:border-yellow-500">
                     <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">Basic</h2>
                     <p class="text-4xl text-red-500 text-center font-bold mb-2">$1.99</p>
                     <p class="text-gray-500 text-center mb-4">Free Plus</p>
@@ -36,7 +36,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </div>
     
                 <!-- Premium Plan -->
-                <div class="bg-white border border-yellow-400 rounded-lg shadow-lg p-6 w-full md:w-1/3">
+                <div class="bg-white border border-yellow-400 rounded-lg shadow-lg p-6 w-full md:w-1/3 hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:border-yellow-500">
                     <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">Premium</h2>
                     <p class="text-4xl text-red-500 text-center font-bold mb-2">$4.99</p>
                     <p class="text-gray-500 text-center mb-4">Standard Plus</p>
@@ -56,7 +56,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </div>
     
                 <!-- Standard Plan -->
-                <div class="bg-white border rounded-lg shadow-lg p-6 w-full md:w-1/3">
+                <div class="bg-white border rounded-lg shadow-lg p-6 w-full md:w-1/3 hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:border-yellow-500">
                     <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">Standard</h2>
                     <p class="text-4xl text-red-500 text-center font-bold mb-2">$2.99</p>
                     <p class="text-gray-500 text-center mb-4">Basic Plus</p>
