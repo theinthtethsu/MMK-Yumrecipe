@@ -6,7 +6,7 @@
     <title>Food Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-roboto text-gray-700 leading-none font-normal">
+  <body class="font-roboto text-gray-700 leading-none font-normal dark:bg-gray-900 dark:text-white">
     <?php include_once '../../../common/header-before-login.php'; ?>
     <?php include_once '../../../common/nav.php'; ?>
     <!-- Main Container -->

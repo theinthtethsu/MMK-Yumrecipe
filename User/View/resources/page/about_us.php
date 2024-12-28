@@ -22,7 +22,7 @@
           <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-7">
             We’re passionate about bringing people together through the joy of cooking and sharing recipes. Our platform combines personal recipe management with a vibrant community of food enthusiasts, making it easy to save your favorite dishes, explore new cuisines, and connect with like-minded creators. Join us in celebrating the art of cooking and the stories behind every meal.
           </p>
-          <a href="receipe.php" class="inline-block text-lg font-semibold py-3 md:py-4 px-6 md:px-8 rounded-full bg-red-500 text-yellow-300 hover:bg-red-600 hover:text-white transition-all duration-300 mt-10">
+          <a href="/yumrecipe/User/View/resources/page/Blog/blog.php" class="inline-block text-lg font-semibold py-3 md:py-4 px-6 md:px-8 rounded-full bg-red-500 text-yellow-300 hover:bg-red-600 hover:text-white transition-all duration-300 mt-10">
             Explore Recipes
           </a>
         </div>

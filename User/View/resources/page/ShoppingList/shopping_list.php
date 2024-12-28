@@ -50,6 +50,9 @@
 </head>
 <body>
     <?php include_once '../../../common/user-profile-common.php'; ?>
+    <div class="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 dark:text-white">
+              <!-- Navigation Bar -->
+    <?php require_once '../../../common/nav.php'; ?>
     <div class="w-full px-4 py-8">
         <!-- Grocery List Container -->
         <div class="bg-white dark:bg-gray-800 p-6 max-w-md mx-auto">
@@ -119,5 +122,7 @@
             <p>Start your shopping list by adding items above</p>
         </div>
     </div>
+    </div>
+    
 </body>
 </html>
