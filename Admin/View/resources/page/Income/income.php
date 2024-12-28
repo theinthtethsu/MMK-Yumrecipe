@@ -13,7 +13,7 @@
 <body class="font-sans bg-light-text h-screen">
     <div class="flex min-h-screen">
         <?php require_once '../../../common/sideMenu.php'; ?>
-        <div class="flex-1 container p-4 bg-secondary">
+        <div class="flex-1 container p-4 bg-secondary overflow-y-auto" style="height: 100vh;">
 
             <h1 class="text-2xl font-bold mb-5">Income Status Overview</h1>
 

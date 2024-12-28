@@ -8,6 +8,8 @@
     <title>Recipe Management</title>
     <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../../../../../output.css">
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="font-sans bg-light-text">
@@ -75,8 +77,8 @@
                                             <td class='p-4'>{$category['name']}</td>
                                             <td class='p-4'>{$category['count']}</td>
                                             <td class='p-4 space-x-4'>
-                                                <a href='#' class='text-blue-500 hover:underline' onclick=\"showModal('update', ${category['id']})\">Update</a>
-                                                <a href='#' class='text-red-500 hover:underline' onclick=\"showModal('delete', ${category['id']})\">Delete</a>
+                                                <i class='material-icons text-green-500' onclick=\"showModal('update', ${category['id']})\">edit</i>
+                                                <i class='material-icons text-red-500' onclick=\"showModal('delete', ${category['id']})\">delete</i>
                                             </td>
                                         </tr>
                                     ";
@@ -170,8 +172,8 @@
                                             <td class='p-4'>{$category['name']}</td>
                                             <td class='p-4'>{$category['count']}</td>
                                             <td class='p-4 space-x-4'>
-                                                <a href='#' class='text-blue-500 hover:underline' onclick=\"showModal('update', ${category['id']})\">Update</a>
-                                                <a href='#' class='text-red-500 hover:underline' onclick=\"showModal('delete', ${category['id']})\">Delete</a>
+                                                <i class='material-icons text-green-500' onclick=\"showModal('update', ${category['id']})\">edit</i>
+                                                <i class='material-icons text-red-500' onclick=\"showModal('delete', ${category['id']})\">delete</i>
                                             </td>
                                         </tr>
                                     ";

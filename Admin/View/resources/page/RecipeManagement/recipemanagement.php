@@ -189,7 +189,7 @@
                                 <input type="number" placeholder="e.g., 30" class="w-full p-2 mb-4 border border-gray-300 rounded" />
 
                             <!-- Ingredients Section -->
-                                    <div class="flex flex-col space-y-4">
+                                    <div class="flex flex-col space-y-4 mb-2">
                                     <!-- Ingredients Label -->
                                     <label class="block font-semibold text-gray-700">Ingredients</label>
                                     <!-- Flex Container for Inputs and List -->
@@ -202,12 +202,12 @@
                                             class="p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500 required"
                                         />
                                         <!-- Quantity and Units -->
-                                        <div class="flex space-x-4">
+                                        <div class="flex space-x-4 mb-2">
                                             <input type="text" id="ingredient-quantity" placeholder="e.g., 1" class="w-20 p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500 required" />
                                             <input type="text" id="ingredient-unit" placeholder="e.g., tbls" class="w-40 p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-purple-500 required" />
                                         </div>
                                         <!-- Add Button -->
-                                        <button type="button" onclick="addIngredient()" class="bg-purple-500 text-white px-4 py-2 rounded shadow hover:bg-purple-600 focus:ring-2 focus:ring-purple-400">Add</button>
+                                        <button type="button" onclick="addIngredient()" class=" w-40 bg-accent hover:bg-accent2 text-white px-4 py-2 rounded shadow hover:bg-purple-600 focus:ring-2 focus:ring-purple-400">Add</button>
                                         </div>
                                         <!-- Added Ingredients List -->
                                         <div id="ingredients-list" class="w-1/2 border border-gray-300 rounded p-4 bg-gray-50 shadow" >
@@ -219,13 +219,14 @@
                                     </div>
                                     </div>
                                 <!-- Instructions Section -->
-                                <div class="flex flex-col space-y-4">
+                                <div class="flex flex-col space-y-4 mb-2">
                                         <label class="block font-semibold text-gray-700">Instructions</label>
                                         <div class="flex space-x-6 items-start">
                                         <!-- Input Field and Add Button -->
-                                        <div class="flex flex-col space-y-4">
+                                        <div class="flex flex-col space-y-4 mb-2">
                                             <textarea id="instruction-text" placeholder="e.g., Mix all the ingredients thoroughly." class="p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-green-500 required"></textarea>
-                                            <button type="button" onclick="addInstruction()" class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600 focus:ring-2 focus:ring-green-400">Add</button>
+                                            <!-- Add Button -->
+                                            <button type="button" onclick="addInstruction()" class=" w-40 bg-accent hover:bg-accent2 text-white px-4 py-2 rounded shadow hover:bg-green-600 focus:ring-2 focus:ring-green-400 mb-2">Add</button>
                                         </div>
                                         <!-- Added Instructions List -->
                                         <div id="instructions-list" class="w-1/2 border border-gray-300 rounded p-4 bg-gray-50 shadow">
@@ -278,8 +279,8 @@
                                 </div>
                                 <!-- Upload and Cancel Buttons -->
                                 <div class="flex justify-end space-x-4">
-                                    <button type="submit" class="bg-accent hover:bg-blue-600 text-white px-4 py-2 rounded">Upload</button>
-                                    <button type="button" onclick="window.location.href='recipemanagement.php'" class="bg-accent hover:bg-blue-600 text-gray-800 px-4 py-2 rounded">Cancel</button>
+                                    <button type="submit" class="bg-accent hover:bg-accent2 text-white px-4 py-2 rounded">Upload</button>
+                                    <button type="button" onclick="window.location.href='recipemanagement.php'" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded">Cancel</button>
                                 </div>
                             </form>
                             </div>`;
