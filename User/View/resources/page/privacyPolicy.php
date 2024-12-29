@@ -11,24 +11,11 @@ $images_path = "/yumrecipe/User/View/resources/img/";
   <title>Privacy Policy</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
   <!-- Header -->
-  <header class="bg-red-500 text-white">
-    <div class="flex justify-between items-center py-4 px-6">
-      <div class="flex items-center">
-        <a href="<?php echo $user_path; ?>homepage.php">
-          <img src="<?php echo $images_path; ?>logo.png" alt="Logo" class="h-12">
-        </a>
-        <h1 class="ml-4 text-2xl font-bold">Yum Recipe</h1>
-      </div>
-      <nav class="space-x-6 text-lg">
-      <a href="<?php echo $user_path; ?>homepage.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'homepage.php' ? 'text-red-500' : '' ?>">Home</a>
-      <a href="<?php echo $user_path; ?>receipe.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'receipe.php' ? 'text-red-500' : '' ?>">Recipes</a>
-      <a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'add_recipe.php' ? 'text-red-500' : '' ?>">Add Recipes</a>
-      <a href="<?php echo $blog_path; ?>blog.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'blog.php' ? 'text-red-500' : '' ?>">Blogs</a>
-      <a href="<?php echo $user_path; ?>about_us.php" class="hover:text-yellow-300 <?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'text-red-500' : '' ?>">About Us</a>
-      </nav>
-    </div>
+  <?php require_once '../../common/header-after-login.php'; ?>
+  <?php require_once '../../common/nav.php'; ?>
+        
   </header>
 
   <!-- Full-Screen Privacy Policy Section -->
@@ -42,7 +29,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
   </main>
 
   <!-- Full-Width Privacy Content -->
-  <section class="w-full bg-white text-gray-700 py-20 px-10">
+  <section class="w-full bg-white text-gray-700 py-20 px-10 dark:bg-gray-900 dark:text-white">
     <div class="max-w-4xl mx-auto space-y-10">
       <!-- Section 1 -->
       <div>
