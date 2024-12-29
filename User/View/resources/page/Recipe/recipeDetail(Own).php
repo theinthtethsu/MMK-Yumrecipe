@@ -11,8 +11,9 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white">
-  <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/header-after-login.php'); ?>
+<body class="bg-white dark:bg-gray-900">
+<?php require_once '../../../common/header-after-login.php'; ?>
+<?php require_once '../../../common/nav.php'; ?>
   <div>
     <div class="bg-red-500 w-full h-auto pl-8 p-4 text-white text-2xl">Shredded Beef Tacos</div>
   </div>
@@ -23,7 +24,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       </div>
       <div class="flex space-x-4">
         <!-- Edit Icon -->
-        <a href="edit_page.php" class="text-gray-500 hover:text-blue-500">
+        <a href="receipeEdit.php" class="text-gray-500 hover:text-blue-500">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit">
           <path d="M11 21H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h7"></path>
           <path d="M18.3 2.3a1 1 0 0 1 1.4 0l2 2a1 1 0 0 1 0 1.4l-8 8-4 1 1-4 8-8z"></path>
@@ -44,9 +45,9 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       </div>
     </div>
   </div>
-  <div class="flex items-center m-8 space-x-4   flex-col md:flex-row  gap-4 mt-6">
+  <div class="flex items-center m-8 space-x-4   flex-col md:flex-row  gap-4 mt-6 dark:text-white">
 
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 ">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
         class="w-4 h-4 text-gray-500">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -88,7 +89,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       src="http://localhost/yumrecipe/User/View/resources/images/shredded-beef-tacos-recipe.jpg"
       alt="Hot Spinach Artichoke Dip" class="w-full md:w-1/2 object-cover" />
   </div>
-  <div class="flex items-center justify-start m-8 space-x-8">
+  <div class="flex items-center justify-start m-8 space-x-8 dark:text-white">
     <p class="text-sm">Serving Size</p>
     <div class="px-2 rounded-lg ">
       <div class="h-10 w-0.5 bg-yellow-500"></div>
@@ -97,7 +98,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     <div>
 
       <button
-        class="flex items-center space-x-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none">
+        class="flex items-center space-x-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-none">
         <svg class="w-4 h-4" fill="#ffffff" height="200px" width="200px" version="1.1" id="Layer_1"
           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64"
           enable-background="new 0 0 64 64" xml:space="preserve">
@@ -128,12 +129,12 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     </div>
   </div>
 
-  <div class="m-8">
+  <div class="m-8 dark:text-white">
     <p>It's a vegetarian pasta loaded with a whole head of broccoli, corn, zucchinis,
       capsicum/peppers and onion, and smothered in a garlic herb tomato sauce. </p>
   </div>
 
-  <div class="flex  flex-col md:flex-row justify-between gap-4 mt-6">
+  <div class="flex  flex-col md:flex-row justify-between gap-4 mt-6 dark:text-white">
     <div class="md:w-1/2 p-4">
       <h2 class="text-2xl font-bold">Ingredients</h2>
       <ul class="list-disc pl-10 py-4">
@@ -147,7 +148,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       </ul>
     </div>
 
-    <div class="w-64 p-4 mr-28 bg-white rounded-md shadow-md border  border-red-400">
+    <div class="w-64 p-4 mr-28 bg-white rounded-md shadow-md border dark:bg-gray-700 border-red-400">
       <h2 class="text-lg font-bold text-red-500 mb-1">Nutrition Facts</h2>
       <p class="text-sm text-red-500 mb-4">Amount Per Serving</p>
       <div class="flex justify-between mb-2">
@@ -176,7 +177,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       </div>
     </div>
   </div>
-  <div class="md:w-1/2 p-4">
+  <div class="md:w-1/2 p-4 dark:text-white">
     <h2 class="text-2xl font-bold mt-4">Instructions</h2>
     <ol class="list-decimal pl-10 py-4">
       <li class="py-2">Preheat the oven to 350°F (175°C).</li>
@@ -190,7 +191,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
 
   </div>
 
-  <div class="flex ml-8 flex-col md:flex-row justify-between gap-6 mt-6 ">
+  <div class="flex ml-8 flex-col md:flex-row justify-between gap-6 mt-6 dark:text-white">
     <!-- All Comments Section -->
     <div class="w-full md:w-3/4">
       <h2 class="text-lg font-bold mb-4">All Comments</h2>

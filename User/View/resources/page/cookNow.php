@@ -11,8 +11,9 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white font-sans">
-  <?php include($_SERVER['DOCUMENT_ROOT'] . '/yumrecipe/User/View/common/header-after-login.php'); ?>
+<body class="bg-white font-sans dark:bg-gray-900">
+  <?php require_once '../../common/header-after-login.php'; ?>
+  <?php require_once '../../common/nav.php'; ?>
   <!-- Main Container -->
   <div class=" mx-auto p-4">
     <!-- Header Section -->
@@ -29,7 +30,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
 
     <!-- Video Section -->
     <div class="flex  flex-col md:flex-row justify-between gap-6 mt-6">
-      <div class="bg-white shadow-md rounded-lg overflow-hidden mt-4 w-1/2">
+      <div class="bg-white dark:bg-gray-700 dark:text-white shadow-md rounded-lg overflow-hidden mt-4 w-1/2">
         <h2 class="text-lg font-bold p-4">Watch How To Make These Beef Tacos</h2>
         <div class="relative">
           <img src="<?php echo $images_path ?>shredded-beef-tacos-recipe.jpg" alt="cheese-cake" class="w-full h-96"">
@@ -40,9 +41,9 @@ $images_path = "/yumrecipe/User/View/resources/images/";
           </button>
         </div>
       </div>
-      <div class="bg-gray-100 shadow-md rounded-lg p-4 mt-12 w-1/5 h-60 mr-10">
+      <div class="bg-gray-100 shadow-md rounded-lg p-4 mt-12 w-1/5 h-60 mr-10 dark:bg-gray-700">
         <h2 class="text-lg font-bold text-center text-red-500 mb-4">Ingredient</h2>
-        <ul class="list-disc pl-5 space-y-2">
+        <ul class="list-disc pl-5 space-y-2 dark:text-white">
           <li class="text-sm">1/2 scallion pancake</li>
           <li class="text-sm">a spritz of avocado oil, or a small pat of butter</li>
           <li class="text-sm">1/2–1 eggs</li>
@@ -54,7 +55,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
 
 
     <!-- Instructions Section -->
-    <div class="bg-white shadow-md rounded-lg p-4 mt-4">
+    <div class="bg-white shadow-md rounded-lg p-4 mt-4 dark:bg-gray-700 dark:text-white">
       <h2 class="text-lg font-bold mb-4">How To Make This Recipe</h2>
       <ul class="space-y-4">
         <li class="flex items-start">

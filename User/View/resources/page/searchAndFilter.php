@@ -7,10 +7,11 @@
   <title>Document</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white">
+<body class="bg-white dark:bg-gray-900">
   <?php include($_SERVER['DOCUMENT_ROOT'] . '/yumrecipe/User/View/common/header-after-login.php'); ?>
+  <?php require_once '../../common/nav.php'; ?>
   <div>
-    <h1 class="text-2xl font-bold m-8">Results For Pasta</h1>
+    <h1 class="text-2xl font-bold m-8 dark:text-white">Results For Pasta</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-4 lg:grid-cols-4 xl:grid-cols-4 gap-8">
       <!-- Recipe Card -->
 
