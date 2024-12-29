@@ -1,3 +1,5 @@
+<?php $premium_path = "/yumrecipe/User/View/resources/page/Premium%20Features/"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +35,11 @@
   </div>
 
   <!-- Subscription Section -->
-  <div class="bg-white dark:bg-gray-800 dark:text-white rounded-lg shadow-md p-6 mb-6">
-    <h2 class="text-lg font-semibold mb-4">Your Subscriptions</h2>
-    <p class="mb-4">You have subscribed to <span class="font-semibold text-green-600">Premium Plan</span>.</p>
+  <div class="bg-white dark:bg-gray-800 dark:text-white rounded-lg shadow-md p-6 mb-6 relative">
+    <a href="<?php echo $premium_path; ?>premiumFeatures.php" class="absolute top-[-15px] left-[200px] bg-red-500 text-white px-4 py-2 rounded-full">Subscribed</a>
+  <h2 class="text-lg font-semibold">Your Subscriptions</h2>
+  <span class="text-gray-400 text-sm">Expire:2025/03/23</span>
+    <p class="mb-4 mt-4">You have subscribed to <span class="font-semibold text-green-600">Premium Plan</span>.</p>
     <ul class="space-y-2 text-sm text-gray-700 dark:text-white">
       <li class="flex items-center">
         <span class="text-green-500 mr-2">✔</span> Upload recipes without restrictions.

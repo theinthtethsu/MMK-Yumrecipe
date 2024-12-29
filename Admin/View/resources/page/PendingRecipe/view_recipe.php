@@ -13,8 +13,12 @@
 <body class="font-sans bg-light-text h-screen">
     <div class="flex min-h-screen">
         <?php require_once '../../../common/sideMenu.php'; ?>
-        <div class="flex-1 container p-4 bg-secondary border border-black">
-            <h1 class="text-2xl font-bold mb-5">Pending Recipe</h1>
+        
+        <div class="flex-1 container p-4 bg-secondary border border-black overflow-y-auto" style="height: 100vh;">
+        <div class="flex justify-start mb-10 ml-10 cursor-pointer" onclick="window.location.href='/yumrecipe/Admin/View/resources/page/Community/community.php'">
+            <i class="material-icons">arrow_back</i>
+        </div>
+            <h1 class="text-2xl font-bold mb-5 text-center">Pending Recipe</h1>
             <div class="flex justify-center">
             <div class="max-w-2xl bg-light-text shadow-lg rounded-lg p-6">
                 <h2 class="text-2xl font-bold mb-4 text-center">Approval</h2>

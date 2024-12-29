@@ -144,10 +144,8 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                             <td class="border border-black p-2"><?= $subscription['type'] ?></td>
                             <td class="border border-black p-2"><?= $subscription['status'] ?></td>
                             <td class="border border-black p-2"><?= $subscription['paymentmethod'] ?></td>
-                            <td class="border border-black p-2">
-                                <button onclick="window.location.href='detailpending.php?no=<?= $subscription['no'] ?>'" class="text-indigo-800 hover:text-blue-600">
-                                   View Details
-                                </button>
+                            <td class="border border-black p-2 flex justify-center">
+                                <span class='material-icons text-accent cursor-pointer' onclick="window.location.href='detailpending.php?no=<?= $subscription['no'] ?>'">visibility</span>
                             </td>
                         </tr>
                     <?php endforeach; ?>

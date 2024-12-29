@@ -1,5 +1,7 @@
 <?php
 $user_path = "/yumrecipe/User/View/resources/page/";
+$premium_path = "/yumrecipe/User/View/resources/page/Premium%20Features/"; 
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +30,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                             <p class="text-red-500 font-bold">$4.99 Premium</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet.</p>
                         </div>
-                        <a href="<?php echo $user_path; ?>payment.php" class="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600">
+                        <a href="<?php echo $premium_path; ?>premiumFeatures.php" class="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600">
                             See Details
                         </a>
                     </div>

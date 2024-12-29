@@ -14,6 +14,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <script src="https://unpkg.com/phosphor-icons"></script>
   </head>
   
   <body class="dark:bg-gray-900 dark:text-white">
@@ -79,7 +80,7 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 
     <section class="container mx-auto py-8 px-4">
       <h2 class="text-center text-4xl font-bold mb-8">Add a Recipe</h2>
-      <form class="max-w-lg mx-auto space-y-8">
+      <form class="max-w-lg mx-auto space-y-8 dark:text-gray-600">
         <!-- Recipe Title -->
         <div>
           <label
@@ -361,79 +362,28 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 
         <!-- Tags -->
         <div>
-          <label
-            for="tags"
-            class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white"
-          >
-            Choose Tags
-          </label>
-          <div class="flex gap-2 flex-wrap">
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
+          <label for="tag-search" class="block text-sm font-semibold mb-1 text-gray-600 dark:text-white">Choose Tags</label>
+          <input
+            type="text"
+            id="tag-search"
+            placeholder="Search Tags"
+            class="border rounded p-2 mb-4 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-red-500"
+            oninput="filterTags()"
+          />
+          <div class="flex gap-2 flex-wrap" id="tag-container">
+            <span class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer flex items-center">
               Japanese
+              <button onclick="removeTag(this)" class="ml-2 text-red-500">✖</button>
             </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
+            <span class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer flex items-center">
               Heart-Healthy
+              <button onclick="removeTag(this)" class="ml-2 text-red-500">✖</button>
             </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
+            <span class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer flex items-center">
               Under 15 minutes
+              <button onclick="removeTag(this)" class="ml-2 text-red-500">✖</button>
             </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
-              Chicken
-            </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
-              Grilling
-            </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
-              Party
-            </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
-              Family Dinner
-            </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
-              Appetizer
-            </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
-              Desert
-            </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
-              Vegetarian
-            </span>
-            <span
-              class="tag inline-block bg-gray-200 text-gray-700 text-sm px-5 py-2 rounded-full cursor-pointer"
-              onclick="toggleTag(this)"
-            >
-              Summer
-            </span>
+            <!-- Add more tags as needed -->
           </div>
         </div>
 
@@ -444,6 +394,11 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
             tagElement.classList.toggle("text-white"); // White text for contrast
             tagElement.classList.toggle("bg-gray-200"); // Return to original background
             tagElement.classList.toggle("text-gray-700"); // Return to original text color
+          }
+
+          function removeTag(button) {
+            const tagElement = button.parentElement;
+            tagElement.remove();
           }
         </script>
 
@@ -541,16 +496,111 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
         </script>
 
         <!-- Submit Button Section -->
-        <div class="text-center flex items-center justify-center gap-6">
-          <!-- Privacy Toggle -->
+          <div class="flex items-center justify-center gap-4">
+  <!-- Submit Button -->
+  <button
+    type="submit"
+    class="bg-red-500 text-white px-4 py-3 rounded hover:bg-red-600 transition font-bold"
+  >
+    Submit Recipe
+  </button>
 
-          <!-- Submit Button -->
-          <button
-            type="submit"
-            class="bg-red-500 text-white px-4 py-3 rounded hover:bg-red-600 transition font-bold"
+  <!-- Privacy Select Dropdown -->
+  <div class="relative">
+    <button
+      type="button"
+      class="inline-flex justify-between items-center w-full rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm ` focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 dark:bg-gray-900 dark:text-white"
+      id="privacy-menu-button"
+      aria-expanded="true"
+      aria-haspopup="true"
+    >
+      <span id="selected-privacy">Public</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 ml-2"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </button>
+
+    <!-- Dropdown menu -->
+    <div
+      class="absolute right-0 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-900"
+      role="menu"
+      aria-orientation="vertical"
+      aria-labelledby="privacy-menu-button"
+      id="privacy-menu"
+      style="display: none;"
+    >
+      <div class="py-1" role="none">
+        <button
+          class="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-white dark:hover:bg-gray-800 dark:hover:text-gray-200"
+          role="menuitem"
+          onclick="selectPrivacy('Public')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 mr-2"
+            fill="currentColor"
+            viewBox="0 0 24 24"
           >
-            Submit Recipe
-          </button>
+            <path
+              fill-rule="evenodd"
+              d="M12 1.75c5.663 0 10.25 4.588 10.25 10.25S17.663 22.25 12 22.25 1.75 17.663 1.75 12 6.337 1.75 12 1.75ZM12 3a9 9 0 100 18 9 9 0 000-18Z"
+            />
+          </svg>
+          Public
+        </button>
+        <button
+          class="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-white dark:hover:bg-gray-800 dark:hover:text-gray-200"
+          role="menuitem"
+          onclick="selectPrivacy('Private')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 mr-2"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2.5A4.5 4.5 0 007.5 7H9a3 3 0 116 0h1.5A4.5 4.5 0 0012 2.5ZM9.062 11a1.875 1.875 0 00-1.875 1.875v5.625c0 1.036.84 1.875 1.875 1.875h5.625A1.875 1.875 0 0016.562 18.5v-5.625A1.875 1.875 0 0014.688 11H9.062Zm2.313 2.5a.937.937 0 00-.937.937v3.126a.937.937 0 101.875 0v-3.125a.937.937 0 00-.938-.938Z"
+            />
+          </svg>
+          Private
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const privacyMenu = document.getElementById("privacy-menu");
+  const privacyButton = document.getElementById("privacy-menu-button");
+  const selectedPrivacy = document.getElementById("selected-privacy");
+
+  privacyButton.addEventListener("click", () => {
+    privacyMenu.style.display = privacyMenu.style.display === "none" || privacyMenu.style.display === "" ? "block" : "none";
+  });
+
+  function selectPrivacy(option) {
+    selectedPrivacy.textContent = option;
+    privacyMenu.style.display = "none";
+  }
+
+  // Close the menu if clicked outside
+  document.addEventListener("click", (event) => {
+    if (!privacyMenu.contains(event.target) && !privacyButton.contains(event.target)) {
+      privacyMenu.style.display = "none";
+    }
+  });
+</script>
+
         </div>
       </form>
     </section>

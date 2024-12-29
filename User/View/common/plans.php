@@ -1,5 +1,6 @@
 <?php
 $commonPath = '/yumrecipe/User/View/common/';
+$user_path = "/yumrecipe/User/View/resources/page/";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@ $commonPath = '/yumrecipe/User/View/common/';
             <!-- Cards Container -->
             <div class="flex flex-col md:flex-row justify-center items-center gap-6">
                 <!-- Basic Plan -->
-                <div class="bg-white border rounded-lg shadow-lg p-6 w-full md:w-1/3">
+                <div class="bg-white border rounded-lg shadow-lg p-6 w-full md:w-1/3 hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:border-yellow-500">
                     <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">Basic</h2>
                     <p class="text-4xl text-red-500 text-center font-bold mb-2">$1.99</p>
                     <p class="text-gray-500 text-center mb-4">Free Plus</p>
@@ -27,13 +28,15 @@ $commonPath = '/yumrecipe/User/View/common/';
                         <li>✅ Get a verified badge in the community</li>
                         <li>✅ Join Up to 3 Live Cooking per month</li>
                     </ul>
-                    <button class="bg-red-500 text-white font-semibold w-full py-2 rounded hover:bg-red-600">
-                        Buy
-                    </button>
+                    <div class="flex justify-center">
+        <a href="<?php echo $user_path; ?>payment.php" class="bg-red-500 text-white font-semibold px-12 py-2 rounded hover:bg-red-600 text-center">
+            Buy
+        </a>
+    </div>
                 </div>
     
                 <!-- Premium Plan -->
-                <div class="bg-white border border-yellow-400 rounded-lg shadow-lg p-6 w-full md:w-1/3">
+                <div class="bg-white border border-yellow-400 rounded-lg shadow-lg p-6 w-full md:w-1/3 hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:border-yellow-500">
                     <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">Premium</h2>
                     <p class="text-4xl text-red-500 text-center font-bold mb-2">$4.99</p>
                     <p class="text-gray-500 text-center mb-4">Standard Plus</p>
@@ -45,13 +48,15 @@ $commonPath = '/yumrecipe/User/View/common/';
                         <li>✅ Exclusive access to workshops, recipes, and content</li>
                         <li>✅ No ads</li>
                     </ul>
-                    <button class="bg-red-500 text-white font-semibold w-full py-2 rounded hover:bg-red-600">
-                        Buy
-                    </button>
+                    <div class="flex justify-center">
+        <a href="<?php echo $user_path; ?>payment.php" class="bg-red-500 text-white font-semibold px-12 py-2 rounded hover:bg-red-600 text-center">
+            Buy
+        </a>
+    </div>
                 </div>
     
                 <!-- Standard Plan -->
-                <div class="bg-white border rounded-lg shadow-lg p-6 w-full md:w-1/3">
+                <div class="bg-white border rounded-lg shadow-lg p-6 w-full md:w-1/3 hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:border-yellow-500">
                     <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">Standard</h2>
                     <p class="text-4xl text-red-500 text-center font-bold mb-2">$2.99</p>
                     <p class="text-gray-500 text-center mb-4">Basic Plus</p>
@@ -62,9 +67,11 @@ $commonPath = '/yumrecipe/User/View/common/';
                         <li>✅ Join Up to 7 Live Cooking per month</li>
                         <li>✅ Access exclusive blogs</li>
                     </ul>
-                    <button class="bg-red-500 text-white font-semibold w-full py-2 rounded hover:bg-red-600">
-                        Buy
-                    </button>
+                    <div class="flex justify-center">
+        <a href="<?php echo $user_path; ?>payment.php" class="bg-red-500 text-white font-semibold px-12 py-2 rounded hover:bg-red-600 text-center">
+            Buy
+        </a>
+    </div>
                 </div>
             </div>
         </div>

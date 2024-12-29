@@ -68,19 +68,29 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                         <a href="<?php echo $user_path; ?>userProfile.php" class="">
                         <span class="material-icons text-gray-400 dark:text-gray-300 mr-2 ">account_circle</span>                     
                         </a>
-                    </div>
-
-                     <!-- Dark Mode Toogle -->
-            <label class="flex items-center cursor-pointer">
+                                    <!-- Dark Mode Toogle -->
+                                    <label class="flex items-center cursor-pointer">
                     <input type="checkbox" id="toggle-dark-mode" class="hidden">
                     <div class="w-10 h-5 bg-gray-300 rounded-full dark:bg-gray-600 flex items-center">
                         <div class="w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 dark:translate-x-5"></div>
                     </div>
-                    <span class="ml-2 text-sm text-gray-900 dark:text-gray-100">Toggle Dark Mode</span>
-            </label>
+                    
+            </label> 
+                    </div>
+
+         
                 
                 </div>
     </div>
+    <script>
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const menu = document.getElementById('menu');
 
+    // 3. Mobile Menu Toggle
+mobileMenuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden'); // Show/hide menu
+});
+
+    </script>
 </header>
 </html>

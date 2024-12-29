@@ -10,10 +10,12 @@ $images_path = "/yumrecipe/User/View/resources/img/";
   <title>Responsive Payment Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-100 dark:bg-gray-900">
 <?php require_once '../../common/header-after-login.php'; ?>
+      <!-- Navigation Bar -->
+      <?php require_once '../../common/nav.php'; ?>
 
-<body class="bg-gray-100">
-  <div class="max-w-6xl mx-auto p-4">
+  <div class="max-w-6xl mx-auto p-4 mt-10">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <!-- Left Section: Payment Methods -->
       <div>
@@ -65,7 +67,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 
       <!-- Right Section: Payment Form -->
       <div>
-        <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Payment Form</h2>
+        <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 dark:text-white">Payment Form</h2>
         <div class="bg-white p-6 rounded-lg shadow">
           <form action="#" method="POST" enctype="multipart/form-data">
             <div class="mb-4">

@@ -18,8 +18,12 @@
 </head>
 <body>
 <?php include_once '../../../common/user-profile-common.php'; ?>
-<div class="container mx-auto text-white flex flex-col lg:flex-row">
-      <!-- Left Section -->
+<!-- Main Content -->
+<div class="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 dark:text-white">
+              <!-- Navigation Bar -->
+    <?php require_once '../../../common/nav.php'; ?>
+    <div class="container mx-auto text-white flex flex-col lg:flex-row">
+        <!-- Left Section -->
       <div class="left w-full lg:w-2/5 p-5">
         <div
           class="calendar bg-red-100 text-gray-700 rounded-lg flex flex-col p-5"
@@ -150,5 +154,7 @@
       <i class="fas fa-plus"></i>
     </button>
     <!-- </div> -->
+</div>
+
 </body>
 </html>

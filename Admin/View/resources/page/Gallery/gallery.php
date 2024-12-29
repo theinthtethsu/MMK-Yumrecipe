@@ -49,9 +49,10 @@ $images_path = "/yumrecipe/Admin/View/resources/images/";
                 ?>
                 <?php foreach ($images as $image) { ?>
                     <div class="relative bg-white p-2 rounded shadow-md">
-                        <button class="absolute top-2 right-2 bg-accent hover:bg-accent2 text-white text-sm px-2 py-1 rounded hover:bg-gray-600">
+                        <label for="file-upload-<?php echo $image['name']; ?>" class="absolute top-2 right-2 bg-accent hover:bg-accent2 text-white text-sm px-2 py-1 rounded hover:bg-gray-600 cursor-pointer">
                             Edit
-                        </button>
+                        </label>
+                        <input type="file" id="file-upload-<?php echo $image['name']; ?>" class="hidden" />
                         <img src="<?php echo $images_path; ?><?php echo $image['file name']; ?>" alt="Gallery Image" class="w-full h-24 object-contain rounded">
                         <p class="text-center text-dark-text"><?php echo $image['title']; ?> (<?php echo $image['location']; ?>)</p>
                         <p class="text-center text-dark-text"><?php echo $image['resolution']; ?></p>
