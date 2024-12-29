@@ -1,5 +1,5 @@
 <?php
-$images_path = "/yumrecipe/User/View/resources/images/";
+$images_path = "/yumrecipe/User/View/resources/img/";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       </div>
     </div>
   </div>
-  <div class="flex items-center m-8 space-x-4   flex-col md:flex-row  gap-4 mt-6 dark:text-white">
+  <div class="flex items-center m-4 ml-8 space-x-4   flex-col md:flex-row  gap-4 mt-6 dark:text-white">
 
     <div class="flex items-center gap-2 ">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -86,7 +86,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   </div>
   <div>
     <img class="w-1/2 h-96 m-8"
-      src="http://localhost/yumrecipe/User/View/resources/images/shredded-beef-tacos-recipe.jpg"
+      src="<?php echo $images_path ?>recipe/shredded-beef-tacos-recipe.jpg"
       alt="Hot Spinach Artichoke Dip" class="w-full md:w-1/2 object-cover" />
   </div>
   <div class="flex items-center justify-start m-8 space-x-8 dark:text-white">
@@ -135,7 +135,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   </div>
 
   <div class="flex  flex-col md:flex-row justify-between gap-4 mt-6 dark:text-white">
-    <div class="md:w-1/2 p-4">
+    <div class="md:w-1/2 p-4 ml-4">
       <h2 class="text-2xl font-bold">Ingredients</h2>
       <ul class="list-disc pl-10 py-4">
         <li class="py-2">1 cup spiwnach</li>
@@ -177,8 +177,8 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       </div>
     </div>
   </div>
-  <div class="md:w-1/2 p-4 dark:text-white">
-    <h2 class="text-2xl font-bold mt-4">Instructions</h2>
+  <div class="md:w-1/2 p-4 dark:text-white ml-4">
+    <h2 class="text-2xl font-bold mt-4 ">Instructions</h2>
     <ol class="list-decimal pl-10 py-4">
       <li class="py-2">Preheat the oven to 350°F (175°C).</li>
       <li class="py-2">Mix all ingredients in a bowl.</li>
@@ -217,14 +217,14 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       <h2 class="text-lg font-bold text-red-500 mb-4">Recent Recipe</h2>
       <!-- Recipe Item -->
       <div class="flex items-center mb-8">
-        <img src="<?php echo $images_path ?>Best-Cheesecake.jpg" alt="cheese-cake" class="w-36 h-28" />
+        <img src="<?php echo $images_path ?>recipe/Best-Cheesecake.jpg" alt="cheese-cake" class="w-36 h-28" />
         <div class="ml-2 ">
           <p>Cheese Cake</p>
           <div class="text-yellow-500">★★★★☆</div>
         </div>
       </div>
       <div class="flex items-center mb-4">
-        <img src="<?php echo $images_path ?>tomato-soup.jpg" alt="soup" class="w-36 h-28" />
+        <img src="<?php echo $images_path ?>recipe/tomato-soup.jpg" alt="soup" class="w-36 h-28" />
         <div class="ml-2">
           <p>Tomato Soup</p>
           <div class="text-yellow-500">★★★★☆</div>
@@ -236,7 +236,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
 
 
   <div class="bg-gray-900">
-    <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/footer.php'); ?>
+  <?php require_once '../../../common/footer.php'; ?>
   </div>
 
 </body>

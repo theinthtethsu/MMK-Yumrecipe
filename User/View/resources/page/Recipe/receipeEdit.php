@@ -9,6 +9,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Receipe Detail Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../js/receipe-edit.js"></script>
 </head>
 
 <body class="bg-white dark:bg-gray-900">
@@ -36,11 +37,11 @@ $images_path = "/yumrecipe/User/View/resources/images/";
             <path d="M9 3h6l1 3H8l1-3z"></path>
           </svg>
         </a>
+
       </div>
     </div>
   </div>
-  <div class="flex items-center m-8 space-x-4   flex-col md:flex-row  gap-4 mt-6 dark:text-white">
-
+  <div class="flex  m-4 ml-8 space-x-4 flex-col md:flex-row  mt-6 dark:text-white">
     <div class="flex items-center gap-2 ">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
         class="w-4 h-4 text-gray-500">
@@ -135,33 +136,39 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   </div>
 
   <div class="m-8 dark:text-white grid grid-cols-4 gap-4">
-    <p class="col-span-2">It's a vegetarian pasta loaded with a whole head of broccoli, corn, zucchinis,
+    <p class="col-span-2 text-sm md:text-base">It's a vegetarian pasta loaded with a whole head of broccoli, corn,
+      zucchinis,
       capsicum/peppers and onion, and smothered in a garlic herb tomato sauce. </p>
-    <button class="col-span-1 border-2 h-8 border-red-500 rounded-lg hover:bg-red-600">Add more descriptuion</button>
+    <button class="col-span-1 border-2 h-8 border-red-500 rounded-lg hover:bg-red-600 text-sm md:text-base">Add more
+      description</button>
     <button class="border-2 w-10 h-8 rounded-lg border-red-500">+</button>
   </div>
 
-  <div class="flex  flex-col md:flex-row justify-between gap-4 mt-6 dark:text-white">
-    <div class="md:w-1/2 p-4 grid grid-cols-6 gap-4">
+  <div class="flex flex-col md:flex-row justify-between gap-4 mt-6 dark:text-white">
+    <div class="md:w-1/2 p-4 grid grid-cols-6 gap-4 ml-4">
       <div class="col-span-2">
-        <h2 class="text-2xl font-bold">Ingredients</h2>
-        <ul class="list-disc pl-10 py-4">
-          <li class="py-2">1 cup spiwnach</li>
-          <li class="py-2">1 cup artichokes</li>
-          <li class="py-2">1 cup cream cheese</li>
-          <li class="py-2">1 cup mozzarella cheese</li>
-          <li class="py-2">1 cup mozzarella cheese</li>
-          <li class="py-2">1 cup mozzarella cheese</li>
+        <h2 class="text-lg md:text-2xl font-bold">Ingredients</h2>
+        <ul id="ingredientsList" class="list-disc pl-10 py-4 text-sm md:text-base">
+          <li class="py-1">1 cup spinach</li>
+          <li class="py-1">1 cup artichokes</li>
+          <li class="py-1">1 cup cream cheese</li>
+          <li class="py-1">1 cup mozzarella cheese</li>
+          <li class="py-1">1 cup mozzarella cheese</li>
+          <li class="py-1">1 cup mozzarella cheese</li>
           <!-- Add more ingredients as needed -->
         </ul>
+        <input id="newIngredient" type="text" class="hidden border-2 border-red-500 rounded-lg p-1 mt-2"
+          placeholder="Add new ingredient" />
       </div>
 
-      <button class="col-span-2 pl-4 border-2 h-8 border-red-500 rounded-lg hover:bg-red-600">Add More
-        ingredients</button>
-      <button class="border-2 w-10 h-8 rounded-lg border-red-500">+</button>
+      <button
+        class="col-span-2 pl-4 border-2 h-6 md:h-8 border-red-500 rounded-lg hover:bg-red-600 text-sm md:text-base"
+        onclick="showIngredientInput()">Add More Ingredients</button>
+      <button class="border-2 w-8 md:w-10 h-6 md:h-8 rounded-lg border-red-500 text-xs md:text-sm"
+        onclick="addIngredient()">+</button>
     </div>
 
-    <div class="w-68 p-4 mr-28 bg-white rounded-md shadow-md border dark:bg-gray-700 border-red-400">
+    <div class="w-68 p-4 mr-28 bg-white rounded-md shadow-md border dark:bg-gray-700 border-red-400 ">
       <h2 class="text-lg font-bold text-red-500 mb-1">Nutrition Facts</h2>
       <p class="text-sm text-red-500 mb-4">Amount Per Serving</p>
       <div class="flex justify-between mb-2">
@@ -200,21 +207,26 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     </div>
   </div>
   <div class="md:w-1/2 p-4 dark:text-white grid grid-cols-6 gap-4">
-    <div class="col-span-3">
-      <h2 class="text-2xl font-bold mt-4">Instructions</h2>
-      <ol class="list-decimal pl-10 py-4">
+    <div class="col-span-3 ml-4">
+      <h2 class="text-lg md:text-2xl font-bold mt-4">Instructions</h2>
+      <ol id="instructionsList" class="list-decimal pl-10 py-4 text-sm md:text-base">
         <li class="py-2">Preheat the oven to 350°F (175°C).</li>
         <li class="py-2">Mix all ingredients in a bowl.</li>
         <li class="py-2">Transfer to a baking dish and bake for 20 minutes.</li>
         <li class="py-2">Transfer to a baking dish and bake for 20 minutes.</li>
         <!-- Add more instructions as needed -->
       </ol>
+      <input id="newInstruction" type="text" class="hidden border-2 border-red-500 rounded-lg p-1"
+        placeholder="Add new instruction" />
     </div>
 
-    <button class="col-span-2 pl-4 border-2 h-8 border-red-500 rounded-lg hover:bg-red-600">Add More
-      ingredients</button>
-    <button class="border-2 w-10 h-8 rounded-lg border-red-500">+</button>
+    <button class="col-span-2 pl-4 border-2 h-6 md:h-8 border-red-500 rounded-lg text-sm md:text-base">Add More
+      Ingredients</button>
+    <button
+      class="border-2 w-8 md:w-10 h-6 md:h-8 rounded-lg border-red-500 text-xs md:text-sm hover:bg-red-700 hover:text-white"
+      onclick="showInput()">+</button>
   </div>
+  
   </div>
 
   </div>
@@ -234,55 +246,20 @@ $images_path = "/yumrecipe/User/View/resources/images/";
         <p class="text-red-500">It really Good!!!!</p>
         <div class="h-[2px] w-1/2 bg-red-500 mt-2"></div>
       </div>
-      <!-- Add Comment Form -->
-
-      <!-- Rating -->
-
     </div>
 
-    <!-- Recent Recipe Section -->
-    <div class="w-full md:w-1/4">
-      <h2 class="text-lg font-bold text-red-500 mb-4">Recent Recipe</h2>
-      <!-- Recipe Item -->
-      <div class="flex items-center mb-8">
-        <img src="<?php echo $images_path ?>Best-Cheesecake.jpg" alt="cheese-cake" class="w-36 h-28" />
-        <div class="ml-2 ">
-          <p>Cheese Cake</p>
-          <div class="text-yellow-500">★★★★☆</div>
-        </div>
-      </div>
-      <div class="flex items-center mb-4">
-        <img src="<?php echo $images_path ?>tomato-soup.jpg" alt="soup" class="w-36 h-28" />
-        <div class="ml-2">
-          <p>Tomato Soup</p>
-          <div class="text-yellow-500">★★★★☆</div>
-        </div>
-      </div>
-    </div>
   </div>
-
-
-
+  <div class="flex justify-end">
+    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 m-4">
+      Save
+    </button>
+  </div>
   <div class="bg-gray-900">
-    <?php include('C:/xampp/htdocs/yumrecipe/User/View/common/footer.php'); ?>
+    <?php require_once '../../../common/footer.php'; ?>
   </div>
 
-  <script>
-    function previewImage(event) {
-      const imagePreview = document.getElementById('imagePreview');
-      const file = event.target.files[0];
-      const reader = new FileReader();
-
-      reader.onload = function (e) {
-        imagePreview.src = e.target.result;
-        imagePreview.classList.remove('hidden'); // Show the image preview
-      }
-
-      if (file) {
-        reader.readAsDataURL(file);
-      }
-    }
-  </script>
+ 
+  
 
 </body>
 

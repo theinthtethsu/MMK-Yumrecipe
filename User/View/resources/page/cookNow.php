@@ -1,5 +1,5 @@
 <?php
-$images_path = "/yumrecipe/User/View/resources/images/";
+$images_path = "/yumrecipe/User/View/resources/img/";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     <!-- Header Section -->
     <div class="bg-red-500 text-white p-6  rounded-t-lg w-full">
       <div class="flex flex-col md:flex-row items-center gap-4">
-        <img src="<?php echo $images_path ?>shredded-beef-tacos-recipe.jpg" alt="cheese-cake" class="w-36 h-28">
+        <img src="<?php echo $images_path ?>recipe/shredded-beef-tacos-recipe.jpg" alt="cheese-cake" class="w-36 h-28">
         <div>
           <h1 class="text-2xl font-bold">Beef Tacos</h1>
           <p class="text-sm">A frozen scallion pancake, loaded with eggs, spinach, avocado, and chili crisp! A
@@ -33,7 +33,8 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       <div class="bg-white dark:bg-gray-700 dark:text-white shadow-md rounded-lg overflow-hidden mt-4 w-1/2">
         <h2 class="text-lg font-bold p-4">Watch How To Make These Beef Tacos</h2>
         <div class="relative">
-          <img src="<?php echo $images_path ?>shredded-beef-tacos-recipe.jpg" alt="cheese-cake" class="w-full h-96"">
+          <img src="<?php echo $images_path ?>recipe/shredded-beef-tacos-recipe.jpg" alt="cheese-cake"
+            class="w-full h-96"">
         <button class=" absolute inset-0 flex items-center justify-center">
           <div class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
             ▶
@@ -41,7 +42,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
           </button>
         </div>
       </div>
-      <div class="bg-gray-100 shadow-md rounded-lg p-4 mt-12 w-1/5 h-60 mr-10 dark:bg-gray-700">
+      <div class="bg-gray-100 shadow-md rounded-lg p-4 mt-12 w-full max-w-xs h-60 mr-10 dark:bg-gray-700">
         <h2 class="text-lg font-bold text-center text-red-500 mb-4">Ingredient</h2>
         <ul class="list-disc pl-5 space-y-2 dark:text-white">
           <li class="text-sm">1/2 scallion pancake</li>
@@ -93,7 +94,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
           </label>
         </li>
       </ul>
-      
+
     </div>
 
     <!-- Ingredient Section -->
@@ -109,16 +110,16 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/yumrecipe/User/View/common/footer.php'); ?>
   </div>
   <script>
-        function toggleStrike(checkbox) {
-          const label = checkbox.nextElementSibling;
-          const text = label.querySelector('span');
-          if (checkbox.checked) {
-            text.style.textDecoration = 'line-through';
-          } else {
-            text.style.textDecoration = 'none';
-          }
-        }
-      </script>
+    function toggleStrike(checkbox) {
+      const label = checkbox.nextElementSibling;
+      const text = label.querySelector('span');
+      if (checkbox.checked) {
+        text.style.textDecoration = 'line-through';
+      } else {
+        text.style.textDecoration = 'none';
+      }
+    }
+  </script>
 </body>
 
 </html>
