@@ -24,7 +24,7 @@
           'time' => '1 hour 22 min',
           'stars' => 4,
           'reviews' => 23,
-          'image' => '/yumrecipe/User/View/resources/images/Pastas/Bucatini Pasta.webp'
+          'image' => '/yumrecipe/User/View/resources/img/Pastas/Bucatini Pasta.webp'
         ],
         [
           'id' => 2,
@@ -33,7 +33,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Pastas/ditalini-pasta.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/Pastas/ditalini-pasta.jpg'
         ],
         [
           'id' => 3,
@@ -42,7 +42,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Pastas/Spicy-Pasta-.webp'
+          'image' => '/yumrecipe/User/View/resources/img/Pastas/Spicy-Pasta-.webp'
         ],
         [
           'id' => 4,
@@ -51,7 +51,7 @@
           'time' => '60 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Pastas/FussiliPastawithSpicyTomatoSauce.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/Pastas/FussiliPastawithSpicyTomatoSauce.jpg'
         ],
         [
           'id' => 5,
@@ -60,7 +60,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Pastas/images.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/Pastas/images.jpg'
         ],
         [
           'id' => 6,
@@ -69,7 +69,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Pastas/Spaghetti.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/Pastas/Spaghetti.jpg'
         ],
         [
           'id' => 7,
@@ -78,7 +78,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Pastas/rigatoni-tomato-sauce.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/Pastas/rigatoni-tomato-sauce.jpg'
         ],
 
         // Add more recipes here...

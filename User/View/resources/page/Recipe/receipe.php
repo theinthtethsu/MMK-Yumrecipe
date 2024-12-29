@@ -27,7 +27,7 @@
           'time' => '1 hour 22 min',
           'stars' => 4,
           'reviews' => 23,
-          'image' => '/yumrecipe/User/View/resources/images/shredded-beef-tacos-recipe.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/shredded-beef-tacos-recipe.jpg'
         ],
         [
           'id' => 2,
@@ -36,7 +36,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Charcuterie Cups.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/Charcuterie Cups.jpg'
         ],
         [
           'id' => 3,
@@ -45,7 +45,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Burmese-Prawn-Curry.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/Burmese-Prawn-Curry.jpg'
         ],
         [
           'id' => 4,
@@ -54,7 +54,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/easy-lemon-dill-sauce.webp'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/easy-lemon-dill-sauce.webp'
         ],
         [
           'id' => 5,
@@ -63,7 +63,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/maryland-crab-cakes.webp'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/maryland-crab-cakes.webp'
         ],
         [
           'id' => 6,
@@ -72,7 +72,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/strawberry-salsa.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/strawberry-salsa.jpg'
         ],
         [
           'id' => 7,
@@ -81,7 +81,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Cake.webp'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/Cake.webp'
         ],
         [
           'id' => 8,
@@ -90,7 +90,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Cheeseball.webp'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/Cheeseball.webp'
         ],
         [
           'id' => 9,
@@ -99,7 +99,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/tomato-soup.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/tomato-soup.jpg'
         ],
         [
           'id' => 10,
@@ -108,7 +108,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Si Hta Min.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/Si Hta Min.jpg'
         ],
         [
           'id' => 11,
@@ -117,7 +117,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/monte_cristo_sandwich.webp'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/monte_cristo_sandwich.webp'
         ],
         [
           'id' => 12,
@@ -126,7 +126,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/IMG_8.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/IMG_8.jpg'
         ],
         [
           'id' => 13,
@@ -135,7 +135,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/herb-butter.webp'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/herb-butter.webp'
         ],
         [
           'id' => 14,
@@ -144,7 +144,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Chocolate-Strawberry.jpeg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/Chocolate-Strawberry.jpeg'
         ],
         [
           'id' => 15,
@@ -153,7 +153,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Chicken-Khao-Soi.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/Chicken-Khao-Soi.jpg'
         ],
         [
           'id' => 16,
@@ -162,7 +162,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/cranberry-sauce.webp'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/cranberry-sauce.webp'
         ],
         [
           'id' => 17,
@@ -171,7 +171,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/easy-holiday-grinch-cookies.webp'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/easy-holiday-grinch-cookies.webp'
         ],
         [
           'id' => 18,
@@ -180,7 +180,7 @@
           'time' => '45 min',
           'stars' => 5,
           'reviews' => 48,
-          'image' => '/yumrecipe/User/View/resources/images/Best-Cheesecake.jpg'
+          'image' => '/yumrecipe/User/View/resources/img/recipe/Best-Cheesecake.jpg'
         ],
         // Add more recipes here...
       ];
