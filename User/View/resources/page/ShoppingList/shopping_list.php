@@ -53,12 +53,12 @@
     <div class="flex-1 flex flex-col bg-gray-50 dark:bg-gray-900 dark:text-white">
               <!-- Navigation Bar -->
     <?php require_once '../../../common/nav.php'; ?>
-    <div class="w-full px-4 py-8">
+    <div class="w-full px-2 sm:px-4 py-4 sm:py-8">
         <!-- Grocery List Container -->
-        <div class="bg-white dark:bg-gray-800 p-6 max-w-md mx-auto">
+        <div class="bg-white dark:bg-gray-800 p-4 sm:p-6 max-w-full sm:max-w-md mx-auto">
             <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mb-6">
-                <input type="text" placeholder="Add an item..." class="border rounded-lg w-full md:w-40 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 dark:text-black-700">
-                <button class="bg-red-500 text-white px-4 py-2 rounded-lg w-full md:w-auto">Add</button>
+                <input type="text" placeholder="Add an item..." class="border rounded-lg w-full md:w-40 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 dark:text-black-700">
+                <button class="bg-red-500 text-white px-3 py-2 text-sm rounded-lg w-full md:w-auto">Add</button>
             </div>
 
             <!-- Dairy Category -->
