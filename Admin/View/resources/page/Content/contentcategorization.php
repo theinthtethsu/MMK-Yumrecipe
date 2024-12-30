@@ -28,6 +28,7 @@
             <div id="content"></div>
             </div>
         </div>
+    </div>
     <script>
       // function to toggle the background color of the selected tab
       function toggleBackground(selected) {
@@ -52,13 +53,13 @@
                         Search </button>
                         </div>
                     </div>
-                    <table class="w-full border-collapse border-black bg-white text-sm">
+                    <table class="w-full border-collapse border-black bg-white">
                          <thead>
-                             <tr class="odd:bg-accent even:bg-black text-left bg-gray-100 border-b">
-                                    <th class="p-4 border border-black font-semibold">No</th>
-                                    <th class="p-4 border border-black font-semibold">Category Name</th>
-                                    <th class="p-4 border border-black font-semibold">Recipe Count</th>
-                                    <th class="p-4 border border-black font-semibold">Action</th>
+                             <tr class="text-left bg-gray-100 border-b">
+                                    <th class="p-4 border border-black">No</th>
+                                    <th class="p-4 border border-black">Category Name</th>
+                                    <th class="p-4 border border-black">Recipe Count</th>
+                                    <th class="p-4 border border-black">Action</th>
                             </tr>
                          </thead>
                          <tbody>
@@ -72,7 +73,7 @@
                                 ];
                                 foreach ($categories as $index => $category) {
                                     echo "
-                                        <tr class='odd:bg-accent even:bg-black border-b hover:bg-gray-50'>
+                                        <tr class='" . ($index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text') . "'>
                                             <td class='p-4 border border-black'>{$category['id']}</td>
                                             <td class='p-4 border border-black'>{$category['name']}</td>
                                             <td class='p-4 border border-black'>{$category['count']}</td>
@@ -88,7 +89,7 @@
                         </table>
                         <!-- Pagination -->
                         <div class="flex items-center mt-4">
-                             <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($categories) ?> of <?= count($categories) ?> entries</span>
+                            <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($categories) ?> of <?= count($categories) ?> entries</span>
                             <div class="flex space-x-5 ml-80">
                                 <a href="#" class="text-gray-700 hover:text-accent mt-2">
                                     <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
@@ -164,33 +165,33 @@
                         Search </button>
                         </div>
                     </div>
-                    <table class="w-full border-collapse bg-white text-sm">
+                    <table class="w-full border-collapse bg-white">
                          <thead>
                              <tr class="text-left bg-gray-100 border-b">
-                                    <th class="p-4 font-semibold">No</th>
-                                    <th class="p-4 font-semibold">Tag Name</th>
-                                    <th class="p-4 font-semibold">Recipe Count</th>
-                                    <th class="p-4 font-semibold">Action</th>
+                                    <th class="p-4 border border-black">No</th>
+                                    <th class="p-4 border border-black">Tag Name</th>
+                                    <th class="p-4 border border-black">Recipe Count</th>
+                                    <th class="p-4 border border-black">Action</th>
                             </tr>
                          </thead>
                          <tbody>
                                 <?php
-                                $categories = [
+                                $tags = [
                                     ['id' => 1, 'name' => 'Quick and Easy', 'count' => 10],
                                     ['id' => 2, 'name' => 'Pasta', 'count' => 22],
                                     ['id' => 3, 'name' => 'Instant Pot', 'count' => 5],
                                     ['id' => 4, 'name' => 'Shashimi', 'count' => 12],
                                     ['id' => 5, 'name' => 'Vegetarian', 'count' => 3],
                                 ];
-                                foreach ($categories as $index => $category) {
+                                foreach ($tags as $index => $tag) {
                                     echo "
-                                        <tr class='border-b hover:bg-gray-50'>
-                                            <td class='p-4'>{$category['id']}</td>
-                                            <td class='p-4'>{$category['name']}</td>
-                                            <td class='p-4'>{$category['count']}</td>
-                                            <td class='p-4 space-x-4'>
-                                                <i class='material-icons text-green-500' onclick=\"showModal('update', ${category['id']})\">edit</i>
-                                                <i class='material-icons text-red-500' onclick=\"showModal('delete', ${category['id']})\">delete</i>
+                                        <tr class='" . ($index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text') . "'>
+                                            <td class='p-4 border border-black'>{$tag['id']}</td>
+                                            <td class='p-4 border border-black'>{$tag['name']}</td>
+                                            <td class='p-4 border border-black'>{$tag['count']}</td>
+                                            <td class='p-4 border border-black space-x-4'>
+                                                <i class='material-icons text-green-500' onclick=\"showModal('update', ${tag['id']})\">edit</i>
+                                                <i class='material-icons text-red-500' onclick=\"showModal('delete', ${tag['id']})\">delete</i>
                                             </td>
                                         </tr>
                                     ";
@@ -200,7 +201,7 @@
                         </table>
                         <!-- Pagination -->
                         <div class="flex items-center mt-4">
-                             <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($categories) ?> of <?= count($categories) ?> entries</span>
+                             <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($tags) ?> of <?= count($tags) ?> entries</span>
                             <div class="flex space-x-5 ml-80">
                                 <a href="#" class="text-gray-700 hover:text-accent mt-2">
                                     <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
