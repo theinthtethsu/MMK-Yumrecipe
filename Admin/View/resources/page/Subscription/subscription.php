@@ -152,8 +152,9 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                 </tbody>
             </table>
             <!-- Pagination -->
-            <div class="flex justify-center mt-4">
-                <div class="flex space-x-5 ml-30">
+            <div class="flex items-center mt-4">
+                <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($pending) ?> of <?= count($pending) ?> entries</span>
+                <div class="flex space-x-5 ml-80">
                     <a href="#" class="text-gray-700 hover:text-accent mt-2">
                         <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
                     </a>
@@ -164,10 +165,10 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                     <?php endfor; ?>
                     <a href="#" class="text-gray-700 hover:text-accent mt-2">
                         <img src="../../../resources/icons/ArrowRight.svg" alt="Next" class="w-4 h-4">
-                            </a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
+            </div>
+            </div>
             </div>
             </div> `;   
             break;

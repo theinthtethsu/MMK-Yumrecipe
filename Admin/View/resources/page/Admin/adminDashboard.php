@@ -69,13 +69,24 @@ $images_path = "/yumrecipe/Admin/View/resources/images/";
                         <h3 class="text-xl font-semibold mb-4">Monthly Subscription Overview</h3>
                         <div class="flex justify-between items-center mb-4">
                             <select class="dropdown border p-2 rounded">
-                                <option>By Year</option>
-                                <option>2024</option>
-                                <option>2023</option>
-                                <option>2022</option>
+                            <option>By Year</option>
+                           <?php
+                            $currentYear = date("Y"); // Get the current year
+                            $startYear = $currentYear - 5; // Start from 5 years ago
+                            $endYear = $currentYear + 5; // End 5 years from now
+                            
+                            for ($year = $startYear; $year <= $endYear; $year++) {
+                                echo "<option value='{$year}'>{$year}</option>";
+                            }
+                            ?>
                             </select>
                         </div>
                         <canvas id="subscriptionChart"></canvas>
+                    </div>
+                    <!-- Doughnut Chart -->
+                    <div class="p-6 rounded">
+                        <h3 class="text-xl font-semibold mb-4">Category Overview</h3>
+                        <canvas id="categoryChart"></canvas>
                     </div>
                     <!-- List Table-->
                     <div class="bg-white p-6 rounded shadow">
@@ -120,6 +131,35 @@ $images_path = "/yumrecipe/Admin/View/resources/images/";
                         borderColor: 'rgba(54, 162, 235, 1)',
                         borderWidth: 1
                     }]
+                }
+            });
+             // Doughnut Chart
+             const categoryCtx = document.getElementById('categoryChart').getContext('2d');
+            new Chart(categoryCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Main Course', 'Desserts', 'Appetizers', 'Drinks', 'Others'],
+                    datasets: [{
+                        data: [145.55, 180.89, 192.31, 190.21, 187.42],
+                        backgroundColor: [
+                            '#6B5B95',
+                            '#FF6F61',
+                            '#88B04B',
+                            '#F7CAC9',
+                            '#92A8D1'
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                usePointStyle: true
+                            }
+                        }
+                    }
                 }
             });
         </script>
