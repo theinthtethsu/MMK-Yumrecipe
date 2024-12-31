@@ -18,8 +18,9 @@ $user_path = "/yumrecipe/User/View/resources/page/";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
-<body class=" h-screen font-roboto">
+<body class="dark:bg-gray-900 dark:text-white font-roboto">
       <!-- Navigation Bar -->
+       <?php require_once '../../../common/header-before-login.php';?>
   <?php require_once '../../../common/nav.php'; ?>
 
     <section class="mt-5 flex flex-col items-center border w-full text-black bg-[#fbecea] border-gray-200 shadow md:flex-row md:w-full h-[340px]">
@@ -27,7 +28,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Premium features made easy</h5>
             <p class="mb-3 font-normal text-gray-700">Add recipes unlimited, instantly create shopping lists, scheduled
                 meals, access to live cooking, save your recipes in organize, and read our blogs.</p>
-            <a href="#plan" class="text-center bg-userPrimary hover:bg-userSecondary text-white font-bold py-2 px-4 rounded w-48">Start Planning</a>
+           
             <button class="bg-userPrimary hover:bg-userSecondary text-white font-bold py-2 px-4 rounded w-48 transition-transform duration-300 hover:translate-x-2" onclick="window.scrollTo({ top: document.getElementById('premium-card-container').offsetTop, behavior: 'smooth' });">Start Planning &nbsp; <i class="fa-solid fa-arrow-right ml-2  hover:text-yellow-500"></i></button>
         </div>
         <img src="../../img/lemonfish.jpg" alt="Lemon Butter Fish" class="w-full h-[340px] object-cover">
@@ -43,7 +44,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </div>
                 <!--text container-->
                 <div class="flex flex-col justify-center items-center mt-2">
-                    <p class="text-center text-black text-sm inline-block w-32">Add recipes  up to 5,15 or even unlimited a month</p>
+                    <p class="text-center text-black dark:text-white text-sm inline-block w-32">Add recipes  up to 5,15 or even unlimited a month</p>
                 </div>
             </div>
             <!--circle and text container wrapper row 1-->
@@ -54,7 +55,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </div>
                 <!--text container-->
                 <div class="flex flex-col justify-center items-center mt-2">
-                    <p class="text-center text-black text-sm inline-block w-32">Access to watch videos and cook along with us
+                    <p class="text-center text-black dark:text-white text-sm inline-block w-32">Access to watch videos and cook along with us
                     </p>
                 </div>
             </div>
@@ -66,7 +67,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </div>
                 <!--text container-->
                 <div class="flex flex-col justify-center items-center mt-2">
-                    <p class="text-center text-black text-sm inline-block w-32">Add recipes  up to 5,15 or even unlimited a month
+                    <p class="text-center text-black dark:text-white text-sm inline-block w-32">Add recipes  up to 5,15 or even unlimited a month
                     </p>
                 </div>
             </div>
@@ -81,7 +82,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </div>
                 <!--text container-->
                 <div class="flex flex-col justify-center items-center mt-2">
-                    <p class="text-center text-black text-sm inline-block w-32">Access to watch videos and cook along with us
+                    <p class="text-center text-black dark:text-white text-sm inline-block w-32">Access to watch videos and cook along with us
                     </p>
                 </div>
             </div>
@@ -93,7 +94,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </div>
                 <!--text container-->
                 <div class="flex flex-col justify-center items-center mt-2">
-                    <p class="text-center text-black text-sm inline-block w-32">Add recipes  up to 5,15 or even unlimited a month</p>
+                    <p class="text-center text-black dark:text-white text-sm inline-block w-32">Add recipes  up to 5,15 or even unlimited a month</p>
                 </div>
             </div>
         </div>
@@ -101,7 +102,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
     </div>
     <hr class="w-full h-px my-8 bg-gray-200 border-0 rounded">
     <!--title--> 
-    <h1 class="text-2xl font-bold text-center mt-8 text-gray-800">Choose your plan</h1>
+    <h1 class="text-2xl font-bold text-center mt-8 text-gray-800 dark:text-white">Choose your plan</h1>
     <!--premium card container-->
     <div id="plan">
     <?php require_once '../../../common/plans.php'; ?>
