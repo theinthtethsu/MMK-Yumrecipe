@@ -1,5 +1,5 @@
 <?php
-$images_path = "/yumrecipe/User/View/resources/images/";
+$images_path = "/yumrecipe/User/View/resources/img/";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   <script src="../../js/receipe-edit.js"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900 dark:text-white">
   <?php require_once '../../../common/header-after-login.php'; ?>
   <?php require_once '../../../common/nav.php'; ?>
   <div>
@@ -41,7 +41,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       </div>
     </div>
   </div>
-  <div class="flex  m-4 ml-8 space-x-4 flex-col md:flex-row  mt-6 dark:text-white">
+  <div class="flex items-center justify-start m-4 ml-8 space-x-4">
     <div class="flex items-center gap-2 ">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
         class="w-4 h-4 text-gray-500">
@@ -80,8 +80,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     </div>
   </div>
   <div class="flex items-center space-x-4">
-    <img class="w-1/2 h-96 m-8"
-      src="http://localhost/yumrecipe/User/View/resources/images/shredded-beef-tacos-recipe.jpg"
+    <img id="mainImage" class="w-1/2 h-96 m-8" src="<?php echo $images_path ?>recipe/shredded-beef-tacos-recipe.jpg"
       alt="Hot Spinach Artichoke Dip" class="w-full md:w-1/2 object-cover" />
 
     <!-- New Buttons -->
@@ -136,12 +135,19 @@ $images_path = "/yumrecipe/User/View/resources/images/";
   </div>
 
   <div class="m-8 dark:text-white grid grid-cols-4 gap-4">
-    <p class="col-span-2 text-sm md:text-base">It's a vegetarian pasta loaded with a whole head of broccoli, corn,
+    <p id="descriptionText" class="col-span-2 text-sm md:text-base">It's a vegetarian pasta loaded with a whole head of
+      broccoli, corn,
       zucchinis,
       capsicum/peppers and onion, and smothered in a garlic herb tomato sauce. </p>
-    <button class="col-span-1 border-2 h-8 border-red-500 rounded-lg hover:bg-red-600 text-sm md:text-base">Add more
+
+    <!-- New input box for additional description -->
+    <input id="newDescription" type="text" class="hidden border-2 border-red-500 rounded-lg p-1 mt-2 col-span-2"
+      placeholder="Add new description" />
+
+    <button onclick="showDescriptionInput()"
+      class="col-span-1 border-2 h-8 border-red-500 rounded-lg hover:bg-red-600 text-sm md:text-base">Add more
       description</button>
-    <button class="border-2 w-10 h-8 rounded-lg border-red-500">+</button>
+    <button onclick="addDescription()" class="border-2 w-10 h-8 rounded-lg border-red-500">+</button>
   </div>
 
   <div class="flex flex-col md:flex-row justify-between gap-4 mt-6 dark:text-white">
@@ -196,12 +202,15 @@ $images_path = "/yumrecipe/User/View/resources/images/";
         <span class="font-bold">14g</span>
       </div>
       <div class="flex justify-between">
-        <button class="col-span-2 align-center p-1 border-2 h-8 border-red-500 rounded-lg hover:bg-red-600">Add
-          Item</button>
-        <button class="border-2 w-10 h-8 rounded-lg border-red-500 mr-2">+</button>
-        <button class="col-span-2 align-center p-1 border-2 h-8 border-red-500 rounded-lg hover:bg-red-600">Add
-          Calorie</button>
-        <button class="border-2 w-10 h-8 rounded-lg border-red-500">+</button>
+        <!-- New input box for adding items -->
+        <input id="newItem" type="text" class="hidden border-2 border-red-500 rounded-lg p-1" placeholder="Add new item" />
+        <button onclick="showItemInput()" class="border-2 h-8 border-red-500 rounded-lg hover:bg-red-600">Add Item</button>
+        <button onclick="addItem()" class="border-2 w-10 h-8 rounded-lg border-red-500">+</button>
+
+        <!-- New input box for adding calories -->
+        <input id="newCalorie" type="text" class="hidden border-2 border-red-500 rounded-lg p-1" placeholder="Add new calorie" />
+        <button onclick="showCalorieInput()" class="border-2 h-8 border-red-500 rounded-lg hover:bg-red-600">Add Calorie</button>
+        <button onclick="addCalorie()" class="border-2 w-10 h-8 rounded-lg border-red-500">+</button>
       </div>
 
     </div>
@@ -226,7 +235,7 @@ $images_path = "/yumrecipe/User/View/resources/images/";
       class="border-2 w-8 md:w-10 h-6 md:h-8 rounded-lg border-red-500 text-xs md:text-sm hover:bg-red-700 hover:text-white"
       onclick="showInput()">+</button>
   </div>
-  
+
   </div>
 
   </div>
@@ -258,8 +267,39 @@ $images_path = "/yumrecipe/User/View/resources/images/";
     <?php require_once '../../../common/footer.php'; ?>
   </div>
 
- 
-  
+  <script>
+    function previewImage(event) {
+      const mainImage = document.getElementById('mainImage');
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        // Update only the main image source
+        mainImage.src = e.target.result;
+      }
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function showDescriptionInput() {
+      const input = document.getElementById('newDescription');
+      input.classList.toggle('hidden'); // Toggle visibility of the input box
+    }
+
+    function addDescription() {
+      const input = document.getElementById('newDescription');
+      const descriptionText = document.getElementById('descriptionText');
+
+      if (input.value.trim() !== "") {
+        // Append the new description below the existing text
+        descriptionText.innerHTML += "<br>" + input.value; // Add new description
+        input.value = ""; // Clear the input box
+        input.classList.add('hidden'); // Hide the input box again
+      }
+    }
+  </script>
 
 </body>
 
