@@ -15,7 +15,7 @@
         <?php require_once '../../../common/sideMenu.php'; ?>
         
         <div class="flex-1 container p-4 bg-secondary border border-black overflow-y-auto" style="height: 100vh;">
-        <div class="flex justify-start mb-10 ml-10 cursor-pointer" onclick="window.location.href='/yumrecipe/Admin/View/resources/page/Community/community.php'">
+        <div class="flex justify-start  ml-10 cursor-pointer" onclick="window.location.href='/yumrecipe/Admin/View/resources/page/Community/community.php'">
             <i class="material-icons">arrow_back</i>
         </div>
             <h1 class="text-2xl font-bold mb-5 text-center">Pending Recipe</h1>
@@ -52,9 +52,6 @@
       <button class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">Reject</button>
     </div>
   </div>
-</div>
-<div class="flex justify-end">
-        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-gray-300" onclick="window.location.href='/yumrecipe/Admin/View/resources/page/Community/community.php'">Back to Community</button>
 </div>
 </body>
 
