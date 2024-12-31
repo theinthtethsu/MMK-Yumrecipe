@@ -145,7 +145,8 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                             <td class="border border-black p-2"><?= $subscription['status'] ?></td>
                             <td class="border border-black p-2"><?= $subscription['paymentmethod'] ?></td>
                             <td class="border border-black p-2 flex justify-center">
-                                <span class='material-icons text-accent cursor-pointer' onclick="window.location.href='detailpending.php?no=<?= $subscription['no'] ?>'">visibility</span>
+                                <button type="button" onclick="window.location.href='detailpending.php?no=<?= $subscription['no'] ?>'" class="text-indigo-800">
+                                 <span class="material-icons text-xl">visibility</span></button>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -222,7 +223,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
               <div>
                      <h1 class="text-2xl font-bold flex justify-center">Subscriber History</h1>
                          <div class="flex space-x-4 justify-end">
-                          <select class="border rounded p-2 bg-secondary">
+                          <select class="border rounded p-2 bg-white">
                             <option>Filtered By</option>
                             <option>Active</option>
                             <option>Expired</option>
@@ -331,7 +332,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
             ];
             ?>
 
-            <table class="min-w-full border border-collapse border-black">
+            <table class="min-w-full border border-black">
                 <thead>
                     <tr class="bg-light-text">
                         <th class="border border-black p-2">No</th>
@@ -346,7 +347,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                 </thead > 
                  <tbody>
                     <?php foreach ($subscriber as $index => $subscriber): ?>
-                        <tr class="<?= $index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text'  ?>">
+                        <tr class="<?= $index % 2 == 0 ? 'bg-secondary' : 'bg-light-text'  ?>">
                             <td class="border border-black p-2"><?= $subscriber['no'] ?></td>
                             <td class="border border-black p-2"><?= $subscriber['subscriber'] ?></td>
                             <td class="border border-black p-2"><?= $subscriber['email'] ?></td>
@@ -368,8 +369,8 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
             </table>
             <!-- Delete Popup Modal -->
                         <div id="deleteModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
-                            <div class="bg-secondary p-6 rounded shadow-lg w-96">
-                                <h2 class="text-xl font-bold text-center">Delete Confirmation</h2>
+                            <div class="bg-white p-6 rounded shadow-lg w-96">
+                                <h2 class="text-xl font-bold text-center text-color-red-500">Delete Confirmation</h2>
                                 <p class="text-center text-gray-700 mb-4">Are you sure you want to delete this category?</p>
                                 <div class="flex justify-center gap-x-4">
                                     <button class="px-4 py-2 bg-red-500 text-white rounded shadow hover:bg-red-600">Delete</button>
@@ -406,7 +407,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
               <div>
                      <h1 class="text-2xl font-bold flex justify-center">Payment History</h1>
                     <div class="flex space-x-4 justify-end">
-                        <select class="border rounded-md p-2 bg-secondary w-40">
+                        <select class="border rounded-md p-2 bg-white w-40">
                             <option>Filtered By</option>
                             <option>Approved</option>
                             <option>Filled</option>
@@ -507,7 +508,7 @@ $addnewplan_path = '/yumrecipe/Admin/View/resources/page/Subscription/addnewplan
                             <th class="border border-black p-2">Email</th>
                             <th class="border border-black p-2">Date</th>
                             <th class="border border-black p-2">Payment Method</th>
-                            <th class="border border-black p-2">Status</th>
+                            <th class="border border-black border-black p-2">Status</th>
                             </tr>
                     </thead > 
                     <tbody>
