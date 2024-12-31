@@ -13,11 +13,19 @@ $receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
         tailwind.config = {
+          theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'], // Add Poppins to Tailwind config
+          },
+        },
+      },
             darkMode: 'class',
         };
     </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 <?php require_once '../../common/header-before-login.php'; ?>
@@ -28,8 +36,8 @@ $receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
   <div class="relative w-full h-[300px] sm:h-[400px] md:h-[500px] max-w-8xl overflow-hidden">
     <!-- Slides -->
     <div class="flex transition-transform duration-700 ease-in-out" id="slider">
-      <img src="<?php echo $images_path ?>lemonfish.jpg" class="w-full flex-shrink-0" alt="Slide 1">
-      <img src="<?php echo $images_path ?>lemonfish.jpg" class="w-full flex-shrink-0" alt="Slide 2">
+      <img src="<?php echo $images_path ?>juice.jpg" class="w-full flex-shrink-0" alt="Slide 1">
+      <img src="<?php echo $images_path ?>" class="w-full flex-shrink-0" alt="Slide 2">
       <img src="<?php echo $images_path ?>lemonfish.jpg" class="w-full flex-shrink-0" alt="Slide 3">
     </div>
 
@@ -42,13 +50,13 @@ $receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
     </button>
 
     <!-- Card Container -->
-  <div class="absolute top-16 sm:top-24 left-8 sm:left-24 md:left-48 rounded-xl p-6 max-w-md md:max-w-lg shadow-lg text-center">
+  <div class="absolute top-16 sm:top-24 left-8 sm:left-24 md:left-48 rounded-xl p-6 max-w-md md:max-w-2xl shadow-lg text-center">
     <!-- Heading -->
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 font-family:'poppins',sans-serif">
-      Cook, Share, <span class="text-red-600">Enjoy</span>
-    </h1>
+    <p class="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-800 font-poppins">
+      Cook, Share, <span class="text-red-600 text-[60px]">Enjoy</span>
+    </p>
     <!-- Description -->
-    <p class="text-gray-500 mt-3 text-xs  sm:text-sm">
+    <p class="text-gray-500 mt-4 text-xs  sm:text-sm">
         "Discover the joy of cooking and sharing delicious meals with your loved ones. Explore a world of mouthwatering recipes, each crafted to bring flavor and happiness to your table."
     </p>
     <!-- Button -->

@@ -22,7 +22,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
         <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 dark:text-white">Payment Methods</h2>
         <div class="flex flex-wrap gap-4 mb-6">
           <!-- KBZ Pay -->
-          <div class="relative w-24 sm:w-32 lg:w-40 bg-white p-4 flex justify-center rounded shadow">
+          <div class="relative w-24 sm:w-32 lg:w-40 bg-white dark:bg-gray-800 p-4 flex justify-center rounded shadow">
             <input type="radio" id="kbz-pay" name="payment-method" class="absolute top-2 right-2 w-5 h-5" checked>
             <label for="kbz-pay" class="flex justify-center">
               <img src="<?php echo $images_path ?>Payment/KBZ.png" alt="KBZ Pay"
@@ -30,7 +30,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             </label>
           </div>
           <!-- Wave Pay -->
-          <div class="relative w-24 sm:w-32 lg:w-40 bg-white p-4 flex justify-center rounded shadow">
+          <div class="relative w-24 sm:w-32 lg:w-40 bg-white dark:bg-gray-800 p-4 flex justify-center rounded shadow">
             <input type="radio" id="wave-pay" name="payment-method" class="absolute top-2 right-2 w-5 h-5">
             <label for="wave-pay" class="flex justify-center">
               <img src="<?php echo $images_path ?>Payment/Wave.png" alt="WavePay"
@@ -38,28 +38,28 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             </label>
           </div>
           <!-- AYA Pay -->
-          <div class="relative w-24 sm:w-32 lg:w-40 bg-white p-4 flex justify-center rounded shadow">
+          <div class="relative w-24 sm:w-32 lg:w-40 bg-white dark:bg-gray-800 p-4 flex justify-center rounded shadow">
             <input type="radio" id="aya-pay" name="payment-method" class="absolute top-2 right-2 w-5 h-5">
             <label for="aya-pay" class="flex justify-center">
               <img src="<?php echo $images_path ?>Payment/AYA.png" alt="AYA Pay"
-                class="w-16 h-12 object-contain">
+                class="w-16 h-12 object-contain dark:filter dark:invert">
             </label>
           </div>
         </div>
 
         <!-- QR Code Section -->
-        <div id="qr-section" class="bg-white p-6 rounded-lg shadow">
+        <div id="qr-section" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
           <div class="flex flex-col sm:flex-row items-center gap-4 mb-4">
             <img id="qr-logo" src="<?php echo $images_path ?>Payment/KBZ.png" alt="KBZ Pay"
               class="w-12 h-12 object-contain">
-            <span id="qr-text" class="text-gray-600 text-lg font-medium">SCAN TO PAY</span>
+            <span id="qr-text" class="text-gray-600 text-lg font-medium dark:text-white">SCAN TO PAY</span>
           </div>
           <img id="qr-code" src="<?php echo $images_path ?>Payment/Kbz-QR.png" alt="QR Code"
             class="w-32 sm:w-40 md:w-48 h-auto mx-auto mb-4">
           <div class="text-center">
-            <p id="account-number" class="text-gray-700 font-medium text-sm sm:text-base">Account Number: <span
+            <p id="account-number" class="text-gray-700 font-medium text-sm sm:text-base dark:text-white">Account Number: <span
                 class="font-normal">0912345678</span></p>
-            <p id="account-name" class="text-gray-700 font-medium text-sm sm:text-base">Account Name: <span
+            <p id="account-name" class="text-gray-700 font-medium text-sm sm:text-base dark:text-white">Account Name: <span
                 class="font-normal">Recipe Admin</span></p>
           </div>
         </div>
@@ -68,22 +68,22 @@ $images_path = "/yumrecipe/User/View/resources/img/";
       <!-- Right Section: Payment Form -->
       <div>
         <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 dark:text-white">Payment Form</h2>
-        <div class="bg-white p-6 rounded-lg shadow">
+        <div class="bg-white p-6 rounded-lg shadow dark:bg-gray-800 dark:text-white">
           <form action="#" method="POST" enctype="multipart/form-data">
             <div class="mb-4">
-              <label for="account-name" class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Account Name</label>
+              <label for="account-name" class="block text-gray-700 font-medium mb-2 text-sm sm:text-base dark:text-gray-300">Account Name</label>
               <input type="text" id="account-name"
-                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base">
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base text-black">
             </div>
             <div class="mb-4">
-              <label for="email-address" class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Email Address</label>
+              <label for="email-address" class="block text-gray-700 font-medium mb-2 text-sm sm:text-base dark:text-gray-300">Email Address</label>
               <input type="email" id="email-address"
-                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base">
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base text-black">
             </div>
             <div class="mb-4">
-              <label for="plan-type" class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Plan Type</label>
+              <label for="plan-type" class="block text-gray-700 font-medium mb-2 text-sm sm:text-base dark:text-gray-300">Plan Type</label>
               <select id="plan-type"
-                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base">
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base dark:bg-gray-800">
                 <option>Plan Type</option>
                 <option>Basic</option>
                 <option>Premium</option>
@@ -91,7 +91,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
             </div>
             <div class="mb-4">
               <label for="payment-screenshot"
-                class="block text-gray-700 font-medium mb-2 text-sm sm:text-base">Payment Screenshot</label>
+                class="block text-gray-700 font-medium mb-2 text-sm sm:text-base dark:text-gray-300">Payment Screenshot</label>
               <div class="border-dashed border-2 border-gray-300 rounded-lg p-4 text-center">
                 <input type="file" id="payment-screenshot" class="hidden">
                 <label for="payment-screenshot" class="cursor-pointer text-red-500 text-sm sm:text-base">Upload</label>

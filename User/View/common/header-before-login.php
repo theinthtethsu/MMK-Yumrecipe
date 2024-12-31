@@ -35,17 +35,38 @@ $images_path = "/yumrecipe/User/View/resources/img/";
         </div>
 
         <!-- Full Navigation -->
-        <div id="menu" class="hidden w-full md:flex md:flex-1 md:items-center md:justify-between md:w-auto">
+        <div id="menu" class="hidden w-full md:flex md:flex-1 md:items-center md:justify-between md:w-auto relative">
             <!-- Search Section -->
             <div class="flex flex-1 max-w-xl mx-auto mt-4 md:mt-0">
-                <div class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-full w-full">
+                <div class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-full w-full ">
                     <!-- Categories Dropdown -->
-                    <button class="flex items-center justify-center px-4 py-2 text-white bg-red-500 rounded-full w-1/2">
+                    <button id="dropdownButton" class="flex items-center justify-center px-4 py-2 text-white bg-red-500 rounded-full w-1/2"  onclick="toggleDropdown()">
                         All Categories
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
+                                 <!-- Dropdown Content -->
+                                 <div 
+          id="dropdownMenu" 
+          class="hidden absolute left-0 top-20 mt-2 w-full bg-white border border-gray-300 dark:border-gray-700 rounded-md shadow-lg dark:bg-gray-900 dark:text-white" >
+          <ul class="grid grid-cols-5 gap-2 p-4">
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 1</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 2</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 3</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 4</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 5</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 6</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 7</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 8</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 9</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 10</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 1</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 2</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 3</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 4</li>
+          </ul>
+        </div>
                     <!-- Search Input -->
                     <input type="text" placeholder="Search" class="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-sm text-gray-700 dark:text-gray-300 focus:outline-none">
                     <!-- Search Button -->
@@ -81,11 +102,16 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 <script>
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const menu = document.getElementById('menu');
-
-    // 3. Mobile Menu Toggle
+    //  Mobile Menu Toggle
 mobileMenuToggle.addEventListener('click', () => {
     menu.classList.toggle('hidden'); // Show/hide menu
 });
+
+//Dropdown
+function toggleDropdown() {
+  const dropdown = document.getElementById('dropdownMenu');
+  dropdown.classList.toggle('hidden');
+}
 
     </script>
 </header>

@@ -42,7 +42,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
             </div>
 
             <!-- Form Section -->
-            <form action="" method="post">
+            <form action="../../../Controller/SignUpController.php" method="post">
                 <!-- Username Field -->
                 <div class="mb-4">
                     <div class="flex items-center border-b-2 border-red-400 p-2">
@@ -79,14 +79,14 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 <!-- Remember Me -->
                 <div class="flex items-center justify-between mb-6 mt-10">
                     <label class="flex items-center text-sm text-gray-600 dark:text-gray-300">
-                        <input type="checkbox" class="form-checkbox text-primary dark:text-primary focus:ring-primary dark:focus:ring-primary">
+                        <input type="checkbox" name="remember" class="form-checkbox text-primary dark:text-primary focus:ring-primary dark:focus:ring-primary">
                         <span class="ml-2">Remember Me</span>
                     </label>                  
                 </div>
 .
                 <!-- Sign Up Button -->
                  <div class=" flex justify-center items-center mt-5">
-                    <button type="submit" class="m-auto px-10 py-3 border rounded-full bg-red-500 text-white text-md font-semibold hover:bg-red-600 ml-auto">Sign Up</button>
+                    <button type="submit" name="signup" class="m-auto px-10 py-3 border rounded-full bg-red-500 text-white text-md font-semibold hover:bg-red-600 ml-auto">Sign Up</button>
                  </div>
             </form>
         </div>      

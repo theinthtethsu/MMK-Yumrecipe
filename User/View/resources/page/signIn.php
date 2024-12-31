@@ -1,4 +1,5 @@
 <?php
+session_start();
 $images_path = "/yumrecipe/User/View/resources/img/";
 $user_path = "/yumrecipe/User/View/resources/page/";
 ?>
@@ -42,12 +43,15 @@ $user_path = "/yumrecipe/User/View/resources/page/";
             </div>
 
             <!-- Form Section -->
-            <form action="" method="post">
+            <form action="../../../Controller/LoginController.php" method="post">
                 <!-- Username Field -->
                 <div class="mb-4">
                     <div class="flex items-center border-b-2 border-red-400 p-2">
-                        <span class="material-icons text-gray-400 dark:text-gray-300">person</span>
-                        <input id="username" name="username" type="text" placeholder="User Name" class="ml-2 w-full bg-transparent focus:outline-none text-black dark:text-white">
+                        <span class="material-icons text-gray-400 dark:text-gray-300">email</span>
+                        <input id="email" name="email" type="text" placeholder="email" class="ml-2 w-full bg-transparent focus:outline-none text-black dark:text-white">
+                        <?php if(isset($_SESSION["email_error"])): ?>
+                            <p class="text-red-500 text-sm"><?php echo $_SESSION["email_error"]; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
 
@@ -56,6 +60,9 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                     <div class="flex items-center border-b-2 border-red-400 p-2">
                         <span class="material-icons text-gray-400 dark:text-gray-300">lock</span>
                         <input id="password" type="password" name="password" placeholder="Password" class="ml-2 w-full bg-transparent focus:outline-none text-black dark:text-white">
+                        <?php if(isset($_SESSION["pwd_error"])): ?>
+                            <p class="text-red-500 text-sm"><?php echo $_SESSION["pwd_error"]; ?></p>
+                        <?php endif; ?>
                         <span class="material-icons text-gray-400 dark:text-gray-300">visibility</span>
                     </div>
                 </div>
@@ -63,7 +70,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 <!-- Remember Me and Forgot Password -->
                 <div class="flex items-center justify-between mb-6 mt-10">
                     <label class="flex items-center text-sm text-gray-600 dark:text-gray-300">
-                        <input type="checkbox" class="form-checkbox text-primary dark:text-primary focus:ring-primary dark:focus:ring-primary">
+                        <input type="checkbox" name="remember" class="form-checkbox text-primary dark:text-primary focus:ring-primary dark:focus:ring-primary">
                         <span class="ml-2">Remember Me</span>
                     </label>
                     <a href="<?php echo $user_path ?>forgetPassword.php" class="text-sm text-primary font-semibold">Forget Password</a>
@@ -71,7 +78,7 @@ $user_path = "/yumrecipe/User/View/resources/page/";
 .
                 <!-- Sign In Button -->
                  <div class=" flex justify-center items-center mt-5">
-                    <button type="submit" class="m-auto px-10 py-3 border rounded-full bg-red-500 text-white text-md font-semibold hover:bg-red-600 ml-auto">Sign In</button>
+                    <button type="submit" name="signin" class="m-auto px-10 py-3 border rounded-full bg-red-500 text-white text-md font-semibold hover:bg-red-600 ml-auto">Sign In</button>
                  </div>
             </form>
         </div>      
