@@ -102,7 +102,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 
     <!-- Back Button -->
     <div class="mt-6 text-center">
-      <a href="receipeDetail.php"
+      <a href="Recipe/receipeDetail.php"
         class="bg-red-500 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-red-600 transition">Back</a>
     </div>
   </div>

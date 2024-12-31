@@ -11,7 +11,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900 dark:text-white">
 <?php require_once '../../../common/header-after-login.php'; ?>
 <?php require_once '../../../common/nav.php'; ?>
   <div>
@@ -45,7 +45,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
       </div>
     </div>
   </div>
-  <div class="flex items-center m-4 ml-8 space-x-4   flex-col md:flex-row  gap-4 mt-6 dark:text-white">
+  <div class="flex items-center justify-start m-4 ml-8 space-x-4">
 
     <div class="flex items-center gap-2 ">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -148,7 +148,7 @@ $images_path = "/yumrecipe/User/View/resources/img/";
       </ul>
     </div>
 
-    <div class="w-64 p-4 mr-28 bg-white rounded-md shadow-md border dark:bg-gray-700 border-red-400">
+    <div class="w-64 p-4 mr-28 bg-white rounded-md shadow-md border  border-red-400 sm:ml-8">
       <h2 class="text-lg font-bold text-red-500 mb-1">Nutrition Facts</h2>
       <p class="text-sm text-red-500 mb-4">Amount Per Serving</p>
       <div class="flex justify-between mb-2">
