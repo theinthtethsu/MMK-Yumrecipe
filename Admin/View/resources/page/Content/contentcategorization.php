@@ -53,7 +53,7 @@
                         Search </button>
                         </div>
                     </div>
-                    <table class="w-full border-collapse border-black bg-white">
+                    <table class="min-w-full border-collapse border-black bg-white">
                          <thead>
                              <tr class="text-left bg-gray-100 border-b">
                                     <th class="p-4 border border-black">No</th>
@@ -74,10 +74,10 @@
                                 foreach ($categories as $index => $category) {
                                     echo "
                                         <tr class='" . ($index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text') . "'>
-                                            <td class='p-4 border border-black'>{$category['id']}</td>
-                                            <td class='p-4 border border-black'>{$category['name']}</td>
-                                            <td class='p-4 border border-black'>{$category['count']}</td>
-                                            <td class='p-4 border border-black space-x-4'>
+                                            <td class='p-2 border border-black'>{$category['id']}</td>
+                                            <td class='p-2 border border-black'>{$category['name']}</td>
+                                            <td class='p-2 border border-black'>{$category['count']}</td>
+                                            <td class='p-2 border border-black space-x-4'>
                                                 <i class='material-icons text-green-500' onclick=\"showModal('update', ${category['id']})\">edit</i>
                                                 <i class='material-icons text-red-500' onclick=\"showModal('delete', ${category['id']})\">delete</i>
                                             </td>
@@ -186,10 +186,10 @@
                                 foreach ($tags as $index => $tag) {
                                     echo "
                                         <tr class='" . ($index % 2 == 0 ? 'bg-gray-300' : 'bg-light-text') . "'>
-                                            <td class='p-4 border border-black'>{$tag['id']}</td>
-                                            <td class='p-4 border border-black'>{$tag['name']}</td>
-                                            <td class='p-4 border border-black'>{$tag['count']}</td>
-                                            <td class='p-4 border border-black space-x-4'>
+                                            <td class='p-2 border border-black'>{$tag['id']}</td>
+                                            <td class='p-2 border border-black'>{$tag['name']}</td>
+                                            <td class='p-2 border border-black'>{$tag['count']}</td>
+                                            <td class='p-2 border border-black space-x-4'>
                                                 <i class='material-icons text-green-500' onclick=\"showModal('update', ${tag['id']})\">edit</i>
                                                 <i class='material-icons text-red-500' onclick=\"showModal('delete', ${tag['id']})\">delete</i>
                                             </td>
@@ -201,7 +201,7 @@
                         </table>
                         <!-- Pagination -->
                         <div class="flex items-center mt-4">
-                             <span class="text-sm text-gray-700 mr-2">Showing 1 to <?= count($tags) ?> of <?= count($tags) ?> entries</span>
+                             <span class="text-gray-700 mr-2">Showing 1 to <?= count($tags) ?> of <?= count($tags) ?> entries</span>
                             <div class="flex space-x-5 ml-80">
                                 <a href="#" class="text-gray-700 hover:text-accent mt-2">
                                     <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">

@@ -8,6 +8,8 @@
     <title>Recipe Management</title>
     <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../../../../../output.css">
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="font-sans bg-light-text">
@@ -26,7 +28,58 @@
            <div id="content"></div>
         </div>
     </div>
-
+    <?php
+    $recipes = [
+        [
+            "id" => 1,
+            "image" => "../../images/aglioolio.jpg",
+            "name" => "Aglio e Olio",
+            "author" => "Admin1",
+            "time" => "35 mins",
+            "status" => "Suggested",
+            "cuisine" => "Italian",
+            "tags" => ["Italian", "Budget Friendly", "Quick & Easy"],
+            "rating" => "5/5",
+            "ingredients" => ["Garlic", "Olive Oil", "Pasta", "Red Pepper Flakes", "Parsley"]
+        ],
+        [
+            "id" => 2,
+            "image" => "../../images/rice.png",
+            "name" => "Rice",
+            "author" => "Admin2",
+            "time" => "45 mins",
+            "status" => "Popular",
+            "cuisine" => "Italian",
+            "tags" => ["Italian", "Classic", "Vegetarian"],
+            "rating" => "4.5/5",
+            "ingredients" => ["Rice", "Water", "Salt"]
+        ],
+        [
+            "id" => 3,
+            "image" => "../../images/rice.png",
+            "name" => "Pasta",
+            "author" => "Admin3",
+            "time" => "30 mins",
+            "status" => "Approved",
+            "cuisine" => "Chinese",
+            "tags" => ["Italian", "Classic", "Vegetarian"],
+            "rating" => "4.7/5",
+            "ingredients" => ["Pasta", "Tomato Sauce"]
+        ],
+        [
+            "id" => 4,
+            "image" => "../../images/rice.png",
+            "name" => "Chicken rice",
+            "author" => "Admin4",
+            "time" => "30 mins",
+            "status" => "Approved",
+            "cuisine" => "Chinese",
+            "tags" => ["Chinese", "Classic", "Vegetarian"],
+            "rating" => "4.7/5",
+            "ingredients" => ["Chicken", "Rice", "Tomato Sauce"]
+        ],
+    ];
+    ?>
     <script>
         // function to toggle the background color of the selected tab
         function toggleBackground(selected) {
@@ -63,7 +116,6 @@
                         <input type="text" placeholder="Recipe, category, ingredients" class="p-2 flex-grow rounded border-gray-300">
                         <button class="bg-accent hover:bg-blue-600 text-white px-4 py-2 rounded">Search</button>
                     </div>
-
                     <!-- Recipe Table -->
                     <table class="w-full table-auto border-collapse border border-gray-300">
                         <thead class="bg-gray-100">
@@ -78,75 +130,86 @@
                                 <th class="border border-gray-300 px-4 py-2">Tags</th>
                                 <th class="border border-gray-300 px-4 py-2">Rating</th>
                                 <th class="border border-gray-300 px-4 py-2">Ingredients</th>
+                                  <th class="border border-gray-300 px-4 py-2">Actions</th>
                             </tr>
                         </thead>
                         <!-- table body -->
-                        <tbody>
-                            <?php for ($i = 1; $i <= 9; $i++): ?>
-                            <tr class="odd:bg-white even:bg-gray-50">
-                                <td class="border border-gray-300 px-4 py-2 text-center"><?= $i ?></td>
-                                <td class="border border-gray-300 px-4 py-2 text-center">
-                                    <img src="../../images/aglioolio.jpg" alt="Recipe Image" class="h-12 w-12 object-cover rounded">
+                         <?php foreach ($recipes as $index => $recipe): ?>
+                                <tr class="odd:bg-white even:bg-gray-50 id="row-<?= $recipe['id'] ?>">
+                                    <td class="border border-gray-300 px-4 py-2 text-center"><?= $index + 1 ?></td>
+                                    <td class="border border-gray-300 px-4 py-2 text-center">
+                                        <img src="<?= $recipe['image'] ?>" alt="Recipe Image" class="h-12 w-12 object-cover rounded">
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-2"><?= $recipe['name'] ?></td>
+                                    <td class="border border-gray-300 px-4 py-2"><?= $recipe['author'] ?></td>
+                                    <td class="border border-gray-300 px-4 py-2"><?= $recipe['time'] ?></td>
+                                    <td class="border border-gray-300 px-4 py-2"><?= $recipe['status'] ?></td>
+                                    <td class="border border-gray-300 px-4 py-2"><?= $recipe['cuisine'] ?></td>
+                                    <td class="border border-gray-300 px-4 py-2">
+                                       <div class="flex flex-wrap gap-2" id="tag-container-<?= $recipe['id'] ?>">
+                                              <?php foreach ($recipe['tags'] as $tag): ?>
+                                                  <span class="flex items-center bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300">
+                                                      <?= $tag ?>
+                                                      <button class="ml-1 text-red-500" onclick="removeItem(this)">&times;</button>
+                                                  </span>
+                                              <?php endforeach; ?>
+                                          </div>
+                                          <button class="bg-secondary text-white mt-2 px-3 py-1 rounded" onclick="openModal('tag', <?= $recipe['id'] ?>)">Add More Tags</button>
+                                      </td>
+                                            <div id="tag-modal" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50 hidden">
+                                            <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+                                                <h3 class="text-xl mb-4">Enter a new tag</h3>
+                                                <input type="text" id="new-tag-input" class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="New tag">
+                                                <div class="flex justify-end">
+                                                    <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded" onclick="closeModal('tag')">Cancel</button>
+                                                    <button class="bg-accent text-white px-4 py-2 rounded ml-2" onclick="saveItem('tag')">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-2"><?= $recipe['rating'] ?></td>
+                                    <td class="border border-gray-300 px-4 py-2">
+                                       <div class="flex flex-wrap gap-2" id="ingredient-container-<?= $recipe['id'] ?>">
+                                              <?php foreach ($recipe['ingredients'] as $ingredient): ?>
+                                                <span class="flex items-center bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300">
+                                                    <?= $ingredient ?>
+                                                    <button class="ml-1 text-red-500" onclick="removeItem(this)">&times;</button>
+                                                </span>
+                                            <?php endforeach; ?>
+                                          </div>
+                                          <button class="bg-secondary text-white mt-2 px-3 py-1 rounded" onclick="openModal('ingredient', <?= $recipe['id'] ?>)">Add More Ingredients</button>
+                                      </td>
+                                      <div id="ingredient-modal" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50 hidden">
+                                        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+                                            <h3 class="text-xl mb-4">Enter a new ingredient</h3>
+                                            <input type="text" id="new-ingredient-input" class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="New ingredient">
+                                            <div class="flex justify-end">
+                                                <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded" onclick="closeModal('ingredient')">Cancel</button>
+                                                <button class="bg-accent text-white px-4 py-2 rounded ml-2" onclick="saveItem('ingredient')">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-2 relative">
+                                    <!-- Dotted menu button -->
+                                    <button class="text-gray-500 hover:text-gray-700 focus:outline-none" onclick="toggleMenu(this)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6h.01M12 12h.01M12 18h.01" />
+                                        </svg>
+                                    </button>
+                                    <!-- Dropdown menu -->
+                                    <div class="hidden absolute right-0 pl-10 mt-2 w-28 bg-white shadow-md rounded border border-gray-300 z-10">
+                                       <i class='material-icons text-red-500 cursor-pointer' id='delete-recipe-<?= $recipe['id'] ?>' onclick='deleteRecipe(<?= $recipe['id'] ?>)'>delete</i>
+                                    </div>
                                 </td>
-                                <td class="border border-gray-300 px-4 py-2">Aglio e Olio</td>
-                                <td class="border border-gray-300 px-4 py-2">Admin<?= $i ?></td>
-                                <td class="border border-gray-300 px-4 py-2">35 mins</td>
-                                <td class="border border-gray-300 px-4 py-2">Suggested</td>
-                                <td class="border border-gray-300 px-4 py-2">Italian</td>
-                                <!-- For Tags Column -->
-                                <td class="border border-gray-300 px-4 py-2">
-                                <div class="flex flex-wrap gap-2" id="tags-container-<?= $i ?>">
-                                     <span class="flex items-center bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300">
-                                        Italian
-                                      <button class="ml-1 text-red-500" onclick="removeTag(this)">&times;</button>
-                                      </span>
-                                      <span class="flex items-center bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300">
-                                          Budget Friendly
-                                          <button class="ml-1 text-red-500" onclick="removeTag(this)">&times;</button>
-                                      </span>
-                                      <span class="flex items-center bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300">
-                                          Quick & Easy
-                                          <button class="ml-1 text-red-500" onclick="removeTag(this)">&times;</button>
-                                      </span>
-                                      <button class="bg-gray-200 text-gray-600 px-3 py-1 rounded text-sm" onclick="addTag(<?= $i ?>)">Add More Tags</button>
-                                  </div>
-                                </td>
-                                <!-- For Rating Column -->
-                                <td class="border border-gray-300 px-4 py-2">5/5</td>
-                                <!-- For Ingredients Column -->
-                                <td class="border border-gray-300 px-4 py-2">
-                                <div class="space-y-2">
-                                  <!-- Ingredient Item -->
-                                <div class="flex items-center justify-between">
-                                  <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300">
-                                      Spaghetti 200 g
-                                  </span>
-                                  <div class="relative">
-                                 <!-- For edit and delete button -->
-                                      <button class="text-gray-500 hover:text-gray-700 focus:outline-none" onclick="toggleMenu(this)">
-                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6h.01M12 12h.01M12 18h.01" />
-                                          </svg>
-                                      </button>
-                                      <div class="hidden absolute right-0 mt-1 w-28 bg-white shadow-md rounded border border-gray-300 z-10">
-                                          <button class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onclick="editIngredient(this)">Edit</button>
-                                          <button class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 text-red-500" onclick="deleteIngredientItem(this)">Delete</button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <button class="bg-gray-200 text-gray-600 px-3 py-1 rounded text-sm" 
-                              onclick="addIngredientTag(this)">
-                                  Add More Tags
-                              </button>
-                             </div>
-                             </td>
-                            </tr>
-                            <?php endfor; ?>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                     <!-- Pagination -->
-                    <div class="flex justify-center mt-4">
-                        <div class="flex  space-x-5 ml-30">
+                    <div class="flex items-center mt-4">
+                        <span class="text-gray-700 mr-2">Showing 1 to <?= count($recipes) ?> of <?= count($recipes) ?> entries</span>
+                        <div class="flex space-x-5 ml-60">
                             <a href="#" class="text-gray-700 hover:text-accent mt-2">
                                 <img src="../../../resources/icons/ArrowLeft.svg" alt="Previous" class="w-4 h-4">
                             </a>
@@ -158,6 +221,17 @@
                             <a href="#" class="text-gray-700 hover:text-accent mt-2">
                                 <img src="../../../resources/icons/ArrowRight.svg" alt="Next" class="w-4 h-4">
                             </a>
+                        </div>
+                    </div>
+                    <!-- Delete Modal -->
+                    <div id="delete-modal" class="fixed inset-0 hidden items-center justify-center bg-black bg-opacity-50">
+                        <div class="bg-white p-6 rounded-md">
+                            <h1 class="text-2xl font-bold text-red-500 mb-4 text-center">Delete Recipe</h1>
+                            <p class="mb-4">Are you sure you want to delete this recipe?</p>
+                            <div class="flex justify-center space-x-4">
+                                <button class="bg-accent text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:ring focus:ring-blue-200">Confirm</button>
+                                <button class="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 focus:ring focus:ring-gray-200">Cancel</button>
+                            </div>
                         </div>
                     </div>
                     </div>
@@ -224,9 +298,9 @@
                                         <div class="flex space-x-6 items-start">
                                         <!-- Input Field and Add Button -->
                                         <div class="flex flex-col space-y-4 mb-2">
-                                            <textarea id="instruction-text" placeholder="e.g., Mix all the ingredients thoroughly." class="p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-green-500 required"></textarea>
+                                            <textarea id="instruction-text" placeholder="e.g., Mix all the ingredients thoroughly." class="p-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-500 required"></textarea>
                                             <!-- Add Button -->
-                                            <button type="button" onclick="addInstruction()" class=" w-40 bg-accent hover:bg-accent2 text-white px-4 py-2 rounded shadow hover:bg-green-600 focus:ring-2 focus:ring-green-400 mb-2">Add</button>
+                                            <button type="button" onclick="addInstruction()" class=" w-40 bg-accent hover:bg-accent2 text-white px-4 py-2 rounded shadow hover:bg-blue-500 focus:ring-2 focus:ring-blue-400 mb-2">Add</button>
                                         </div>
                                         <!-- Added Instructions List -->
                                         <div id="instructions-list" class="w-1/2 border border-gray-300 rounded p-4 bg-gray-50 shadow">
@@ -294,69 +368,80 @@
             const defaultTab = document.querySelector('ul li:first-child');
             toggleBackground(defaultTab);
         });
-        // Function to remove a tag
-       function removeTag(button) {
-        button.parentElement.remove();
-       }
-        // Function to add a new tag
-        function addTag(rowId) {
-            const newTag = prompt("Enter a new tag:");
-            if (newTag) {
-                const tagsContainer = document.getElementById(`tags-container-${rowId}`);
-                const tagElement = document.createElement("span");
-                tagElement.className = "flex items-center bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300";
-                tagElement.innerHTML = `${newTag} <button class="ml-1 text-red-500" onclick="removeTag(this)">&times;</button>`;
-                tagsContainer.insertBefore(tagElement, tagsContainer.lastElementChild);
-            }
-        }
-        // Toggle the action menu visibility
-        function toggleMenu(button) {
-            const menu = button.nextElementSibling;
-            document.querySelectorAll('.relative div:not(.hidden)').forEach(openMenu => {
-                if (openMenu !== menu) openMenu.classList.add('hidden');
-            });
-            menu.classList.toggle('hidden');
-        }
+        /*  
+        function for tags and ingredients
+        */
+      let currentRecipeId = null;// Track the recipe ID for current action
 
-        // Edit ingredient handler
-        function editIngredient(button) {
-            const ingredientText = button.closest('.relative').previousElementSibling.innerText;
-            const newIngredient = prompt("Edit Ingredient:", ingredientText);
-            if (newIngredient) {
-                button.closest('.relative').previousElementSibling.innerText = newIngredient;
+            // Open a modal for tags or ingredients
+            function openModal(type, recipeId) {
+                currentRecipeId = recipeId; // Store the current recipe ID
+                document.getElementById(`${type}-modal`).classList.remove("hidden");
             }
-        }
+            // Close the modal
+            function closeModal(type) {
+                document.getElementById(`${type}-modal`).classList.add("hidden");
+            }
+            // Save a new tag or ingredient
+            function saveItem(type) {
+                const input = document.getElementById(`new-${type}-input`).value.trim();
+                if (input) {
+                    const container = document.getElementById(`${type}-container-${currentRecipeId}`);
+                    const element = document.createElement("span");
+                    element.className = "flex items-center bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300";
+                    element.innerHTML = `${input} <button class="ml-1 text-red-500" onclick="removeItem(this)">&times;</button>`;
+                    container.appendChild(element);
+                    document.getElementById(`new-${type}-input`).value = ""; // Clear input
+                }
+                closeModal(type); // Close modal
+            }
+            // Remove a tag or ingredient
+            function removeItem(button) {
+                button.parentElement.remove();
+            }
+            /*
+            function for delete recipe
+            */
+                const recipes = <?php echo json_encode($recipes); ?>;
+                function deleteRecipe(id) {
+                    const recipe = recipes.find(r => r.id === id); // Find the recipe by ID
+                    if (recipe) {
+                        // Update the modal content dynamically
+                        const modal = document.getElementById('delete-modal');
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
 
-        // Delete individual ingredient item
-        function deleteIngredientItem(button) {
-            const item = button.closest('.flex');
-            item.remove();
-        }
-        // Add more tags functionality
-        function addIngredientTag(button) {
-            const tagName = prompt("Enter a new ingredient tag:");
-            if (tagName) {
-                const newTag = document.createElement('div');
-                newTag.className = 'flex items-center justify-between mt-2';
-                newTag.innerHTML = `
-                    <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm border border-gray-300">
-                        ${tagName}
-                    </span>
-                    <div class="relative">
-                        <button class="text-gray-500 hover:text-gray-700 focus:outline-none" onclick="toggleMenu(this)">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6h.01M12 12h.01M12 18h.01" />
-                            </svg>
-                        </button>
-                        <div class="hidden absolute right-0 mt-1 w-28 bg-white shadow-md rounded border border-gray-300 z-10">
-                            <button class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onclick="editIngredient(this)">Edit</button>
-                            <button class="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 text-red-500" onclick="deleteIngredientItem(this)">Delete</button>
-                        </div>
-                    </div>
-                `;
-                button.parentNode.insertBefore(newTag, button);
+                        // Attach event handlers for confirmation
+                        modal.querySelector('.bg-accent').onclick = function () {
+                            confirmDelete(id);
+                        };
+                        modal.querySelector('.bg-gray-500').onclick = cancelDelete;
+                    } else {
+                        console.error('Recipe not found');
+                    }
+                }
+                function confirmDelete(id) {
+                    const recipeIndex = recipes.findIndex(r => r.id === id);
+                    if (recipeIndex !== -1) {
+                        recipes.splice(recipeIndex, 1); // Remove recipe from the array
+                        document.getElementById(`row-${id}`).remove(); // Remove the table row
+                        console.log('Recipe deleted:', id);
+                    }
+                    cancelDelete(); // Close the modal
+                }
+                function cancelDelete() {
+                    const modal = document.getElementById('delete-modal');
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            // Toggle the action menu visibility
+            function toggleMenu(button) {
+                const menu = button.nextElementSibling;
+                document.querySelectorAll('.relative div:not(.hidden)').forEach(openMenu => {
+                    if (openMenu !== menu) openMenu.classList.add('hidden');
+                });
+                menu.classList.toggle('hidden');
             }
-        }
         // Close menus if clicked outside
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.relative')) {
@@ -420,7 +505,6 @@
             document.getElementById("instruction-text").value = "";
         }
         }
-
         // Remove List Item
         function removeItem(button) {
         const listItem = button.parentElement;
