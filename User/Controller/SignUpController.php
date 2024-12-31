@@ -8,8 +8,11 @@ ini_set('display_errors', 1);
 // Check if the signup button is clicked
 if (isset($_POST['signup'])) {
     // Process the signup logic here
+    $username = $_POST['username'];
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
     $password = $_POST['password'];
+    $remember = $_POST['remember'];
     
     //check if the email is valid
     if(!isValidateEmail($email)){
@@ -67,3 +70,5 @@ function isValidateEmail($email){
 }
 
 ?>
+
+<?php echo 'Hello'; ?>

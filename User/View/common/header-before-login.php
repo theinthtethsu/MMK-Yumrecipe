@@ -46,25 +46,25 @@ $images_path = "/yumrecipe/User/View/resources/img/";
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <!-- Dropdown Content -->
-        <div 
+                                 <!-- Dropdown Content -->
+                                 <div 
           id="dropdownMenu" 
-          class="hidden absolute left-0 top-20 mt-2 w-full bg-white border border-gray-300 rounded-md shadow-lg">
+          class="hidden absolute left-0 top-20 mt-2 w-full bg-white border border-gray-300 dark:border-gray-700 rounded-md shadow-lg dark:bg-gray-900 dark:text-white" >
           <ul class="grid grid-cols-5 gap-2 p-4">
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 1</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 2</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 3</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 4</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 5</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 6</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 7</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 8</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 9</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 10</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 1</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 2</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 3</li>
-            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200">Item 4</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 1</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 2</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 3</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 4</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 5</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 6</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 7</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 8</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 9</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 10</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 1</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 2</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 3</li>
+            <li class="p-2 bg-gray-100 rounded-md hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">Item 4</li>
           </ul>
         </div>
                     <!-- Search Input -->
