@@ -3,7 +3,7 @@
 class DBConnection
 {
     private $host = "localhost";
-    private $port = 3307;
+    private $port = 3306;
     private $database = "yummi";
     private $username = "root";
     private $password = "";

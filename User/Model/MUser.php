@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/User/Model/DBConnection.php";
+require_once 'DBConnection.php';
 
 class MUser extends DBConnection
 {
@@ -9,13 +9,14 @@ class MUser extends DBConnection
     private $username;
     private $email;
     private $password;
-    private $isdeleted;
     private $created_at;
     private $updated_at;
+    private $isdeleted;
 
     /**
      * this function is used to construct the user object
      * @author: LK
+   
      * @param string $email
      * @param string $password
      */

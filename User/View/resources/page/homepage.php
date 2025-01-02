@@ -1,7 +1,20 @@
 <?php
+session_start();
 $images_path = "/yumrecipe/User/View/resources/img/";
 $user_path = "/yumrecipe/User/View/resources/page/";
 $receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
+
+
+// var_dump($_SESSION);
+// echo "Session status: " . (isset($_SESSION["signin"]) ? "Set" : "Not set");
+
+// Check login status and include appropriate header
+// if(isset($_SESSION["signin"]) && $_SESSION["signin"] === true) {
+//     require_once '../../common/header-after-login.php';
+// } else {
+//     require_once '../../common/header-before-login.php';
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +41,14 @@ $receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php require_once '../../common/header-before-login.php'; ?>
+<?php 
+if(empty($_SESSION['password'])){
+  require_once '../../common/header-before-login.php';
+}else{
+  require_once '../../common/header-after-login.php';
+}
+
+?>
 
 <!-- Image Slider -->
 <section class="bg-gray-100 flex items-center justify-center mt-0 w-full ">
@@ -92,7 +112,7 @@ $receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
 
     <div class="flex items-center justify-end mt-11 px-20 mb-10">
         <!-- Centered Button -->
-        <a href="<?php echo $user_path; ?>receipe.php" class="px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300">
+        <a href="<?php echo $user_path; ?>Recipe/receipe.php" class="px-6 py-3 bg-red-500 text-white font-medium rounded-full shadow-md hover:bg-red-600 transition duration-300">
           View All Recipes
         </a>      
       </div>

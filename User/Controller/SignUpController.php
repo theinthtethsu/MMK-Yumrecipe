@@ -1,7 +1,7 @@
 <?php
-
-require_once $_SERVER['DOCUMENT_ROOT'] . "/User/Model/MUser.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/User/Controller/common/mailSender.php";
+require_once '../Model/MUser.php';
+//require_once $_SERVER['DOCUMENT_ROOT'] . "/User/Model/MUser.php";
+//require_once $_SERVER['DOCUMENT_ROOT'] . "/User/Controller/common/mailSender.php";
 
 ini_set('display_errors', 1);
 
@@ -12,7 +12,6 @@ if (isset($_POST['signup'])) {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
-    $remember = $_POST['remember'];
     
     //check if the email is valid
     if(!isValidateEmail($email)){
@@ -30,14 +29,14 @@ if (isset($_POST['signup'])) {
         echo "Email already exists";
     }else{
         $user->signup();
-        $content = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/User/View/mail/welcome.html");
-        $mail = new SendMail();
-        $mail->sendMail(
-            $email,
-            "Welcome to Yummy",
-            $content
-        );
-        header("Location: ../View/resources/page/login.php");
+        // $content = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/User/View/mail/welcome.html");
+        // $mail = new SendMail();
+        // $mail->sendMail(
+        //     $email,
+        //     "Welcome to Yummy",
+        //     $content
+        // );
+        header("Location: ../View/resources/page/signIn.php");
     }
 
 } else {
@@ -69,6 +68,15 @@ function isValidateEmail($email){
     return preg_match($pattern, $email);
 }
 
+function isValidatePhone($phone){
+    // Matches formats like:
+    // 1234567890
+    // 123-456-7890
+    // (123) 456-7890
+    // +1 123-456-7890
+    $pattern = "/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/";
+    return preg_match($pattern, $phone);
+}
+
 ?>
 
-<?php echo 'Hello'; ?>

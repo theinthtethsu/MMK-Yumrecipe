@@ -77,13 +77,13 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                 </div>
 
                 <!-- Remember Me -->
-                <div class="flex items-center justify-between mb-6 mt-10">
+                <!-- <div class="flex items-center justify-between mb-6 mt-10">
                     <label class="flex items-center text-sm text-gray-600 dark:text-gray-300">
                         <input type="checkbox" name="remember" class="form-checkbox text-primary dark:text-primary focus:ring-primary dark:focus:ring-primary">
                         <span class="ml-2">Remember Me</span>
                     </label>                  
-                </div>
-.
+                </div> -->
+
                 <!-- Sign Up Button -->
                  <div class=" flex justify-center items-center mt-5">
                     <button type="submit" name="signup" class="m-auto px-10 py-3 border rounded-full bg-red-500 text-white text-md font-semibold hover:bg-red-600 ml-auto">Sign Up</button>
