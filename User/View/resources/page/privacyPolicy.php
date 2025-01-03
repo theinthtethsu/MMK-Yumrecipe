@@ -13,7 +13,13 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
   <!-- Header -->
-  <?php require_once '../../common/header-after-login.php'; ?>
+  <?php 
+if(isset($_GET['email'])) {
+    include '../../common/header-after-login.php';
+} else {
+    include '../../common/header-before-login.php';
+}
+?>
   <?php require_once '../../common/nav.php'; ?>
         
   </header>

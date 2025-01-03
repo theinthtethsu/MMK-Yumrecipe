@@ -13,7 +13,14 @@
      <script defer src="/yumrecipe/User/View/resources/js/dark-mode.js"></script>
   </head>
   <body class="bg-white text-gray-700 leading-none font-normal overflow-x-hidden dark:bg-gray-900 dark:text-white transition-all duration-300">
-  <?php include('../../common/header-before-login.php'); ?>
+  <?php 
+if(isset($_GET['email'])) {
+    include '../../common/header-after-login.php';
+} else {
+    include '../../common/header-before-login.php';
+}
+?>
+
   <?php include('../../common/nav.php'); ?>
     <section class="w-full px-4 py-8">
       <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-x-5">

@@ -29,13 +29,13 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
             <a href="<?php echo $user_path; ?>Recipe/receipe.php" class="text-sm sm:text-base hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'receipe.php' ? 'text-red-500' : '' ?>">Recipes</a>
           </li>
           <li class="md:block">
-            <a href="<?php echo $user_path; ?>add_recipe.php" class="text-sm sm:text-base hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'add_recipe.php' ? 'text-red-500' : '' ?>">Add Recipes</a>
+            <a href="<?php echo $user_path; ?>addRecipe.php" class="text-sm sm:text-base hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'addRecipe.php' ? 'text-red-500' : '' ?>">Add Recipes</a>
           </li>
           <li class="md:block">
             <a href="<?php echo $blog_path; ?>blog.php" class="text-sm sm:text-base hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'blog.php' ? 'text-red-500' : '' ?>">Blogs</a>
           </li>
           <li class="md:block">
-            <a href="<?php echo $user_path; ?>about_us.php" class="text-sm sm:text-base hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'text-red-500' : '' ?>">About Us</a>
+            <a href="<?php echo $user_path; ?>aboutUs.php" class="text-sm sm:text-base hover:text-red-600 <?php echo basename($_SERVER['PHP_SELF']) == 'aboutUs.php' ? 'text-red-500' : '' ?>">About Us</a>
           </li>
         </ul>
     

@@ -1,17 +1,20 @@
 <?php
 
-require_once 'DBConnection.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/yumrecipe/User/Model/DBConnection.php";
 
 class MUser extends DBConnection
 {
     private $table = "m_users";
     private $id;
     private $username;
-    private $email;
     private $password;
+    private $email;
+    private $status;
+    private $plan_id;
+    private $isdeleted;
     private $created_at;
     private $updated_at;
-    private $isdeleted;
+    
 
     /**
      * this function is used to construct the user object
@@ -20,8 +23,9 @@ class MUser extends DBConnection
      * @param string $email
      * @param string $password
      */
-    public function __construct($email, $password)
+    public function __construct($username,$email, $password)
     {
+        $this->username = $username;
         $this->email = $email;
         $this->password = $password;
     }
@@ -38,10 +42,11 @@ class MUser extends DBConnection
 
         $sql = "
         INSERT INTO $this->table 
-            (email, password) 
+            (username,email, password) 
         VALUES 
-            (:email, :password)";
+            (:username,:email, :password)";
         $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(":username", $this->username);
         $stmt->bindValue(":email", $this->email);
         $stmt->bindValue(":password", password_hash($this->password,PASSWORD_DEFAULT) );
         $stmt->execute();
@@ -70,7 +75,7 @@ class MUser extends DBConnection
      * @author: LK
      * @return void
      */
-    public function login(){
+    public function signin(){
         $db = new DBConnection();
         $pdo = $db->connection();
         
@@ -79,5 +84,19 @@ class MUser extends DBConnection
         $stmt->bindValue(":email", $this->email);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    public function signout() {
+        // Unset all session variables
+        $_SESSION = array();
+        
+        // Destroy the session cookie
+        if (isset($_COOKIE[session_name()])) {
+            setcookie(session_name(), '', time()-3600, '/');
+        }
+        
+        // Destroy the session
+        session_destroy();
     }
 }

@@ -96,7 +96,9 @@ $user_path = "/yumrecipe/User/View/resources/page/";
                     <div class="w-10 h-5 bg-gray-300 rounded-full dark:bg-gray-600 flex items-center">
                         <div class="w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 dark:translate-x-5"></div>
                     </div>
-                    
+
+                    <!-- test -->
+                    <!-- <button onclick="window.location.href='../resources/page/signout.php' ">Sign Out</button> -->
             </label> 
                     </div>
 

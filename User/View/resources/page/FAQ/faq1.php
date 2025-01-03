@@ -8,7 +8,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 dark:text-white">
-  <?php require_once '../../common/header-before-login.php'; ?>
+<?php 
+if(isset($_GET['email'])) {
+    include '../../common/header-after-login.php';
+} else {
+    include '../../common/header-before-login.php';
+}
+?>
+
 
       <!-- Navigation Bar -->
       <?php require_once '../../common/nav.php'; ?>

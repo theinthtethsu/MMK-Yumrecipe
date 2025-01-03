@@ -10,7 +10,14 @@
 
 <body class="dark:bg-gray-900 dark:text-white">
   <!-- Navbar -->
-  <?php require_once '../../../common/header-before-login.php';?>
+  
+  <?php 
+if(isset($_GET['email'])) {
+    include '../../../common/header-after-login.php';
+} else {
+    include '../../../common/header-before-login.php';
+}
+?>
   <?php require_once '../../../common/nav.php'; ?>
   <!-- Main Content -->
   <main class="container mx-auto py-8 px-4">

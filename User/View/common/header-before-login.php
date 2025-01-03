@@ -80,10 +80,10 @@ $images_path = "/yumrecipe/User/View/resources/img/";
 
             <!-- Auth Buttons -->
             <div class="flex items-center space-x-4 mt-4 md:mt-0">
-                <a href="<?php echo $user_path; ?>signIn.php" class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-sm font-semibold">
+                <a href="<?php echo $user_path; ?>Signin/signIn.php" class="px-5 py-2 text-white bg-red-500 rounded-full hover:bg-red-600 text-sm font-semibold">
                     Sign In
                 </a>
-                <a href="<?php echo $user_path; ?>signUp.php" class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-sm font-semibold dark:text-black dark:bg-white dark:hover:border-2 dark:hover:border-red-500 hover:text-white">
+                <a href="<?php echo $user_path; ?>Signin/signUp.php" class="px-5 py-2 text-white bg-gray-900 rounded-full hover:bg-gray-800 text-sm font-semibold dark:text-black dark:bg-white dark:hover:border-2 dark:hover:border-red-500 hover:text-white">
                     Sign Up </a>
 <!-- Dark Mode Toogle -->
                     <label class="flex items-center cursor-pointer">

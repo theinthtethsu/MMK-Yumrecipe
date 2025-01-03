@@ -7,7 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="dark:bg-gray-900 dark:text-white">
-    <?php include_once '../../../common/header-before-login.php'; ?>
+  <?php 
+if(isset($_GET['email'])) {
+    include '../../../common/header-after-login.php';
+} else {
+    include '../../../common/header-before-login.php';
+}
+?>
     <?php include_once '../../../common/nav.php'; ?>
     <!-- Main Container -->
     <div class="max-w-screen-lg mx-auto px-4 py-4 mt-14 dark:bg-gray-800 dark:text-white">

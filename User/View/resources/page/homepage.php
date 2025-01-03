@@ -3,18 +3,6 @@ session_start();
 $images_path = "/yumrecipe/User/View/resources/img/";
 $user_path = "/yumrecipe/User/View/resources/page/";
 $receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
-
-
-// var_dump($_SESSION);
-// echo "Session status: " . (isset($_SESSION["signin"]) ? "Set" : "Not set");
-
-// Check login status and include appropriate header
-// if(isset($_SESSION["signin"]) && $_SESSION["signin"] === true) {
-//     require_once '../../common/header-after-login.php';
-// } else {
-//     require_once '../../common/header-before-login.php';
-// }
-
 ?>
 
 <!DOCTYPE html>
@@ -42,12 +30,11 @@ $receipe_path = "/yumrecipe/User/View/resources/page/Recipe/";
 </head>
 <body>
 <?php 
-if(empty($_SESSION['password'])){
-  require_once '../../common/header-before-login.php';
-}else{
-  require_once '../../common/header-after-login.php';
+if(isset($_GET['email'])) {
+    include '../../common/header-after-login.php';
+} else {
+    include '../../common/header-before-login.php';
 }
-
 ?>
 
 <!-- Image Slider -->

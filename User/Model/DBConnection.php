@@ -4,7 +4,7 @@ class DBConnection
 {
     private $host = "localhost";
     private $port = 3306;
-    private $database = "yummi";
+    private $database = "yumrecipe";
     private $username = "root";
     private $password = "";
 

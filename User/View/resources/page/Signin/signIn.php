@@ -1,5 +1,10 @@
 <?php
 session_start();
+// If user is already logged in, redirect to profile
+if (isset($_SESSION['user_id'])) {
+    header("Location: userProfile.php");
+    exit();
+}
 $images_path = "/yumrecipe/User/View/resources/img/";
 $user_path = "/yumrecipe/User/View/resources/page/";
 ?>
@@ -39,41 +44,40 @@ $user_path = "/yumrecipe/User/View/resources/page/";
             <!-- Title -->
             <div class="text-center mb-6">
                 <p class="text-2xl font-bold text-black dark:text-white">Sign In</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">or <a href="<?php echo $user_path ?>signUp.php" class="text-primary font-semibold">Sign Up</a></p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">or <a href="<?php echo $user_path ?>Signin/signUp.php" class="text-primary font-semibold">Sign Up</a></p>
             </div>
 
             <!-- Form Section -->
-            <form action="../../../Controller/LoginController.php" method="post">
+            <form action="../../../../Controller/SignInController.php" method="post">
                 <!-- Username Field -->
                 <div class="mb-4">
+                <?php if (isset($_SESSION["email_error"])): ?>
+        <div class="error text-red-500 text-sm"><?php echo $_SESSION["email_error"]; ?></div>
+        <?php unset($_SESSION["email_error"]); ?>
+    <?php endif; ?>
                     <div class="flex items-center border-b-2 border-red-400 p-2">
                         <span class="material-icons text-gray-400 dark:text-gray-300">email</span>
-                        <input id="email" name="email" type="text" placeholder="email" class="ml-2 w-full bg-transparent focus:outline-none text-black dark:text-white">
-                        <?php if(isset($_SESSION["email_error"])): ?>
-                            <p class="text-red-500 text-sm"><?php echo $_SESSION["email_error"]; ?></p>
-                        <?php endif; ?>
+                        <input id="email" name="email" type="text" placeholder="email" class="ml-2 w-full bg-transparent focus:outline-none text-black dark:text-white">                      
                     </div>
                 </div>
 
                 <!-- Password Field -->
                 <div class="mb-4">
+                <?php if (isset($_SESSION["pwd_error"])): ?>
+        <div class="error text-red-500 text-sm"><?php echo $_SESSION["pwd_error"]; ?></div>
+        <?php unset($_SESSION["pwd_error"]); ?>
+    <?php endif; ?>
                     <div class="flex items-center border-b-2 border-red-400 p-2">
                         <span class="material-icons text-gray-400 dark:text-gray-300">lock</span>
                         <input id="password" type="password" name="password" placeholder="Password" class="ml-2 w-full bg-transparent focus:outline-none text-black dark:text-white">
-                        <?php if(isset($_SESSION["pwd_error"])): ?>
-                            <p class="text-red-500 text-sm"><?php echo $_SESSION["pwd_error"]; ?></p>
-                        <?php endif; ?>
-                        <span class="material-icons text-gray-400 dark:text-gray-300">visibility</span>
+                       
+                        <span id="togglePassword" class="material-icons text-gray-400 dark:text-gray-300 cursor-pointer">visibility</span>
                     </div>
                 </div>
 
-                <!-- Remember Me and Forgot Password -->
+                <!-- Forgot Password -->
                 <div class="flex items-center justify-between mb-6 mt-10">
-                    <label class="flex items-center text-sm text-gray-600 dark:text-gray-300">
-                        <input type="checkbox" name="remember" class="form-checkbox text-primary dark:text-primary focus:ring-primary dark:focus:ring-primary">
-                        <span class="ml-2">Remember Me</span>
-                    </label>
-                    <a href="<?php echo $user_path ?>forgetPassword.php" class="text-sm text-primary font-semibold">Forget Password</a>
+                    <a href="<?php echo $user_path ?>forgetPassword.php" class="text-sm text-primary font-semibold">Forgot Password ?</a>
                 </div>
 .
                 <!-- Sign In Button -->
@@ -84,6 +88,27 @@ $user_path = "/yumrecipe/User/View/resources/page/";
         </div>      
     </div>
 </section>
- 
+<script>
+    // const togglePassword = document.querySelector('#togglePassword');
+    // const password = document.querySelector('#password');
+
+    // togglePassword.addEventListener('click', function () {
+    //     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    //     password.setAttribute('type', type);
+    //     this.classList.toggle('fa-eye-slash');
+
+        const passwordField = document.querySelector('#password');
+    const togglePassword = document.querySelector('#togglePassword');
+
+    togglePassword.addEventListener('click', () => {
+        // Toggle the type attribute of the password field
+        const isPassword = passwordField.type === 'password';
+        passwordField.type = isPassword ? 'text' : 'password';
+
+        // Toggle the eye icon
+        togglePassword.textContent = isPassword ? 'visibility_off' : 'visibility';
+    });
+
+</script>
 </body>
 </html>

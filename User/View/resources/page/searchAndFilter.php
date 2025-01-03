@@ -8,7 +8,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white dark:bg-gray-900">
-  <?php include($_SERVER['DOCUMENT_ROOT'] . '/yumrecipe/User/View/common/header-after-login.php'); ?>
+<?php 
+if(isset($_GET['email'])) {
+    include '../../common/header-after-login.php';
+} else {
+    include '../../common/header-before-login.php';
+}
+?>
   <?php require_once '../../common/nav.php'; ?>
   <div>
     <h1 class="text-2xl font-bold m-8 dark:text-white">Results For Pasta</h1>

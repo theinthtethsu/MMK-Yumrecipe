@@ -15,26 +15,32 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
 </head>
 
 <body>
-    <section class="bg-gray-800 text-white ">
-        <div class="max-w-7xl mx-auto p-8 flex flex-col md:flex-row gap-8">
+    <section class="bg-gray-800 text-white p-8">
+        
+            <div class="flex justify-around">
             <!-- Left Section: Pages -->
-            <div class="flex-1">
+            <div class="mb-10">
                 <h2 class="text-3xl font-bold mb-6">Pages</h2>
+                <div class="flex">
                 <ul class="space-y-4 text-lg">
                     <li><a href="<?php echo $user_path; ?>homepage.php" class=" hover:text-red-500">Home</a></li>
                     <li><a href="<?php echo $user_path; ?>Recipe/receipe.php" class=" hover:text-red-500">Recipes</a></li>
-                    <li><a href="<?php echo $user_path; ?>add_recipe.php" class="hover:text-red-500">Add Recipes</a></li>
+                    <li><a href="<?php echo $user_path; ?>addRecipe.php" class="hover:text-red-500">Add Recipes</a></li>
                     <li><a href="<?php echo $user_path; ?>blog.html" class="hover:text-red-500">Blogs</a></li>
-                    <li><a href="<?php echo $user_path; ?>aboutUs.html" class="hover:text-red-500">About Us</a></li>
-                    <li><a href="<?php echo $user_path; ?>faq1.php" class="hover:text-red-500">FAQ</a></li>
+                </ul>
+
+                <ul class="ml-10 space-y-4 text-lg">
+                <li><a href="<?php echo $user_path; ?>aboutUs.html" class="hover:text-red-500">About Us</a></li>
+                    <li><a href="<?php echo $user_path; ?>FAQ/faq1.php" class="hover:text-red-500">FAQ</a></li>
                     <li><a href="<?php echo $user_path; ?>privacyPolicy.php" class="hover:text-red-500">Privacy
                             Policy</a></li>
                 </ul>
+                </div>
             </div>
 
-            <!-- Center Section: About Yum Recipe -->
-            <div class="flex-1 text-center">
-                <h2 class="text-3xl font-bold text-red-500 mb-4">Yum Recipe</h2>
+            <!-- Right Section: About Yum Recipe -->
+            <div class=" text-center">
+                <h2 class="text-4xl font-bold text-red-500 mb-6">Yum Recipe</h2>
                 <p class="text-gray-300 mb-6 leading-relaxed">
                     I am always sharing fresh, flavorful, and healthy recipes<br />
                     that I love to make and eat in my real life.
@@ -47,30 +53,9 @@ $blog_path = "/yumrecipe/User/View/resources/page/Blog/";
                     <a href="#" class="text-red-500 text-2xl"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
-
-            <!-- Right Section: Contact Form -->
-            <div class="flex-1">
-                <h2 class="text-3xl font-bold mb-6 text-center">How can I help you?</h2>
-                <p class="text-gray-300 text-center mb-6">
-                    Please feel free to reach out to us using the contact below.
-                </p>
-
-                <form class="space-y-4">
-                    <input type="email" placeholder="Enter Your Email"
-                        class="w-full px-4 py-2 rounded-md bg-gray-900 text-gray-200 focus:outline-none focus:ring-red-400"
-                        required />
-                    <textarea placeholder="Enter Your Message" rows="3"
-                        class="w-full px-4 py-2 rounded-md bg-gray-900 text-gray-200 focus:outline-none  focus:ring-red-400"
-                        required></textarea>
-                    <div class="text-center">
-                        <button type="submit" class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-400">
-                            Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
         </div>
     </section>
+
     <!-- FontAwesome for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>

@@ -10,7 +10,6 @@ if (isset($_POST['signup'])) {
     // Process the signup logic here
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
     $password = $_POST['password'];
     
     //check if the email is valid
@@ -24,7 +23,7 @@ if (isset($_POST['signup'])) {
         exit;
     }
 
-    $user = new MUser($email,$password);
+    $user = new MUser($username,$email,$password);
     if($user->isEmailExists($email)){
         echo "Email already exists";
     }else{
@@ -36,11 +35,11 @@ if (isset($_POST['signup'])) {
         //     "Welcome to Yummy",
         //     $content
         // );
-        header("Location: ../View/resources/page/signIn.php");
+        header("Location: ../View/resources/page/Signin/signIn.php");
     }
 
 } else {
-    header("Location: ../View/resources/page/error/404.php");
+    header("Location: ../View/resources/page/Error/404.php");
     exit;
 }
 
@@ -66,17 +65,5 @@ function isValidatePassword($password){
 function isValidateEmail($email){
     $pattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
     return preg_match($pattern, $email);
-}
-
-function isValidatePhone($phone){
-    // Matches formats like:
-    // 1234567890
-    // 123-456-7890
-    // (123) 456-7890
-    // +1 123-456-7890
-    $pattern = "/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/";
-    return preg_match($pattern, $phone);
-}
-
-?>
+}?>
 

@@ -1,4 +1,18 @@
+<?php
+session_start();
+// Get category from URL parameter
+$category = isset($_GET['category']) ? $_GET['category'] : null;
 
+// Get recipes based on category
+if ($category) {
+   // $recipes = $recipeController->getSavedRecipesByCategory($userId, $category);
+    $currentCategory = ucfirst($category); // Capitalize first letter for display
+} else {
+ //   $recipes = $recipeController->getAllSavedRecipes($userId);
+    $currentCategory = "All Personal Recipes";
+}
+?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +34,7 @@
             <div class="container mx-auto px-4 py-8">
                 <!-- Top Section: Search and Filter -->
                 <div class="flex justify-between items-center mb-6">
-                    <h1 class="text-xl font-semibold">All Personal Recipes</h1>
+                    <h1 class="text-xl font-semibold"><?php echo $currentCategory; ?></h1>
 
                     <div class="flex items-center space-x-4">
                         <!-- Filter Button -->

@@ -28,7 +28,7 @@
                             <div class="mb-4">
                                 <label class="block mb-2 text-sm font-semibold">Email</label>
                                 <input type="text" value="" placeholder="abc123@gmail.com"
-                                    class="w-80 px-3 py-2 rounded bg-gray-200 text-gray-600 focus:outline-none">
+                                    class="w-80 px-3 py-2 rounded bg-gray-200 text-gray-600 focus:outline-none" disabled>
                             </div>
 
                             <!-- Password -->
@@ -51,17 +51,27 @@
 
                             <!-- Signout Button -->
                             <div class="text-center">
-                                <button class="bg-white text-gray-700 px-5 py-2 rounded hover:bg-gray-200">
-                                    Signout ↩
-                                </button>
+                                 <button onclick="saveProfile()" class="bg-white text-gray-700 px-5 py-2 rounded hover:bg-gray-200 font-semibold" >
+                                    Save
+                                </button> 
                             </div>
                         </form>
+                        <!-- <a href="signout.php" class="bg-white text-gray-700 px-5 py-2 rounded hover:bg-gray-200">
+                                    Signout ↩
+                        </a> -->
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-
+<script>
+    function saveProfile() {
+        alert("Profile saved");
+        window.location.href = "userProfile.php";
+        window.location.reload();
+        
+    }
+</script>
 </body>
 </html>
